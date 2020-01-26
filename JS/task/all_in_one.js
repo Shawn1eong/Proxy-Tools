@@ -4,8 +4,8 @@ const global = {
         //baidu_tieba: true,
         //iqiyi: true,
         //_52pojie: true,
-        //netease_music: true,
-        //v2ex: true,
+        netease_music: true,
+        v2ex: true,
         china_telecom: true,
         eleme: true
     },
