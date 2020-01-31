@@ -438,7 +438,7 @@ let execute = () => {
                     "Host": `wapside.189.cn:9001`,
                     "Origin": `https://wapside.189.cn:9001`,
                     "Referer": `https://wapside.189.cn:9001/resources/dist/signInActivity.html?cmpid=jt-khd-my-zygn&ticket=0ab000281b4a8139f264620ae1d8b1ce067a6587921f90a6260dca4389a4e01a&version=7.6.0`,
-                    Cookie: ''
+                    Cookie: 's_fid=4E9278D16E567385-1BA03F214310C9E7'
                 },
                 body: JSON.stringify({
                     phone: global.data.china_telecom
