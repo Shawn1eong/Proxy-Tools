@@ -1,8 +1,9 @@
 let phone = '17347342426';//您的手机号
 
 function sign_10000() {
-    let cookieVal = $prefs.valueForKey("cookie.10000");
-    if (!cookieVal) {
+    let cookieVal = "s_cc=true; s_fid=4E9278D16E567385-1BA03F214310C9E7; lvid=9bd4e232f894f33ed19687c15db555c8; nvid=1; svid=536205A4D09ECBAA5EDD3C1215059A2A"
+    $prefs.valueForKey("cookie.10000");
+    if (!cookieVal) {   
         //此处无意义了cookieVal
         $notify("电信营业厅", "无法签到", "请先获取cookie");
     }
