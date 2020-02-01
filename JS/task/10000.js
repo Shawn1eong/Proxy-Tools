@@ -2,8 +2,8 @@ const cookieName = '电信营业厅'
 const cookieKey = 'chavy_cookie_10000'
 const chavy = init()
 
-const phone = '17347342426'
-const cookieVal = 's_cc=true; s_fid=7B059B61224624F1-1D40DF5A446AA362; lvid=c1e746ec516899df831d21ed6e077b71; nvid=1; svid=AC5C28025149816BC85FBE8B1C40D4E9'
+const phone = ''
+const cookieVal = ''
 
 sign()
 
