@@ -3,8 +3,13 @@
 [rewrite_local]
 ^https:\/\/mubu\.com\/api\/app\/user\/info url script-response-body mubu.js
 
+/*
+//幕布高级会员
+http-response ^https:\/\/mubu\.com\/api\/app\/user\/info requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/JS/Unlock/mubu.js
+
 MITM=mubu.com
 by chamberlen
+
 */
 
 
