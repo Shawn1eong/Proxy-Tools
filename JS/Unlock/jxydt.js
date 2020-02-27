@@ -1,5 +1,8 @@
-# #js写法格式
 /*
+驾照 Unlock By @ShawnaLeong
+
+注意⚠️:仅供学习交流，切勿用作商业用途
+
 [rewrite_local]
 Surge4：
 http-response https:\/\/vipapi\.jxedt\.com\/vip\/check requires-body=1,max-size=0,script-path=jxydt.js
