@@ -1,4 +1,4 @@
-const url = 'http://119.29.29.29/d?dn=xcu-jn-iosapps.ccgslb.com.cn';
+const url = 'http://119.29.29.29/d?dn=iosapps.itunes.apple.com';
 if ($network.v4.primaryInterface === 'en0') {
   $httpClient.get(url, function(error, response, data) {
     if (error) {
