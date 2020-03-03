@@ -51,55 +51,50 @@ h5.ele.me
 
 const cookieName = '饿了么'
 const cookieKey = 'cookie_elem'
-const UserId = 'user_id_elem'
+const UserId='user_id_elem'
 const sy = init()
-var cookieVal = sy.getdata(cookieKey);
-var regx = /USERID=\d+/;
+var cookieVal =sy.getdata(cookieKey);
+var regx=/USERID=\d+/;
 
-var userid = cookieVal.match(regx)[0];
-userid = userid.replace('USERID=', '');
+var userid=cookieVal.match(regx)[0];
+userid=userid.replace('USERID=','');
 
 
-var headerscommon = {
-  'Content-Type': 'application/json',
-  'Cookie': cookieVal,
-  'f-refer': 'wv_h5',
-  'Origin': 'https://tb.ele.me',
-  'Referer': 'https://tb.ele.me/wow/zele/act/qiandao?wh_biz=tm&source=main',
-  'User-Agent': 'Rajax/1 Apple/iPhone11,8 iOS/13.3 Eleme/8.29.6 ID/BFA5A018-7070-4341-9DEF-763E3B23EA282; IsJailbroken/1 Mozilla/5.0 (iPhone; CPU iPhone OS 13_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 AliApp(ELMC/8.29.6) UT4Aplus/0.0.4 WindVane/8.6.0 828x1792 WK'
+var headerscommon={
+  'Content-Type':'application/json',
+  'Cookie':cookieVal,
+  'f-refer':'wv_h5',
+  'Origin':'https://tb.ele.me',
+   'Referer':'https://tb.ele.me/wow/zele/act/qiandao?wh_biz=tm&source=main',
+   'User-Agent':'Rajax/1 Apple/iPhone11,8 iOS/13.3 Eleme/8.29.6 ID/BFA5A018-7070-4341-9DEF-763E3B23EA282; IsJailbroken/1 Mozilla/5.0 (iPhone; CPU iPhone OS 13_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 AliApp(ELMC/8.29.6) UT4Aplus/0.0.4 WindVane/8.6.0 828x1792 WK'
 }
 
 //签到结果
-var signresult = '';
+var signresult='';
 
+//翻牌JSON
+var turnstr='';
 //翻牌结果
-var turnstr = '翻牌结果: ';
-//翻牌奖励
-var turnresult = new Array;
+var turnresult=new Array;
 
-//签到奖励
-var sign_result = new Array;
+
 
 var hisresult;
 sign()
 
 function sign() {
-  let data = dosign().then((data) => {
+  let data = dosign().then( (data) => {                                         
+         
+          doturnover().then( (data) => {   
 
-    doturnover(1).then((data) => {
-
-      doshare().then((data) => {
-
-        doturnover(2).then((data) => {
-          dosignhis().then((data) => {
+            dosignhis().then( (data) => {   
 
               doNotify();
               sy.done()
+            })
           })
-      })
-    })
-    })
-  });
+        
+      });
 }
 
 function dosign() {
@@ -107,26 +102,26 @@ function dosign() {
   return new Promise(resolve => {
     setTimeout(() => {
 
-      try {
-        var endurl = '/sign_in'
+      try{
+        var endurl='/sign_in'
         url = { url: `https://h5.ele.me/restapi/member/v2/users/`, headers: headerscommon }
         if (cookieVal == undefined || cookieVal == "0" || cookieVal == null) {
           sy.msg(cookieName, "未获取Cookie", '');
           return;
         }
-
+        
         url.url += userid;
         url.url += endurl;
-      
+        sy.log(url.url);
         sy.post(url, (error, response, data) => {
-          var obj=JSON.parse(data);
+          sy.log(response.status);
           if (response.status == 200) {
             signresult = '签到结果: 成功🎉'
-            sign_result=obj;
-
+            
+           
           } else if (response.status == 400) {
             signresult = '签到结果: 重复❗'
-
+          
           }
           else {
             signresult = '签到结果: 未知❗'
@@ -134,23 +129,23 @@ function dosign() {
           resolve('done');
         })
       }
-      catch (erre) {
+      catch(erre){
         resolve('done')
       }
     })
   })
 }
 
-function doturnover(count) {
+function doturnover() {
 
   return new Promise(resolve => {
     setTimeout(() => {
 
-      try {
-        var endurl = '/sign_in/daily/prize'
-        let body = { "channel": "app", "index": random(0,3), "longitude": 116.334716796875, "latitude": 59.73897171020508 };
-        url = {
-          url: `https://h5.ele.me/restapi/member/v2/users/`,
+      try{
+        var endurl='/sign_in/daily/prize'
+        let body={"channel": "app","index": 0,"longitude": 116.334716796875,"latitude": 59.73897171020508};
+        url = { 
+          url: `https://h5.ele.me/restapi/member/v2/users/`, 
           headers: headerscommon,
           body: JSON.stringify(body)
         }
@@ -160,68 +155,29 @@ function doturnover(count) {
         }
         url.url += userid;
         url.url += endurl;
+        //headers['Content-Type']='application/json';
+        sy.log(url);
         sy.post(url, (error, response, data) => {
-          var obj = JSON.parse(data);
-            sy.log(count);
-          if (response.status == 200) {
-            turnstr =turnstr+ `成功(${count})🎉 `
-            for( var i in obj)
-              {
-                turnresult.push(obj[i]);
-              }
+         console.log(response);
+          var obj=JSON.parse(data);
 
+          if (response.status == 200) {
+            turnstr = '翻牌结果: 成功🎉'
+            turnresult=obj;
+           
           } else if (response.status == 400) {
-            turnstr =turnstr+ `重复(${count})❗ `
-
+            turnstr = '翻牌结果: 重复❗'
+          
           }
           else {
-            turnstr =turnstr+ `未知(${count})❗ `
+            turnstr = '翻牌结果: 未知❗'
           }
 
 
           resolve('done');
         })
       }
-      catch (erre) {
-        resolve('done')
-      }
-    },500)
-  })
-}
-
-function doshare() {
-
-  return new Promise(resolve => {
-    setTimeout(() => {
-
-      try {
-        var endurl = '/sign_in/wechat'
-        let body = { "channel": "app"};
-        url = {
-          url: `https://h5.ele.me/restapi/member/v1/users/`,
-          headers: headerscommon,
-          body: JSON.stringify(body)
-        }
-        if (cookieVal == undefined || cookieVal == "0" || cookieVal == null) {
-          sy.msg(cookieName, "未获取Cookie", '');
-          return;
-        }
-        url.url += userid;
-        url.url += endurl;
-        sy.post(url, (error, response, data) => {
-          if (response.status == 200) {
-
-            sy.log("分享微信成功");
-          }
-          else {
-            sy.log("分享微信失败");
-          }
-
-
-          resolve('done');
-        })
-      }
-      catch (erre) {
+      catch(erre){
         resolve('done')
       }
     })
@@ -233,8 +189,8 @@ function dosignhis() {
   return new Promise(resolve => {
     setTimeout(() => {
 
-      try {
-        var endurl = '/sign_in/info'
+      try{
+        var endurl='/sign_in/info'
         url = { url: `https://h5.ele.me/restapi/member/v1/users/`, headers: headerscommon }
         if (cookieVal == undefined || cookieVal == "0" || cookieVal == null) {
           sy.msg(cookieName, "未获取Cookie", '');
@@ -242,46 +198,55 @@ function dosignhis() {
         }
         url.url += userid;
         url.url += endurl;
+        sy.log(url.url);
         sy.get(url, (error, response, data) => {
+         
+          var obj=JSON.parse(data);
 
-          var obj = JSON.parse(data);
-
-          hisresult = obj;
+          hisresult=obj;
 
 
           resolve('done');
         })
       }
-      catch (erre) {
+      catch(erre){
         resolve('done')
       }
     })
   })
 }
 
-function doNotify() {
-  console.log(turnresult);
-  var ret = signresult;
-  var signday = 0;
-  for (var i = 0; i < hisresult.statuses.length; i++) {
-    if (hisresult.statuses[i] == 1) {
-      signday++;
-    }
-  }
-  ret = ret + ',已连续签到' + signday + '天\n';
-  for (var i = 0; i < sign_result.length; i++) {
-      ret = ret + '***获得：' + sign_result[i].name + '(' + sign_result[i].amount + ')元🧧\n';
-  }
-  ret = ret + turnstr+'\n';
-  for (var i = 0; i < turnresult.length; i++) {
-    if (turnresult[i].status == 1) {
-      ret = ret + '***获得：' + turnresult[i].prizes[0].name + '(' + turnresult[i].prizes[0].amount + ')元🧧\n';
-    }
-  }
-  ret = ret + '签到3天得3元红包，7天抽10-200元🧧';
+function doNotify(){
 
-  sy.msg('饿了么', '', ret);
+    console.log(hisresult);
+    console.log(turnresult);
+    console.log(turnstr);
+    var ret=signresult;
+    var signday=0;
+    for(var i=0;i<hisresult.statuses.length;i++){
+        if(hisresult.statuses[i]==1){
+          signday++;
+        }
+    }
+    ret=ret+',已连续签到'+signday+'天\n';
+    ret=ret+turnstr;
+    for(var i=0;i<turnresult.length;i++){
+        if(turnresult[i].status==1){
+            ret=ret+' 获得：'+turnresult[i].prizes[0].name+'('+turnresult[i].prizes[0].amount+')元🧧';
+        }
+    }
+    ret=ret+'\n';
+    ret=ret+'签到3天得3元红包，10天抽10-200元🧧';
+
+    sy.msg('饿了么签到','',ret);
 }
+
+
+
+
+
+
+
 
 
 
@@ -316,15 +281,15 @@ function init() {
   }
   post = (options, callback) => {
     if (isQuanX()) {
-      if (typeof options == "string") options = { url: options }
-      options["method"] = "POST"
-      $task.fetch(options).then(response => {
-        response["status"] = response.statusCode
-        callback(null, response, response.body)
-      }, reason => callback(reason.error, null, null))
+        if (typeof options == "string") options = { url: options }
+        options["method"] = "POST"
+        $task.fetch(options).then(response => {
+            response["status"] = response.statusCode
+            callback(null, response, response.body)
+        }, reason => callback(reason.error, null, null))
     }
     if (isSurge()) $httpClient.post(options, callback)
-  }
+}
   done = (value = {}) => {
     $done(value)
   }
