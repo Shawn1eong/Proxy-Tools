@@ -10,4 +10,3 @@ if ($network.v4.primaryInterface === 'en0') {
 } else {
   $done({server: '8.8.8.8'});
 }
-}
