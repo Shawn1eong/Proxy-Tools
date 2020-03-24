@@ -1,6 +1,7 @@
 
 var obj = JSON.parse($response.body);
 var bundle_id = obj.receipt["bundle_id"];
+
 if(bundle_id == "com.speed.test.internet")
 {
 obj = {
