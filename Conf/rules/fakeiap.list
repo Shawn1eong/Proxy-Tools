@@ -26,3 +26,7 @@ DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,itunes.com
 DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,mzstatic.com
+
+# > Fake IAP
+AND,((USER-AGENT,itunesstored*), (DOMAIN-KEYWORD,-buy.itunes.apple.com)),〄IAP-PREMIUM
+RULE-SET,https://raw.githubusercontent.com/tinycarrot/tinycarrot/master/Surge/FakeiAP-Filter-Surge.txt,〄IAP-PREMIUM,notification-text="Fakeiap 😃",notification-interval=3600
