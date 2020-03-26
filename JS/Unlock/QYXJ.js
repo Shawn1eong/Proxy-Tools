@@ -1,19 +1,13 @@
-//  正则^https:\/\/commerce-api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info
-// Mitm.commerce-api.faceu.mobi
-
-var obj = JSON.parse($response.body);
-
-obj= {
-  "data": {
-    "flag": true,
-    "start_time": 1572760027,
-    "end_time": 4097368706
-  },
-  "systime": "",
-  "errmsg": "Success",
-  "ret": "0"
-};
-
+/**
+ * QX
+ * rewrite:
+ * ^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info url script-response-body nzw9314/Script/qyxj.js
+ * hostname:commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi
+ */
+let obj = JSON.parse($response.body);
+obj.data.end_time=3725012184;
+obj.data.is_cancel_subscribe=false;
+obj.data.flag=true;
 $done({body: JSON.stringify(obj)});
 
-//LK
+//轻颜相机
