@@ -17,5 +17,5 @@ IP-CIDR,224.0.0.0/4,no-resolve
 IP-CIDR,240.0.0.0/4,no-resolve
 # > China
 DOMAIN-SUFFIX,cn
-DOMAIN-SUFFIX,xn--fiqs8s
+DOMAIN-SUFFIX,xn—fiqs8s
 GEOIP,CN
