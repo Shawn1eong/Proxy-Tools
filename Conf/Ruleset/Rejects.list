@@ -169,7 +169,7 @@ URL-REGEX,”^https?+:\/\/m\.ibuscloud\.com\/v2\/app\/getStartPage“
 # > 杭州市·市民卡
 URL-REGEX,”^https?+:\/\/smkmp\.96225\.com\/smkcenter\/ad\/“
 # > 虎扑
-URL-REGEX,”^https?+:\/\/games\.mobileapi\.hupu\.com\/.+?\/interfaceAd(?:Monitor)?+\/“
+URL-REGEX,”^https?+:\/\/games\.mobileapi\.hupu\.com\/\d\/(?:\d\.){2}\d\/status\/init“
 # > 虎牙
 URL-REGEX,”^https?+:\/\/business\.msstatic\.com\/advertiser\/“
 URL-REGEX,”^https?+:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/resource“
@@ -308,8 +308,6 @@ URL-REGEX,”^https?+:\/\/api\.qbb6\.com\/ad\/“
 URL-REGEX,”^https?+:\/\/msspjh\.emarbox\.com\/getAdConfig“
 URL-REGEX,”^https?+:\/\/api\.videozhishi\.com\/api\/getAdvertising“
 URL-REGEX,”^https?+:\/\/api\.rr\.tv\/ad\/“
-# > 人人影视
-URL-REGEX,”^https?+:\/\/ctrl\.(?>playcvn|zmzapi)\.(?>com|net)\/app\/(?>ads|init)“
 # > 日日煮
 URL-REGEX,”^https?+:\/\/api\.daydaycook\.com\.cn\/daydaycook\/server\/ad\/“
 URL-REGEX,”^https?+:\/\/cms\.daydaycook\.com\.cn\/api\/cms\/advertisement\/“
