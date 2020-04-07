@@ -21,11 +21,10 @@ URL-REGEX,”^https?+:\/\/gw\.aihuishou\.com\/app-portal\/home\/getadvertisement
 # > 爱思助手
 URL-REGEX,”^https?+:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml“
 # > 阿里
+URL-REGEX,”^https?+:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch“
 URL-REGEX,”^https?+:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.tmall\.wireless“
 # >> 1688
 URL-REGEX,”^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv“
-# >> 阿里妈妈
-URL-REGEX,”^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query“
 # >> 飞猪
 URL-REGEX,”^https?+:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/“
 # >> 高德地图
