@@ -1,30 +1,27 @@
 /*
-QX:
-[rewrite_local]
 
-#Fit健身会员 （by黑黑酱）
-^https:\/\/bea\.sportq\.com\/SFitWeb\/sfit\/getUserBaseInfo url script-response-body fit.js
+https://bea.sportq.com/SFitWeb/sfit
 
-[MITM]
-hostname:bea.sportq.com
+hostname=bea.sportq.com
 
 */
 
-re('"isVip":"\\d','"isVip":"1')
+var body = $response.body;
+var url = $request.url;
+var obj = JSON.parse(body);
 
-function re() {
- var body = $response.body;
- if (arguments[0].includes("@")) {
-  var regs = arguments[0].split("@");
-  var strs = arguments[1].split("@");
-  for (i = 0;i < regs.length;i++) {
-   var reg = new RegExp(regs[i],"g");
-   body = body.replace(reg, strs[i]);
- }
+const vip = "/getMessageNumber";
+const pro = "/getUserBaseInfo";
+
+if (url.indexOf(vip) != -1) {
+	obj.entRet.isVip = 1;
+	obj.entRet.endTime = 1906952319;
+	body = JSON.stringify(obj);
 }
- else {
-  var reg = new RegExp(arguments[0],"g");
-  body = body.replace(reg, arguments[1]);
+
+if (url.indexOf(pro) != -1) {
+      obj.entRet.entUserBaseInfo.isVip = 1;
+      body = JSON.stringify(obj);
 }
- $done(body);
-}
+
+$done({body});
