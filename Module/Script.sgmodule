@@ -45,13 +45,13 @@ QQNews.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa
 // Super.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js,type=http-response,pattern=^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list)
 
 # > RRAD
-RRad.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Spript/Adblock/RRad.js,type=http-response,pattern=^https://api\.rr\.tv/v3plus/index/(channel|todayChoice)$
+RRad.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/RRad.js,type=http-response,pattern=^https://api\.rr\.tv/v3plus/index/(channel|todayChoice)$
 
 # > 今日头条去广告
 Toutiao.js = requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/Toutiao.js,type=http-response,pattern=^https?://[\s\S]*\.snssdk\.com/api/news/feed/v88/
 
 # > 番茄读书去广告
-fanqiedushu.js = requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Spript/Unlock/fanqiedushu.js,script-update-interval=0,type=http-response,pattern=^https?://.*\.snssdk.com.*
+fanqiedushu.js = requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/fanqiedushu.js,script-update-interval=0,type=http-response,pattern=^https?://.*\.snssdk.com.*
 
 # 微博国际版去广告 （作者：yichahucha）hostname = weibointl.api.weibo.cn, api.weibo.cn
 weibointl_launch.js = requires-body=1,script-path=https://raw.githubusercontent.com/hancj0528/Script/master/weibointl_launch.js,type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn/portal\.php\?a=get_coopen_ads
@@ -166,44 +166,44 @@ wszs.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.c
 Diyidan.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/Diyidan.js,type=http-response,pattern=^https:\/\/api\.diyidan\.net\/v0\.3\/(user\/personal_homepage|vip_user\/info|tv_series\/index\?appChanne)
 
 # > Fit
-Fit健身 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/bea\.sportq\.com\/SFitWeb\/sfit\/,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Spript/Unlock/fit.js,script-update-interval=0
+Fit健身 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/bea\.sportq\.com\/SFitWeb\/sfit\/,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/fit.js,script-update-interval=0
 
 # > 白描黄金会员
-baimiao.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Spript/Unlock/baimiao.js,script-update-interval=0,type=http-response,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$
+baimiao.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/baimiao.js,script-update-interval=0,type=http-response,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$
 
 # > 懒饭 vip pro
-lanfanapp.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Spript/Unlock/lanfanapp.js,script-update-interval=0,type=http-response,pattern=https:\/\/lanfanapp\.com\/api\/v1\/user\/
+lanfanapp.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/lanfanapp.js,script-update-interval=0,type=http-response,pattern=https:\/\/lanfanapp\.com\/api\/v1\/user\/
 
 # XMind Unlock pro
-Xmind.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Spript/Unlock/Xmind.js,script-update-interval=0,type=http-response,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices
+Xmind.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Xmind.js,script-update-interval=0,type=http-response,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices
 
 # > 加密通话unlock vip
-jmdh.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Spript/Unlock/Alex/jmdh.js,script-update-interval=0,type=http-response,pattern=https:\/\/m\.4009991000\.com\/(userCharge|feeQuery).action
+jmdh.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Alex/jmdh.js,script-update-interval=0,type=http-response,pattern=https:\/\/m\.4009991000\.com\/(userCharge|feeQuery).action
 
 # > Buyhack
 # sanbox verifyReceipt
 verify_receipt.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/verify_receipt.js,type=http-response,pattern=^https?:\/\/sandbox\.itunes\.apple\.com\/verifyReceipt
 
 # > Vue unlock.vip
-vue.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Spript/Unlock/Alex/vue.js,script-update-interval=0,type=http-response,pattern=https:\/\/api\.vuevideo\.net\/api\/v1\/users\/.+\/profile
+vue.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Alex/vue.js,script-update-interval=0,type=http-response,pattern=https:\/\/api\.vuevideo\.net\/api\/v1\/users\/.+\/profile
 
 # > 企信通小程序 unlock
-qxt.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Spript/Unlock/Alex/qxt.js,script-update-interval=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/
+qxt.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Alex/qxt.js,script-update-interval=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/
 
 # > 贝瓦儿歌unlock
-bweg.js = url requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Spript/Unlock/bweg.js,type=http-response,pattern=^https?:\/\/iface\.beva\.com\/(order\/device\/vip)
+bweg.js = url requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/bweg.js,type=http-response,pattern=^https?:\/\/iface\.beva\.com\/(order\/device\/vip)
 
 # > 菜谱大全vip Unlockvip
-cpdq.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Spript/Unlock/cpdq.js,type=http-response,pattern=^https?:\/\/api\.jiaonizuocai\.com
+cpdq.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/cpdq.js,type=http-response,pattern=^https?:\/\/api\.jiaonizuocai\.com
 
 # > 很皮语音包vip unlock
-hpyyb.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Spript/Unlock/hpyyb.js,type=http-response,pattern=https:\/\/api3\.henpi\.vip\/app\/(user\/get_userinfo|label\/music_type_list)
+hpyyb.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/script/Unlock/hpyyb.js,type=http-response,pattern=https:\/\/api3\.henpi\.vip\/app\/(user\/get_userinfo|label\/music_type_list)
 
 # > paper.vip
-paper.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Spript/Unlock/paper.js,type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.*\/subscribers\/[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}$
+paper.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/paper.js,type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.*\/subscribers\/[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}$
 
 # > 彩云小译vip
-cyxy.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Spript/Unlock/cyxy.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.interpreter\.caiyunai\.com\/v1\/user
+cyxy.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/cyxy.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.interpreter\.caiyunai\.com\/v1\/user
 
 # > poizon
 com.poizon.js = script-path=https://github.com/ConnersHua/Profiles/raw/master/Surge/Script/com.poizon.js,requires-body=true,type=http-response,pattern=^https?:\/\/m\.poizon\.com\/client\/init
@@ -230,7 +230,7 @@ qyxj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.c
 // cupdasher.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/cupdasher.js,type=http-response,pattern=^https:\/\/p.+-buy\.itunes\.apple\.com\/WebObjects\/MZFinance.woa\/wa\/inAppRegrantPurchaseHistory
 
 # > 有道云笔记 (By Alex0510)
-ydybj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/ydybj.js,type=http-response,pattern=https://note.youdao.com/yws/(mapi/payment|api/self)
+ydybj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Alex/ydybj.js,type=http-response,pattern=https://note.youdao.com/yws/(mapi/payment|api/self)
 
 # > 凉意
 # 韩剧TV (By 凉意)

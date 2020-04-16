@@ -38,7 +38,6 @@ app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
 
 # > Redirect Google Service
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
-^https?:\/\/pagead2\.googlesyndication\.com\/pagead\/ - reject
 
 # Anti_ISP_JD_Hijack
 ^https?:\/\/coupon\.m\.jd\.com\/ https://coupon.m.jd.com/ 302
@@ -78,8 +77,8 @@ app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
 (?<=\?video_id=\w{32})[^*]+  302
 
 # Tiktok Unlock
-(.*video_id=\w{32})(.*watermark=)(.*) $1 302
-(?<=(carrier|account|sys)_region=)CN KR 307
+// (.*video_id=\w{32})(.*watermark=)(.*) $1 302
+//(?<=(carrier|account|sys)_region=)CN KR 307
 
 # Redirect Google Service
 ^http:\/\/www\.google\.cn https://www.google.com 302
