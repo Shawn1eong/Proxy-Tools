@@ -197,7 +197,7 @@ bweg.js = url requires-body=1,max-size=0,script-path=https://raw.githubuserconte
 cpdq.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/cpdq.js,type=http-response,pattern=^https?:\/\/api\.jiaonizuocai\.com
 
 # > 很皮语音包vip unlock
-hpyyb.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/script/Unlock/hpyyb.js,type=http-response,pattern=https:\/\/api3\.henpi\.vip\/app\/(user\/get_userinfo|label\/music_type_list)
+hpyyb.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/hpyyb.js,type=http-response,pattern=https:\/\/api3\.henpi\.vip\/app\/(user\/get_userinfo|label\/music_type_list)
 
 # > paper.vip
 paper.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/paper.js,type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.*\/subscribers\/[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}$
