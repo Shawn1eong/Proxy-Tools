@@ -45,7 +45,7 @@ QQNews.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa
 // Super.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js,type=http-response,pattern=^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list)
 
 # > RRAD
-RRad.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Conf/Ruleset/RRad.js,type=http-response,pattern=^https://api\.rr\.tv/v3plus/index/(channel|todayChoice)$
+RRad.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/RRad.js,type=http-response,pattern=^https://api\.rr\.tv/v3plus/index/(channel|todayChoice)$
 
 # > 今日头条去广告
 Toutiao.js = requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/Toutiao.js,type=http-response,pattern=^https?://[\s\S]*\.snssdk\.com/api/news/feed/v88/
