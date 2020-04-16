@@ -2,9 +2,9 @@
 
 $httpClient.post('https://link-ip.nextdns.io/d49521/c274ce33ad2401ca', function(error, response, data){
   if (error) {
-console.log(error + '‼️');
+$notification.post('NEXT DNS ', 'Internet error','');
+    $done({});
   } else {
-console.log(data);
-$done();
+$notification.post('NEXT DNS ', 'IPv4 (with linked IP)', 'ip :' + data);
+    $done({});
   }
-});
