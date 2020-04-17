@@ -8,3 +8,4 @@ $notification.post('NEXT DNS ', 'Internet error','');
 $notification.post('NEXT DNS ', 'IPv4 (with linked IP)', 'ip :' + data);
     $done({});
   }
+});
