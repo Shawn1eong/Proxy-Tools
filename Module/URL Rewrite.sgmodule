@@ -73,12 +73,12 @@ app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
 ^https?:\/\/www\.iqshw\.com\/d\/js\/m http://burpsuite.applinzi.com/Interface header
 
 # TikTok
-(?<=vide.f)7(?=\d{2}.mp4)  302
-(?<=\?video_id=\w{32})[^*]+  302
+#(?<=vide.f)7(?=\d{2}.mp4)  302
+#(?<=\?video_id=\w{32})[^*]+  302
 
 # Tiktok Unlock
-// (.*video_id=\w{32})(.*watermark=)(.*) $1 302
-//(?<=(carrier|account|sys)_region=)CN KR 307
+#(.*video_id=\w{32})(.*watermark=)(.*) $1 302
+#(?<=(carrier|account|sys)_region=)CN KR 307
 
 # Redirect Google Service
 ^http:\/\/www\.google\.cn https://www.google.com 302
