@@ -3,27 +3,6 @@
 #!system=ios
 
 [Script]
-
-# > By Choler
-# > Display jd historical price
-jd_price.js = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js,script-update-interval=0
-
-# > Display taobao historical price
-# 不生效或失效的需要卸载 tb 重装，注意不开脚本进 tb 会失效
-TaobaoPrice.js = requires-body=1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/TaobaoPrice.js,type=http-response,pattern=^https?://(amdc|trade-acs)\.m\.taobao\.com/(amdc/mobileDispatch|gw/mtop\.taobao\.detail\.getdetail)
-
-// tb_price.js = requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js,type=http-request,pattern=^https?://.+/amdc/mobileDispatch
-// tb_price.js = requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js,type=http-response,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail
-
-# > Display netflix ratings（IMDb、douaban）
-nf_rating.js = script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js,type=http-request,pattern=^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D
-nf_rating.js = requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js,type=http-response,pattern=^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D
-
-# > Remove Ads 
-# > 微博 (By yichahucha)
-wb_launch.js = requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js,type=http-response,pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua)
-wb_ad.js = requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js,type=http-response,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list)
-
 # > 微信公众号 (By Choler)
 WeChat.js = script-path=https://Choler.github.io/Surge/Script/WeChat.js,type=http-request,pattern=^https://mp\.weixin\.qq\.com/mp/getappmsgad
 
@@ -44,10 +23,6 @@ Toutiao.js = requires-body=1,max-size=-1,script-path=https://Choler.github.io/Su
 
 # > 番茄读书去广告
 fanqiedushu.js = requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/fanqiedushu.js,script-update-interval=0,type=http-response,pattern=^https?://.*\.snssdk.com.*
-
-# 微博国际版去广告 （作者：yichahucha）hostname = weibointl.api.weibo.cn, api.weibo.cn
-weibointl_launch.js = requires-body=1,script-path=https://raw.githubusercontent.com/hancj0528/Script/master/weibointl_launch.js,type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn/portal\.php\?a=get_coopen_ads
-weibointl_timeline.js = requires-body=1,script-path=https://raw.githubusercontent.com/hancj0528/Script/master/weibointl_timeline.js,type=http-response,pattern=^https?:\/\/api\.weibo\.cn/2/(statuses|groups)/(unread_hot_|friends_)?timeline
 
 # > 知乎 (By Primovist)
 Zhihu.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Zhihu.js,type=http-response,pattern=”^https?:\/\/(api|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d{1,10}\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=)“
@@ -169,9 +144,6 @@ jmdh.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.c
 # sanbox verifyReceipt
 verify_receipt.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/verify_receipt.js,type=http-response,pattern=^https?:\/\/sandbox\.itunes\.apple\.com\/verifyReceipt
 
-# > Vue unlock.vip
-vue.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Alex/vue.js,script-update-interval=0,type=http-response,pattern=https:\/\/api\.vuevideo\.net\/api\/v1\/users\/.+\/profile
-
 # > 企信通小程序 unlock
 qxt.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Alex/qxt.js,script-update-interval=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/
 
@@ -288,4 +260,4 @@ verify_receipt.js = requires-body=1,max-size=262144,script-path=https://raw.gith
 
 
 [MITM]
-hostname = %APPEND% trade-acs.m.taobao.com, bea.sportq.com, api.meiyan.com, api.m.jd.com, ios.prod.ftl.netflix.com, vipapi.jxedt.com, api.interpreter.caiyunai.com, mubu.com, miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, api.rr.tv, ctrl.playcvn.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, api.diyidan.net, api.jiaonizuocai.com, bookapi.ihuman.com, rest.zhibo.tv, note.youdao.com, billing.peakcloud.org, api.ithome.com, www.xmind.cn, api.weiqire.com, pay.wecut.com, *.bjxkhc.com, jdytv.cn, api.psy-1.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com, api.bilibili.com, app.bilibili.com, *.zhihu.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, api.vnision.com, sp.kaola.com, r.inews.qq.com, newdrugs.dxy.cn, account.wps.*, u.kanghuayun.com, api.mvmtv.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.termius.com, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com, api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, owa.videoshowiosglobalserver.com:0, purchases.ws.pho.to, api-intl.mr.meitu.com, apimboom2.globaldelight.net, photos.adobe.io, api.getmimo.com, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, education.github.com, ssl-api.itranslateapp.com, sk.ulysses.app, license.enpass.io, api.keepkeep.com, www.api.monkeyuni.net, api.textnow.me,
+hostname = %APPEND% trade-acs.m.taobao.com, bea.sportq.com, api.meiyan.com, api.m.jd.com, vipapi.jxedt.com, api.interpreter.caiyunai.com, mubu.com, miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, api.rr.tv, ctrl.playcvn.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, api.diyidan.net, api.jiaonizuocai.com, bookapi.ihuman.com, rest.zhibo.tv, note.youdao.com, billing.peakcloud.org, api.ithome.com, www.xmind.cn, api.weiqire.com, pay.wecut.com, *.bjxkhc.com, jdytv.cn, api.psy-1.com, mp.weixin.qq.com, api.bilibili.com, app.bilibili.com, *.zhihu.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, api.vnision.com, sp.kaola.com, r.inews.qq.com, newdrugs.dxy.cn, account.wps.*, u.kanghuayun.com, api.mvmtv.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.termius.com, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com, api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, owa.videoshowiosglobalserver.com:0, purchases.ws.pho.to, api-intl.mr.meitu.com, apimboom2.globaldelight.net, photos.adobe.io, api.getmimo.com, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, education.github.com, ssl-api.itranslateapp.com, sk.ulysses.app, license.enpass.io, api.keepkeep.com, www.api.monkeyuni.net, api.textnow.me,
