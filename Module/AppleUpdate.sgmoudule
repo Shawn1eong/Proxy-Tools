@@ -1,0 +1,10 @@
+#!name=AppleUpdate
+#!desc=Block IOS Update
+#!system=ios
+
+[Rule]
+# (AppleUpdate)
+# > Block IOS Update
+DOMAIN,mesu.apple.com,AppleUpdate,reject
+DOMAIN,gdmf.apple.com,AppleUpdate,reject
+DOMAIN,updates-http.cdn-apple.com,,reject
