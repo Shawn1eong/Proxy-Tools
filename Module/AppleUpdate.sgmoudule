@@ -5,6 +5,6 @@
 [Rule]
 # (AppleUpdate)
 # > Block IOS Update
-DOMAIN,mesu.apple.com,AppleUpdate,reject
-DOMAIN,gdmf.apple.com,AppleUpdate,reject
-DOMAIN,updates-http.cdn-apple.com,,reject
+DOMAIN,mesu.apple.com,AppleUpdate,REJECT
+DOMAIN,gdmf.apple.com,AppleUpdate,REJECT
+DOMAIN,updates-http.cdn-apple.com,REJECT
