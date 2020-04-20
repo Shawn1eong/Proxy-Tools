@@ -52,11 +52,11 @@ wps.cookie.js = script-path=https://raw.githubusercontent.com/chavyleung/scripts
 elemGetCookies.js = script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/elemGetCookies.js,type=http-request,pattern=^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$
 
 # > 天翼套餐详情
-telecomInfinity.js = script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/task/telecomInfinity.js,type=http-request,pattern=^https?:\/\/e\.189\.cn\/store\/user\/package_detail\.do
+China_Telecom.js = http-request,pattern=^https?:\/\/e\.189\.cn\/store\/user\/package_detail\.do,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Spript/task/China_Telecom.js
 
 # > 微信小程序活动抽奖 (By @makexp & @zZPiglet)
 # 打开微信小程序 进入”活动抽奖“，手动签到一次或点击”已签到“
-WeChatLottery_new.js = script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/WeChatLottery/WeChatLottery_new.js,type=http-request,pattern=^https:\/\/api-hdcj\.9w9\.com\/v\d\/sign
+WeChatLottery_new.js = script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/WeChatLottery_new.js,type=http-request,pattern=^https:\/\/api-hdcj\.9w9\.com\/v\d\/sign
 
 [MITM]
-hostname = %APPEND% api.m.jd.com,api.1sapp.com,www.flyertea.com, wapside.189.cn:9001, www.smzdm.com, music.163.com, zt.wps.cn, api-hdcj.9w9.com, h5.ele.me, api.rr.tv, i.meituan.com, e.189.cn, promotion.waimai.meituan.com, 
+hostname = %APPEND% api.m.jd.com,api.1sapp.com,m.ximalaya.com,www.flyertea.com, wapside.189.cn:9001, www.smzdm.com, music.163.com, zt.wps.cn, api-hdcj.9w9.com, h5.ele.me, api.rr.tv, i.meituan.com, e.189.cn, promotion.waimai.meituan.com, 
