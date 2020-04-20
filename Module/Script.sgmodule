@@ -140,10 +140,6 @@ Xmind.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.
 # > 加密通话unlock vip
 jmdh.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Alex/jmdh.js,script-update-interval=0,type=http-response,pattern=https:\/\/m\.4009991000\.com\/(userCharge|feeQuery).action
 
-# > Buyhack
-# sanbox verifyReceipt
-verify_receipt.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/verify_receipt.js,type=http-response,pattern=^https?:\/\/sandbox\.itunes\.apple\.com\/verifyReceipt
-
 # > 企信通小程序 unlock
 qxt.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Alex/qxt.js,script-update-interval=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/
 

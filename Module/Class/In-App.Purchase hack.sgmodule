@@ -1,0 +1,12 @@
+#!name=Unlock In-App purchase
+#!desc=Trial. Cancel subscriptions. Restore pucharse. By Langkhach
+
+[Script]
+# > Buyhack
+verify_receipt.js = requires-body=1,max-size=262144,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/verify_receipt.js,script-update-interval=0,type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+
+# sanbox verifyReceipt
+verify_receipt.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/verify_receipt.js,type=http-response,pattern=^https?:\/\/sandbox\.itunes\.apple\.com\/verifyReceipt
+
+[MITM]
+hostname = %APPEND% buy.itunes.apple.com,sandbox.itunes.apple.com
