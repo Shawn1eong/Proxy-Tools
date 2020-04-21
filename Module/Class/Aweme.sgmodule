@@ -10,4 +10,4 @@ Aweme = type=http-request,pattern=https:\/\/.*\.amemv\.com\/aweme\/v.*\/(feed|po
 Aweme = type=http-response,pattern=https:\/\/.*\.amemv\.com\/aweme\/v.*\/(feed|post),requires-body=true,script-path=https://Choler.github.io/Surge/Script/Aweme.js
 
 [MITM]
-hostname = %APPEND% *.amemv.com, *.snssdk.com
+hostname = %APPEND% *.snssdk.com, *.amemv.com, *.musical.ly
