@@ -84,3 +84,4 @@ iosapps.itunes.apple.com = script:stored
 [Script]
 dns stored script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Conf/stored.js
 
+#
