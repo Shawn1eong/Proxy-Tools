@@ -11,11 +11,11 @@ PS:记得自己修改WIFI名称 "home_ssid1or2"
 
 //The Notification Format.
 //You can change the notification by yourself.
-let TITLE = '网络状态变更';
-let SUBTITLE_CELLULAR = '蜂窝网, ';
+let TITLE = 'Outbound Changed!';
+let SUBTITLE_CELLULAR = 'Cellular, ';
 let SUBTITLE_WIFI = 'Wi-Fi, ';
-let ABOUT_MODE = '出站模式 ';
-let ABOUT_TIME = '加入网络 ';
+let ABOUT_MODE = 'Outbound mode: ';
+let ABOUT_TIME = 'Start Network: ';
 let FORMAT_TIME = "yyyy-MM-dd hh:mm:ss";
 
 //white ssid and black ssid ob rule.
