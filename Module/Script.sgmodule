@@ -22,7 +22,7 @@ RRad.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.
 # Toutiao.js = requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/Toutiao.js,type=http-response,pattern=^https?://[\s\S]*\.snssdk\.com/api/news/feed/v88/
 
 # > 番茄读书去广告
-fanqiedushu.js = requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/fanqiedushu.js,script-update-interval=0,type=http-response,pattern=^https?://.*\.snssdk.com.*
+# fanqiedushu.js = requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/fanqiedushu.js,script-update-interval=0,type=http-response,pattern=^https?://.*\.snssdk.com.*
 
 # > 知乎 (By Primovist)
 Zhihu.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Zhihu.js,type=http-response,pattern=”^https?:\/\/(api|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d{1,10}\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=)“
@@ -107,15 +107,6 @@ jxydt.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.
 
 # > 幕布(by @superuv)
 mb.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/mb.js,type=http-response,pattern=https:\/\/mubu\.com\/api\/app\/user\/info
-
-# 智能证件照相机 (by @superuv)
-znzj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/znzj.js,type=http-response,pattern=^https:\/\/app\.xunjiepdf\.com\/api\/v4\/virtualactregister
-
-# 猫咪翻译(by @superuv)
-mmfy.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/mmfy.js,type=http-response,pattern=http:\/\/miaow\.yiyongcad\.com\/api\/v4\/memprofile
-
-# 微商助手(by @superuv)
-wszs.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/wszs.js,type=http-response,pattern=https:\/\/api\.lennou\.com\/user\/info
 
 # > Miao Miao
 # > Bear熊掌记 (By Miao Miao)
@@ -250,10 +241,6 @@ Unfold.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercon
 
 # > videoshow
 videoshow.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/videoshow.vip.js,script-update-interval=0,type=http-response,pattern=^https:\/\/owa\.videoshowiosglobalserver\.com\/zone\/.+\/iosPayClient\/(payVerify|imeiVerify)
-
-# > Buyhack
-verify_receipt.js = requires-body=1,max-size=262144,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/verify_receipt.js,script-update-interval=0,type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
-
 
 [MITM]
 hostname = %APPEND% trade-acs.m.taobao.com, baimiao.uzero.cn,bea.sportq.com, api.meiyan.com, api.m.jd.com, vipapi.jxedt.com, api.cognitive.microsofttranslator.com, offline.microsofttranslator.com, m.4009991000.com,miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,*.rr.tv,api3.henpi.vip,nomo.dafork.com,lanfanapp.com,api.interpreter.caiyunai.com, mubu.com, sf-integral-sign-in.weixinjia.net,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, api.rr.tv, ctrl.playcvn.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, api.diyidan.net, api.jiaonizuocai.com, *.qidian.com,bookapi.ihuman.com, rest.zhibo.tv, note.youdao.com, billing.peakcloud.org, api.ithome.com, www.xmind.cn, api.weiqire.com, pay.wecut.com, *.bjxkhc.com, jdytv.cn, api.psy-1.com, mp.weixin.qq.com, api.bilibili.com, app.bilibili.com, *.zhihu.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, api.vnision.com, sp.kaola.com, r.inews.qq.com, newdrugs.dxy.cn, account.wps.*, u.kanghuayun.com, api.mvmtv.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.termius.com, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com, api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, owa.videoshowiosglobalserver.com:0, purchases.ws.pho.to, api-intl.mr.meitu.com, apimboom2.globaldelight.net, photos.adobe.io, api.getmimo.com, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, education.github.com, ssl-api.itranslateapp.com, api.itranslateapp.com,sk.ulysses.app, license.enpass.io, api.keepkeep.com, www.api.monkeyuni.net, api.textnow.me,
