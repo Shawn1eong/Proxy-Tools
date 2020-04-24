@@ -45,7 +45,7 @@
 美团外卖 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js,type=http-request,pattern=^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/doaction
 
 # > 饿了么
-饿了么 = script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/elemGetCookies.js,type=http-request,pattern=^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$
+饿了么 = script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/elemGetCookies.js,type=http-request,pattern=^https:\/\/h5\.ele\.me\/restapi\/eus\/v\d\/current_user$
 
 # > 天翼套餐详情
 电信套餐查询 = http-request,pattern=^https?:\/\/e\.189\.cn\/store\/user\/package_detail\.do,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/task/China_Telecom.js
