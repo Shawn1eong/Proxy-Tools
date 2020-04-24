@@ -50,11 +50,5 @@
 # > 天翼套餐详情
 电信套餐查询 = http-request,pattern=^https?:\/\/e\.189\.cn\/store\/user\/package_detail\.do,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/task/China_Telecom.js
 
-# 微博 (By @Macsuny)
-微博 = script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js,type=http-request,pattern=https:\/\/api\.weibo\.cn\/\d\/video\/machine\?gsid
-
-# 微博钱包 (By @Macsuny)
-微博钱包 = script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js,type=http-request,pattern=http-request,pattern=https:\/\/pay\.sc\.weibo\.com\/aj\/mobile\/home\/welfare\/signin\/do\?
-
 [MITM]
 hostname = %APPEND% api.m.jd.com,api.1sapp.com,m.ximalaya.com,www.flyertea.com, wapside.189.cn:9001, www.smzdm.com, music.163.com, zt.wps.cn, api-hdcj.9w9.com, h5.ele.me, api.rr.tv, i.meituan.com, e.189.cn, promotion.waimai.meituan.com, 
