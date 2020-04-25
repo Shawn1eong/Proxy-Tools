@@ -65,7 +65,7 @@ BaiduCloud.js = requires-body=1,max-size=0,script-path=https://raw.githubusercon
 yun_analyze.js = script-path=https://github.com/MeetaGit/MeetaRules/raw/m%CE%B1ster/Surge/Scripting/yun_analyze.js,requires-body=1,type=http-request,pattern=https?:\/\/pan\.baidu\.com\/s\/
 
 # > 黄油相机VIP
-HYXJ.js = requires-body=1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/HYXJ.js,type=http-response,pattern=^https://api4\.bybutter\.com(/v4/users/me|/v4/shop/.+)
+//bybutter.js = requires-body=1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/bybutter.js,type=http-response,pattern=^https://api4\.bybutter\.com(/v4/users/me|/v4/shop/.+)
 
 # > 小小影视Vip (By Meeta)
 xxys.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xxys.js,type=http-response,pattern=https:\/\/.*\.xiaoxiao.*\.com\/(vod\/reqplay\/|ucp/index|getGlobalData)
