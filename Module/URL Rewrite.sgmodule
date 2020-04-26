@@ -3,6 +3,7 @@
 #!system=ios
 
 [MITM]
+# Update time: 2020.4.26
 hostname = %INSERT% *.snssdk.com,*.amemv.com
 
 [URL Rewrite]

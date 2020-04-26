@@ -3,7 +3,7 @@
 #!system=ios
 
 [Header Rewrite]
-
+# Update time: 2020.4.26
 # > Microsoft translator
 https:\/\/offline\.microsofttranslator\.com\/translatorresources\.svc\/GetMetadata\?platform=ios&version= header-replace (\r\n)If-None-Match:.+(\r\n) $1
 https:\/\/api\.cognitive\.microsofttranslator\.com\/languages\?scope=compact,transliteration&api-version= header-replace (\r\n)If-None-Match:.+(\r\n) $1
