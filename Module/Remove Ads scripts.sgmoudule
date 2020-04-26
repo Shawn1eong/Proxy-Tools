@@ -1,0 +1,103 @@
+#!name=Remove ads
+#!desc=app removes ads.
+#!system=ios
+
+[General]
+force-http-engine-hosts = %APPEND% vali.cp31.ott.cibntv.net
+
+[Rule]
+# Update time: 2020.4.27
+
+# Remove YouTube‘s Ad
+# 如果您是 YouTube Premium，请不要开启此模块。
+URL-REGEX,^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier),REJECT-TINYGIF
+
+# Remove youku‘s Ad
+URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
+
+# Remove rrtv‘s Ad
+AND,((USER-AGENT,PUClient*), (NOT,((DOMAIN-SUFFIX,rr.tv)))),REJECT
+URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/homePage),REJECT
+
+# Remove News_bilibili‘s Ad
+URL-REGEX,^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/ad|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)),REJECT
+
+# Remove Zdm‘s Ad
+URL-REGEX,^https?:\/\/(app-)?api\.smzdm\.com\/(v\d\/)?util\/(loading|banner),REJECT
+
+# Remove Zhihu‘s Ad
+DOMAIN,sugar.zhihu.com,REJECT
+DOMAIN,appcloud2.in.zhihu.com,REJECT
+URL-REGEX,^https:\/\/pic\d\.zhimg\.com\/70\/,REJECT
+URL-REGEX,https:\/\/(api|www)\.zhihu\.com\/(ab|adx|fringe|commercial|ad-style-service|.*(recommendations|extended|featured-comment-ad)|api\/v4\/(brand|mcn|(answer|question)s\/\d+\/meta_related_topics)(\/|\?)),REJECT
+AND,((USER-AGENT,osee2*), (OR,((IP-CIDR,0.0.0.0/0,no-resolve),(IP-CIDR6,::/0,no-resolve)))),REJECT
+
+[URL Rewrite]
+# Remove Super‘s Ad (By Liquor030)
+app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
+
+# Remove News_Article‘s Ad (By Liquor030)
+app_name=news_article&([\S]*)aid=\d+ app_name=news_article_social&$1aid=19 header
+
+# Remove douyin‘s Ad
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/feed\/ https://aweme.snssdk.com/aweme/v1/feed/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/aweme\/post\/ https://aweme.snssdk.com/aweme/v1/aweme/post/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/follow\/feed\/ https://aweme.snssdk.com/aweme/v1/follow/feed/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/nearby\/feed\/ https://aweme.snssdk.com/aweme/v1/nearby/feed/ header
+^https://aweme-eagle(.*)\.snssdk\.com/aweme/v2/ https://aweme-eagle$1.snssdk.com/aweme/v1/ 302
+
+[Script]
+# > 抖音
+douyin_post.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme/v1/aweme\/post\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin_post.js
+douyin_feed.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/feed\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin_feed.js
+douyin_follow.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/follow\/feed\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin_follow.js
+douyin_naerby.js = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/nearby\/feed\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin_nearby.js
+
+# > 微信公众号 (By Choler)
+WeChat.js = script-path=https://Choler.github.io/Surge/Script/WeChat.js,type=http-request,pattern=^https://mp\.weixin\.qq\.com/mp/getappmsgad
+
+# > Netease koala removes ads
+wykaola.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wykaola.js,type=http-response,pattern=^https://sp\.kaola\.com/api/openad$
+
+# > QQ News removes ads
+QQNews.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/QQNews.js,type=http-response,pattern=^https://r\.inews\.qq.com\/get(QQNewsUnreadList|RecommendList)
+
+# > Super removes ads
+Super.js = type=http-response,pattern="^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list)",requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js,script-update-interval=0
+
+# > RRAD
+RRtv_channel.js = type=http-response,requires-body=true,pattern=^https?:\/\/api\.rr\.tv\/v\dplus\/index\/channel$,script-path=https://Choler.github.io/Surge/Script/rrsp.js
+
+# > 今日头条去广告
+# Toutiao.js = requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/Toutiao.js,type=http-response,pattern=^https?://[\s\S]*\.snssdk\.com/api/news/feed/v88/
+
+# > 毒去广告 （作者：ConnersHua）
+com.poizon.js = script-path=https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Script/com.poizon.js,type=http-response,pattern=^https?:\/\/m\.poizon\.com\/client\/init
+
+# > A岛去帖内广告 （作者：LarkinZero）
+nmb_no_ad.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/LarkinZero/Surge/master/nmb_no_ad.js,script-update-interval=0,type=http-response,pattern=https:\/\/nmb\.fastmirror\.org\/Api\/thread.*
+
+# > 起点APP去启动广告 （作者：LarkinZero）
+qidian_anti_ad.js = script-path=https://raw.githubusercontent.com/LarkinZero/Surge/master/qidian_anti_ad.js,requires-body=true,type=http-response,pattern=https:\/\/mage\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen\?localLabels=100
+
+# > IT之家 去新闻列表广告
+ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/ITHome.js,type=http-response,pattern=^https?:\/\/api\.ithome\.com\/json\/slide\/index
+ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/ITHome.js,type=http-response,pattern=^https?:\/\/api\.ithome\.com\/json\/(newslist|listpage)\/news
+
+# > Remove Ads 
+# > 微博 (By yichahucha)
+wb_launch.js = requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js,type=http-response,pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua)
+wb_ad.js = requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js,type=http-response,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list)
+
+# > 微博国际版去广告 （作者：yichahucha）hostname = weibointl.api.weibo.cn, api.weibo.cn
+weibointl_launch.js = requires-body=1,script-path=https://raw.githubusercontent.com/hancj0528/Script/master/weibointl_launch.js,type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn/portal\.php\?a=get_coopen_ads
+weibointl_timeline.js = requires-body=1,script-path=https://raw.githubusercontent.com/hancj0528/Script/master/weibointl_timeline.js,type=http-response,pattern=^https?:\/\/api\.weibo\.cn/2/(statuses|groups)/(unread_hot_|friends_)?timeline
+
+# > bilibili去广告
+Bilibili.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Bilibili.js,pattern=^https?:\/\/ap(i|p).(live.)?bilibili.com\/x(live)?\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/(mine(\/ipad)?|teenagers\/status)|view|feed\/index|rank|channel\/region\/list)|app-room/v1/index/getInfoByRoom)\?access_key,type=http-response
+
+# > 知乎去广告
+Zhihu.js = type=http-response,requires-body=1,max-size=-1,pattern=^https:\/\/(api|lens|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d+\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=|api\/videos\/\d+\/recommend),script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Zhihu.js,script-update-interval=0
+
+[MITM]
+hostname = %APPEND% *.snssdk.com, *.uve.weibo.com, api.weibo.cn, mapi.weibo.com, ap*.zhihu.com, www.zhihu.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, aweme.snssdk.com,lens.zhihu.com,*api.smzdm.com,ap*.bilibili.com,storage.wax.weibo.com,api.ithome.com,*.fastmirror.org,*.qidian.com,api.m.jd.com,api.rr.tv,r.inews.qq.com,sp.kaola.com,m.poizon.com,mp.weixin.qq.com,sf-integral-sign-in.weixinjia.net,*.amemv.com, *.musical.ly
