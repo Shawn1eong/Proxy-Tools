@@ -1,61 +1,9 @@
-#!name= Script - Remove Ads + unlock
-#!desc=自用模块,于Remove Ads + unlock vip.集成: 需要配置 CA 证书并启用 MitM 开关. 
+#!name= Script - unlock
+#!desc=自用模块, unlock vip.集成: 需要配置 CA 证书并启用 MitM 开关. 
 #!system=ios
 
 [Script]
-# Update time: 2020.4.26
-# > 微信公众号 (By Choler)
-WeChat.js = script-path=https://Choler.github.io/Surge/Script/WeChat.js,type=http-request,pattern=^https://mp\.weixin\.qq\.com/mp/getappmsgad
-
-# > Netease koala removes ads
-wykaola.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wykaola.js,type=http-response,pattern=^https://sp\.kaola\.com/api/openad$
-
-# > QQ News removes ads
-QQNews.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/QQNews.js,type=http-response,pattern=^https://r\.inews\.qq.com\/get(QQNewsUnreadList|RecommendList)
-
-# > Super removes ads
-// Super.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js,type=http-response,pattern=^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list)
-
-# > RRAD
-RRad.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/RRad.js,type=http-response,pattern=^https://api\.rr\.tv/v3plus/index/(channel|todayChoice)$
-
-# > 今日头条去广告
-# Toutiao.js = requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/Toutiao.js,type=http-response,pattern=^https?://[\s\S]*\.snssdk\.com/api/news/feed/v88/
-
-# > 知乎 (By Primovist)
-Zhihu.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Zhihu.js,type=http-response,pattern=”^https?:\/\/(api|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d{1,10}\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=)“
-
-# > 毒去广告 （作者：ConnersHua）
-com.poizon.js = script-path=https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Script/com.poizon.js,type=http-response,pattern=^https?:\/\/m\.poizon\.com\/client\/init
-
-# > 哔哩哔哩去广告
-Bilibili.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Bilibili.js,type=http-response,pattern=^https?:\/\/ap(i|p).(live.)?bilibili.com\/x(live)?\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/(mine|teenagers\/status)|view|feed\/index|show\/popular\/index|rank)|app-room/v1/index/getInfoByRoom)\?access_key
-
-# > 京东去广告
-JDAdRemove.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/JDAdRemove.js,type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(start|myOrderInfo|orderTrackBusiness)
-
-# > 张大妈去广告
-SMZDM.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/SMZDM.js,type=http-response,pattern=^https?:\/\/(h(aojia|omepage)|(articl|baik)e|s)-api\.smzdm\.com\/(home|sou)
-
-# > A岛去帖内广告 （作者：LarkinZero）
-nmb_no_ad.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/LarkinZero/Surge/master/nmb_no_ad.js,script-update-interval=0,type=http-response,pattern=https:\/\/nmb\.fastmirror\.org\/Api\/thread.*
-
-# > 起点APP去启动广告 （作者：LarkinZero）
-qidian_anti_ad.js = script-path=https://raw.githubusercontent.com/LarkinZero/Surge/master/qidian_anti_ad.js,requires-body=true,type=http-response,pattern=https:\/\/mage\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen\?localLabels=100
-
-# > 去除哔哩哔哩热门评论上面的小喇叭 （作者：Primovist）
-bilibili-reply.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ydzydzydz/Rules/master/Surge/resources/script/bilibili-reply.js,script-update-interval=0,type=http-response,pattern=https://api.bilibili.com/x/v2/reply/main\?access_key
-
-# > 去除哔哩哔哩推广活动 （原作者：onewayticket255 修改：Primovist
-bilibili-viewrelate.js = requires-body=1,script-path=https://raw.githubusercontent.com/ydzydzydz/Rules/master/Surge/resources/script/bilibili-viewrelate.js,type=http-response,pattern=https://api.bilibili.com/x/v2/reply/main\?access_key
-
-# > 哔哩哔哩（N合一版）（原作者：onewayticket255 修改：Primovist）
-bilibili.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/ydzydzydz/Rules/master/Surge/resources/script/bilibili.js,type=http-response,pattern=^https?:\/\/ap(i|p).bilibili.com\/x\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/mine|view|feed\/index))\?access_key
-
-# > IT之家 去新闻列表广告
-ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/ITHome.js,type=http-response,pattern=^https?:\/\/api\.ithome\.com\/json\/slide\/index
-ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/ITHome.js,type=http-response,pattern=^https?:\/\/api\.ithome\.com\/json\/(newslist|listpage)\/news
-
+# Update time: 2020.4.27
 # > 百度网盘倍速播放
 BaiduCloud.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js,type=http-response,pattern=https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user
 
@@ -150,20 +98,6 @@ paper.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.
 # > 彩云小译vip
 cyxy.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/cyxy.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.interpreter\.caiyunai\.com\/v1\/user
 
-# > poizon
-com.poizon.js = script-path=https://github.com/ConnersHua/Profiles/raw/master/Surge/Script/com.poizon.js,requires-body=true,type=http-response,pattern=^https?:\/\/m\.poizon\.com\/client\/init
-
-# > 微信读书 （可能有用）
-weixinyuedu.js = script-path=https://raw.githubusercontent.com/imxh/js/master/weixinyuedu.js,requires-body=true,type=http-response,pattern=https?:\/\/i\.weread\.qq\.com\/pay\/memberCardSummary
-
-# > 微信读书 （作者：yxiaocai）
-// iweread.js = script-path=https://raw.githubusercontent.com/yxiaocai/quanx/master/js/iweread.js,requires-body=true,type=http-response,pattern=^https?:\/\/i.weread.qq.com\/pay
-
-# > 人人视频去广告+原画 （作者：popeyelau）
-// rrtv.js = script-path=https://raw.githubusercontent.com/popeyelau/Surge/master/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv(\/user\/profile|\/ad\/getAll)
-// rrtv.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/XYXShawn/JS/master/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll)
-rrtv.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail)
-
 # 人人影视字幕组 （作者：Kaya）hostname =
 YYeTs.js = requires-body=true,script-path=https://raw.githubusercontent.com/ydzydzydz/Rules/master/Surge/resources/script/YYeTs.js,type=http-response,pattern=^https?:\/\/ctrl.playcvn.com/app/(init|ads)
 
@@ -244,4 +178,4 @@ Unfold.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercon
 videoshow.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/videoshow.vip.js,script-update-interval=0,type=http-response,pattern=^https:\/\/owa\.videoshowiosglobalserver\.com\/zone\/.+\/iosPayClient\/(payVerify|imeiVerify)
 
 [MITM]
-hostname = %APPEND% trade-acs.m.taobao.com, api4.bybutter.com, baimiao.uzero.cn,bea.sportq.com, api.meiyan.com, api.m.jd.com, vipapi.jxedt.com, api.cognitive.microsofttranslator.com, offline.microsofttranslator.com, m.4009991000.com,miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,*.rr.tv,api3.henpi.vip,nomo.dafork.com,lanfanapp.com,api.interpreter.caiyunai.com, mubu.com, sf-integral-sign-in.weixinjia.net,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, api.rr.tv, ctrl.playcvn.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, api.diyidan.net, api.jiaonizuocai.com, *.qidian.com,bookapi.ihuman.com, rest.zhibo.tv, note.youdao.com, billing.peakcloud.org, api.ithome.com, www.xmind.cn, api.weiqire.com, pay.wecut.com, *.bjxkhc.com, jdytv.cn, api.psy-1.com, mp.weixin.qq.com, api.bilibili.com, app.bilibili.com, *.zhihu.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, api.vnision.com, sp.kaola.com, r.inews.qq.com, newdrugs.dxy.cn, account.wps.*, u.kanghuayun.com, api.mvmtv.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.termius.com, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com, api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, owa.videoshowiosglobalserver.com:0, purchases.ws.pho.to, api-intl.mr.meitu.com, apimboom2.globaldelight.net, photos.adobe.io, api.getmimo.com, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, education.github.com, ssl-api.itranslateapp.com, api.itranslateapp.com,sk.ulysses.app, license.enpass.io, api.keepkeep.com, www.api.monkeyuni.net, api.textnow.me,
+hostname = %APPEND%  api4.bybutter.com, baimiao.uzero.cn,bea.sportq.com, api.meiyan.com, vipapi.jxedt.com, api.cognitive.microsofttranslator.com, offline.microsofttranslator.com, m.4009991000.com,miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api3.henpi.vip,nomo.dafork.com,lanfanapp.com,api.interpreter.caiyunai.com, mubu.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, ctrl.playcvn.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, api.diyidan.net, api.jiaonizuocai.com,bookapi.ihuman.com, rest.zhibo.tv, note.youdao.com, billing.peakcloud.org, www.xmind.cn, api.weiqire.com, pay.wecut.com, *.bjxkhc.com, jdytv.cn, api.psy-1.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, api.vnision.com, newdrugs.dxy.cn, account.wps.*, u.kanghuayun.com, api.mvmtv.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.termius.com, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com, api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, owa.videoshowiosglobalserver.com:0, purchases.ws.pho.to, api-intl.mr.meitu.com, apimboom2.globaldelight.net, photos.adobe.io, api.getmimo.com, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, education.github.com, ssl-api.itranslateapp.com, api.itranslateapp.com,sk.ulysses.app, license.enpass.io, api.keepkeep.com, www.api.monkeyuni.net, api.textnow.me,
