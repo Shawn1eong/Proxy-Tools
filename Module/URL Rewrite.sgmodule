@@ -2,12 +2,9 @@
 #!desc=URL Header & 302 & 307
 #!system=ios
 
-[MITM]
-# Update time: 2020.4.26
-hostname = %INSERT% *.snssdk.com,*.amemv.com
 
 [URL Rewrite]
-
+# Update time: 2020.4.26
 # Diyidan download parse
 (http://musicapi\.diyidan\.net/tv_series/video/download/\d+)/(1|2) $1/4 302
 
