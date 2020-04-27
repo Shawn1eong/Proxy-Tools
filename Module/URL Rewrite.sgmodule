@@ -68,13 +68,6 @@
 ^https?:\/\/static\.m\.ttkvod\.com\/static_cahce\/index\/index\.txt http://ogtre5vp0.bkt.clouddn.com/Static/TXT/index.txt header
 ^https?:\/\/www\.iqshw\.com\/d\/js\/m http://burpsuite.applinzi.com/Interface header
 
-# > tiktok去水印(*.amemv.com, *.snssdk.com)
-^https://aweme-eagle(.*)\.snssdk\.com/aweme/v2/ https://aweme-eagle$1.snssdk.com/aweme/v1/ 302
-
-# Tiktok Unlock
-#(.*video_id=\w{32})(.*watermark=)(.*) $1 302
-#(?<=(carrier|account|sys)_region=)CN KR 307
-
 # Redirect Google Service
 ^http:\/\/www\.google\.cn https://www.google.com 302
 ^https?:\/\/(www.)?g\.cn https://www.google.com 302
