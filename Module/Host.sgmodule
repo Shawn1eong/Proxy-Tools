@@ -7,8 +7,8 @@
 ip6-localhost = ::1
 ip6-loopback = ::1
 # > Apple
-iosapps.itunes.apple.com = server:8.8.8.8
-testflight.apple.com = server:8.8.8.8
+iosapps.itunes.apple.com = script:stored
+testflight.apple.com = script:stored
 # > 淘宝
 *.taobao.com = server:223.5.5.5
 # > 天猫
