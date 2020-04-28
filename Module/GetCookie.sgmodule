@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% api.m.jd.com,api.1sapp.com,m.ximalaya.com,api.weibo.cn, pay.sc.weibo.com,www.flyertea.com,draw.jdfcloud.com,e.189.cn,api.inews.qq.com, wapside.189.cn:9001, www.smzdm.com, music.163.com, zt.wps.cn, api-hdcj.9w9.com, h5.ele.me, api.rr.tv, i.meituan.com, promotion.waimai.meituan.com, 
+hostname = %APPEND% api.m.jd.com,api.1sapp.com,m.ximalaya.com,api.weibo.cn, pay.sc.weibo.com,www.flyertea.com,api.inews.qq.com, wapside.189.cn:9001, www.smzdm.com, music.163.com, zt.wps.cn, api-hdcj.9w9.com, h5.ele.me, api.rr.tv, i.meituan.com, promotion.waimai.meituan.com, 
 
 
 [Script]
@@ -18,7 +18,6 @@ hostname = %APPEND% api.m.jd.com,api.1sapp.com,m.ximalaya.com,api.weibo.cn, pay.
 qtt.cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js,type=http-request,pattern=^https:\/\/api\.1sapp\.com\/sign\/info?
 qtt.cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js,type=http-request,pattern=^https:\/\/api\.1sapp\.com\/content\/readV2?
 qtt.cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js,type=http-request,pattern=^https:\/\/api\.1sapp\.com\/x\/feed\/getReward?
-
 
 # > 中国电信
 10000.cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js,type=http-request,pattern=^https:\/\/wapside.189.cn:9001\/api\/home\/homeInfo
@@ -60,6 +59,3 @@ weibo cookie = script-path=https://raw.githubusercontent.com/Sunert/Scripts/mast
 
 txnewscookie = type=http-request,pattern=https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews.js
 txnewscookie = type=http-request,pattern=https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews.js
-
-# > 微信小程序 来客有礼
-lkylCookie = script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js,type=http-request,pattern=https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\?
