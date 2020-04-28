@@ -1,9 +1,3 @@
-/*
-主机名= api.polaxiong.com 
- 
-^https：//api.polaxiong.com/v1/payments/appleiap/receipts/confirmation url script-response-body pola.js 
-
-*/
 
 var mstatus = "HTTP/1.1 200 OK";
 var mheaders = $response.headers;
