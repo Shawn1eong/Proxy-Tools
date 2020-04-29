@@ -1,6 +1,10 @@
-#!name=🔍Q-Search
+#!name=🔍Q-Search-All in one Modified by nzw9314
 #!desc=Browser Search Add-ons, Modified from module by Neurogram
 #!system=ios
+
+# Q-Search 
+# Modified by nzw9314 
+# From Neurogram (https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/Q-Search.sgmodule)
 
 # - Safari 内输入 命令 + 空格 + 关键词 快速指定搜索引擎搜索
 
@@ -8,27 +12,37 @@
 
 # 可自行修改指令或者添加搜索引擎
 
-# gh：GitHub 搜索
-# gm：Google 图片搜索
-# sof: Stack Overflow
-# se: StackExchange
+# gh：  GitHub搜索
+# gm：  Google图片搜索
+# sof:  Stack Overflow
+# se:   StackExchange
+# wiki: 维基百科
+# wk:   维基中文
+# mg:   Magi
+# tf:   Google 搜索 TestFlight
 
 # yd：有道词典搜索
 # trc: Google 译至中
 # tre: Google 译至英
 # trj: Google 译至日
 
+
 # db：豆瓣搜索
 # zh: 知乎
 # wb: 微博
 # wx: 微信
 # rd: Reddit
+# ssp: 少数派
+# csdn: CSDN
+
 # zdm: 什么值得买
 # amz: 亚马逊
 # jd: 京东
 # tb: 淘宝
 # tm: 天猫
 
+# ac:  Acfun
+# bli: 哔哩哔哩
 # ytb: YouTube
 # ph:  PornHub 
 # gd:  Google Drive资源
@@ -55,6 +69,18 @@
 # wa  (WolframAlpha)
 ^https:\/\/duckduckgo.com\/\?q=wa\+([^&]+).+ https://www.wolframalpha.com/input/?i=$1 302
 
+# wiki  (维基百科)
+^https:\/\/duckduckgo.com\/\?q=wiki(\+|%20)([^&]+).+ http://wikipedia.org/wiki/$2 302
+
+# wk  (维基中文)
+^https:\/\/duckduckgo.com\/\?q=wk(\+|%20)([^&]+).+ https://zh.wikipedia.org/wiki/$2 302
+
+# mg  (Magi)
+^https:\/\/duckduckgo.com\/\?q=mg(\+|%20)([^&]+).+ https://magi.com/search?q=$2 302
+
+# tf  (Google 搜索 TestFlight)
+^https:\/\/duckduckgo.com\/\?q=tf(\+|%20)([^&]+).+ https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com 302
+
 # > 翻译
 # yd   (有道)
 ^https:\/\/duckduckgo.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
@@ -70,6 +96,7 @@
 
 
 # 社区
+
 # db：豆瓣
 ^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
 
@@ -88,6 +115,12 @@
 # tw (Twitter)
 ^https:\/\/duckduckgo.com\/\?q=tw\+([^&]+).+ https://twitter.com/search?q=$1 302
 
+# ssp: 少数派
+^https:\/\/duckduckgo.com\/\?q=ssp\+([^&]+).+ https://sspai.com/search/post/$1 302
+
+# csdn: CSDN
+^https:\/\/duckduckgo.com\/\?q=csdn\+([^&]+).+ https://so.csdn.net/so/search/s.do?q=$1&t=&u= 302
+
 # > 购物
 # zdm: 什么值得买
 ^https:\/\/duckduckgo.com\/\?q=zdm\+([^&]+).+ https://search.m.smzdm.com/?v=b&s=$1 302
@@ -105,6 +138,12 @@
 ^https:\/\/duckduckgo.com\/\?q=tm\+([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$1 302
 
 # 视频资源
+
+# ac (Acfun)
+^https:\/\/duckduckgo.com\/\?q=ac\+([^&]+).+ https://www.acfun.cn/search?keyword==$1 302
+
+# bli (哔哩哔哩) 
+^https:\/\/duckduckgo.com\/\?q=bli\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
 
 # ytb  (YouTube)
 ^https:\/\/duckduckgo.com\/\?q=ytb\+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
