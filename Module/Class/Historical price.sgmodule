@@ -10,7 +10,7 @@ jd_price.js = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.actio
 
 # > Display taobao historical price
 # 不生效或失效的需要卸载 tb 重装，注意不开脚本进 tb 会失效
-TaobaoPrice.js = requires-body=1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/TaobaoPrice.js,type=http-response,pattern=^https?://(amdc|trade-acs)\.m\.taobao\.com/(amdc/mobileDispatch|gw/mtop\.taobao\.detail\.getdetail)
+TaobaoPrice.js = requires-body=1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/TaobaoPrice.js,pattern=^https?:\/\/trade-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.detail\.getdetail,type=http-response,max-size=-1
 
 // tb_price.js = requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js,type=http-request,pattern=^https?://.+/amdc/mobileDispatch
 // tb_price.js = requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js,type=http-response,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail
