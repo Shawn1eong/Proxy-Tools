@@ -5,7 +5,8 @@
 [URL Rewrite]
 (?<=_region=)CN(?=&) KR 307
 (?<=&app_version=)15..(?=.?.?&) 1 307
-
 (?<=\?version_code=)15..(?=.?.?&) 1 307
+(.*video_id=\w{32})(.*watermark=)(.*) $1 302
+
 [MITM]
 hostname = %INSERT% *.musical.ly, *.tiktokv.com, *.byteoversea.com, *.snssdk.com
