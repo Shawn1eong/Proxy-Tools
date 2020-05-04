@@ -6,7 +6,10 @@
 (?<=_region=)CN(?=&) KR 307
 (?<=&app_version=)15..(?=.?.?&) 1 307
 (?<=\?version_code=)15..(?=.?.?&) 1 307
-(.*video_id=\w{32})(.*watermark=)(.*) $1 302
+
+[Script]
+抖音 & TikTok去广告&水印 = type=http-response,pattern=^https:\/\/.*\.(amemv|musical)\.(com|ly)\/aweme\/v.*\/(feed|post),requires-body=1,max-size=0,script-path=https://choler.github.io/Surge/Script/Aweme.js
+抖音 & TikTok去广告&水印 = type=http-request,pattern=^https:\/\/.*\.(amemv|musical)\.(com|ly)\/aweme\/v.*\/(feed|post),requires-body=1,max-size=0,script-path=https://choler.github.io/Surge/Script/Aweme.js
 
 [MITM]
 hostname = %INSERT% *.musical.ly, *.tiktokv.com, *.byteoversea.com, *.snssdk.com
