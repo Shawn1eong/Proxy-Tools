@@ -2,15 +2,15 @@
 
 async function launch() {
     await linkedip();
+    $done();
 }
 launch()
 function linkedip(){ 
 $httpClient.post('https://link-ip.nextdns.io/d49521/c274ce33ad2401ca', function(error, response, data){
   if (error) {
-console.log('‼️');
+console.log('❌');
   } else {
-console.log('🟢 '+ data);
+console.log('🔔'+ data);
   }
-  $done();
 });
 }
