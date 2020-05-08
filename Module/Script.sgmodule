@@ -3,7 +3,7 @@
 #!system=ios
 
 [Script]
-# Update time: 2020.4.27
+# Update time: 2020.5.9
 # > 百度网盘倍速播放
 BaiduCloud.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js,type=http-response,pattern=https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user
 
@@ -130,6 +130,9 @@ peak.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.c
 qrxs.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/qrxs.js,type=http-response,pattern=^https://api.weiqire.com/api3/(visitor/|user/unlockCharpter)
 
 # > Langkhach越南老哥
+# > Muscle Booster
+Muscle Booster = type=http-response,pattern=^https:\/\/menscoach-api\.asqq\.io\/prod\/user$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/MuscleBooster.js,script-update-interval=0
+
 # > all apps monkey
 monkey.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/monkey.js,script-update-interval=0,type=http-response,pattern=^https:\/\/www\.api\.monkeyuni\.net\/api\/.+\/mobile\/account\/load-update
 
@@ -164,4 +167,4 @@ memrise.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubuserco
 Unfold.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Unfold.vip.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.unfold\.app\/v1\/ios\/receipts$
 
 [MITM]
-hostname = %APPEND%  api4.bybutter.com, baimiao.uzero.cn,bea.sportq.com, api.meiyan.com, vipapi.jxedt.com, api.cognitive.microsofttranslator.com, offline.microsofttranslator.com, m.4009991000.com,miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api3.henpi.vip,nomo.dafork.com,lanfanapp.com,api.interpreter.caiyunai.com, mubu.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, ctrl.playcvn.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, api.diyidan.net, api.jiaonizuocai.com,bookapi.ihuman.com, rest.zhibo.tv, note.youdao.com, billing.peakcloud.org, www.xmind.cn, api.weiqire.com, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, api.vnision.com, newdrugs.dxy.cn, account.wps.*, u.kanghuayun.com, api.mvmtv.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.termius.com, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com, api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, purchases.ws.pho.to, api-intl.mr.meitu.com, apimboom2.globaldelight.net, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, education.github.com, ssl-api.itranslateapp.com, api.itranslateapp.com,sk.ulysses.app, license.enpass.io, api.keepkeep.com, www.api.monkeyuni.net, api.textnow.me,
+hostname = %APPEND%  api4.bybutter.com, menscoach-api.asqq.io,baimiao.uzero.cn,bea.sportq.com, api.meiyan.com, vipapi.jxedt.com, api.cognitive.microsofttranslator.com, offline.microsofttranslator.com, m.4009991000.com,miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api3.henpi.vip,nomo.dafork.com,lanfanapp.com,api.interpreter.caiyunai.com, mubu.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, ctrl.playcvn.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, api.diyidan.net, api.jiaonizuocai.com,bookapi.ihuman.com, rest.zhibo.tv, note.youdao.com, billing.peakcloud.org, www.xmind.cn, api.weiqire.com, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, api.vnision.com, newdrugs.dxy.cn, account.wps.*, u.kanghuayun.com, api.mvmtv.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.termius.com, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com, api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, purchases.ws.pho.to, api-intl.mr.meitu.com, apimboom2.globaldelight.net, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, education.github.com, ssl-api.itranslateapp.com, api.itranslateapp.com,sk.ulysses.app, license.enpass.io, api.keepkeep.com, www.api.monkeyuni.net, api.textnow.me,
