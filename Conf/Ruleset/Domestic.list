@@ -136,15 +136,6 @@ DOMAIN-SUFFIX,v-56.com
 DOMAIN-SUFFIX,sogo.com
 DOMAIN-SUFFIX,sogou.com
 DOMAIN-SUFFIX,sogoucdn.com
-# > Steam
-DOMAIN-SUFFIX,steampowered.com
-DOMAIN-SUFFIX,steam-chat.com
-DOMAIN-SUFFIX,steamgames.com
-DOMAIN-SUFFIX,steamusercontent.com
-DOMAIN-SUFFIX,steamcontent.com
-DOMAIN-SUFFIX,steamstatic.com
-DOMAIN-SUFFIX,steamcdn-a.akamaihd.net
-DOMAIN-SUFFIX,steamstat.us
 # > Tencent
 USER-AGENT,MicroMessenger%20Client
 USER-AGENT,WeChat*
@@ -155,6 +146,7 @@ DOMAIN-SUFFIX,igamecj.com
 DOMAIN-SUFFIX,myapp.com
 DOMAIN-SUFFIX,myqcloud.com
 DOMAIN-SUFFIX,qq.com
+DOMAIN-SUFFIX,qqmail.com
 DOMAIN-SUFFIX,servicewechat.com
 DOMAIN-SUFFIX,tencent.com
 DOMAIN-SUFFIX,tencent-cloud.net
@@ -374,6 +366,7 @@ DOMAIN-SUFFIX,tianyancha.com
 DOMAIN-SUFFIX,tophub.today
 DOMAIN-SUFFIX,udacity.com
 DOMAIN-SUFFIX,uning.com
+DOMAIN-SUFFIX,unity3d.com
 DOMAIN-SUFFIX,vmware.com
 DOMAIN-SUFFIX,weather.com
 DOMAIN-SUFFIX,weico.cc
