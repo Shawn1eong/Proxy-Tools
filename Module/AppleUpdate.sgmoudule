@@ -8,3 +8,5 @@
 DOMAIN,mesu.apple.com,AppleUpdate,REJECT
 DOMAIN,gdmf.apple.com,AppleUpdate,REJECT
 DOMAIN,updates-http.cdn-apple.com,REJECT
+# > Antirevoke
+DOMAIN,ocsp.apple.com,REJECT
