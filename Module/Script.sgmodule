@@ -129,7 +129,9 @@ peak.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.c
 # > 奇热小说 解锁收费章节(By @@ios4521)
 qrxs.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/qrxs.js,type=http-response,pattern=^https://api.weiqire.com/api3/(visitor/|user/unlockCharpter)
 
-# > Langkhach越南老哥
+# > Adguard Premium
+Adguard Premium = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.com\/api\/.+\/ios_validate_receipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/maicoo-l/Surge/master/Script/AdGuard.js,script-update-interval=0
+
 # > Muscle Booster
 Muscle Booster = type=http-response,pattern=^https:\/\/menscoach-api\.asqq\.io\/prod\/user$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/MuscleBooster.js,script-update-interval=0
 

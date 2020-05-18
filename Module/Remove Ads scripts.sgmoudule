@@ -6,7 +6,7 @@
 force-http-engine-hosts = %APPEND% vali.cp31.ott.cibntv.net
 
 [Rule]
-# Update time: 2020.5.16
+# Update time: 2020.5.19
 # > Remove Twitterrific's Ad
 DOMAIN-SUFFIX,iconfactory.com,REJECT
 
@@ -73,6 +73,12 @@ app_name=news_article&([\S]*)aid=\d+ app_name=news_article_social&$1aid=19 heade
 ^https://aweme-eagle(.*)\.snssdk\.com/aweme/v2/ https://aweme-eagle$1.snssdk.com/aweme/v1/ 302
 
 [Script]
+# Remove lv‘show live‘s Ad
+lv-show.js = type=http-response,pattern=^https?:\/\/langapi\.lv-show\.com/.*?system/config,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/lv-show.js,script-update-interval=0
+
+# # Remove douyu‘s Ad
+douyu.js = type=http-response,pattern=^https?:\/\/rtbapi\.douyucdn\.cn,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/douyu.js,script-update-interval=0
+
 # Remove Zdm‘s Ad
 SMZDM.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/SMZDM.js,pattern=^https?:\/\/(s|h(aojia|omepage)|(articl|baik)e)-api\.smzdm\.com\/(home|sou),type=http-response
 
@@ -128,4 +134,4 @@ Bilibili.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercont
 Zhihu.js = type=http-response,requires-body=1,max-size=-1,pattern=^https:\/\/(api|lens|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d+\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=|api\/videos\/\d+\/recommend),script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Zhihu.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% *.snssdk.com, *.uve.weibo.com, api.weibo.cn, render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, mapi.weibo.com, ap*.zhihu.com, www.zhihu.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, aweme.snssdk.com,lens.zhihu.com,*api.smzdm.com,ap*.bilibili.com,storage.wax.weibo.com,api.ithome.com,*.fastmirror.org,*.qidian.com,api.m.jd.com,api.rr.tv,r.inews.qq.com,sp.kaola.com,m.poizon.com,mp.weixin.qq.com,sf-integral-sign-in.weixinjia.net,*.amemv.com, *.musical.ly
+hostname = %APPEND% *.snssdk.com, *.uve.weibo.com, api.weibo.cn, render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, mapi.weibo.com, ap*.zhihu.com, www.zhihu.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, langapi.lv-show.com,rtbapi.douyucdn.cn,aweme.snssdk.com,lens.zhihu.com,*api.smzdm.com,ap*.bilibili.com,storage.wax.weibo.com,api.ithome.com,*.fastmirror.org,*.qidian.com,api.m.jd.com,api.rr.tv,r.inews.qq.com,sp.kaola.com,m.poizon.com,mp.weixin.qq.com,sf-integral-sign-in.weixinjia.net,*.amemv.com, *.musical.ly
