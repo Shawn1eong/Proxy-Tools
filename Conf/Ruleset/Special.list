@@ -21,6 +21,7 @@ PROCESS-NAME,UUBooster
 DOMAIN-SUFFIX,windows.com
 DOMAIN-SUFFIX,windows.net
 DOMAIN-SUFFIX,windowsupdate.com
+DOMAIN-SUFFIX,msftconnecttest.com
 
 # > Xunlei
 USER-AGENT,%E8%BF%85%E9%9B%B7
