@@ -6,7 +6,7 @@
 force-http-engine-hosts = %APPEND% vali.cp31.ott.cibntv.net
 
 [Rule]
-# Update time: 2020.5.19
+# Update time: 2020.5.22
 # > Remove Twitterrific's Ad
 DOMAIN-SUFFIX,iconfactory.com,REJECT
 
