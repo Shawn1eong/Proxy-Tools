@@ -3,7 +3,7 @@ event network-changed by Tempoblink
 version: 2.1
 auther: tempoblink
 [Script]
-Outbound Mode = type=event,event-name=network-changed,debug=1,script-path=JS/Network-changed.js
+Network-changed = type=event,event-name=network-changed,debug=1,script-path=JS/Network-changed.js
 
 PS:记得自己修改WIFI名称 "home_ssid1or2" 
 主要功能:指定Wi-Fi下,Surge自动化不同出站模式,三个值可选'Direct' or 'Rule' or 'Global-Proxy' 
@@ -20,11 +20,11 @@ let FORMAT_TIME = "yyyy-MM-dd hh:mm:ss";
 
 //white ssid and black ssid ob rule.
 let WHITENAME = [
-            "home_ssid1",
+            "yangmi87619",
             "home_ssid2"
     ];
 let BLACKNAME = [
-            "free_ssid1",
+            "pangpangyang",
             "free_ssid2"
     ];
 
