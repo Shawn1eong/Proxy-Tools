@@ -2,13 +2,14 @@
 #!desc=Local DNS Mapping.
 
 [Host]
-# Update time: 2020.4.26
+# Update time: 2020.5.26
 # > ip 6
 ip6-localhost = ::1
 ip6-loopback = ::1
 # > Apple
-iosapps.itunes.apple.com = script:stored
-testflight.apple.com = script:stored
+*.apple.com = script:stored
+# > GOOLE 
+*.google.com = script:stored
 # > 淘宝
 *.taobao.com = server:223.5.5.5
 # > 天猫
