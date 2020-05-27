@@ -3,15 +3,15 @@ surge 根据不同的网络情况决定是使用doh，还是使用路由器提�
 [General]
 doh-server = 你的DoH服务器
 [Host]
-* = script:DNS-Changed.js
+* = script:ns-changed.js
 [Script]
-DNS-Changed = type=rule,script-path=DNS-Changed.js
+DNS-Changed = type=rule,script-path=Dns-changed.js
 */
 
 var hostname = $domain;
 // 这些网络下不使用默认doh
 var ssids = [
-    '修改为wifi名称',
+    'pangpangyang',
 ];
 // 如果路由器提供的dns包括这些dns就不使用doh
 var dnss = [
