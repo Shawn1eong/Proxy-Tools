@@ -20,11 +20,11 @@ let FORMAT_TIME = "yyyy-MM-dd hh:mm:ss";
 
 //white ssid and black ssid ob rule.
 let WHITENAME = [
-            "yangmi87619",
+            "home_ssid1",
             "home_ssid2"
     ];
 let BLACKNAME = [
-            "pangpangyang",
+            "free_ssid1",
             "free_ssid2"
     ];
 
