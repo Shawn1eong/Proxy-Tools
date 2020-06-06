@@ -10,5 +10,3 @@ DOMAIN,gdmf.apple.com,AppleUpdate,REJECT
 DOMAIN,updates-http.cdn-apple.com,REJECT
 # > Antirevoke
 DOMAIN,ocsp.apple.com,REJECT
-# > App Store 下载卡转圈
-DOMAIN,p14-buy.itunes.apple.com,♺Global
