@@ -6,7 +6,7 @@
 force-http-engine-hosts = %APPEND% vali.cp31.ott.cibntv.net
 
 [Rule]
-# Update time: 2020.5.23
+# Update time: 2020.6.3
 # > Remove YouTube++ Ad
 URL-REGEX,^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player\/ad_,REJECT
 
@@ -33,10 +33,8 @@ AND,((USER-AGENT,PUClient*), (NOT,((DOMAIN-SUFFIX,rr.tv)))),REJECT
 URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/homePage),REJECT
 
 # Remove News_bilibili‘s Ad
-URL-REGEX,^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/ad|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)),REJECT
 
-URL-REGEX,https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)),REJECT
-URL-REGEX,https://api.bilibili.com/x/v2/dm/ad,REJECT
+URL-REGEX,^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/ad|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)),REJECT
 
 # Remove Zdm‘s Ad
 URL-REGEX,^https?:\/\/(app-)?api\.smzdm\.com\/(v\d\/)?util\/(loading|banner),REJECT
@@ -94,7 +92,6 @@ douyin_item = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/
 douyin_search = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/general\/search\/single\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin.js
 douyin_hot = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/hot\/search\/video\/list\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin.js
 
-
 # > 微信公众号 (By Choler)
 WeChat.js = script-path=https://Choler.github.io/Surge/Script/WeChat.js,type=http-request,pattern=^https://mp\.weixin\.qq\.com/mp/getappmsgad
 
@@ -138,4 +135,4 @@ Bilibili.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercont
 Zhihu.js = type=http-response,requires-body=1,max-size=-1,pattern=^https:\/\/(api|lens|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d+\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=|api\/videos\/\d+\/recommend),script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Zhihu.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% *.snssdk.com, *.uve.weibo.com, api.weibo.cn, render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, mapi.weibo.com, ap*.zhihu.com, www.zhihu.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, langapi.lv-show.com,rtbapi.douyucdn.cn,aweme.snssdk.com,lens.zhihu.com,*api.smzdm.com,ap*.bilibili.com,storage.wax.weibo.com,api.ithome.com,*.fastmirror.org,*.qidian.com,api.m.jd.com,api.rr.tv,r.inews.qq.com,sp.kaola.com,m.poizon.com,mp.weixin.qq.com,sf-integral-sign-in.weixinjia.net,*.amemv.com, *.musical.ly
+hostname = %APPEND% *.snssdk.com, *.uve.weibo.com, api.weibo.cn, render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, mapi.weibo.com, ap*.zhihu.com, api.live.bilibili.com,www.zhihu.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, langapi.lv-show.com,rtbapi.douyucdn.cn,aweme.snssdk.com,lens.zhihu.com,*api.smzdm.com,ap*.bilibili.com,storage.wax.weibo.com,api.ithome.com,*.fastmirror.org,*.qidian.com,api.m.jd.com,api.rr.tv,r.inews.qq.com,sp.kaola.com,m.poizon.com,mp.weixin.qq.com,sf-integral-sign-in.weixinjia.net,*.amemv.com, *.musical.ly
