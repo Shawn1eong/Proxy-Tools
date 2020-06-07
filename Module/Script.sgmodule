@@ -142,7 +142,7 @@ Muscle Booster = type=http-response,pattern=^https:\/\/menscoach-api\.asqq\.io\/
 monkey.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/monkey.js,script-update-interval=0,type=http-response,pattern=^https:\/\/www\.api\.monkeyuni\.net\/api\/.+\/mobile\/account\/load-update
 
 # > NOMO
-nomo.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/nomo.js,script-update-interval=0,type=http-response,pattern=^https:\/\/nomo\.dafork\.com\/api\/.+\/iap\/ios_product_list
+nomo.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/nomo.js,script-update-interval=0,type=http-response,pattern=^https:\/\/nomo\.dafork\.com\/api\/v2\/iap\/ios_product_list
 
 # > endel
 endel.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/endel.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api-production\.endel\.io\/.*\/user$
