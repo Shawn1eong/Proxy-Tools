@@ -16,7 +16,7 @@ aimeiju.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyD
 # > 小小影视 Unlock vip
 小小影视 = type=http-response,pattern=https:\/\/ios\.xiaoxiaoapps\.com\/(vod\/reqplay\/|ucp/index|getGlobalData),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xxys.js,script-update-interval=0
 
-# > 黄油相机VIP
+# > bybutter
 bybutter = type=http-response,pattern=https?:\/\/.*\.bybutter\.com\/(v4\/shop\/|v4\/users\/me|v4\/shop\/shelves|v4\/editor\/template\/recommended|v4\/search\/products|v4\/template-square\/),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/bybutter.js,script-update-interval=0
 
 # > 哔哩哔哩番剧开启1080P+
@@ -33,6 +33,12 @@ yyzs.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/S
 
 # > WPS
 Wps.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js,type=http-response,pattern=^https://account.wps.*/api/users/
+
+# > Plpl
+Plpl = type=http-response,pattern=https:\/\/api\.gao1gps\.cn\/(v1\/user\/info|v1\/firstpurchase),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/plpl.js,script-update-interval=0
+
+# > wssyxj
+wshshyxj.js = type=http-response,pattern=https:\/\/user\.edujia.com\/\/user\/ws\/vip\/(query\/info.do|main\/query\/info.do),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/wshshyxj.js,script-update-interval=0
 
 # > DaQianShiJie Unlock
 dqsj.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/dqsj.js,type=http-response,pattern=^https:\/\/api\.mvmtv\.com\/index\.php.*(c=user.*a=info|a=addr.*vid=.*)
@@ -172,4 +178,4 @@ memrise.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubuserco
 Unfold.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Unfold.vip.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.unfold\.app\/v1\/ios\/receipts$
 
 [MITM]
-hostname = %APPEND%  *.bybutter.com, menscoach-api.asqq.io,baimiao.uzero.cn,bea.sportq.com, api.meiyan.com, vipapi.jxedt.com, api.cognitive.microsofttranslator.com, offline.microsofttranslator.com, m.4009991000.com,miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api3.henpi.vip,nomo.dafork.com,lanfanapp.com,api.interpreter.caiyunai.com, mubu.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, ctrl.playcvn.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, api.diyidan.net, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, rest.zhibo.tv, note.youdao.com, billing.peakcloud.org, www.xmind.cn, api.weiqire.com, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, api.vnision.com, newdrugs.dxy.cn, account.wps.*, u.kanghuayun.com, api.mvmtv.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.termius.com, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com, api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, purchases.ws.pho.to, api-intl.mr.meitu.com, apimboom2.globaldelight.net, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, education.github.com, ssl-api.itranslateapp.com, api.itranslateapp.com,sk.ulysses.app, license.enpass.io, api.keepkeep.com, www.api.monkeyuni.net, api.textnow.me,
+hostname = %APPEND%  *.bybutter.com, api.gao1gps.cn,user.edujia.com,menscoach-api.asqq.io,baimiao.uzero.cn,bea.sportq.com, api.meiyan.com, vipapi.jxedt.com, api.cognitive.microsofttranslator.com, offline.microsofttranslator.com, m.4009991000.com,miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api3.henpi.vip,nomo.dafork.com,lanfanapp.com,api.interpreter.caiyunai.com, mubu.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, ctrl.playcvn.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, api.diyidan.net, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, rest.zhibo.tv, note.youdao.com, billing.peakcloud.org, www.xmind.cn, api.weiqire.com, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, api.vnision.com, newdrugs.dxy.cn, account.wps.*, u.kanghuayun.com, api.mvmtv.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.termius.com, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com, api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, purchases.ws.pho.to, api-intl.mr.meitu.com, apimboom2.globaldelight.net, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, education.github.com, ssl-api.itranslateapp.com, api.itranslateapp.com,sk.ulysses.app, license.enpass.io, api.keepkeep.com, www.api.monkeyuni.net, api.textnow.me,
