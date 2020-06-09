@@ -40,6 +40,9 @@ Plpl = type=http-response,pattern=https:\/\/api\.gao1gps\.cn\/(v1\/user\/info|v1
 # > wssyxj
 wshshyxj.js = type=http-response,pattern=https:\/\/user\.edujia.com\/\/user\/ws\/vip\/(query\/info.do|main\/query\/info.do),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/wshshyxj.js,script-update-interval=0
 
+# > Geist
+Geist.js = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Geist.js,script-update-interval=0
+
 # > DaQianShiJie Unlock
 dqsj.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/dqsj.js,type=http-response,pattern=^https:\/\/api\.mvmtv\.com\/index\.php.*(c=user.*a=info|a=addr.*vid=.*)
 
