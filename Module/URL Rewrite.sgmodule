@@ -57,9 +57,8 @@
 ^https://nomo.dafork.com/api/v3/iap/ios_product_list https://files.catbox.moe/fgmkpy.json 302
 
 # Wiki
-^https?://.+.(m.)?wikipedia.org/wiki http://www.wikiwand.com/en 302
-^https?://zh.(m.)?wikipedia.org/(zh-hans|zh-sg|zh-cn|zh(?=/)) http://www.wikiwand.com/zh 302
-^https?://zh.(m.)?wikipedia.org/zh-[a-zA-Z]{2,} http://www.wikiwand.com/zh-hant 302
+^https://zh.(m.)?wikipedia.org/zh(-\w*)?(?=/) http://www.wikiwand.com/zh$2 302
+^https://(\w*).(m.)?wikipedia.org/wiki http://www.wikiwand.com/$1 302
 
 # Other
 ^https?:\/\/cfg\.m\.ttkvod\.com\/mobile\/ttk_mobile_1.8\.txt http://ogtre5vp0.bkt.clouddn.com/Static/TXT/ttk_mobile_1.8.txt header
