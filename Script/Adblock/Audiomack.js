@@ -1,8 +1,4 @@
 /*
-
-Quantumult X 脚本:
-
-[rewrite_local]
 # Audiomack 去广告（by LTribe）
 ^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\w+$ url script-response-body Audiomack.js
 
