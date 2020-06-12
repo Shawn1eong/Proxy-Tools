@@ -4,7 +4,7 @@
 
 
 [URL Rewrite]
-# Update time: 2020.5.23
+# Update time: 2020.6.12
 #网易云
 ^https?://198.18.1.49 https://interface3.music.163.com header
 
