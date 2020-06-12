@@ -31,10 +31,6 @@
 ^http:\/\/(\d*\.\d*\.\d*\.\d*)\/query_gameserver\?version=3\.7\.0_gf_ios&t=(\d*)&uid=(\d*) http://$1/query_gameserver?version=3.7.0_gf_android&t=$2&uid=$3 302
 (http://musicapi\.diyidan\.net/tv_series/video/download/\d+)/(1|2) $1/4 302
 
-# Google_Service_HTTPS_Jump
-^https?:\/\/(www\.)?g\.cn https://www.google.com 302
-^https?:\/\/(www\.)?google\.cn https://www.google.com 302
-
 # > Redirect Google Service
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
 
@@ -69,9 +65,6 @@
 ^https?:\/\/sqimg\.qq\.com\/ https://sqimg.qq.com/ 302
 ^https?:\/\/static\.m\.ttkvod\.com\/static_cahce\/index\/index\.txt http://ogtre5vp0.bkt.clouddn.com/Static/TXT/index.txt header
 ^https?:\/\/www\.iqshw\.com\/d\/js\/m http://burpsuite.applinzi.com/Interface header
-
-# > Redirect Google Service
-^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
 
 # Redirect HTTP to HTTPS
 ^https?:\/\/(www.)?taobao\.com\/ https://taobao.com/ 302
