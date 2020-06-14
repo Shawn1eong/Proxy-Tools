@@ -23,6 +23,21 @@ Hourly weather.js = script-path=Hourly weather.js,type=cron,cronexp=0 0 8-20/3 *
 # > 每日打卡提醒（corn ”0 9,18 * * 1-5“ 周一到周五，早九晚六）+ 每日壹句（有道词典）+ 跳转钉钉打卡页面
 每日打开提醒 = script-path=https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js,type=cron,cronexp=”0 9,18 * * 1-5“
 
-# > 饿了么 签到、打卡
-饿了签到 = type=cron,cronexp=0 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js,script-update-interval=0
-饿了打卡 = type=cron,cronexp=10 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/elem/elemCheckIn.js,script-update-interval=0
+# > 实时货币换算
+实时汇率 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/exchangeRate.js,script-update-interval=0
+
+# 纵横小说 (By Peng-YM)
+# 使用方法：进入纵横小说页面，例如<<剑来>>：http://book.zongheng.com/book/672340.html 则id为672340，将id添加到列表即可。 
+纵横小说= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/zongheng.js
+
+# GitHub监控(By Peng-YM)
+GitHub监控= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/github.js
+
+# Steam价格监控(By Peng-YM)
+Steam价格监控= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/steam.js
+
+# 汇率监控(By Peng-YM)
+汇率监控= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/exchange.js
+
+# Epic周免(By Peng-YM)
+Epic周免= type=cron,cronexp=0 8 */7 * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/epic.js
