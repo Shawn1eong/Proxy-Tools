@@ -26,6 +26,15 @@
 # > baidu
 ^https?:\/\/pan\.baidu\.com\/s\/(.+) https://pan.baiduwp.com/s/$1 302
 
+# > Coderx
+^https?:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/commit\/(.*)$ grape://commit?id=$2&reponame=$1 307
+^https?:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/pull\/(\d+)$ grape://pr?number=$2&reponame=$1 307
+^https?:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/issues\/(\d+)$ grape://issue?number=$2&reponame=$1 307
+^https?:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/pulls\/?$ grape://prs?reponame=$1 307
+^https?:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/issues\/?$ grape://issues?reponame=$1 307
+^https?:\/\/github\.com\/(?!.*users)(?!.*trending)([\u4E00-\u9FA5A-Za-z0-9_-]+)\/(?!.*blob)([\u4E00-\u9FA5A-Za-z0-9_-]+)(?!.*md)(?!.*png|jpg)$ grape://repo?reponame=$1/$2 307
+^https?:\/\/github\.com\/(?!.*users)(?!.*trending)([\u4E00-\u9FA5A-Za-z0-9_-]+)$ grape://user?login=$1 307
+
 # > 崩坏3跨服
 ^https:\/\/global1\.bh3\.com\/query_dispatch\?version=3\.7\.0_gf_ios&t=(\d*) ”https://global1.bh3.com/query_dispatch?version=3.7.0_gf_android&t=$1 “ 302
 ^http:\/\/(\d*\.\d*\.\d*\.\d*)\/query_gameserver\?version=3\.7\.0_gf_ios&t=(\d*)&uid=(\d*) http://$1/query_gameserver?version=3.7.0_gf_android&t=$2&uid=$3 302
@@ -33,6 +42,8 @@
 
 # > Redirect Google Service
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+^https:\/\/www\.google\.com\/url\?q=(.+)$ $1 302
+
 
 # Anti_ISP_JD_Hijack
 ^https?:\/\/coupon\.m\.jd\.com\/ https://coupon.m.jd.com/ 302
@@ -115,3 +126,8 @@
 ^https?:\/\/(www.)?zbrushcn\.com\/ http://pixologic.com/ 302
 
 # CUSTOM URL
+[Script]
+Jianshu = type=http-request,pattern=^https?:\/\/links\.jianshu\.com\/go\?to=(.+)$,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/jianshu.js
+
+[MITM]
+hostname = %APPEND% github.com,www.google.com, links.jianshu.com, link.zhihu.com,*.wikipedia.org, *.wikiwand.com
