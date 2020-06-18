@@ -47,3 +47,4 @@ PSN会免= type=cron,cronexp=0 9 1 * *,script-path=https://raw.githubusercontent
 
 # > 疫情咨询(By Peng-YM)
 nCov_new.js = type=cron,cronexp=0 0 9 * * *,script-path=https://github.com/Mazetsz/QX/blob/master/nCov_new.js,script-update-interval=0
+nCov.js = type=cron,cronexp=0 0 9 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/nCov.js,script-update-interval=0
