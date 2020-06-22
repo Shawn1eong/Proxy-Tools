@@ -48,3 +48,23 @@ PSN会免= type=cron,cronexp=0 9 1 * *,script-path=https://raw.githubusercontent
 # > 疫情咨询(By Peng-YM)
 nCov_new.js = type=cron,cronexp=0 0 9 * * *,script-path=https://github.com/Mazetsz/QX/blob/master/nCov_new.js,script-update-interval=0
 nCov.js = type=cron,cronexp=0 0 9 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/nCov.js,script-update-interval=0
+
+# 签到脚本
+
+# > 京东
+京东 = type=cron,cronexp=0 0 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
+
+# > 115 (By @zZPiglet)
+115 = type=cron,cronexp=1 0 * * *,script-path=script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/115/115.js
+
+# > 京东农场 (By liuxiaoyucc)
+京东农场= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_fruit.js
+
+# > 京东萌宠 (By liuxiaoyucc)
+京东农场= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_pet.js
+
+# > 京东宠汪汪 (By uniqueque)
+京东宠汪汪= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_joy.js
+
+# > 京东种豆得豆 (By uniqueque)
+京东种豆得豆= type=cron,cronexp=8 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_plantBean.js
