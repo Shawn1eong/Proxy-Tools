@@ -127,7 +127,7 @@
 
 # CUSTOM URL
 [Script]
-Jianshu = type=http-request,pattern=^https?:\/\/links\.jianshu\.com\/go\?to=(.+)$,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/jianshu.js
+Jianshu = type=http-request,pattern=^https?:\/\/links\.jianshu\.com\/go\?to=(.+)$,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/Jianshu.js
 
 [MITM]
 hostname = %APPEND% github.com,www.google.com, links.jianshu.com, link.zhihu.com,*.wikipedia.org, *.wikiwand.com
