@@ -71,9 +71,6 @@ mb.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com
 # > 去广告+原画
 Diyidan.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/Diyidan.js,type=http-response,pattern=^https:\/\/api\.diyidan\.net\/v0\.3\/(user\/personal_homepage|vip_user\/info|tv_series\/index\?appChanne)
 
-# > Fit
-Fit健身 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/bea\.sportq\.com\/SFitWeb\/sfit\/,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/fit.js,script-update-interval=0
-
 # > 白描黄金会员
 baimiao.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/baimiao.js,script-update-interval=0,type=http-response,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$
 

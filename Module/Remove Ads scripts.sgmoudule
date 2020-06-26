@@ -112,9 +112,6 @@ rrsp_banner = type=http-response,requires-body=true,pattern=^https?:\/\/api\.rr\
 # > 今日头条去广告
 //Toutiao.js = requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/Toutiao.js,type=http-response,pattern=^https?://[\s\S]*\.snssdk\.com/api/news/feed/v88/
 
-# > 毒去广告 （作者：ConnersHua）
-com.poizon.js = script-path=https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Script/com.poizon.js,type=http-response,pattern=^https?:\/\/m\.poizon\.com\/client\/init
-
 # > A岛去帖内广告 （作者：LarkinZero）
 nmb_no_ad.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/LarkinZero/Surge/master/nmb_no_ad.js,script-update-interval=0,type=http-response,pattern=https:\/\/nmb\.fastmirror\.org\/Api\/thread.*
 
@@ -136,4 +133,4 @@ Bilibili.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercont
 Zhihu.js = type=http-response,requires-body=1,max-size=-1,pattern=^https:\/\/(api|lens|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d+\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=|api\/videos\/\d+\/recommend),script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Zhihu.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% *.uve.weibo.com, api.revenuecat.com,api.weibo.cn, render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, mapi.weibo.com, ap*.zhihu.com, api.live.bilibili.com,www.zhihu.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, langapi.lv-show.com,rtbapi.douyucdn.cn,aweme.snssdk.com,lens.zhihu.com,*api.smzdm.com,ap*.bilibili.com,storage.wax.weibo.com,api.ithome.com,*.fastmirror.org,*.qidian.com,api.m.jd.com,api.rr.tv,r.inews.qq.com,sp.kaola.com,m.poizon.com,mp.weixin.qq.com,sf-integral-sign-in.weixinjia.net,*.amemv.com, *.musical.ly
+hostname = %APPEND% *.uve.weibo.com, api.revenuecat.com,api.weibo.cn, render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, mapi.weibo.com, ap*.zhihu.com, api.live.bilibili.com,www.zhihu.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, langapi.lv-show.com,rtbapi.douyucdn.cn,aweme.snssdk.com,lens.zhihu.com,*api.smzdm.com,ap*.bilibili.com,storage.wax.weibo.com,api.ithome.com,*.fastmirror.org,*.qidian.com,api.m.jd.com,api.rr.tv,r.inews.qq.com,sp.kaola.com,mp.weixin.qq.com,sf-integral-sign-in.weixinjia.net,*.amemv.com, *.musical.ly
