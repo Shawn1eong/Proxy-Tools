@@ -2,6 +2,11 @@
 #!desc=自用模块, unlock vip.集成: 需要配置 CA 证书并启用 MitM 开关. 
 #!system=ios
 
+
+[MITM]
+hostname = %APPEND%  *.bybutter.com,user.edujia.com,api.meiyan.com,*wikipedia.org,menscoach-api.asqq.io,baimiao.uzero.cn,bea.sportq.com, api.meiyan.com, vipapi.jxedt.com, api.cognitive.microsofttranslator.com, offline.microsofttranslator.com, m.4009991000.com,miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api3.henpi.vip,nomo.dafork.com,lanfanapp.com,api.interpreter.caiyunai.com, mubu.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, ctrl.playcvn.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, api.diyidan.net, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, rest.zhibo.tv, note.youdao.com, billing.peakcloud.org, www.xmind.cn, api.weiqire.com, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, api.vnision.com, newdrugs.dxy.cn, account.wps.*, u.kanghuayun.com, api.mvmtv.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.termius.com, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com, api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, purchases.ws.pho.to, api-intl.mr.meitu.com, apimboom2.globaldelight.net, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, education.github.com, ssl-api.itranslateapp.com, api.itranslateapp.com,sk.ulysses.app, license.enpass.io, api.keepkeep.com, www.api.monkeyuni.net, api.textnow.me,
+
+
 [Script]
 # Update time: 2020.5.28
 # > 百度网盘倍速播放
@@ -108,6 +113,9 @@ YYeTs.js = requires-body=true,script-path=https://raw.githubusercontent.com/ydzy
 # 轻颜相机 & ulike & 蒸汽波相机(vaporcam)三合一 解锁VIP(By @s y & Alex0510)
 qyxj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/qyxj.js,type=http-response,pattern=^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info
 
+# > 美颜相机一次性解锁内购（by黑黑酱）
+myxj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/myxj.js,type=http-response,pattern=^https:\/\/api\.meiyan\.com\/iap\/verify\.json
+
 # CPU Dasher破解(需要ios13 恢复购买后禁用掉 By @s y)
 // cupdasher.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/cupdasher.js,type=http-response,pattern=^https:\/\/p.+-buy\.itunes\.apple\.com\/WebObjects\/MZFinance.woa\/wa\/inAppRegrantPurchaseHistory
 
@@ -170,6 +178,3 @@ memrise.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubuserco
 
 # > Unfold
 Unfold.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Unfold.vip.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.unfold\.app\/v1\/ios\/receipts$
-
-[MITM]
-hostname = %APPEND%  *.bybutter.com,user.edujia.com,*wikipedia.org,menscoach-api.asqq.io,baimiao.uzero.cn,bea.sportq.com, api.meiyan.com, vipapi.jxedt.com, api.cognitive.microsofttranslator.com, offline.microsofttranslator.com, m.4009991000.com,miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api3.henpi.vip,nomo.dafork.com,lanfanapp.com,api.interpreter.caiyunai.com, mubu.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, ctrl.playcvn.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, api.diyidan.net, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, rest.zhibo.tv, note.youdao.com, billing.peakcloud.org, www.xmind.cn, api.weiqire.com, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, api.vnision.com, newdrugs.dxy.cn, account.wps.*, u.kanghuayun.com, api.mvmtv.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.termius.com, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com, api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, purchases.ws.pho.to, api-intl.mr.meitu.com, apimboom2.globaldelight.net, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, education.github.com, ssl-api.itranslateapp.com, api.itranslateapp.com,sk.ulysses.app, license.enpass.io, api.keepkeep.com, www.api.monkeyuni.net, api.textnow.me,
