@@ -8,7 +8,7 @@ force-http-engine-hosts = %APPEND% vali.cp31.ott.cibntv.net
 [Rule]
 # Update time: 2020.6.30
 
-# > Remove Twitterrific's Ad
+# > Remove Twitterrific’s Ad
 DOMAIN-SUFFIX,iconfactory.com,REJECT
 
 # > Remove Jd‘s Ad
@@ -104,7 +104,7 @@ wykaola.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyD
 QQNews.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/QQNews.js,type=http-response,pattern=^https://r\.inews\.qq.com\/get(QQNewsUnreadList|RecommendList)
 
 # > Super removes ads hostname:*.snssdk.com
-//Super.js = type=http-response,pattern="^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list)",requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js,script-update-interval=0
+//Super.js = type=http-response,pattern=“^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list)”,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js,script-update-interval=0
 
 # > RRAD
 rrsp_video = type=http-response,requires-body=true,pattern=^https?:\/\/api\.rr\.tv\/watch\/v\d\/get_movie_info,script-path=https://Choler.github.io/Surge/Script/rrsp.js
@@ -134,4 +134,5 @@ Bilibili.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercont
 Zhihu.js = type=http-response,requires-body=1,max-size=-1,pattern=^https:\/\/(api|lens|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type|limit)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d+\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=|api\/videos\/\d+\/recommend),script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Zhihu.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% api.revenuecat.com,render.alipay.com,gw.alicdn.com,*acs.m.taobao.com,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,ap*.zhihu.com,api.live.bilibili.com,www.zhihu.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, langapi.lv-show.com,rtbapi.douyucdn.cn,aweme.snssdk.com,lens.zhihu.com,*api.smzdm.com,ap*.bilibili.com,storage.wax.weibo.com,api.ithome.com,*.fastmirror.org,*.qidian.com,api.m.jd.com,api.rr.tv,r.inews.qq.com,sp.kaola.com,mp.weixin.qq.com,sf-integral-sign-in.weixinjia.net,*.amemv.com, *.musical.ly
+hostname = %APPEND% api.revenuecat.com, render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, api.weibo.cn,mapi.weibo.com,*.uve.weibo.com
+,ap*.zhihu.com, api.live.bilibili.com,www.zhihu.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, langapi.lv-show.com,rtbapi.douyucdn.cn,aweme.snssdk.com,lens.zhihu.com,*api.smzdm.com,ap*.bilibili.com,storage.wax.weibo.com,api.ithome.com,*.fastmirror.org,*.qidian.com,api.m.jd.com,api.rr.tv,r.inews.qq.com,sp.kaola.com,mp.weixin.qq.com,sf-integral-sign-in.weixinjia.net,*.amemv.com, *.musical.ly
