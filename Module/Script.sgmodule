@@ -12,9 +12,6 @@ hostname = %APPEND%  *.bybutter.com,user.edujia.com,api.meiyan.com,*wikipedia.or
 # > 百度网盘倍速播放
 BaiduCloud.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js,type=http-response,pattern=https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user
 
-# > 云盘解析（Made by Meeta)
-yun_analyze.js = script-path=https://github.com/MeetaGit/MeetaRules/raw/m%CE%B1ster/Surge/Scripting/yun_analyze.js,requires-body=1,type=http-request,pattern=https?:\/\/pan\.baidu\.com\/s\/
-
 # > 爱美剧Vip (by huihui）(官网：app.meiju2018.com)
 aimeiju.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/aimeiju.js,type=http-response,pattern=^https?:\/\/api.bjxkhc.com\/index\.php\/app\/ios\/(vod\/show|(user|vod|topic|type)\/index)
 
