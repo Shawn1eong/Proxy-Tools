@@ -1,14 +1,14 @@
-#!name= Script - unlock
+# #!name= Script - unlock
 #!desc=自用模块, unlock vip.集成: 需要配置 CA 证书并启用 MitM 开关. 
 #!system=ios
 
 
 [MITM]
-hostname = %APPEND%  *.bybutter.com,user.edujia.com,api.meiyan.com,*wikipedia.org,baimiao.uzero.cn, api.meiyan.com,*.xmind.*, vipapi.jxedt.com, api.cognitive.microsofttranslator.com, offline.microsofttranslator.com, m.4009991000.com,miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api3.henpi.vip,lanfanapp.com,api.interpreter.caiyunai.com, mubu.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, ctrl.playcvn.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, api.diyidan.net, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, rest.zhibo.tv, note.youdao.com, billing.peakcloud.org, api.weiqire.com, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, api.vnision.com, newdrugs.dxy.cn, account.wps.*, u.kanghuayun.com, api.mvmtv.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.termius.com, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com, api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, purchases.ws.pho.to, api-intl.mr.meitu.com, apimboom2.globaldelight.net, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, education.github.com, sk.ulysses.app, license.enpass.io, api.keepkeep.com, api.textnow.me,
+hostname = %APPEND%  *.bybutter.com,user.edujia.com,api.meiyan.com,*wikipedia.org,baimiao.uzero.cn,bea.sportq.com, api.meiyan.com, api.revenuecat.com,vipapi.jxedt.com, api.cognitive.microsofttranslator.com, offline.microsofttranslator.com, m.4009991000.com,miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api3.henpi.vip,lanfanapp.com,api.interpreter.caiyunai.com, mubu.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, ctrl.playcvn.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, api.diyidan.net, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, rest.zhibo.tv, note.youdao.com, billing.peakcloud.org, www.xmind.cn, api.weiqire.com, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, api.vnision.com, newdrugs.dxy.cn, account.wps.*, u.kanghuayun.com, api.mvmtv.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.termius.com, viva.v21xy.com, biz.caiyunapp.com, api.gotokeep.com, api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, purchases.ws.pho.to, api-intl.mr.meitu.com, apimboom2.globaldelight.net, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, education.github.com, sk.ulysses.app, license.enpass.io, api.keepkeep.com, api.textnow.me, api.polaxiong.com, api.polarr.co,
 
 
 [Script]
-# Update time: 2020.5.28
+# Update time: 2020.7.28
 # > 百度网盘倍速播放
 BaiduCloud.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js,type=http-response,pattern=https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user
 
@@ -80,7 +80,7 @@ baimiao.js = requires-body=1,max-size=0,script-path=https://raw.githubuserconten
 lanfanapp.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/lanfanapp.js,script-update-interval=0,type=http-response,pattern=https:\/\/lanfanapp\.com\/api\/v1\/user\/
 
 # XMind Unlock pro
-Xmind.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/XMind.js,script-update-interval=0,type=https?:\/\/.*\.xmind\..*\/_res\/devices
+Xmind.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Xmind.js,script-update-interval=0,type=http-response,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices
 
 # > 加密通话unlock vip
 jmdh.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Alex/jmdh.js,script-update-interval=0,type=http-response,pattern=https:\/\/m\.4009991000\.com\/(userCharge|feeQuery).action
