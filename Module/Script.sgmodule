@@ -1,4 +1,4 @@
-# #!name= Script - unlock
+#!name= Script - unlock
 #!desc=自用模块, unlock vip.集成: 需要配置 CA 证书并启用 MitM 开关. 
 #!system=ios
 
