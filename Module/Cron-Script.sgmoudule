@@ -87,3 +87,7 @@ nCov.js = type=cron,cronexp=0 0 9 * * *,script-path=https://raw.githubuserconten
 
 # > 热门监控 (By Evilbutcher)
 热门监控 = type=cron,cronexp="30 0 8-22/2 * * *",script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hotsearch/hot.js,wake-system=true,timeout=600
+
+# > 小黑盒 (By @zZPiglet)
+# 进入"小黑盒" - "我"，若弹出"首次写入heybox Cookie 成功"即可
+小黑盒 =type=cron,cronexp=0 * * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/heybox/heybox.js
