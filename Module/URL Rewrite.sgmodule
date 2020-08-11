@@ -4,7 +4,7 @@
 
 
 [URL Rewrite]
-# Update time: 2020.6.12
+# Update time: 2020.8.12
 #网易云
 ^https?://198.18.1.49 https://interface3.music.163.com header
 
@@ -44,6 +44,8 @@
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
 ^https:\/\/www\.google\.com\/url\?q=(.+)$ $1 302
 
+# Redirect Google Maps Service
+^(http|https):\/\/(ditu|maps).google\.cn https://maps.google.com 302
 
 # Anti_ISP_JD_Hijack
 ^https?:\/\/coupon\.m\.jd\.com\/ https://coupon.m.jd.com/ 302
@@ -130,4 +132,4 @@
 Jianshu = type=http-request,pattern=^https?:\/\/links\.jianshu\.com\/go\?to=(.+)$,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/Jianshu.js
 
 [MITM]
-hostname = %APPEND% github.com,www.google.com, links.jianshu.com, link.zhihu.com,*.wikipedia.org, *.wikiwand.com
+hostname = %APPEND% github.com,www.google.com, www.google.cn,links.jianshu.com, link.zhihu.com,*.wikipedia.org, *.wikiwand.com
