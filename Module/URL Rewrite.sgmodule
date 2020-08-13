@@ -8,9 +8,6 @@
 #网易云
 ^https?://198.18.1.49 https://interface3.music.163.com header
 
-# Diyidan download parse
-(http://musicapi\.diyidan\.net/tv_series/video/download/\d+)/(1|2) $1/4 302
-
 # boom premium
 ^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$ https://raw.githubusercontent.com/langkhach270389/Scripting/master/boom.vip.rsp 302
 
