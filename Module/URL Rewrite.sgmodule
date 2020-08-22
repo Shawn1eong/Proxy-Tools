@@ -128,4 +128,4 @@
 # CUSTOM URL
 
 [MITM]
-hostname = %APPEND% github.com,www.google.com, www.google.cn,links.jianshu.com, link.zhihu.com,*.wikipedia.org, *.wikiwand.com
+hostname = %APPEND% github.com,www.google.com, www.google.cn,*.wikipedia.org, *.wikiwand.com
