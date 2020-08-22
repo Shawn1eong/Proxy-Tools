@@ -4,7 +4,8 @@
 
 
 [URL Rewrite]
-# Update time: 2020.8.12
+# Update time: 2020.8.22
+
 #网易云
 ^https?://198.18.1.49 https://interface3.music.163.com header
 
@@ -125,8 +126,6 @@
 ^https?:\/\/(www.)?zbrushcn\.com\/ http://pixologic.com/ 302
 
 # CUSTOM URL
-[Script]
-Jianshu = type=http-request,pattern=^https?:\/\/links\.jianshu\.com\/go\?to=(.+)$,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/Jianshu.js
 
 [MITM]
 hostname = %APPEND% github.com,www.google.com, www.google.cn,links.jianshu.com, link.zhihu.com,*.wikipedia.org, *.wikiwand.com
