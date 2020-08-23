@@ -19,10 +19,10 @@ aimeiju.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyD
 小小影视 = type=http-response,pattern=https:\/\/ios\.xiaoxiaoapps\.com\/(vod\/reqplay\/|ucp/index|getGlobalData),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xxys.js,script-update-interval=0
 
 # > bybutter
-bybutter = type=http-response,pattern=https?:\/\/.*\.bybutter\.com\/(v4\/shop\/|v4\/users\/me|v4\/shop\/shelves|v4\/editor\/template\/recommended|v4\/search\/products|v4\/template-square\/),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/bybutter.js,script-update-interval=0
+bybutter = type=http-response,pattern=https?:\/\/.*\.bybutter\.com\/(v4\/shop\/|v4\/users\/me|v4\/shop\/shelves|v4\/editor\/template\/recommended|v4\/search\/products|v4\/template-square\/),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/bybutter.js,script-update-interval=0
 
 # > 哔哩哔哩番剧开启1080P+
-BilibiliHD = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/BiliHD.js
+BilibiliHD = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/BiliHD.js
 
 # > VSCO unlock vip
 vsco.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js,type=http-response,pattern=^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/
@@ -37,7 +37,7 @@ yyzs.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/S
 Wps.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js,type=http-response,pattern=^https://account.wps.*/api/users/
 
 # > wssyxj
-wshshyxj.js = type=http-response,pattern=https:\/\/user\.edujia.com\/\/user\/ws\/vip\/(query\/info.do|main\/query\/info.do),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/wshshyxj.js,script-update-interval=0
+wshshyxj.js = type=http-response,pattern=https:\/\/user\.edujia.com\/\/user\/ws\/vip\/(query\/info.do|main\/query\/info.do),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/wshshyxj.js,script-update-interval=0
 
 # > DaQianShiJie Unlock
 dqsj.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/dqsj.js,type=http-response,pattern=^https:\/\/api\.mvmtv\.com\/index\.php.*(c=user.*a=info|a=addr.*vid=.*)
@@ -63,37 +63,37 @@ mb.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com
 // bear.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/bear.js,type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
 
 # > 白描黄金会员
-baimiao.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/baimiao.js,script-update-interval=0,type=http-response,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$
+baimiao.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/baimiao.js,script-update-interval=0,type=http-response,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$
 
 # > 懒饭 vip pro
-lanfanapp.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/lanfanapp.js,script-update-interval=0,type=http-response,pattern=https:\/\/lanfanapp\.com\/api\/v1\/user\/
+lanfanapp.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/lanfanapp.js,script-update-interval=0,type=http-response,pattern=https:\/\/lanfanapp\.com\/api\/v1\/user\/
 
 # XMind Unlock pro
-Xmind.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Xmind.js,script-update-interval=0,type=http-response,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices
+Xmind.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/Xmind.js,script-update-interval=0,type=http-response,pattern=https:\/\/www\.xmind\.cn\/\_res\/devices
 
 # > 加密通话unlock vip
-jmdh.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Alex/jmdh.js,script-update-interval=0,type=http-response,pattern=https:\/\/m\.4009991000\.com\/(userCharge|feeQuery).action
+jmdh.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/Alex/jmdh.js,script-update-interval=0,type=http-response,pattern=https:\/\/m\.4009991000\.com\/(userCharge|feeQuery).action
 
 # > 企信通小程序 unlock
-qxt.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Alex/qxt.js,script-update-interval=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/
+qxt.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/Alex/qxt.js,script-update-interval=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/
 
 # > 贝瓦儿歌unlock
-bweg.js = url requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/bweg.js,type=http-response,pattern=^https?:\/\/iface\.beva\.com\/(order\/device\/vip)
+bweg.js = url requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/bweg.js,type=http-response,pattern=^https?:\/\/iface\.beva\.com\/(order\/device\/vip)
 
 # > 菜谱大全vip Unlockvip
-cpdq.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/cpdq.js,type=http-response,pattern=^https?:\/\/api\.jiaonizuocai\.com
+cpdq.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/cpdq.js,type=http-response,pattern=^https?:\/\/api\.jiaonizuocai\.com
 
 # > 很皮语音包vip unlock
-hpyyb.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/hpyyb.js,type=http-response,pattern=https:\/\/api3\.henpi\.vip\/app\/(user\/get_userinfo|label\/music_type_list)
+hpyyb.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/hpyyb.js,type=http-response,pattern=https:\/\/api3\.henpi\.vip\/app\/(user\/get_userinfo|label\/music_type_list)
 
 # > polaris.js
 polaris.js = type=http-response,pattern=^https?:\/\/api\.(polaxiong\.com|polarr\.co)\/v\d\/payments\/appleiap\/receipts\/confirmation$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/LTribeSkyx/Script/master/polaris.js,script-update-interval=0
 
 # > paper.vip
-paper.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/paper.js,type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.*\/subscribers\/[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}$
+paper.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/paper.js,type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.*\/subscribers\/[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}$
 
 # > 彩云小译vip
-cyxy.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/cyxy.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.interpreter\.caiyunai\.com\/v1\/user
+cyxy.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/cyxy.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.interpreter\.caiyunai\.com\/v1\/user
 
 # 人人影视字幕组 （作者：Kaya）hostname =
 YYeTs.js = requires-body=true,script-path=https://raw.githubusercontent.com/ydzydzydz/Rules/master/Surge/resources/script/YYeTs.js,type=http-response,pattern=^https?:\/\/ctrl.playcvn.com/app/(init|ads)
@@ -109,7 +109,7 @@ myxj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.c
 // cupdasher.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/cupdasher.js,type=http-response,pattern=^https:\/\/p.+-buy\.itunes\.apple\.com\/WebObjects\/MZFinance.woa\/wa\/inAppRegrantPurchaseHistory
 
 # > 有道云笔记 (By Alex0510)
-ydybj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Alex/ydybj.js,type=http-response,pattern=https://note.youdao.com/yws/(mapi/payment|api/self)
+ydybj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/Alex/ydybj.js,type=http-response,pattern=https://note.youdao.com/yws/(mapi/payment|api/self)
 
 # 小睡眠（by 黑黑酱）
 xiaoshuimian.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/xiaoshuimian.js,type=http-response,pattern=^https:\/\/api\.psy-1\.com\/cosleep\/user\/info
