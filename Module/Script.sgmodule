@@ -50,6 +50,7 @@ vivavideo.js = requires-body=1,script-path=https://raw.githubusercontent.com/Nob
 
 # > Keep app unlock private lessons and action libraries.
 Keep.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Keep.js,type=http-response,pattern=^https:\/\/api\.gotokeep\.com\/(.+\/subject|.+\/dynamic)
+Keep1.js = requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/keep.js,type=http-response,pattern=^https:\/\/api\.gotokeep\.com\/*
 
 # VUE pro
 VUE.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/VUE.js,type=http-response,pattern=^https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare)
