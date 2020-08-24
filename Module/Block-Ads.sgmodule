@@ -6,7 +6,7 @@
 force-http-engine-hosts = %APPEND% vali.cp31.ott.cibntv.net
 
 [Rule]
-# Update time: 2020.6.30
+# Update time: 2020.8.24
 
 # > Remove Twitterrific’s Ad
 DOMAIN-SUFFIX,iconfactory.com,REJECT
@@ -38,6 +38,13 @@ URL-REGEX,^https?:\/\/(app-)?api\.smzdm\.com\/(v\d\/)?util\/(loading|banner),REJ
 
 # Remove WB‘s Ad
 DOMAIN,adimg.vue.weibo.com,REJECT
+URL-REGEX,^https:\/\/api\.weibo\.com\/oauth2\/getaid,REJECT
+
+# Remove keep‘s Ad
+URL-REGEX,^https:\/\/api\.gotokeep\.com\/ads\/v1\/ads\?spotIds,REJECT
+
+# Remove heybox‘s Ad
+URL-REGEX,^https:\/\/api\.xiaoheihe\.cn\/account\/get_ads_info\,REJECT
 
 # Remove Zhihu‘s Ad
 DOMAIN,118.89.204.198,REJECT
@@ -52,11 +59,13 @@ URL-REGEX,^https?://gw.alicdn.com/(t(f|p)s/.+\d{3,4}-\d{4}|mt),REJECT
 URL-REGEX,^https?:\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json,REJECT
 URL-REGEX,^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get\/,REJECT
 AND,((URL-REGEX,\/amdc\/mobileDispatch),(USER-AGENT,%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D*)),REJECT
+URL-REGEX,^https:\/\/iyes\.youku\.com\/start\/rt?,REJECT
 
 # Remove CainiaoGuoGuo‘s Ad
 URL-REGEX,https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.nbnetflow\.guoappstartup\.ads\.show,REJECT
 URL-REGEX,https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.recommend,REJECT
 URL-REGEX,https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.show,REJECT
+URL-REGEX,https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.nbnetflow\.guoappstartup\.ads\.show,REJECT
 
 [URL Rewrite]
 # Remove Super‘s Ad (By Liquor030)
