@@ -12,9 +12,6 @@ hostname = %APPEND%  *.bybutter.com,user.edujia.com,api.meiyan.com,*wikipedia.or
 # > 百度网盘倍速播放
 BaiduCloud.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js,type=http-response,pattern=https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user
 
-# > 爱美剧Vip (by huihui）(官网：app.meiju2018.com)
-aimeiju.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/aimeiju.js,type=http-response,pattern=^https?:\/\/api.bjxkhc.com\/index\.php\/app\/ios\/(vod\/show|(user|vod|topic|type)\/index)
-
 # > 小小影视 Unlock vip
 小小影视 = type=http-response,pattern=https:\/\/ios\.xiaoxiaoapps\.com\/(vod\/reqplay\/|ucp/index|getGlobalData),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xxys.js,script-update-interval=0
 
@@ -46,7 +43,6 @@ dqsj.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/S
 vivavideo.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js,type=http-response,pattern=^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip
 
 # > Keep app unlock private lessons and action libraries.
-Keep.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Keep.js,type=http-response,pattern=^https:\/\/api\.gotokeep\.com\/(.+\/subject|.+\/dynamic)
 Keep1.js = requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/keep.js,type=http-response,pattern=^https:\/\/api\.gotokeep\.com\/*
 
 # VUE pro
