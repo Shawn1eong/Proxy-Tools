@@ -4,7 +4,7 @@
 
 
 [URL Rewrite]
-# Update time: 2020.8.22
+# Update time: 2020.8.30
 
 #网易云
 ^https?://198.18.1.49 https://interface3.music.163.com header
@@ -18,7 +18,11 @@
 # > Jianshu 
 ^https:\/\/links\.jianshu\.com\/go\?to=(.+)$ $1 302
 
-# > Zhihu
+# > 去掉知乎的中间跳转。
+https?://link.zhihu.com/\?target=(https?)%3A//(.*) $1://$2 307
+
+^https?://link\.zhihu\.com/\?target=(https?)%3A//(.*) $1://$2 302
+
 ^https:\/\/link\.zhihu\.com\/\?target=http(s)?+%3A\/\/(.+)$ http$1://$2 302
 
 # > baidu
@@ -128,4 +132,4 @@
 # CUSTOM URL
 
 [MITM]
-hostname = %APPEND% github.com,www.google.com, www.google.cn,*.wikipedia.org, *.wikiwand.com
+hostname = %APPEND% github.com,www.google.com, www.google.cn,*.wikipedia.org, *.wikiwand.com, link.zhihu.com

@@ -5,13 +5,9 @@
 [MITM]
 hostname = %APPEND% links.jianshu.com, pan.baidu.com, www.zhihu.com, link.zhihu.com
 
-[URL Rewrite]
-// 去掉知乎的中间跳转。
-https?://link.zhihu.com/\?target=(https?)%3A//(.*) $1://$2 307
-
 [Header Rewrite]
 
-# Update time: 2020.8.22
+# Update time: 2020.8.30
 
 # > 知乎网页显示优化
 ^https:\/\/www\.zhihu\.com\/ header-replace User-Agent "Mozilla/5.0 (Windows Phone 10)"
