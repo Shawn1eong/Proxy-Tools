@@ -1,4 +1,4 @@
-![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=_icons=true&theme=merko)
+![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=shaGuar-svg_icons=true&theme=merko)
 # Ru1e
 Surge&Quantumult X 
 纯自用，
