@@ -4,7 +4,7 @@
 
 
 [URL Rewrite]
-# Update time: 2020.8.30
+# Update time: 2020.9.5
 
 #网易云
 ^https?://198.18.1.49 https://interface3.music.163.com header
@@ -21,11 +21,10 @@
 # > 去掉知乎的中间跳转。
 https?://link.zhihu.com/\?target=(https?)%3A//(.*) $1://$2 307
 
-^https?://link\.zhihu\.com/\?target=(https?)%3A//(.*) $1://$2 302
-
 ^https:\/\/link\.zhihu\.com\/\?target=http(s)?+%3A\/\/(.+)$ http$1://$2 302
 
 ^https://oia\.zhihu\.com https://zhuanlan.zhihu.com 307
+
 # > baidu
 ^https?:\/\/pan\.baidu\.com\/s\/(.+) https://pan.baiduwp.com/s/$1 302
 
@@ -37,6 +36,9 @@ https?://link.zhihu.com/\?target=(https?)%3A//(.*) $1://$2 307
 ^https?:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/issues\/?$ grape://issues?reponame=$1 307
 ^https?:\/\/github\.com\/(?!.*users)(?!.*trending)([\u4E00-\u9FA5A-Za-z0-9_-]+)\/(?!.*blob)([\u4E00-\u9FA5A-Za-z0-9_-]+)(?!.*md)(?!.*png|jpg)$ grape://repo?reponame=$1/$2 307
 ^https?:\/\/github\.com\/(?!.*users)(?!.*trending)([\u4E00-\u9FA5A-Za-z0-9_-]+)$ grape://user?login=$1 307
+
+# > GitHub master branch
+^https://github.com/(Dreamacro|yichengchen|lhie1|DivineEngine|SukkaW)/(clash|clashX|Rules|Profiles|Koolshare-Clash)$ https://github.com/$1/$2/tree/master 302
 
 # > 崩坏3跨服
 ^https:\/\/global1\.bh3\.com\/query_dispatch\?version=3\.7\.0_gf_ios&t=(\d*) ”https://global1.bh3.com/query_dispatch?version=3.7.0_gf_android&t=$1 “ 302
@@ -63,9 +65,6 @@ https?://link.zhihu.com/\?target=(https?)%3A//(.*) $1://$2 307
 
 # Anti_ISP_Taobao_Hijack
 ^https?:\/\/m\.taobao\.com\/ https://m.taobao.com/ 302
-
-# > NOMO
-^https://nomo.dafork.com/api/v3/iap/ios_product_list https://files.catbox.moe/fgmkpy.json 302
 
 # Wiki
 ^https://zh.(m.)?wikipedia.org/zh(-\w*)?(?=/) http://www.wikiwand.com/zh$2 302
@@ -132,4 +131,4 @@ https?://link.zhihu.com/\?target=(https?)%3A//(.*) $1://$2 307
 # CUSTOM URL
 
 [MITM]
-hostname = %APPEND% github.com,www.google.com, www.google.cn,*.wikipedia.org, *.wikiwand.com, link.zhihu.com, oia.zhihu.com
+hostname = %APPEND% github.com,www.google.com, GitHub.com,www.google.cn,*.wikipedia.org, *.wikiwand.com, link.zhihu.com, oia.zhihu.com

@@ -3,11 +3,11 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% links.jianshu.com, pan.baidu.com, www.zhihu.com, link.zhihu.com
+hostname = %APPEND% links.jianshu.com, pan.baidu.com, www.zhihu.com, link.zhihu.com, www.google.com
 
 [Header Rewrite]
 
-# Update time: 2020.8.30
+# Update time: 2020.9.5
 
 # > 知乎网页显示优化
 ^https:\/\/www\.zhihu\.com\/ header-replace User-Agent "Mozilla/5.0 (Windows Phone 10)"
@@ -17,10 +17,6 @@ hostname = %APPEND% links.jianshu.com, pan.baidu.com, www.zhihu.com, link.zhihu.
 
 # > 小小影视vip (By Eric)
 https:\/\/.*.xiaoxiao(img|apps|appxs).com header-replace Cookie xxx_api_auth=6131333537653261363463323331666265663763396239663835636662373930
-
-# > Microsoft translator
-https:\/\/offline\.microsofttranslator\.com\/translatorresources\.svc\/GetMetadata\?platform=ios&version= header-replace (\r\n)If-None-Match:.+(\r\n) $1
-https:\/\/api\.cognitive\.microsofttranslator\.com\/languages\?scope=compact,transliteration&api-version= header-replace (\r\n)If-None-Match:.+(\r\n) $1
 
 # > 百度贴吧
 ^https?+:\/\/(?:c\.)?+tieba\.baidu\.com\/(?:f|p) header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
@@ -66,6 +62,8 @@ https:\/\/api\.cognitive\.microsofttranslator\.com\/languages\?scope=compact,tra
 [Script]
 
 Goole = type=http-request,pattern=^https:\/\/www\.google\.com\/(m|search).+(q=[^&]+)&.+,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/google/simplifyurl.js
+
+Goole search = type=http-response,pattern=https?:\/\/www\.google\.com\/search.*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/endless.js
 
 Jianshu = type=http-request,pattern=^https?:\/\/links\.jianshu\.com\/go\?to=(.+)$,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/Jianshu.js
 

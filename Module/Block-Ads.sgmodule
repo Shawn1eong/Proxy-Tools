@@ -6,7 +6,7 @@
 force-http-engine-hosts = %APPEND% vali.cp31.ott.cibntv.net
 
 [Rule]
-# Update time: 2020.8.24
+# Update time: 2020.9.5
 
 # > Remove Twitterrific’s Ad
 DOMAIN-SUFFIX,iconfactory.com,REJECT
@@ -22,6 +22,9 @@ URL-REGEX,^http(s)://api.bjxkhc.com/index.php/app/ios/ads/index,REJECT-TINYGIF
 # Remove YouTube‘s Ad
 # 如果您是 YouTube Premium，请不要开启此模块。
 URL-REGEX,^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier),REJECT-TINYGIF
+URL-REGEX,^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+ad_,REJECT
+URL-REGEX,^https?:\/\/\w+\.youtube\.com\/api\/stats\/(ads|.+adformat),REJECT
+URL-REGEX,^https?:\/\/\w+\.youtube\.com\/(pagead|ptracking),REJECT
 
 # Remove youku‘s Ad
 URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
@@ -66,6 +69,9 @@ URL-REGEX,https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.nbnetflow\.guoappsta
 URL-REGEX,https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.recommend,REJECT
 URL-REGEX,https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.show,REJECT
 URL-REGEX,https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.nbnetflow\.guoappstartup\.ads\.show,REJECT
+
+# Remove hostsVN
+URL-REGEX,^https?:\/\/(\w+\.)?(adclick|ads([0-9]+)?|adserver|adformat|analysis|banners?|click|counter|log|log-?\w+?|pagead|stat|stats|statis|trace|track|tracking|uniad)\.\w+\.(com|cn|org|info|io|net|vn|com.vn),REJECT-TINYGIF
 
 [URL Rewrite]
 # Remove Super‘s Ad (By Liquor030)
@@ -131,4 +137,4 @@ Bilibili.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercont
 Zhihu.js = type=http-response,requires-body=1,max-size=-1,pattern=^https:\/\/(api|lens|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type|limit)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d+\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=|api\/videos\/\d+\/recommend),script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Zhihu.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% api.revenuecat.com, render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, ap*.zhihu.com,  api.live.bilibili.com, www.zhihu.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, langapi.lv-show.com, rtbapi.douyucdn.cn, lens.zhihu.com, *api.smzdm.com, ap*.bilibili.com, storage.wax.weibo.com, api.ithome.com, *.fastmirror.org, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
+hostname = %APPEND% api.revenuecat.com, render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, ap*.zhihu.com,  api.live.bilibili.com, www.zhihu.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, m.youtube.com, s.youtube.com, youtubei.googleapis.com, langapi.lv-show.com, rtbapi.douyucdn.cn, lens.zhihu.com, *api.smzdm.com, ap*.bilibili.com, storage.wax.weibo.com, api.ithome.com, *.fastmirror.org, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
