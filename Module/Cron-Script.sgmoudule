@@ -23,10 +23,6 @@ Hourly weather.js = script-path=Hourly weather.js,type=cron,cronexp=0 0 8-20/3 *
 # > 每日打卡提醒（corn ”0 9,18 * * 1-5“ 周一到周五，早九晚六）+ 每日壹句（有道词典）+ 跳转钉钉打卡页面
 每日打开提醒 = script-path=https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js,type=cron,cronexp=”0 9,18 * * 1-5“
 
-# > 纵横小说 (By Peng-YM)
-# > 使用方法：进入纵横小说页面，例如<<剑来>>：http://book.zongheng.com/book/672340.html 则id为672340，将id添加到列表即可。 
-纵横小说= type=cron,cronexp=*/30 * * * *,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/task/zongheng.js,script-update-interval=0
-
 # > GitHub监控(By Peng-YM)
 GitHub监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/task/github.js,script-update-interval=0
 
@@ -55,9 +51,6 @@ nCov.js = type=cron,cronexp=0 0 9 * * *,script-path=https://raw.githubuserconten
 # > 115 (By @zZPiglet)
 115 = type=cron,cronexp=1 0 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/115/115.js
 
-# > 万达电影
-万达电影 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wanda/wanda.js,wake-system=true
-
 # > 京东
 京东 = type=cron,cronexp=0 0 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
 
@@ -78,10 +71,6 @@ nCov.js = type=cron,cronexp=0 0 9 * * *,script-path=https://raw.githubuserconten
 # > 京东种豆得豆 (By uniqueque、lxk0301 & iepngs)
 # 京东App - 右下角"我的"- 游戏与互动-种豆得豆
 京东种豆得豆 = type=cron,cronexp=1 7-21/2 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_steal.js
-
-# > 京东摇钱树 (By lxk0301)
-# 京东App - 右下角"我的"- 游戏与互动-摇钱树
-京东摇钱树=type=cron,cronexp=*/6 * * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_moneyTree.js
 
 # > 京东加速 (By lxk0301)
 # 京东App - 右下角"我的"- 游戏与互动-天天加速
