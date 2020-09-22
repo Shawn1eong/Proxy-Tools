@@ -36,10 +36,6 @@ URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/
 # Remove News_bilibili‘s Ad
 URL-REGEX,^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/ad|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)),REJECT
 
-# Remove WB‘s Ad
-DOMAIN,adimg.vue.weibo.com,REJECT
-URL-REGEX,^https:\/\/api\.weibo\.com\/oauth2\/getaid,REJECT
-
 # Remove keep‘s Ad
 URL-REGEX,^https:\/\/api\.gotokeep\.com\/ads\/v1\/ads\?spotIds,REJECT
 
@@ -70,22 +66,10 @@ app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
 # Remove News_Article‘s Ad (By Liquor030)
 app_name=news_article&([\S]*)aid=\d+ app_name=news_article_social&$1aid=19 header
 
-# Remove douyin‘s Ad
-^https://aweme-eagle(.*)\.snssdk\.com/aweme/v2/ https://aweme-eagle$1.snssdk.com/aweme/v1/ 302
-
 [Script]
 
 # # Remove douyu‘s Ad
 douyu.js = type=http-response,pattern=^https?:\/\/rtbapi\.douyucdn\.cn,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/douyu.js,script-update-interval=0
-
-# > 抖音
-douyin_post = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme/v1/aweme\/post\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin.js
-douyin_feed = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/feed\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin.js
-douyin_follow = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/follow\/feed\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin.js
-douyin_naerby = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/nearby\/feed\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin.js
-douyin_item = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/search\/item\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin.js
-douyin_search = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/general\/search\/single\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin.js
-douyin_hot = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/hot\/search\/video\/list\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin.js
 
 # > Super removes ads hostname:*.snssdk.com
 //Super.js = type=http-response,pattern=“^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list)”,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js,script-update-interval=0
@@ -112,4 +96,4 @@ ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent
 Bilibili.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Bilibili.js,pattern=^https?:\/\/ap(i|p).(live.)?bilibili.com\/x(live)?\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/(mine(\/ipad)?|teenagers\/status)|view|feed\/index|rank|channel\/region\/list)|app-room/v1/index/getInfoByRoom)\?access_key,type=http-response
 
 [MITM]
-hostname = %APPEND% render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, api.weibo.cn, *.snssdk.com, api.live.bilibili.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, m.youtube.com, s.youtube.com, youtubei.googleapis.com, rtbapi.douyucdn.cn, ap*.bilibili.com, api.ithome.com, *.fastmirror.org, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
+hostname = %APPEND% render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, api.live.bilibili.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, m.youtube.com, s.youtube.com, youtubei.googleapis.com, rtbapi.douyucdn.cn, ap*.bilibili.com, api.ithome.com, *.fastmirror.org, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
