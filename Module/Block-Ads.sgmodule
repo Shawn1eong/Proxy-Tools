@@ -6,7 +6,7 @@
 force-http-engine-hosts = %APPEND% vali.cp31.ott.cibntv.net
 
 [Rule]
-# Update time: 2020.9.5
+# Update time: 2020.9.20
 
 # > Remove Twitterrific’s Ad
 DOMAIN-SUFFIX,iconfactory.com,REJECT
@@ -36,9 +36,6 @@ URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/
 # Remove News_bilibili‘s Ad
 URL-REGEX,^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/ad|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)),REJECT
 
-# Remove Zdm‘s Ad
-URL-REGEX,^https?:\/\/(app-)?api\.smzdm\.com\/(v\d\/)?util\/(loading|banner),REJECT
-
 # Remove WB‘s Ad
 DOMAIN,adimg.vue.weibo.com,REJECT
 URL-REGEX,^https:\/\/api\.weibo\.com\/oauth2\/getaid,REJECT
@@ -48,13 +45,6 @@ URL-REGEX,^https:\/\/api\.gotokeep\.com\/ads\/v1\/ads\?spotIds,REJECT
 
 # Remove heybox‘s Ad
 URL-REGEX,^https:\/\/api\.xiaoheihe\.cn\/account\/get_ads_info\,REJECT
-
-# Remove Zhihu‘s Ad
-DOMAIN,118.89.204.198,REJECT
-DOMAIN,sugar.zhihu.com,REJECT
-DOMAIN,appcloud2.in.zhihu.com,REJECT
-URL-REGEX,^https:\/\/pic\d\.zhimg\.com\/70\/,REJECT
-URL-REGEX,https:\/\/(api|www)\.zhihu\.com\/(ab|adx|fringe|commercial|ad-style-service|.*(recommendations|extended|featured-comment-ad)|api\/v4\/(brand|mcn|(answer|question)s\/\d+\/meta_related_topics)|brand\/questions\/\d+\/activity\/answers\/red-packet(\/|\?|$)),REJECT
 
 # Remove Alibaba‘s Ad
 URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.((trip\.activity|film\.mtopadvertiseapi)\.querytmsresources|(taobao\.idle\.home|aliyun\.mobile)\.welcome(page)?|.*?\.ads?\.),REJECT
@@ -84,17 +74,12 @@ app_name=news_article&([\S]*)aid=\d+ app_name=news_article_social&$1aid=19 heade
 ^https://aweme-eagle(.*)\.snssdk\.com/aweme/v2/ https://aweme-eagle$1.snssdk.com/aweme/v1/ 302
 
 [Script]
-# Remove Audiomack‘s Ad
-Audiomack = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\w+$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/Audiomack.js,script-update-interval=0
 
 # Remove lv‘show live‘s Ad
 lv-show.js = type=http-response,pattern=^https?:\/\/langapi\.lv-show\.com/.*?system/config,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/lv-show.js,script-update-interval=0
 
 # # Remove douyu‘s Ad
 douyu.js = type=http-response,pattern=^https?:\/\/rtbapi\.douyucdn\.cn,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/douyu.js,script-update-interval=0
-
-# Remove Zdm‘s Ad
-SMZDM.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/SMZDM.js,pattern=^https?:\/\/(s|h(aojia|omepage)|(articl|baik)e)-api\.smzdm\.com\/(home|sou)(?!\/list_filter),type=http-response
 
 # > 抖音
 douyin_post = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme/v1/aweme\/post\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin.js
@@ -126,15 +111,8 @@ qidian_anti_ad.js = script-path=https://raw.githubusercontent.com/LarkinZero/Sur
 ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/ITHome.js,type=http-response,pattern=^https?:\/\/api\.ithome\.com\/json\/slide\/index
 ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/ITHome.js,type=http-response,pattern=^https?:\/\/api\.ithome\.com\/json\/(newslist|listpage)\/news
 
-# > Remove Weibo Ads 
-WeiboADs.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/WeiboADs.js,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list),type=http-response
-WeiboLaunch.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/WeiboLaunch.js,pattern=^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(\/interface\/sdk\/sdkad.php|\/wbapplua\/wbpullad.lua),type=http-response
-
 # > bilibili去广告
 Bilibili.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Bilibili.js,pattern=^https?:\/\/ap(i|p).(live.)?bilibili.com\/x(live)?\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/(mine(\/ipad)?|teenagers\/status)|view|feed\/index|rank|channel\/region\/list)|app-room/v1/index/getInfoByRoom)\?access_key,type=http-response
 
-# > 知乎去广告
-Zhihu.js = type=http-response,requires-body=1,max-size=-1,pattern=^https:\/\/(api|lens|www)\.zhihu\.com\/(moments(\/recommend)?\?(action|feed_type|limit)|topstory\/recommend|.*\/questions|market\/header|people|appview\/(v2|p)\/(answer\/)?\d+\?no\_image\=false(\&article\_fixed\_bottom\=1)?\&X\-SUGER\=|api\/videos\/\d+\/recommend),script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Zhihu.js,script-update-interval=0
-
 [MITM]
-hostname = %APPEND% api.revenuecat.com, render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, api.weibo.cn, *.snssdk.com,mapi.weibo.com, *.uve.weibo.com, ap*.zhihu.com,  api.live.bilibili.com, www.zhihu.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, m.youtube.com, s.youtube.com, youtubei.googleapis.com, langapi.lv-show.com, rtbapi.douyucdn.cn, lens.zhihu.com, *api.smzdm.com, ap*.bilibili.com, storage.wax.weibo.com, api.ithome.com, *.fastmirror.org, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
+hostname = %APPEND% render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, api.weibo.cn, *.snssdk.com, api.live.bilibili.com, www.zhihu.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, m.youtube.com, s.youtube.com, youtubei.googleapis.com, langapi.lv-show.com, rtbapi.douyucdn.cn, lens.zhihu.com, ap*.bilibili.com, api.ithome.com, *.fastmirror.org, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
