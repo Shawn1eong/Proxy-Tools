@@ -1,3 +1,5 @@
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=shaGuar-svg&theme=monokai&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
+
 # Ru1e
 Surge&Quantumult X 
 纯自用，
@@ -9,9 +11,9 @@ Surge 代理服务器将由脚本处理，且可具有多个 IP 地址。
 配置：
 [Proxy]
 HTTP = http, custom.com, 443, username, password
- [Host]
+[Host]
 custom.com = script:server
- [Script]
+[Script]
 dns server script-path=example.js
 
 # > Script：
@@ -75,15 +77,6 @@ doh-server = 你的DoH服务器
 [Script]
 Dns-changed = type=rule,script-path=Dns-changed.js
 
-# > DNS 污染
-- DNS 污染问题
-
-[Rule]
-SCRIPT,falied,PROXY,requires-resolve
-
-[Script]
-rule falied script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Conf/failed.js
-
 # > App Store
 - 解决应用下载异常缓慢问题
 
@@ -92,5 +85,3 @@ iosapps.itunes.apple.com = script:stored
 
 [Script]
 dns stored script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Conf/stored.js
-
-#
