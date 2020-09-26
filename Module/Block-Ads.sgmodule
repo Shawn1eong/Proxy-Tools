@@ -85,9 +85,6 @@ RRtv_channel.js = type=http-response,requires-body=true,pattern=^https?:\/\/api\
 # > 今日头条去广告
 //Toutiao.js = requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/Toutiao.js,type=http-response,pattern=^https?://[\s\S]*\.snssdk\.com/api/news/feed/v88/
 
-# > A岛去帖内广告 （作者：LarkinZero）
-nmb_no_ad.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/LarkinZero/Surge/master/nmb_no_ad.js,script-update-interval=0,type=http-response,pattern=https:\/\/nmb\.fastmirror\.org\/Api\/thread.*
-
 # > 起点APP去启动广告 （作者：LarkinZero）
 qidian_anti_ad.js = script-path=https://raw.githubusercontent.com/LarkinZero/Surge/master/qidian_anti_ad.js,requires-body=true,type=http-response,pattern=https:\/\/mage\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen\?localLabels=100
 
@@ -99,4 +96,4 @@ ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent
 Bilibili.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Bilibili.js,pattern=^https?:\/\/ap(i|p).(live.)?bilibili.com\/x(live)?\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/(mine(\/ipad)?|teenagers\/status)|view|feed\/index|rank|channel\/region\/list)|app-room/v1/index/getInfoByRoom)\?access_key,type=http-response
 
 [MITM]
-hostname = %APPEND% render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, api.live.bilibili.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, m.youtube.com, s.youtube.com, youtubei.googleapis.com, rtbapi.douyucdn.cn, ap*.bilibili.com, api.ithome.com, *.fastmirror.org, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
+hostname = %APPEND% render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, api.live.bilibili.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, m.youtube.com, s.youtube.com, youtubei.googleapis.com, rtbapi.douyucdn.cn, ap*.bilibili.com, api.ithome.com, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
