@@ -35,6 +35,9 @@ Steam价格监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubuse
 # > 汇率监控(By Peng-YM)
 汇率监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/exchange.js,script-update-interval=0
 
+# > 热门监控 (By Evilbutcher)
+热门监控 = type=cron,cronexp="30 0 8-22/2 * * *",script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hotsearch/hot.js,wake-system=true,timeout=600
+
 # > Epic周免(By Peng-YM)
 Epic周免= type=cron,cronexp=0 9 ? * MON,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/epic.js,script-update-interval=0
 
@@ -48,11 +51,8 @@ nCov.js = type=cron,cronexp=0 0 9 * * *,script-path=https://raw.githubuserconten
 
 # 签到脚本
 
-# > 115 (By @zZPiglet)
-115 = type=cron,cronexp=1 0 * * *,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/115/115.js
-
 # > 京东
-京东 = type=cron,cronexp=0 0 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
+# 京东 = type=cron,cronexp=0 0 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
 
 # > 京东农场 (By liuxiaoyucc、lxk0301 & iepngs)
 # 京东App - 右下角"我的"- 游戏与互动- 东东农场
@@ -65,23 +65,3 @@ nCov.js = type=cron,cronexp=0 0 9 * * *,script-path=https://raw.githubuserconten
 # > 京东宠汪汪 (By uniqueque、lxk0301 & iepngs)
 # 京东App - 右下角"我的"- 游戏与互动-宠汪汪
 京东宠汪汪 = type=cron,cronexp=15 1,2 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy.js
-宠汪汪偷好友积分与狗粮 = type=cron,cronexp=5 6-18/6 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_steal.js
-宠汪汪积分兑换奖品 = type=cron,cronexp=0 0-16/8 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_reward.js
-
-# > 京东种豆得豆 (By uniqueque、lxk0301 & iepngs)
-# 京东App - 右下角"我的"- 游戏与互动-种豆得豆
-京东种豆得豆 = type=cron,cronexp=1 7-21/2 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_steal.js
-
-# > 京东加速 (By lxk0301)
-# 京东App - 右下角"我的"- 游戏与互动-天天加速
-京东加速=type=cron,cronexp=0 */3 * * *,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_speed.js
-
-# > 宠汪汪积分兑换奖品 (By lxk0301)
-宠汪汪积分兑换奖品 = type=cron,cronexp=0 0-16/8 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_reward.js
-
-# > 京小超 (By lxk0301)
-京小超 = type=cron,cronexp=11 1-23/5 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_superMarket.js
-京小超领蓝币 = type=cron,cronexp=11 5 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_blueCoin.js
-
-# > 热门监控 (By Evilbutcher)
-热门监控 = type=cron,cronexp="30 0 8-22/2 * * *",script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hotsearch/hot.js,wake-system=true,timeout=600
