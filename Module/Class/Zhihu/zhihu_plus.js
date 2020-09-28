@@ -7,7 +7,7 @@ async function main(){
   if (magicJS.isResponse){
     switch (true){
       // 回答内容优化
-      case /^https?:\/\/www\.zhihu\.com\/appview\/v2\/answer\//.test(magicJS.request.url):
+      case /^https?:\/\/www\.zhihu\.com\/appview\/v2\/answer\/.*(entry=(?!(preload-topstory|preload-search|preload-subscription)))?/.test(magicJS.request.url):
         try{
           let html = magicJS.response.body;
           // 付费内容提醒

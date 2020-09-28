@@ -21,8 +21,8 @@ const token = "784a03feb07989d3339dfa41c7eb41777436cbfa";
 
 const repositories = [
   {
-    name: "Peng-YM",
-    url: "https://github.com/Peng-YM/QuanX/tree/master/Tasks",
+    name: "blackmatrix7",
+    url: "https://github.com/blackmatrix7/ios_rule_script",
   },
   {
     name: "jscool",
