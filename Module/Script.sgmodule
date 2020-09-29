@@ -4,7 +4,7 @@
 
 
 [MITM]
-hostname = %APPEND%  *.bybutter.com, api.meiyan.com,*wikipedia.org, cdn.altstore.io, www.patreon.com,bea.sportq.com, buy.itunes.apple.com, api.meiyan.com, api.revenuecat.com, api.cognitive.microsofttranslator.com, offline.microsofttranslator.com, m.4009991000.com,miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api3.henpi.vip,lanfanapp.com,api.interpreter.caiyunai.com, mubu.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, ctrl.playcvn.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, rest.zhibo.tv, note.youdao.com, billing.peakcloud.org, api.weiqire.com, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, newdrugs.dxy.cn, u.kanghuayun.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.gotokeep.com, api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, purchases.ws.pho.to, api-intl.mr.meitu.com, apimboom2.globaldelight.net, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, education.github.com, sk.ulysses.app, license.enpass.io, api.keepkeep.com, api.textnow.me, api.polaxiong.com, api.polarr.co,
+hostname = %APPEND%  *.bybutter.com, api.meiyan.com,*wikipedia.org, cdn.altstore.io, www.patreon.com,bea.sportq.com, buy.itunes.apple.com, api.meiyan.com, api.revenuecat.com, api.cognitive.microsofttranslator.com, offline.microsofttranslator.com,miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,lanfanapp.com,api.interpreter.caiyunai.com, mubu.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, newdrugs.dxy.cn, u.kanghuayun.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.gotokeep.com, 59.110.149.231,129.211.156.213,api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, purchases.ws.pho.to, api-intl.mr.meitu.com, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, sk.ulysses.app, license.enpass.io, api.textnow.me, api.polaxiong.com, api.polarr.co,
 
 
 [Script]
@@ -18,9 +18,6 @@ BaiduCloud.js = requires-body=1,max-size=0,script-path=https://raw.githubusercon
 # > bybutter
 bybutter = type=http-response,pattern=https?:\/\/.*\.bybutter\.com\/(v4\/shop\/|v4\/users\/me|v4\/shop\/shelves|v4\/editor\/template\/recommended|v4\/search\/products|v4\/template-square\/),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/bybutter.js,script-update-interval=0
 
-# > 哔哩哔哩番剧开启1080P+
-BilibiliHD = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/BiliHD.js
-
 # > VSCO unlock vip
 vsco.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js,type=http-response,pattern=^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/
 
@@ -28,7 +25,7 @@ vsco.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/S
 yyzs.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/yyzs.js,type=http-response,pattern=^https?:\/\/(i|newdrugs)\.dxy\.cn\/(snsapi\/username\/|app\/user\/(pro\/stat\?|init\?timestamp=))
 
 # > Keep app unlock private lessons and action libraries.
-Keep1.js = requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/keep.js,type=http-response,pattern=^https:\/\/api\.gotokeep\.com\/*
+Keep.js = requires-body=1,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/keep.js,type=http-response,pattern=https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days)
 
 # VUE pro
 VUE.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/VUE.js,type=http-response,pattern=^https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare)
@@ -47,9 +44,6 @@ lanfanapp.js = requires-body=1,max-size=0,script-path=https://raw.githubusercont
 # > RCam /Geist /Gear /Picsew 
 NG.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/receipt.js,script-update-interval=0,type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
 
-# > 加密通话unlock vip
-jmdh.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/Alex/jmdh.js,script-update-interval=0,type=http-response,pattern=https:\/\/m\.4009991000\.com\/(userCharge|feeQuery).action
-
 # > 企信通小程序 unlock
 qxt.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/Alex/qxt.js,script-update-interval=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/
 
@@ -59,9 +53,6 @@ bweg.js = url requires-body=1,max-size=0,script-path=https://raw.githubuserconte
 # > 菜谱大全vip Unlockvip
 cpdq.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/cpdq.js,type=http-response,pattern=^https?:\/\/api\.jiaonizuocai\.com
 
-# > 很皮语音包vip unlock
-hpyyb.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/hpyyb.js,type=http-response,pattern=https:\/\/api3\.henpi\.vip\/app\/(user\/get_userinfo|label\/music_type_list)
-
 # > polaris.js
 polaris.js = type=http-response,pattern=^https?:\/\/api\.(polaxiong\.com|polarr\.co)\/v\d\/payments\/appleiap\/receipts\/confirmation$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/LTribeSkyx/Script/master/polaris.js,script-update-interval=0
 
@@ -70,9 +61,6 @@ paper.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.
 
 # > 彩云小译vip
 cyxy.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/cyxy.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.interpreter\.caiyunai\.com\/v1\/user
-
-# 人人影视字幕组 （作者：Kaya）hostname =
-YYeTs.js = requires-body=true,script-path=https://raw.githubusercontent.com/ydzydzydz/Rules/master/Surge/resources/script/YYeTs.js,type=http-response,pattern=^https?:\/\/ctrl.playcvn.com/app/(init|ads)
 
 # > syzzzf
 # 轻颜相机 & ulike & 蒸汽波相机(vaporcam)三合一 解锁VIP(By @s y & Alex0510)
@@ -84,32 +72,17 @@ myxj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.c
 # CPU Dasher破解(需要ios13 恢复购买后禁用掉 By @s y)
 // cupdasher.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/cupdasher.js,type=http-response,pattern=^https:\/\/p.+-buy\.itunes\.apple\.com\/WebObjects\/MZFinance.woa\/wa\/inAppRegrantPurchaseHistory
 
-# > 有道云笔记 (By Alex0510)
-ydybj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/Alex/ydybj.js,type=http-response,pattern=https://note.youdao.com/yws/(mapi/payment|api/self)
-
 # 小睡眠（by 黑黑酱）
 xiaoshuimian.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/xiaoshuimian.js,type=http-response,pattern=^https:\/\/api\.psy-1\.com\/cosleep\/user\/info
 
 # > 洪恩双语绘本 
 hnsyhb.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/hnsyhb.js,type=http-response,pattern=https:\/\/bookapi\.ihuman\.com\/(v1\/get\_user\_info|v1\/get\_purchase\_list)
 
-# > 中国体育直播unlock (By 军哥哥)
-zgtyzb.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/zgtyzb.js,type=http-response,pattern=http:\/\/rest\.zhibo\.tv\/room\/get\-room\-info\-v430
-
 # > Peak 解锁Pro
 peak.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/peak.js,type=http-response,pattern=^https:\/\/billing\.peakcloud\.org\/billing\/2\/user\/me?
 
-# > 奇热小说 解锁收费章节(By @@ios4521)
-qrxs.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/qrxs.js,type=http-response,pattern=^https://api.weiqire.com/api3/(visitor/|user/unlockCharpter)
-
 # > Adguard Premium
 Adguard Premium = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.com\/api\/.+\/ios_validate_receipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/maicoo-l/Surge/master/Script/AdGuard.js,script-update-interval=0
-
-# > workingcopy.js
-workingcopy.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/workingcopy.js,script-update-interval=0,type=http-response,pattern=^https:\/\/education\.github\.com\/api\/user$
-
-# > boom
-verify_receipt.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/verify_receipt.js,script-update-interval=0,type=http-response,pattern=^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$
 
 # > Darkroom.js 
 Darkroom.js = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/(receipts|subscribers*),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/LTribeSkyx/Script/master/Darkroom.js,script-update-interval=0
@@ -125,9 +98,6 @@ busuu.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercont
 
 # > memrise
 memrise.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/memrise.vip.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.memrise\.com\/.+\/(me\/$|dashboard\/$|leaderboards\/following\/)
-
-# > Unfold
-Unfold.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Unfold.vip.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.unfold\.app\/v1\/ios\/receipts$
 
 # > altstore
 altstore.js = requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/joyoner/rule/master/JS/altstore.js,script-update-interval=0,type=http-response,pattern=^https://cdn.altstore.io/file/altstore/apps.json
