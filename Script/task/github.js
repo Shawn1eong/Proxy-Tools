@@ -37,8 +37,9 @@ const repositories = [
     url: "https://github.com/zZPiglet/Task",
   },
   {
-    name: "Fndroid-ClashForWin",
-    url: "https://github.com/Fndroid/clash_for_windows_pkg",
+    name: "Peng-YM",
+    file_names: ["Tools/NextDNS"],
+    url: "https://github.com/Peng-YM/QuanX",
   },
   {
     name: "Netskao Cracked-for-NoAds-IPAs",
