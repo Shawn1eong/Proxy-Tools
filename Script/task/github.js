@@ -45,10 +45,8 @@ const repositories = [
     url: "https://github.com/Netskao/Cracked-for-NoAds-IPAs",//路径模板🌟
   },
   {
-    name: "NobyDa",
-    file_names: ["Module/RewriteRules.sgmodule", "RewriteRules"],//路径模板🌟
-    url: "https://github.com/NobyDa/Script/tree/master/Surge/Module",
-  }
+  name: “NobyDa”,
+    url: “https://github.com/NobyDa/ND-AD”,//路径模板🌟
 ];
 
 const $ = API("github", false);
