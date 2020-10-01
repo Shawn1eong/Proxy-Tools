@@ -48,6 +48,7 @@ const repositories = [
   {
   name: “NobyDa”,
     url: “https://github.com/NobyDa/ND-AD”,//路径模板🌟
+  },
 ];
 
 const $ = API("github", false);
