@@ -37,6 +37,10 @@ const repositories = [
     url: "https://github.com/zZPiglet/Task",
   },
   {
+    name: "NobyDa ND-Ad",
+    url: "https://github.com/NobyDa/ND-AD",
+  },
+  {
     name: "Peng-YM",
     file_names: ["Tools/NextDNS"],
     url: "https://github.com/Peng-YM/QuanX",
@@ -44,10 +48,6 @@ const repositories = [
   {
     name: "Netskao Cracked-for-NoAds-IPAs",
     url: "https://github.com/Netskao/Cracked-for-NoAds-IPAs",//路径模板🌟
-  },
-  {
-  name: “NobyDa”,
-    url: “https://github.com/NobyDa/ND-AD”,//路径模板🌟
   },
 ];
 
