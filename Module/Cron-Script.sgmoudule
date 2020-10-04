@@ -3,10 +3,7 @@
 
 [Script]
 # > 天气（MEETAGIT）
-// meweather.js = script-path=https://raw.githubusercontent.com/MeetaGit/MeetaRules/master/Surge/Scripting/meweather.js,script-update-interval=0,type=cron,cronexp=”0 0 8,14,18 * * ?“
-
-# > 本地天气通知（MEETAGIT）
-Hourly weather.js = script-path=Hourly weather.js,type=cron,cronexp=0 0 8-20/3 * * *
+meweather.js = script-path=https://raw.githubusercontent.com/MeetaGit/MeetaRules/master/Surge/Scripting/meweather.js,script-update-interval=0,type=cron,cronexp=”0 0 8,14,18 * * ?“
 
 # > 历史上的哪一天
 历史事件 = script-path=https://raw.githubusercontent.com/MeetaGit/MeetaRules/m%CE%B1ster/Surge/Scripting/Calendar.js,script-update-interval=0,type=cron,cronexp=”0 0 10,15,20 * * ?“
@@ -35,19 +32,11 @@ Steam价格监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubuse
 # > 汇率监控(By Peng-YM)
 汇率监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/exchange.js,script-update-interval=0
 
-# > 热门监控 (By Evilbutcher)
-热门监控 = type=cron,cronexp="30 0 8-22/2 * * *",script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hotsearch/hot.js,wake-system=true,timeout=600
-
 # > Epic周免(By Peng-YM)
 Epic周免= type=cron,cronexp=0 9 ? * MON,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/epic.js,script-update-interval=0
 
 # > PSN会免(By Peng-YM)
 PSN会免= type=cron,cronexp=0 9 1 * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/psn.js,script-update-interval=0
-
-# > 疫情咨询(By Peng-YM)
-nCov_new.js = type=cron,cronexp=0 0 9 * * *,script-path=https://github.com/Mazetsz/QX/blob/master/nCov_new.js,script-update-interval=0
-nCov.js = type=cron,cronexp=0 0 9 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/nCov.js,script-update-interval=0
-
 
 # 签到脚本
 
