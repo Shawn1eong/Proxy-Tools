@@ -46,12 +46,12 @@ Surge 会直接并发向所有代理服务器进行 TCP 握手，并选择最快
 - 脚本中只能填入 IP 地址，可先测速后到 DNS 结果处查看。
 - 使用 Scritp Policy 需除代理服务器外，其他参数都一致。
 
-[Proxy]
+-[Proxy]
 HK = http, custom.hk, 443, username, password
 KR = http, custom.kr, 443, username, password
 JP = http, custom.jp, 443, username, password
 
-[Proxy Group]
+-[Proxy Group]
 Proxy = select, HK, KR, JP
 Auto = url-test, HK, KR, JP, url = http://www.gstatic.com/generate_204
 Fallback = fallback, HK, KR, JP, url = http://www.gstatic.com/generate_204
