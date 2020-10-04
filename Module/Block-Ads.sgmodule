@@ -19,13 +19,6 @@ URL-REGEX,^http(s)://api.bjxkhc.com/index.php/app/ios/pay/ok$ ,REJECT-TINYGIF
 URL-REGEX,^http(s)://api.bjxkhc.com/index.php/app/ios/ver/index_ios$,REJECT
 URL-REGEX,^http(s)://api.bjxkhc.com/index.php/app/ios/ads/index,REJECT-TINYGIF
 
-# Remove YouTube‘s Ad
-# 如果您是 YouTube Premium，请不要开启此模块。
-URL-REGEX,^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier),REJECT-TINYGIF
-URL-REGEX,^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+ad_,REJECT
-URL-REGEX,^https?:\/\/\w+\.youtube\.com\/api\/stats\/(ads|.+adformat),REJECT
-URL-REGEX,^https?:\/\/\w+\.youtube\.com\/(pagead|ptracking),REJECT
-
 # Remove youku‘s Ad
 URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 
@@ -60,8 +53,6 @@ URL-REGEX,https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.nbnetflow\.guoappsta
 URL-REGEX,^https?:\/\/(\w+\.)?(adclick|ads([0-9]+)?|adserver|adformat|analysis|banners?|click|counter|log|log-?\w+?|pagead|stat|stats|statis|trace|track|tracking|uniad)\.\w+\.(com|cn|org|info|io|net|vn|com.vn),REJECT-TINYGIF
 
 [URL Rewrite]
-# Remove youtube‘s Ad (By yuenanlao)
-ctier=[A-Z] citier=A 302
 
 # Remove Super‘s Ad (By Liquor030)
 app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
@@ -96,4 +87,4 @@ ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent
 Bilibili.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Bilibili.js,pattern=^https?:\/\/ap(i|p).(live.)?bilibili.com\/x(live)?\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/(mine(\/ipad)?|teenagers\/status)|view|feed\/index|rank|channel\/region\/list)|app-room/v1/index/getInfoByRoom)\?access_key,type=http-response
 
 [MITM]
-hostname = %APPEND% render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, api.live.bilibili.com, pic*.zhimg.com, *.amemv.com, *.googlevideo.com, m.youtube.com, s.youtube.com, youtubei.googleapis.com, rtbapi.douyucdn.cn, ap*.bilibili.com, api.ithome.com, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
+hostname = %APPEND% render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, api.live.bilibili.com, pic*.zhimg.com, *.amemv.com, rtbapi.douyucdn.cn, ap*.bilibili.com, api.ithome.com, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
