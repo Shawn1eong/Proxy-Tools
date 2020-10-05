@@ -2,10 +2,7 @@
 #!desc=Local DNS Mapping.
 
 [Host]
-# Update time: 2020.6.12
-# > ip 6
-ip6-localhost = ::1
-ip6-loopback = ::1
+# Update time: 2020.10.5
 # > 淘宝
 *.taobao.com = server:223.5.5.5
 # > 天猫
@@ -44,17 +41,19 @@ hotspot.cslwifi.com = server:syslib
 amplifi.lan = server:syslib
 *.lan = server:syslib
 # 指定 IP 地址或另一个域名
-# 远景论坛
-*.pcbeta.com = 120.52.19.113
-cdn.pcbeta.attachment.inimc.com = 120.52.19.113
-cdn.pcbeta.static.inimc.com = 120.52.19.113
-cdn.pcbeta.css.inimc.com = 120.52.19.113
+# # PCBeta
+*.pcbeta.com = 36.27.212.81
+cdn.pcbeta.attachment.inimc.com = 36.27.212.81
+cdn.pcbeta.static.inimc.com = 36.27.212.81
+cdn.pcbeta.css.inimc.com = 36.27.212.81
 # 其他
 *.aliqin.com = server:223.6.6.6
 *.ali*.com = server:223.6.6.6
 *.upyun.com = server:223.6.6.6
 *.mmstat.com = server:223.6.6.6
 hdslb.com = server:119.29.29.29
+# > testfligh
+testflight.apple.com = server:https://223.5.5.5/dns-query
 # kinghong
 *.kingkong.com.tw = server:https://i.233py.com/dns-query
 # > Github

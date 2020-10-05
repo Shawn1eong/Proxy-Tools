@@ -1,8 +1,7 @@
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=shaGuar-svg&theme=monokai&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
 
 # Ru1e
-Surge&Quantumult X 
-纯自用，
+Surge&Quantumult X 所有内容均来自互联网 不确定可用性纯自用。
 
 # Scritp Policy
 Surge 代理服务器将由脚本处理，且可具有多个 IP 地址。
@@ -77,11 +76,3 @@ doh-server = 你的DoH服务器
 [Script]
 Dns-changed = type=rule,script-path=Dns-changed.js
 
-# > App Store
-- 解决应用下载异常缓慢问题
-
-[Host]
-iosapps.itunes.apple.com = script:stored
-
-[Script]
-dns stored script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Conf/stored.js
