@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!name=Youtube facebook spotify tiktok Block-ads
 #!desc=removes ads.
 #!system=ios
@@ -104,3 +105,111 @@ ctier=[A-Z] citer=A 302
 ^https?:\/\/.+\.snssdk\.com\/.+app_log\/ - reject
 ^https?:\/\/.+\.snssdk\.com\/.+promotion\/ - reject
 ^https?:\/\/.+\.snssdk\.com\/.+stats\/ - reject
+=======
+#!name=Youtube facebook spotify tiktok Block-ads
+#!desc=removes ads.
+#!system=ios
+
+[MITM]
+hostname = %APPEND% graph.nhaccuatui.com, spclient.wg.spotify.com, *.googlevideo.com, s.youtube.com, www.youtube.com, www.googleapis.com, youtubei.googleapis.com, api*.tiktokv.com, api*.musical.ly, *-hl.snssdk.com
+
+[Rule]
+URL-REGEX,^https:\/\/.+\.googlevideo\.com\/.+oad=,REJECT
+URL-REGEX,^https?:\/\/(\w+\.)?(adclick|ads([0-9]+)?|adserver|adformat|analysis|banners?|click|counter|log|log-?\w+?|pagead|stat|stats|statis|trace|track|tracking|uniad)\.\w+\.(com|cn|org|info|io|net|vn|com.vn),REJECT
+URL-REGEX,^https?://graph.facebook.com/.+activities,REJECT
+URL-REGEX,^https?://graph.facebook.com/.+advertiser_id=,REJECT
+URL-REGEX,^https?://graph.facebook.com/.+events,REJECT
+URL-REGEX,^https?://graph.facebook.com/network_ads_common,REJECT
+URL-REGEX,^https?://www.facebook.com/adnw_logging,REJECT
+URL-REGEX,^https?://www.facebook.com/adnw_sync,REJECT
+URL-REGEX,^https?://graph.nhaccuatui.com/.+advs,REJECT
+URL-REGEX,^https?://graph.nhaccuatui.com/.+logs,REJECT
+URL-REGEX,^https?://graph.nhaccuatui.com/.+deviceinfo,REJECT
+URL-REGEX,^https?://spclient.wg.spotify.com/ad-logic/*,REJECT
+URL-REGEX,^https?://spclient.wg.spotify.com/ads/*,REJECT
+URL-REGEX,^https?://spclient.wg.spotify.com/.+ad_slot,REJECT
+URL-REGEX,^https?://spclient.wg.spotify.com/.+banners,REJECT
+URL-REGEX,^https?://spclient.wg.spotify.com/.+canvases,REJECT
+URL-REGEX,^https?://spclient.wg.spotify.com/.+cards,REJECT
+URL-REGEX,^https?://spclient.wg.spotify.com/.+crashlytics,REJECT
+URL-REGEX,^https?://spclient.wg.spotify.com/.+doubleclick,REJECT
+URL-REGEX,^https?://spclient.wg.spotify.com/.+enabled-tracks,REJECT
+URL-REGEX,^https?://spclient.wg.spotify.com/.+event,REJECT
+URL-REGEX,^https?://spclient.wg.spotify.com/.+promoted_offer,REJECT
+URL-REGEX,^https?://spclient.wg.spotify.com/.+sponsored,REJECT
+URL-REGEX,^https?:\/\/.+\.googlevideo\.com\/.+oad=,REJECT
+URL-REGEX,^https?:\/\/.+\.googlevideo\.com\/ptracking,REJECT
+URL-REGEX,^https?:\/\/.+\.googlevideo\.com\/videogoodput,REJECT
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/.+adformat,REJECT
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/.+get_ads,REJECT
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/api\/stats\/ads,REJECT
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/api\/stats\/atr,REJECT
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/api\/stats\/qoe,REJECT
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/csi_204,REJECT
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/gen_204,REJECT
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/generate_204,REJECT
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/get_midroll,REJECT
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/pagead,REJECT
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/ptracking,REJECT
+URL-REGEX,^https?:\/\/.+\.googleapis.com/.+ad_break,REJECT
+URL-REGEX,^https?:\/\/.+\.googleapis.com/adsmeasurement,REJECT
+URL-REGEX,^https?:\/\/.+\.tiktokv\.com\/api\/ad\/,REJECT
+URL-REGEX,^https?:\/\/.+\.tiktokv\.com\/.+stats\/,REJECT
+URL-REGEX,^https?:\/\/.+\.musical\.ly\/api\/ad\/,REJECT
+URL-REGEX,^https?:\/\/.+\.musical\.ly\/.+stats\/,REJECT
+URL-REGEX,^https?:\/\/.+\.snssdk\.com\/api\/ad\/,REJECT
+URL-REGEX,^https?:\/\/.+\.snssdk\.com\/monitor\/,REJECT
+URL-REGEX,^https?:\/\/.+\.snssdk\.com\/.+app_log\/,REJECT
+URL-REGEX,^https?:\/\/.+\.snssdk\.com\/.+promotion\/,REJECT
+URL-REGEX,^https?:\/\/.+\.snssdk\.com\/.+stats\/,REJECT
+
+[URL Rewrite]
+ctier=[A-Z] citer=A 302
+^https?:\/\/(\w+\.)?(adclick|ads([0-9]+)?|adserver|adformat|analysis|banners?|click|counter|log|log-?\w+?|pagead|stat|stats|statis|trace|track|tracking|uniad)\.\w+\.(com|cn|org|info|io|net|vn|com.vn) - reject
+^https?://graph.facebook.com/.+activities - reject
+^https?://graph.facebook.com/.+advertiser_id= - reject
+^https?://graph.facebook.com/.+events - reject
+^https?://graph.facebook.com/network_ads_common - reject
+^https?://www.facebook.com/adnw_logging - reject
+^https?://www.facebook.com/adnw_sync - reject
+^https?://graph.nhaccuatui.com/.+advs - reject
+^https?://graph.nhaccuatui.com/.+logs - reject
+^https?://graph.nhaccuatui.com/.+deviceinfo - reject
+^https?://spclient.wg.spotify.com/ad-logic/* - reject
+^https?://spclient.wg.spotify.com/ads/* - reject
+^https?://spclient.wg.spotify.com/.+ad_slot - reject
+^https?://spclient.wg.spotify.com/.+banners - reject
+^https?://spclient.wg.spotify.com/.+canvases - reject
+^https?://spclient.wg.spotify.com/.+cards - reject
+^https?://spclient.wg.spotify.com/.+crashlytics - reject
+^https?://spclient.wg.spotify.com/.+doubleclick - reject
+^https?://spclient.wg.spotify.com/.+enabled-tracks - reject
+^https?://spclient.wg.spotify.com/.+event - reject
+^https?://spclient.wg.spotify.com/.+promoted_offer - reject
+^https?://spclient.wg.spotify.com/.+sponsored - reject
+^https?:\/\/.+\.googlevideo\.com\/.+oad= - reject
+^https?:\/\/.+\.googlevideo\.com\/ptracking - reject
+^https?:\/\/.+\.googlevideo\.com\/videogoodput - reject
+^https?:\/\/.+\.youtube\.com\/.+adformat - reject
+^https?:\/\/.+\.youtube\.com\/.+get_ads - reject
+^https?:\/\/.+\.youtube\.com\/api\/stats\/ads - reject
+^https?:\/\/.+\.youtube\.com\/api\/stats\/atr - reject
+^https?:\/\/.+\.youtube\.com\/api\/stats\/qoe - reject
+^https?:\/\/.+\.youtube\.com\/csi_204 - reject
+^https?:\/\/.+\.youtube\.com\/gen_204 - reject
+^https?:\/\/.+\.youtube\.com\/generate_204 - reject
+^https?:\/\/.+\.youtube\.com\/get_midroll - reject
+^https?:\/\/.+\.youtube\.com\/pagead - reject
+^https?:\/\/.+\.youtube\.com\/ptracking - reject
+^https?:\/\/.+\.googleapis.com/.+ad_break - reject
+^https?:\/\/.+\.googleapis.com/adsmeasurement - reject
+^https?:\/\/.+\.tiktokv\.com\/api\/ad\/ - reject
+^https?:\/\/.+\.tiktokv\.com\/.+stats\/ - reject
+^https?:\/\/.+\.musical\.ly\/api\/ad\/ - reject
+^https?:\/\/.+\.musical\.ly\/.+stats\/ - reject
+^https?:\/\/.+\.snssdk\.com\/api\/ad\/ - reject
+^https?:\/\/.+\.snssdk\.com\/monitor\/ - reject
+^https?:\/\/.+\.snssdk\.com\/.+app_log\/ - reject
+^https?:\/\/.+\.snssdk\.com\/.+promotion\/ - reject
+^https?:\/\/.+\.snssdk\.com\/.+stats\/ - reject
+>>>>>>> 64b2e212ebc57de8eab343dd9dba7692d0c7a813
