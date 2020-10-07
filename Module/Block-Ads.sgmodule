@@ -21,6 +21,7 @@ URL-REGEX,^http(s)://api.bjxkhc.com/index.php/app/ios/ads/index,REJECT-TINYGIF
 
 # Remove youku‘s Ad
 URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
+URL-REGEX,^https:\/\/iyes\.youku\.com\/start\/rt?,REJECT
 
 # Remove rrtv‘s Ad
 AND,((USER-AGENT,PUClient*), (NOT,((DOMAIN-SUFFIX,rr.tv)))),REJECT
@@ -28,6 +29,12 @@ URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/
 
 # Remove News_bilibili‘s Ad
 URL-REGEX,^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/ad|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)),REJECT
+
+# Remove dxy‘s Ad
+URL-REGEX,^https?:\/\/dxy\.com\/app\/i\/ask\/biz\/feed\/launch,REJECT
+URL-REGEX,^https?:\/\/dq\.dxy\.cn\/api\.php\?action=getpostbanners&sys_id=,REJECT
+URL-REGEX,^https?:\/\/drugs\.dxy\.cn\/api\/ad\?productType=,REJECT
+URL-REGEX,^https?:\/\/www\.dxy\.cn\/webservices\/app\/specialAd\/list\?ac=,REJEC
 
 # Remove keep‘s Ad
 URL-REGEX,^https:\/\/api\.gotokeep\.com\/ads\/v1\/ads\?spotIds,REJECT
@@ -41,7 +48,6 @@ URL-REGEX,^https?://gw.alicdn.com/(t(f|p)s/.+\d{3,4}-\d{4}|mt),REJECT
 URL-REGEX,^https?:\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json,REJECT
 URL-REGEX,^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get\/,REJECT
 AND,((URL-REGEX,\/amdc\/mobileDispatch),(USER-AGENT,%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D*)),REJECT
-URL-REGEX,^https:\/\/iyes\.youku\.com\/start\/rt?,REJECT
 
 # Remove CainiaoGuoGuo‘s Ad
 URL-REGEX,https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.nbnetflow\.guoappstartup\.ads\.show,REJECT
@@ -84,4 +90,4 @@ ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent
 Bilibili.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Bilibili.js,pattern=^https?:\/\/ap(i|p).(live.)?bilibili.com\/x(live)?\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/(mine(\/ipad)?|teenagers\/status)|view|feed\/index|rank|channel\/region\/list)|app-room/v1/index/getInfoByRoom)\?access_key,type=http-response
 
 [MITM]
-hostname = %APPEND% render.alipay.com, gw.alicdn.com, *acs.m.taobao.com, api.live.bilibili.com, pic*.zhimg.com, *.amemv.com, rtbapi.douyucdn.cn, ap*.bilibili.com, api.ithome.com, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
+hostname = %APPEND% render.alipay.com, gw.alicdn.com, *acs.m.taobao.com,*.dxy.cn, api.live.bilibili.com, pic*.zhimg.com, *.amemv.com, rtbapi.douyucdn.cn, ap*.bilibili.com, api.ithome.com, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
