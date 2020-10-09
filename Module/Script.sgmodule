@@ -22,7 +22,7 @@ BaiduCloud.js = requires-body=1,max-size=0,script-path=https://raw.githubusercon
 vsco.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js,type=http-response,pattern=^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/
 
 # > Keep app unlock private lessons and action libraries.
-Keep PRO = requires-body=1,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/keepgoto.js,type=http-response,pattern=https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days)
+Keep PRO = requires-body=1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/keepgoto.js,type=http-response,pattern=https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days)
 
 # VUE pro
 VUE PRO = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/VUE.js,type=http-response,pattern=^https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare)
