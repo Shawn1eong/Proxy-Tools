@@ -19,7 +19,7 @@ BaiduCloud.js = requires-body=1,max-size=0,script-path=https://raw.githubusercon
 黄油相机 = type=http-response,pattern=https?:\/\/.*\.bybutter\.com\/(v4\/shop\/|v4\/users\/me|v4\/shop\/shelves|v4\/editor\/template\/recommended|v4\/search\/products|v4\/template-square\/),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/bybutter.js,script-update-interval=0
 
 # > lanfan pro
-懒饭PRO = requires-body=1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/lanfan.js,pattern=^https:\/\/lanfanapp.com\/api\/v1\/user\/(prime.json|page_detail.json)
+懒饭Pro = type=http-response,pattern=^https:\/\/lanfanapp.com\/api\/v1\/user\/(prime.json|page_detail.json),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/lanfanapp.js,script-update-interval=0
 
 # > VSCO unlock vip
 vsco.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js,type=http-response,pattern=^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/
