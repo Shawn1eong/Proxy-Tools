@@ -3,12 +3,12 @@
 #!system=ios
 
 [URL Rewrite]
-(?<=&mcc_mnc=)4.. 2 302
-(?<=_region=)CN(?=&) KR 302
-(?<=\?version_code=)18.2..(?=.?.?&) 1 302
-(?<=\?version_code=)1[8-9]..(?=.?.?&) 1 302
-(?<=&app_version=)1[8-9]..(?=.?.?&) 1 302
-(?<=\d\/\?\w{7}_\w{4}=)1[6-7]..(?=.?.?&) 17 302
+(?<=&mcc_mnc=)4.. 2 307
+(?<=_region=)CN(?=&) KR 307
+(?<=\?version_code=)18.2..(?=.?.?&) 1 307
+(?<=\?version_code=)1[8-9]..(?=.?.?&) 1 307
+(?<=&app_version=)1[8-9]..(?=.?.?&) 1 307
+(?<=\d\/\?\w{7}_\w{4}=)1[6-7]..(?=.?.?&) 17 307
 
 [MITM]
 hostname = %INSERT% *.tiktokv.com, *.byteoversea.com, *.musical.ly, *.snssdk.com
