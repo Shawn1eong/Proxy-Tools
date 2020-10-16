@@ -4,7 +4,7 @@
 
 
 [MITM]
-hostname = %APPEND%  *.bybutter.com, api.meiyan.com, lanfanapp.com, *wikipedia.org, cdn.altstore.io, www.patreon.com,bea.sportq.com, buy.itunes.apple.com, api.meiyan.com, api.revenuecat.com, api.cognitive.microsofttranslator.com, offline.microsofttranslator.com,miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com, mubu.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, u.kanghuayun.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.gotokeep.com, 59.110.149.231,129.211.156.213,api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, purchases.ws.pho.to, api-intl.mr.meitu.com, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, sk.ulysses.app, license.enpass.io, api.textnow.me, api.polaxiong.com, api.polarr.co,
+hostname = %APPEND%  *.bybutter.com, api.meiyan.com, lanfanapp.com, *wikipedia.org, cdn.altstore.io, ws.60he.com,www.patreon.com,bea.sportq.com, buy.itunes.apple.com, api.meiyan.com, api.revenuecat.com, api.cognitive.microsofttranslator.com, offline.microsofttranslator.com,miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com, mubu.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, pan.baidu.com, m.client.10010.com, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, api*.tiktokv.com, *.musical.ly, vsco.co, u.kanghuayun.com, mitaoapp.yeduapp.com, www.3ivf.com, pay.guoing.com, api.gotokeep.com, 59.110.149.231,129.211.156.213,api.vuevideo.net, ios.xiangjiaoapps.com, apple.xiangjiaoapps.com, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, oa.zalo.me, api.meiease.c*, viva-asia1.vvbrd.com, api.memrise.com , api.busuu.com, purchases.ws.pho.to, api-intl.mr.meitu.com, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, sk.ulysses.app, license.enpass.io, api.textnow.me, api.polaxiong.com, api.polarr.co,
 
 
 [Script]
@@ -29,6 +29,9 @@ Keep PRO = requires-body=1,script-path=https://raw.githubusercontent.com/shaGuar
 
 # VUE pro
 VUE PRO = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/VUE.js,type=http-response,pattern=^https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare)
+
+# Python pro
+Python’AI = type=http-response,pattern=^http:\/\/ws\.60he\.com\/user\.htm,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/demo2099/QTXScripts/master/js/pythonai.js ,script-update-interval=0
 
 # > 以下为nzw9314收集整理
 # > 幕布(by @superuv)
