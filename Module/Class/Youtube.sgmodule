@@ -70,3 +70,7 @@ URL-REGEX,^https?:\/\/.+\.snssdk\.com\/.+stats\/,REJECT
 
 [URL Rewrite]
 ctier=[A-Z] citer=A 302
+^https?+:\/\/.+?\.googlevideo\.com\/.+?(?>&oad|ctier) - reject-200
+^https?+:\/\/\w+?\.youtube\.com\/api\/.+?ad - reject-200
+^https?+:\/\/\w+?\.youtube\.com\/p(?>agead|tracking) - reject-200
+^https?+:\/\/youtubei\.googleapis\.com\/youtubei\/.+?(?>ad|log)_ - reject-200
