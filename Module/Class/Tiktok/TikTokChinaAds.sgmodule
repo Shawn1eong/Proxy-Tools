@@ -3,11 +3,11 @@
 #!system=ios
 
 [Rule]
-DOMAIN-SUFFIX,amemv.com, DIRECT
-DOMAIN-SUFFIX,byteimg.com, DIRECT
-DOMAIN-SUFFIX,dig.bdurl.net, DIRECT
-DOMAIN-SUFFIX,ibytedtos.com, REJECT
-DOMAIN-SUFFIX,ipstatp.com, REJECT
+DOMAIN-SUFFIX,amemv.com,DIRECT
+DOMAIN-SUFFIX,byteimg.com,DIRECT
+DOMAIN-SUFFIX,dig.bdurl.net,DIRECT
+DOMAIN-SUFFIX,ibytedtos.com,REJECT
+DOMAIN-SUFFIX,ipstatp.com,REJECT
 
 [URL Rewrite]
 ^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/feed\/ https://aweme.snssdk.com/aweme/v1/feed/ header
