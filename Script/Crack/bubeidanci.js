@@ -6,7 +6,7 @@ Download link : https://t.cn/A6Z1ysfS
 
 [rewrite_local]
 # 不背单词 （by LTribe）
-^https?:\/\/sapi\.beingfine\.cn\/v\d\/report\/launch* url script-response-body bubeidanci.js
+^https?:\/\/sapi\.beingfine\.cn\/v\d\/report\/launch* 
 
 [mitm]
 hostname = sapi.beingfine.cn,

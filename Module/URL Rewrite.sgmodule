@@ -138,4 +138,4 @@
 # CUSTOM URL
 
 [MITM]
-hostname = %APPEND% github.com,www.google.com,api.abema.io, GitHub.com,www.google.cn,*.wikipedia.org, *.wikiwand.com, raw.githubusercontent.com
+hostname = %APPEND% github.com,www.google.com,api.abema.io, GitHub.com,www.google.cn,*.wikipedia.org, *.wikiwand.com, raw.githubusercontent.com, apimboom2.globaldelight.net

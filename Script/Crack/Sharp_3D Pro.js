@@ -5,7 +5,7 @@ unlock Shapr:3D PRO
 
 [rewrite_local]
 # unlock Shapr3D
-^https?:\/\/prod\.api\.shapr3d\.com\/user-management\/profile-with-device url script-response-body Shapr3D.js
+^https?:\/\/prod\.api\.shapr3d\.com\/user-management\/profile-with-device 
 
 [mitm]
 hostname = prod.api.shapr3d.com,

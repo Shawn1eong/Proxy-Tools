@@ -1,4 +1,6 @@
-//Script event auto linked ipv4 nextdns: network-change
+/*
+Nextdns_linkedip = type=event,event-name=network-changed,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Surge/nextdns_linkedip.js,script-update-interval=0
+*/
 
 async function launch() {
     await linkedip();

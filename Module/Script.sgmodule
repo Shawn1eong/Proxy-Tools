@@ -4,7 +4,7 @@
 
 
 [MITM]
-hostname = %APPEND%  *.bybutter.com, api.meiyan.com, lanfanapp.com, cdn.altstore.io,www.patreon.com,bea.sportq.com,apimboom2.globaldelight.net, buy.itunes.apple.com, api.revenuecat.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, vsco.co, u.kanghuayun.com, www.3ivf.com, pay.guoing.com, api.gotokeep.com, 59.110.149.231,129.211.156.213,api.vuevideo.net, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, oa.zalo.me, api.meiease.c*, viva-asia1.vvbrd.com, purchases.ws.pho.to, api-intl.mr.meitu.com, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io,  api.polaxiong.com, api.polarr.co,
+hostname = %APPEND%  *.bybutter.com, api.meiyan.com, lanfanapp.com, api.getmimo.com, prod.api.shapr3d.com, cdn.altstore.io,www.patreon.com,bea.sportq.com,apimboom2.globaldelight.net, buy.itunes.apple.com, api.revenuecat.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, vsco.co, u.kanghuayun.com, www.3ivf.com, pay.guoing.com, api.gotokeep.com, 59.110.149.231,129.211.156.213,api.vuevideo.net, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, oa.zalo.me, api.meiease.c*, viva-asia1.vvbrd.com, purchases.ws.pho.to, api-intl.mr.meitu.com, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io,  api.polaxiong.com, api.polarr.co,
 
 
 [Script]
@@ -69,6 +69,12 @@ Darkroom.js = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/
 
 # > Lightroom
 Lightroom.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Lightroom.js,script-update-interval=0,type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts
+
+# > Mimo Pro 
+Mimo Pro = type=http-response,pattern=^https:\/\/api\.getmimo\.com\/v1\/subscriptions$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/mimo.vip.js,script-update-interval=0
+
+# > Sharp3D Pro
+Sharp:3D Pro = type=http-response,pattern=^https:\/\/prod\.api\.shapr3d\.com\/user-management\/profile-with-device,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Sharp%3A3D%20Pro.js,script-update-interval=0
 
 # > beautyplus
 beautyplusvip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/beautyplusvip.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api-intl\.mr\.meitu\.com/.*/subs_offer_elg$
