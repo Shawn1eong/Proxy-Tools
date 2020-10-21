@@ -1,6 +1,6 @@
 /*
 
-Quantumult X 脚本
+Quantumult X
 unlock Shapr:3D PRO
 
 [rewrite_local]
