@@ -65,14 +65,3 @@ dns hk script-path=HK.js
 dns kr script-path=KR.js
 dns jp script-path=JP.js
 
-# > Scripting
-
-# > 根据网络情况使用Doh
-- Surge 根据不同的网络情况决定是使用doh，还是使用路由器提供的dns
-
-[General]
-doh-server = 你的DoH服务器
-
-[Script]
-Dns-changed = type=rule,script-path=Dns-changed.js
-
