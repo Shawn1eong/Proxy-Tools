@@ -63,9 +63,9 @@ https:\/\/.*.xiaoxiao(img|apps|appxs).com header-replace Cookie xxx_api_auth=613
 
 Google = type=http-request,pattern=^https:\/\/www\.google\.com\/(m|search).+(q=[^&]+)&.+,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/google/simplifyurl.js
 
-Goole search = type=http-response,pattern=https:\/\/www\.google\..*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Conf/endless.js
+Goole search = type=http-response,pattern=https:\/\/www\.google\..*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Conf/Tools/endless.js
 
-CSDN = type=http-response,pattern=https:\/\/.*\.csdn\.net\/.*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Conf/csdn.js
+CSDN = type=http-response,pattern=https:\/\/.*\.csdn\.net\/.*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Conf/Tools/csdn.js
 
 Jianshu = type=http-request,pattern=^https?:\/\/links\.jianshu\.com\/go\?to=(.+)$,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/Jianshu.js
 
