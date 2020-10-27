@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% links.jianshu.com, pan.baidu.com, www.zhihu.com, link.zhihu.com, www.google.com, www.google.*, www.jianshu.com, encrypted.google.*, *.csdn.net
+hostname = %APPEND% links.jianshu.com, *.baidu.com, www.zhihu.com, link.zhihu.com, www.google.com, www.google.*, www.jianshu.com, encrypted.google.*, *.csdn.net
 
 [Header Rewrite]
 
