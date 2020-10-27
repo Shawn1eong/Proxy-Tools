@@ -3,11 +3,14 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% links.jianshu.com, pan.baidu.com, www.zhihu.com, link.zhihu.com, www.google.com, www.google.*, encrypted.google.*, *.csdn.net
+hostname = %APPEND% links.jianshu.com, pan.baidu.com, www.zhihu.com, link.zhihu.com, www.google.com, www.google.*, www.jianshu.com, encrypted.google.*, *.csdn.net
 
 [Header Rewrite]
 
-# Update time: 2020.9.5
+# Update time: 2020.10.28
+
+# > 简书注入桌面
+^https:\/\/www\.jianshu\.com\/p header-replace User-Agent “Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36”
 
 # > 知乎网页显示优化
 ^https:\/\/www\.zhihu\.com\/ header-replace User-Agent "Mozilla/5.0 (Windows Phone 10)"
@@ -68,6 +71,8 @@ Goole search = type=http-response,pattern=https:\/\/www\.google\..*,requires-bod
 CSDN = type=http-response,pattern=https:\/\/.*\.csdn\.net\/.*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Conf/Tools/csdn.js
 
 Jianshu = type=http-request,pattern=^https?:\/\/links\.jianshu\.com\/go\?to=(.+)$,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/Jianshu.js
+
+Jianshux = type=http-response,pattern=^https:\/\/www\.jianshu\.com\/p,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/jianshu.js
 
 baiduPan = type=http-response,pattern=^https:\/\/pan\.baidu\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/baiduPan.js
 
