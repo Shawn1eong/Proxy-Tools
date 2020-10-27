@@ -3,7 +3,7 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% links.jianshu.com, pan.baidu.com, www.zhihu.com, link.zhihu.com, www.google.com
+hostname = %APPEND% links.jianshu.com, pan.baidu.com, www.zhihu.com, link.zhihu.com, www.google.com, www.google.*, encrypted.google.*, *.csdn.net
 
 [Header Rewrite]
 
@@ -63,7 +63,9 @@ https:\/\/.*.xiaoxiao(img|apps|appxs).com header-replace Cookie xxx_api_auth=613
 
 Google = type=http-request,pattern=^https:\/\/www\.google\.com\/(m|search).+(q=[^&]+)&.+,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/google/simplifyurl.js
 
-Goole search = type=http-response,pattern=https?:\/\/www\.google\.com\/search.*(?<!start=\d{2}|\d{3})$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/endless.js
+Goole search = type=http-response,pattern=https:\/\/www\.google\..*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Conf/endless.js
+
+CSDN = type=http-response,pattern=https:\/\/.*\.csdn\.net\/.*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Conf/csdn.js
 
 Jianshu = type=http-request,pattern=^https?:\/\/links\.jianshu\.com\/go\?to=(.+)$,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/Jianshu.js
 
