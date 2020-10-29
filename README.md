@@ -15,9 +15,3 @@
     <img alt="languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=shaGuar-svg&hide_border=true&layout=compact&card_width=445" />
   </div>
 </p>
-
-<p align="left">
-  <div>
-    <img alt="ween-stats" src="https://github-readme-stats.vercel.app/api/wakatime?username=shaGuar-svg&hide_border=true&custom_title=Week%20Stats" />
-  </div>
-</p>
