@@ -6,6 +6,8 @@
  *
  ******** 以下为 tamperJS 自动生成的 rewrite 相关信息，可能需要根据情况适当调整 ********
 
+EndlessGoogle = type=http-response,requires-body=1,pattern=^https?:\/\/www\.google\..*\/search,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/endlessgoogle.js
+
 [rewrite]
 http:\/\/www\.google\..* url script-response-body endless.js
 https:\/\/www\.google\..* url script-response-body endless.js
@@ -162,13 +164,13 @@ function init() {
     document.head.appendChild(style);
     msg = document.createElement("div");
     msg.setAttribute("class", "endless-msg");
-    msg.innerText = "Loading next page...";
+    msg.innerText = "       Loading next page...";
     document.body.appendChild(msg);
 }
 
-document.addEventListener("DOMContentLoaded", init);}()</script></body>`)
+document.addEventListener("DOMContentLoaded", init);
+}()</script></body>`)
 
-  console.log('添加 tamperJS：endless.js')
 }
 
 $done({ body })

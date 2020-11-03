@@ -67,7 +67,7 @@ BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baid
 
 Google = type=http-request,pattern=^https:\/\/www\.google\.com\/(m|search).+(q=[^&]+)&.+,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/google/simplifyurl.js
 
-Goole search = type=http-response,pattern=https:\/\/www\.google\..*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Conf/Tools/endless.js
+EndlessGoogle = type=http-response,requires-body=1,pattern=^https?:\/\/www\.google\..*\/search,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/endlessgoogle.js
 
 CSDN = type=http-response,pattern=https:\/\/.*\.csdn\.net\/.*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Conf/Tools/csdn.js
 
