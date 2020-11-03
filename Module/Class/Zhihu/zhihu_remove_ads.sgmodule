@@ -23,14 +23,6 @@ URL-REGEX,^https?:\/\/www\.zhihu\.com\/api\/v4\/hot_recommendation,REJECT-TINYGI
 URL-REGEX,^https?:\/\/www\.zhihu\.com\/commercial_api\/banners_v3\/mobile_banner,REJECT-TINYGIF
 URL-REGEX,^https?:\/\/zhuanlan\.zhihu\.com\/api\/articles\/\d+\/recommendation,REJECT-TINYGIF
 
-[URL Rewrite]
-# 知乎网页去广告&推荐列表
-https://www\.zhihu\.com/api/v4/questions/\d+/related-readings _ reject
-https://www\.zhihu\.com/api/v4/answers/\d+/related-readings _ reject
-https://www\.zhihu\.com/api/v4/hot_recommendation _ reject
-https://www\.zhihu\.com/commercial_api/banners_v3/mobile_banner _ reject
-https://zhuanlan\.zhihu\.com/api/articles/\d+/recommendation _ reject
-
 [Header Rewrite]
 # 知乎（部分替换为手机百度 Quark 的 User-Agent）
 # 可以看楼层回复 1-2 条
