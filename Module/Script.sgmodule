@@ -4,16 +4,13 @@
 
 
 [MITM]
-hostname = %APPEND%  *.bybutter.com, api.meiyan.com, lanfanapp.com, api.getmimo.com, prod.api.shapr3d.com, cdn.altstore.io,www.patreon.com,bea.sportq.com,apimboom2.globaldelight.net, buy.itunes.apple.com, api.revenuecat.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, vsco.co, u.kanghuayun.com, www.3ivf.com, pay.guoing.com, api.gotokeep.com, 59.110.149.231,129.211.156.213,api.vuevideo.net, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, oa.zalo.me, api.meiease.c*, viva-asia1.vvbrd.com, purchases.ws.pho.to, api-intl.mr.meitu.com, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io,  api.polaxiong.com, api.polarr.co,
+hostname = %APPEND% api.meiyan.com, lanfanapp.com, api.getmimo.com, prod.api.shapr3d.com, cdn.altstore.io,www.patreon.com,bea.sportq.com,apimboom2.globaldelight.net, buy.itunes.apple.com, api.revenuecat.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com, api.lennou.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com, *.xiaoxiao*.com, vsco.co, u.kanghuayun.com, www.3ivf.com, pay.guoing.com, api.gotokeep.com, 59.110.149.231,129.211.156.213,api.vuevideo.net, api.gamer.com.tw, *.xiangxiangapps.com, avatar-nct.nixcdn.com, oa.zalo.me, api.meiease.c*, viva-asia1.vvbrd.com, purchases.ws.pho.to, api-intl.mr.meitu.com, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io,  api.polaxiong.com, api.polarr.co,
 
 
 [Script]
 # Update time: 2020.7.28
 # > 小小影视 Unlock vip
 小小影视 = type=http-response,pattern=https:\/\/ios\.xiaoxiaoapps\.com\/(vod\/reqplay\/|ucp/index|getGlobalData),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xxys.js,script-update-interval=0
-
-# > bybutter
-黄油相机 = type=http-response,pattern=https?:\/\/.*\.bybutter\.com\/(v4\/shop\/|v4\/users\/me|v4\/shop\/shelves|v4\/editor\/template\/recommended|v4\/search\/products|v4\/template-square\/),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/bybutter.js,script-update-interval=0
 
 # > lanfan pro
 懒饭Pro = type=http-response,pattern=^https:\/\/lanfanapp.com\/api\/v1\/user\/(prime.json|page_detail.json),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/lanfanapp.js,script-update-interval=0
@@ -77,6 +74,6 @@ Mimo Pro = type=http-response,pattern=^https:\/\/api\.getmimo\.com\/v1\/subscrip
 beautyplusvip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/beautyplusvip.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api-intl\.mr\.meitu\.com/.*/subs_offer_elg$
 
 # > altstore
-altstore.js = requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/joyoner/rule/master/JS/altstore.js,script-update-interval=0,type=http-response,pattern=^https://cdn.altstore.io/file/altstore/apps.json
+# altstore.js = requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/joyoner/rule/master/JS/altstore.js,script-update-interval=0,type=http-response,pattern=^https://cdn.altstore.io/file/altstore/apps.json
 
 Altstore beta  = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/altstore.js,script-update-interval=0,type=http-response,pattern=https:\/\/www\.patreon\.com\/api\/oauth2\/v2\/identity?
