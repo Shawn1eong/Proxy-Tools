@@ -2,6 +2,9 @@
 #!desc=Make Your Day - By wzw1997007 & Choler
 #!system=ios
 
+[General]
+force-http-engine-hosts = %APPEND% api-h2.tiktokv.com:443,api.tiktokv.com:443
+
 [URL Rewrite]
 ^https://api[\w-]*?.tiktokv.com/aweme/v\d/policy/notice/? - reject
 
