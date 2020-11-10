@@ -4,8 +4,6 @@
 [Host]
 # Update time: 2020.10.19
 # 本地 DNS 映射记录
-testflight.apple.com = script:Dnspod
-iosapps.itunes.apple.com = script:Dnspod
 # > 淘宝
 *.taobao.com = server:223.5.5.5
 # > 天猫
