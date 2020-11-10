@@ -1,17 +1,20 @@
-/*
-黄油相机
+const me = "/v4/users/me";
+const shop = "/v4/shop";
+const search = "/v4/search/products";
+var url = $request.url;
 
-QX1.0.10：
-[rewrite_local]
-https:\/\/api4\.bybutter\.com\/v4\/* url script-response-body hyxj.js
-
-Surge4:
-[Script]
-http-response https:\/\/api4\.bybutter\.com\/v4\/* requires-body=1,max-size=0,script-path=hyxj.js
-
-[MITM]
-hostname = %APPEND% api4.bybutter.com
-*/
-
-body = $response.body.replace(/\"ownership\":\"\w+\"/g, '\"ownership\":"free"').replace(/\"usageType\":\"\w+\"/g, '\"usageType\":"unlimited"').replace(/\"memberships\":\[\]/g, "\"memberships\":[{\"endAt\":1780697166,\"id\":\"1\",\"name\":\"普通会员\",\"ownership\":\"temporary\",\"startAt\":1587654321,\"usageType\":\"unlimited\"}]").replace(/false/g, "true")
-$done({body});
+if ($request.method == 'OPTIONS'){
+ $done({});
+}else{
+var body = $response.body;
+ if (url.indexOf(me) != -1) {
+  body = body.replace(/memberships":\\[\\]/g, 'memberships":[{"endAt":2493043200,"id":"1","name":"普通会员","ownership":"temporary","startAt":1587425677,"usageType":"unlimited"}]');
+}
+if (url.indexOf(shop) != -1) {
+  body = body.replace(/ownership":"\w+"/g, 'ownership":"free"').replace(/usageType":"\w+"/g, 'usageType":"unlimited"').replace(/remark":"[^"]+"/g, 'remark":"使用期限：永久"');
+}
+if (url.indexOf(search) != -1) {
+ body = body.replace(/"enable":false/g, '"enable":true').replace(/"style":"membership_only"/, '"style":"none"');
+}
+$done({ body });
+}
