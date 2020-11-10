@@ -7,7 +7,7 @@
 hostname = %APPEND% api.meiyan.com, lanfanapp.com,api.getmimo.com,*.bybutter.com,prod.api.shapr3d.com,cdn.altstore.io,www.patreon.com,bea.sportq.com,apimboom2.globaldelight.net, buy.itunes.apple.com, api.revenuecat.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com,api.lennou.com,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com,*.xiaoxiao*.com,vsco.co,u.kanghuayun.com,www.3ivf.com,pay.guoing.com,api.gotokeep.com,59.110.149.231,129.211.156.213,api.vuevideo.net,api.gamer.com.tw,*.xiangxiangapps.com,avatar-nct.nixcdn.com,oa.zalo.me,api.meiease.c*, viva-asia1.vvbrd.com, purchases.ws.pho.to, api-intl.mr.meitu.com, photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io,  api.polaxiong.com, api.polarr.co
 
 [Script]
-# Update time: 2020.7.28
+# Update time: 2020.11.11
 # > 小小影视 Unlock vip
 小小影视 = type=http-response,pattern=https:\/\/ios\.xiaoxiaoapps\.com\/(vod\/reqplay\/|ucp/index|getGlobalData),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xxys.js,script-update-interval=0
 
