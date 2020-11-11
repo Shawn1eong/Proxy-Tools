@@ -35,6 +35,9 @@ VUE PRO = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/S
 # > 企信通小程序 unlock
 企信通小程序 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/Alex/qxt.js,script-update-interval=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/
 
+# > 美颜相机
+myxj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/myxj.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.meiyan\.com\/iap\/verify\.json
+
 # > 黄油相机
 Hyxj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/HYXJ.js,type=http-response,pattern=^https?:\/\/.*\.bybutter\.com\/(v4\/shop\/|v4\/users\/me|v4\/shop\/shelves|v4\/editor\/template\/recommended|v4\/search\/products|v4\/template-square\/)
 
@@ -71,9 +74,6 @@ Lightroom.js = requires-body=1,max-size=0,script-path=https://raw.githubusercont
 
 # > Mimo Pro 
 Mimo Pro = type=http-response,pattern=^https:\/\/api\.getmimo\.com\/v1\/subscriptions$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/mimo.vip.js,script-update-interval=0
-
-# > beautyplus
-beautyplusvip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/beautyplusvip.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api-intl\.mr\.meitu\.com/.*/subs_offer_elg$
 
 # > altstore
 # altstore.js = requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/joyoner/rule/master/JS/altstore.js,script-update-interval=0,type=http-response,pattern=^https://cdn.altstore.io/file/altstore/apps.json
