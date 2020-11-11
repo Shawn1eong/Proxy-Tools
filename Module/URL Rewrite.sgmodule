@@ -37,25 +37,11 @@
 ^https://github.com/(Dreamacro|yichengchen|lhie1|DivineEngine|SukkaW)/(clash|clashX|Rules|Profiles|Koolshare-Clash)$ https://github.com/$1/$2/tree/master 302
 ^(http|https):\/\/raw\.githubusercontent\.com\/(DivineEngine|lhie1)\/(.+?)\/(master|main)\/(.+) https://cdn.jsdelivr.net/gh/$2/$3/$5 302
 
-# > Redirect Google Service
+# Redirect Google Search Service
 ^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
 
 # Redirect Google Maps Service
 ^(http|https):\/\/(ditu|maps).google\.cn https://maps.google.com 302
-
-# Anti_ISP_JD_Hijack
-^https?:\/\/coupon\.m\.jd\.com\/ https://coupon.m.jd.com/ 302
-^https?:\/\/h5\.m\.jd\.com\/ https://h5.m.jd.com/ 302
-^https?:\/\/m\.jd\.com\/ https://m.jd.com/ 302
-^https?:\/\/newcz\.m\.jd\.com\/ https://newcz.m.jd.com/ 302
-^https?:\/\/p\.m\.jd\.com\/ https://p.m.jd.com/ 302
-^https?:\/\/so\.m\.jd\.com\/ https://so.m.jd.com/ 302
-^https?:\/\/union\.click\.jd\.com\/jda? http://union.click.jd.com/jda?adblock= header
-^https?:\/\/union\.click\.jd\.com\/sem.php? http://union.click.jd.com/sem.php?adblock= header
-^https?:\/\/www.jd.com\/ https://www.jd.com/ 302
-
-# Anti_ISP_Taobao_Hijack
-^https?:\/\/m\.taobao\.com\/ https://m.taobao.com/ 302
 
 # Wiki
 ^https://zh.(m.)?wikipedia.org/zh(-\w*)?(?=/) http://www.wikiwand.com/zh$2 302
