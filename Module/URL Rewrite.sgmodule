@@ -4,7 +4,7 @@
 
 
 [URL Rewrite]
-# Update time: 2020.9.26
+# Update time: 2020.11.11
 
 #网易云
 ^https?://198.18.1.49 https://interface3.music.163.com header
@@ -46,7 +46,6 @@
 # Anti_ISP_JD_Hijack
 ^https?:\/\/coupon\.m\.jd\.com\/ https://coupon.m.jd.com/ 302
 ^https?:\/\/h5\.m\.jd\.com\/ https://h5.m.jd.com/ 302
-^https?:\/\/item\.m\.jd\.com\/ https://item.m.jd.com/ 302
 ^https?:\/\/m\.jd\.com\/ https://m.jd.com/ 302
 ^https?:\/\/newcz\.m\.jd\.com\/ https://newcz.m.jd.com/ 302
 ^https?:\/\/p\.m\.jd\.com\/ https://p.m.jd.com/ 302
