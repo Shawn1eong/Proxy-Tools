@@ -29,28 +29,28 @@ jobs:
           npm install 
           
       - name: '运行 【中青看点自动阅读九】'
-        if: env.YOUTH_READ
+        if: env.YOUTH_READ9
         run: |
           node Task/Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ9 }}
 
       - name: '运行 【中青看点自动阅读十】'
-        if: env.YOUTH_READ2
+        if: env.YOUTH_READ10
         run: |
           node Task/Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ10 }}
           
       - name: '运行 【中青看点自动阅读十一】'
-        if: env.YOUTH_READ3
+        if: env.YOUTH_READ11
         run: |
           node Task/Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ11 }}
           
       - name: '运行 【中青看点自动阅读十二】'
-        if: env.YOUTH_READ4
+        if: env.YOUTH_READ12
         run: |
           node Task/Youth_Read.js
         env:
