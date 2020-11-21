@@ -6,81 +6,7 @@
 force-http-engine-hosts = %APPEND% vali.cp31.ott.cibntv.net
 
 [Rule]
-# Update time: 2020.11.21
-<<<<<<< HEAD
-=======
-
-# > Jable.tv av
-DOMAIN-SUFFIX,asewlfjqwlflkew.com,REJECT
-DOMAIN-SUFFIX,uus52.com,REJECT
-DOMAIN-SUFFIX,uus58.com,REJECT
-DOMAIN-SUFFIX,ddmax20.xyz,REJECT
-DOMAIN-SUFFIX,ads.exosrv.com,REJECT
-DOMAIN-KEYWORD,exosrv,REJECT
-DOMAIN-KEYWORD,asewlfjqwlflkew,REJECT
-DOMAIN-SUFFIX,tyrantdb.com,REJECT
-DOMAIN-SUFFIX,adserve.work,REJECT
-
-# > nfmovies.com 奈菲影视
-DOMAIN-SUFFIX,s96.cnzz.com,REJECT
-#DOMAIN-SUFFIX,yabo729.com,REJECT
-
-# > #m.pianku.me/ 手机片库网
-#DOMAIN-KEYWORD,xn--2qux23c9ziyrq,REJECT
-DOMAIN-SUFFIX,xn--3bs795g.zone,REJECT
-DOMAIN-SUFFIX,xn--2qux23c9ziyrq.plus,REJECT
-DOMAIN-SUFFIX,xn--2qux23c9ziyrq.club,REJECT
-DOMAIN-SUFFIX,xn--xhq9mt12cf5v.xn--io0a7i,REJECT
-DOMAIN-SUFFIX,ddmax20.xyz,REJECT
-#DOMAIN-SUFFIX,www.avple.video,REJECT
-
-# > netflav.com Netflav
-DOMAIN-SUFFIX,ad.pornimg.xyz,REJECT
-DOMAIN-SUFFIX,yandex.ru,REJECT
-DOMAIN-SUFFIX,awaitcola.com,REJECT
-#DOMAIN-SUFFIX,jsdelivr.net,REJECT
-DOMAIN-SUFFIX,wine-api.net,REJECT
-#DOMAIN-KEYWORD,wixsite.com,REJECT
-DOMAIN-SUFFIX,exosrv.com,REJECT
-DOMAIN-SUFFIX,juicyads.com,REJECT
-#DOMAIN-SUFFIX,wixstatic.com,REJECT
-DOMAIN-SUFFIX,thumb.fvs.io,REJECT
-DOMAIN-SUFFIX,itnuzleafan.com,REJECT
-DOMAIN-SUFFIX,oawhaursaith.com,REJECT
-DOMAIN-SUFFIX,unreshiramor.com,REJECT
-
-# > avgle.me
-DOMAIN-SUFFIX,jads.co,REJECT
-DOMAIN-SUFFIX,adxadserv.com,REJECT
-DOMAIN-SUFFIX,moatads.com,REJECT
-DOMAIN-SUFFIX,juicyads.in,REJECT
-DOMAIN-SUFFIX,dtscout.com,REJECT
-
-# > dilili.tv
-DOMAIN-SUFFIX,51.la,REJECT
-DOMAIN-SUFFIX,51daeka.com,REJECT
-
-# > #porn
-DOMAIN-SUFFIX,trafficjunky.com,REJECT
-
-# >  ja.nyahentai.com
-DOMAIN-SUFFIX,adserver.juicyads.com,REJECT
-DOMAIN-SUFFIX,poweredby.jads.co,REJECT
-DOMAIN-SUFFIX,jads.co,REJECT
-
-# >  www.cocomanhua.com
-DOMAIN-SUFFIX,exdynsrv.com,REJECT
-#DOMAIN-SUFFIX,cloudfront.net,REJECT
-DOMAIN-SUFFIX,d227cncaprzd7y.cloudfront.net,REJECT
-DOMAIN-SUFFIX,d10lumateci472.cloudfront.net,REJECT
-
-# >  www.mfkhm.com
-DOMAIN-SUFFIX,new.xiongzhangad.com,REJECT
-
-# >  m.yhdm.io
-DOMAIN-SUFFIX,dvzk66.cn,REJECT
-DOMAIN-SUFFIX,pu0glv.cn,REJECT
->>>>>>> 296c7da8dd002a69e5559acc5f461f3933250df3
+# Update time: 2020.9.20
 
 # > Remove Twitterrific’s Ad
 DOMAIN-SUFFIX,iconfactory.com,REJECT
@@ -133,17 +59,6 @@ URL-REGEX,https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.nbnetflow\.guoappsta
 URL-REGEX,^https?:\/\/(\w+\.)?(adclick|ads([0-9]+)?|adserver|adformat|analysis|banners?|click|counter|log|log-?\w+?|pagead|stat|stats|statis|trace|track|tracking|uniad)\.\w+\.(com|cn|org|info|io|net|vn|com.vn),REJECT-TINYGIF
 
 [URL Rewrite]
-# nfmovies.com adsblock
-https:?/\/www\.nfmovies\.com\/static\/\w{6}-\d\.(jpg|gif) https://limbopro.xyz/usr/uploads/2020/10/2091577197.png 302
-https:?/\/www\.nfmovies\.com\/static\/2020\w.*\.jpg https://limbopro.xyz/usr/uploads/2020/10/2091577197.png 302
-https:?/\/www\.nfmovies\.com\/static\/\d{1,4}.jpg https://limbopro.xyz/usr/uploads/2019/11/3141795768.jpg 302
-https:?/\/www\.nfmovies\.com\/static\/1.jpg https://limbopro.xyz/usr/uploads/2019/11/3141795768.jpg 302
-https\b.*\bbanner.jpg https://limbopro.xyz/usr/uploads/2020/10/2091577197.png 302
-https\b.*\bbanner\b.*\.jpg - REJECT
-https://\b.*\bnaifei\b.*/\?sid=\w{1,6} https://limbopro.xyz 302
-http.*yabo729.\b.* https://limbopro.xyz 302
-http.*yabo.\b.* https://limbopro.xyz 302
-
 # Remove Super‘s Ad (By Liquor030)
 app_name=super&([\S]*)aid=\d+ app_name=super_pro&$1aid=1412 header
 
@@ -180,4 +95,4 @@ ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent
 Bilibili.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/primovist/ScriptsForSurge/master/Scripts/Bilibili.js,pattern=^https?:\/\/ap(i|p).(live.)?bilibili.com\/x(live)?\/(resource\/show\/tab|v2\/(reply\/main|view\/material|account\/(mine(\/ipad)?|teenagers\/status)|view|feed\/index|rank|channel\/region\/list)|app-room/v1/index/getInfoByRoom)\?access_key,type=http-response
 
 [MITM]
-hostname = %APPEND% render.alipay.com, cloudrls.com, javtsunami.com, *.cloudfront.net, 91porny.com, cdn.jsdelivr.net, s3.amazonaws.com, static.nyahentai.pw, zh.nyahentai.me, m.yhdm.io, k.wudejia.com, www.mfkhm.com, www.cocomanhua.com, fans.91p20.space, www.91porn.com, *.xvideos-cdn.com, www.xvideos.com, *.realsrv.com, *.nyahentai.com, gum.criteo.com, rt.gsspat.jp, *.nyahentai.pw, rt.gsspat.jp, img.gsspat.jp, *.phncdn.com, www.pornhub.com, cn.pornhub.com, *.pornhub.com, *.ddmax20.*, asianclub.tv, *.yabo.*, *.yabo729.com, *.wine-api.net, *.wixsite.com, *.wixstatic.com, *.dilidd.com, *.alicdn.com, *.dililitv.com, *.netflav.*, *.netflav.com, www.avple.video, *.imgur.*, *.pianku.*, *.xn--2qux23c9ziyrq.club, *.naifei.shop, *.nfmovies.com,*.yb463.app, *.yabet.*, *.yabet1477.*, ddrk.me, *.ddrk.me, poweredbyliquidfire.mobi, *.poweredbyliquidfire.mobi, avgle.com, *.avgle.com, *.juicyads.com, *.jads.co, jable.tv, *.jable.tv, *.ackcdn.net, *.trwl1.*, *.trwl1.com, *.o333o.com, *.exosrv.com, asewlfjqwlflkew.com, *.asewlfjqwlflkew.com, *.tsyndicate.com, tsyndicate.com, *.uus58.com, asewlfjqwlflkew.com, *.uus58.*, gw.alicdn.com, *acs.m.taobao.com,*.dxy.cn, m.weibo.cn, api.live.bilibili.com, pic*.zhimg.com,vv.video.qq.com, *.amemv.com, rtbapi.douyucdn.cn, ap*.bilibili.com, api.ithome.com, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
+hostname = %APPEND% render.alipay.com, gw.alicdn.com, *acs.m.taobao.com,*.dxy.cn, m.weibo.cn, api.live.bilibili.com, pic*.zhimg.com,vv.video.qq.com, *.amemv.com, rtbapi.douyucdn.cn, ap*.bilibili.com, api.ithome.com, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
