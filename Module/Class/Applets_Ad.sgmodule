@@ -6,9 +6,9 @@
 hostname = %APPEND% *.ddly666.top, hkj178.com, a.jxjt888.top, lysl2020.com, www.i3zh.com,d.syshhc.top
 
 [Script]
-老胡工具箱 = type=http-response,requires-body=1,max-size=0,pattern=https://d.syshhc.top/wp-json/wp/v2/*,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js
-酸鸡汤（光头） = type=http-response,requires-body=1,max-size=0,pattern=https://bbb.ddly666.top/wp-json/wp/v2/posts/*,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js
-黑科技软件 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/hkj178.com/wp-json/mp/v2/posts/*,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js
-天泽后花园 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/a.jxjt888.top/wp-json/wp/v2/posts/*,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js
-小野分享 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/lysl2020.com/wp-json/wp/v2/posts/*,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js
-搜罗好货 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/www.i3zh.com/wp-json/wp/v2/posts/*,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js
+http-response https://d.syshhc.top/wp-json/wp/v2/* requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,tag=老胡工具箱
+http-response https://bbb.ddly666.top/wp-json/wp/v2/posts/* requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,tag=酸鸡汤
+http-response ^https:\/\/hkj178.com/wp-json/mp/v2/posts/* requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,tag=黑科技软件
+http-response ^https:\/\/a.jxjt888.top/wp-json/wp/v2/posts/* requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,tag=天泽后花园
+http-response ^https:\/\/lysl2020.com/wp-json/wp/v2/posts/* requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js, tag=小野分享
+http-response ^https:\/\/www.i3zh.com/wp-json/wp/v2/posts/* requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js, tag=搜罗好货
