@@ -1,0 +1,5 @@
+#!name=Proxy for Common Port Only
+#!desc=对非常用端口使用直连策略，用以减少将 Surge 用于网关模式时，局域网内的其他设备将 BitTorrent 数据包发送到 rixCloud 网络的概率。这并不可能完全过滤 BitTorrent 数据包，因此仍然需要为 BitTorrent 下载/做种设备设置单独的分流规则。
+
+[Rule]
+AND,((NOT,((DEST-PORT,21))), (NOT,((DEST-PORT,22))), (NOT,((DEST-PORT,23))), (NOT,((DEST-PORT,53))), (NOT,((DEST-PORT,80))), (NOT,((DEST-PORT,123))), (NOT,((DEST-PORT,194))), (NOT,((DEST-PORT,443))), (NOT,((DEST-PORT,465))), (NOT,((DEST-PORT,587))), (NOT,((DEST-PORT,993))), (NOT,((DEST-PORT,995))), (NOT,((DEST-PORT,2052))), (NOT,((DEST-PORT,2053))), (NOT,((DEST-PORT,2082))), (NOT,((DEST-PORT,2083))), (NOT,((DEST-PORT,2086))), (NOT,((DEST-PORT,2095))), (NOT,((DEST-PORT,2096))), (NOT,((DEST-PORT,5228))), (NOT,((DEST-PORT,5229))), (NOT,((DEST-PORT,5230))), (NOT,((DEST-PORT,8080))), (NOT,((DEST-PORT,8443))), (NOT,((DEST-PORT,8880)))),DIRECT
