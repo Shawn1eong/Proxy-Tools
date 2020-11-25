@@ -37,6 +37,8 @@ PSN会免= type=cron,cronexp=0 9 1 * *,script-path=https://raw.githubusercontent
 
 # 签到脚本
 
+阅读 = type=cron,cronexp=2 */22 * * * ?,wake-system=1,script-path=https://raw.githubusercontent.com/xingliuchao/jd/main/QQread.js,script-update-interval=0
+东东工厂 = type=cron,cronexp=0 *\/3 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/dd_factory.js,
 # By lxk0301   GitHub：https://github.com/lxk0301/scripts
 东东农场= type=cron,cronexp=5 6-18/6 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js,timeout=530,wake-system=1,script-update-interval=0
 东东萌宠= type=cron,cronexp=20 7-19/6 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js,timeout=530,wake-system=1,script-update-interval=0
