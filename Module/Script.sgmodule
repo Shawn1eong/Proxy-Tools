@@ -23,7 +23,7 @@ vsco.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/S
 # > Keep app unlock private lessons and action libraries. (api.gotokeep.com,59.110.149.231,129.211.156.213)
 Keep PRO = requires-body=1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/keepgoto.js,type=http-response,pattern=https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days)
 
-# > 美颜相机 (api.meiyan.com)
+# > 美颜相机 v9.6.20版本 (api.meiyan.com)
 Meiyanxiangji.js = requires-body=1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/Meiyanxiangji.js,type=http-response,pattern=^https:\/\/api\.meiyan\.com\/vip\/user_info
 
 # > 美图秀秀 v9.0.51版本 (api.xiuxiu.meitu.com)
