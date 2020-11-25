@@ -35,9 +35,6 @@ Epic周免= type=cron,cronexp=0 9 ? * MON,script-path=https://raw.githubusercont
 # > PSN会免(By Peng-YM)
 PSN会免= type=cron,cronexp=0 9 1 * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/psn.js,script-update-interval=0
 
-# MeetaGit    https://github.com/MeetaGit/MeetaRules/tree/master/Surge
-幸运飞艇= type=cron,cronexp=0 0/5 13-23 * * *,script-path=https://raw.githubusercontent.com/MeetaGit/MeetaRules/m%CE%B1ster/Surge/Custom_Js/lottery_xyft.js,script-update-interval=0
-
 # 签到脚本
 
 # By lxk0301   GitHub：https://github.com/lxk0301/scripts
