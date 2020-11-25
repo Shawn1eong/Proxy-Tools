@@ -4,78 +4,81 @@
 
 
 [MITM]
-hostname = %APPEND%  lanfanapp.com,api.getmimo.com, biz.caiyunapp.com, *.bybutter.com,prod.api.shapr3d.com,cdn.altstore.io,www.patreon.com,bea.sportq.com,apimboom2.globaldelight.net, buy.itunes.apple.com, api.revenuecat.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com,api.lennou.com,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com,*.xiaoxiao*.com,vsco.co,u.kanghuayun.com,www.3ivf.com,pay.guoing.com,api.gotokeep.com,59.110.149.231,129.211.156.213,api.vuevideo.net,api.gamer.com.tw,*.xiangxiangapps.com,avatar-nct.nixcdn.com,oa.zalo.me,api.meiease.c*, viva-asia1.vvbrd.com,purchases.ws.pho.to,photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io,  api.polaxiong.com, api.polarr.co
+hostname = %APPEND%  lanfanapp.com,api.getmimo.com,api.xiuxiu.meitu.com,api.meiyan.com, biz.caiyunapp.com, *.xxjjappss.com,*.*.mob.com, *.bybutter.com,prod.api.shapr3d.com,cdn.altstore.io,www.patreon.com,bea.sportq.com, buy.itunes.apple.com, api.revenuecat.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com,api.lennou.com,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com,*.xiaoxiao*.com,vsco.co,u.kanghuayun.com,www.3ivf.com,pay.guoing.com,api.gotokeep.com,59.110.149.231,129.211.156.213,api.vuevideo.net,api.gamer.com.tw,*.xiangxiangapps.com,avatar-nct.nixcdn.com,oa.zalo.me,api.meiease.c*, viva-asia1.vvbrd.com,purchases.ws.pho.to,photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io,  api.polaxiong.com, api.polarr.co
 
 [Script]
-# Update time: 2020.11.21
+# Update time: 2020.11.25
 
 彩云天气_SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/caiyun_svip.js
 
-# > 小小影视 Unlock vip
-小小影视 = type=http-response,pattern=https:\/\/ios\.xiaoxiaoapps\.com\/(vod\/reqplay\/|ucp/index|getGlobalData),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xxys.js,script-update-interval=0
+# > 小小影视 Unlock vip （*.xxjjappss.com,*.*.mob.com,）
+小小影视 = type=http-response,pattern=https:\/\/.*\..*\.com\/(vod\/reqplay\/|ucp/index|getGlobalData),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/xxys.js,script-update-interval=0
 
-# > lanfan pro
+# > lanfan pro (lanfanapp.com)
 懒饭Pro = type=http-response,pattern=^https:\/\/lanfanapp.com\/api\/v1\/user\/(prime.json|page_detail.json),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/lanfanapp.js,script-update-interval=0
 
-# > VSCO unlock vip
+# > VSCO unlock vip (vsco.co)
 vsco.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js,type=http-response,pattern=^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/
 
-# > Keep app unlock private lessons and action libraries.
+# > Keep app unlock private lessons and action libraries. (api.gotokeep.com,59.110.149.231,129.211.156.213)
 Keep PRO = requires-body=1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/keepgoto.js,type=http-response,pattern=https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days)
 
-# VUE pro
+# > 美颜相机 (api.meiyan.com)
+Meiyanxiangji.js = requires-body=1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/Meiyanxiangji.js,type=http-response,pattern=^https:\/\/api\.meiyan\.com\/vip\/user_info
+
+# > 美图秀秀 v9.0.51版本 (api.xiuxiu.meitu.com)
+Meiyanxiangji.js = requires-body=1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/mtxx.js,type=http-response,pattern=^https:\/\/api\.xiuxiu\.meitu\.com\/v1\/user\/show\.json
+
+# VUE pro (api.vuevideo.net)
 VUE PRO = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/VUE.js,type=http-response,pattern=^https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare)
 
 # > 以下为nzw9314收集整理
 
 # > Miao Miao
-# > Bear熊掌记 (By Miao Miao)
+# > Bear熊掌记 (buy.itunes.apple.com)
 // Bear熊掌记 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/bear.js,type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
 
-# > RCam /Geist /Gear /Picsew 
+# > RCam /Geist /Gear /Picsew (buy.itunes.apple.com)
 内购 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/receipt.js,script-update-interval=0,type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
 
-# > 企信通小程序 unlock
+# > 企信通小程序 unlock (miniapp.elecredit.com)
 企信通小程序 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/Alex/qxt.js,script-update-interval=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/
 
-# > 黄油相机
+# > 黄油相机 (.*.bybutter.com)
 Hyxj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/HYXJ.js,type=http-response,pattern=^https?:\/\/.*\.bybutter\.com\/(v4\/shop\/|v4\/users\/me|v4\/shop\/shelves|v4\/editor\/template\/recommended|v4\/search\/products|v4\/template-square\/)
 
-# > 菜谱大全vip Unlockvip
+# > 菜谱大全 (api.jiaonizuocai.com)
 cpdq.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/cpdq.js,type=http-response,pattern=^https?:\/\/api\.jiaonizuocai\.com
 
-# > 泼辣修图
+# > 泼辣修图 (api.polaxiong.com, api.polarr.co)
 泼辣修图 = type=http-response,pattern=^https?:\/\/api\.(polaxiong\.com|polarr\.co)\/v\d\/payments\/appleiap\/receipts\/confirmation$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/LTribeSkyx/Script/master/polaris.js,script-update-interval=0
 
-# > paper
+# > paper （api.revenuecat.com）
 paper笔记 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/paper.js,type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.*\/subscribers\/[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}$
 
-# > 彩云小译vip
+# > 彩云小译 （api.interpreter.caiyunai.com）
 彩云小译 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/cyxy.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.interpreter\.caiyunai\.com\/v1\/user
 
-# > syzzzf
+# > syzzzf （commerce-.*api.faceu.mobi, commerce-api.faceu.mobi）
 # 轻颜相机 & ulike & 蒸汽波相机(vaporcam)三合一 解锁VIP(By @s y & Alex0510)
 qyxj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/qyxj.js,type=http-response,pattern=^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info
 
-# > Peak 解锁Pro
+# > Peak （billing.peakcloud.org）
 peak游戏 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/peak.js,type=http-response,pattern=^https:\/\/billing\.peakcloud\.org\/billing\/2\/user\/me?
 
-# > Boom 解锁Pro
-Boom = type=http-response,pattern=^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/verify_receipt.js,script-update-interval=0
-
-# > Adguard Premium
+# > Adguard Premium （mobile-api.adguard.com）
 Adguard Premium = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.com\/api\/.+\/ios_validate_receipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/maicoo-l/Surge/master/Script/AdGuard.js,script-update-interval=0
 
-# > Darkroom.js 
+# > Darkroom.js （api.revenuecat.com）
 Darkroom.js = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/(receipts|subscribers*),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/LTribeSkyx/Script/master/Darkroom.js,script-update-interval=0
 
-# > Lightroom
+# > Lightroom （photos.adobe.io）
 Lightroom.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Lightroom.js,script-update-interval=0,type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts
 
-# > Mimo Pro 
+# > Mimo Pro （api.getmimo.com）
 Mimo Pro = type=http-response,pattern=^https:\/\/api\.getmimo\.com\/v1\/subscriptions$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/mimo.vip.js,script-update-interval=0
 
-# > altstore
+# > altstore （www.patreon.com,cdn.altstore.io）
 # altstore.js = requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/joyoner/rule/master/JS/altstore.js,script-update-interval=0,type=http-response,pattern=^https://cdn.altstore.io/file/altstore/apps.json
 
 Altstore beta  = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/altstore.js,script-update-interval=0,type=http-response,pattern=https:\/\/www\.patreon\.com\/api\/oauth2\/v2\/identity?
