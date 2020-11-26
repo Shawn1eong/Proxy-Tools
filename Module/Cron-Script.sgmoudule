@@ -39,6 +39,8 @@ PSN会免= type=cron,cronexp=0 9 1 * *,script-path=https://raw.githubusercontent
 
 企鹅读书 = type=cron,cronexp=0 */20 0-23 * * *,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.js
 
+京东到家 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js,script-update-interval=0
+
 # By lxk0301   GitHub：https://github.com/lxk0301/scripts
 东东工厂 = type=cron,cronexp=0 */1 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdfactory.js
 
