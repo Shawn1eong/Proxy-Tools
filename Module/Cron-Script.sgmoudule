@@ -37,7 +37,7 @@ PSN会免= type=cron,cronexp=0 9 1 * *,script-path=https://raw.githubusercontent
 
 # 签到脚本
 
-企鹅读书 = type=cron,cronexp=0 */20 0-23 * * *,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.js
+企鹅读书 = type=cron,cronexp=*/11 * * * *,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/qqread.js
 
 京东到家 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js,script-update-interval=0
 
