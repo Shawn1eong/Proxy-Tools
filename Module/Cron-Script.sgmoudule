@@ -62,7 +62,8 @@ PSN会免= type=cron,cronexp=0 9 1 * *,script-path=https://raw.githubusercontent
 
 宠汪汪偷好友积分与狗粮= type=cron,cronexp=0 0,6 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_steal.js,timeout=420,wake-system=1,script-update-interval=0
 
-宠汪汪积分兑换奖品= type=cron,cronexp=1 0,8,12,16 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js,timeout=30,wake-system=1,script-update-interval=0
+宠汪汪积分兑换奖品= type=cron,cronexp=0,59 0,59 0,8,12,16,23 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js,timeout=30,wake-system=1,script-update-interval=0
+
 宠汪汪——兑换京豆 = type=cron, cronexp=“0 0 8,16 * * *”, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js
 # >>>>> 第一次执行,大概率失败 {23：59}
 东东超市——第一次兑换京豆 = type=cron, cronexp=“59 59 23 * * *”, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js
