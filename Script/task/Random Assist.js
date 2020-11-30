@@ -1,6 +1,4 @@
-/*
-Fuck Car= type=cron,cronexp=18 2 1,10,20 */1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/task/Random%20Assist.js,wake-system=1,script-update-interval=0
- */
+
 const $ = new Env("互助码");
 const shareCodes = [
   {
