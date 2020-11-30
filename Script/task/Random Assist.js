@@ -1,14 +1,14 @@
 /*
-Fuck Car= type=cron,cronexp=18 2 1,10,20 */1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Task/Fuck,wake-system=1,script-update-interval=0
+Fuck Car= type=cron,cronexp=18 2 1,10,20 */1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/task/Random%20Assist.js,wake-system=1,script-update-interval=0
  */
 const $ = new Env("互助码");
 const shareCodes = [
   {
-    zd: $.getdata("zd_shareCode1") || "rou5iaffhqwipxdtboyuoyhf7a3h7wlwy7o5jii",
-    nc: $.getdata("nc_shareCode1") || "9361b44e3bbe49c0a7318daf8b0557a9",
-    mc: $.getdata("mc_shareCode1") || "MTAxODc2NTEzMDAwMDAwMDAyMjU2MjA3OQ==",
-    ddgc: $.getdata("dd_shareCode1") || "P04z54XCjVWnYaS5jQNCWX6331Il3xJe0M",
-    jxgc: $.getdata("jx_shareCode1") || "2Nwg40WjOkT5NFxSlhsEug==",
+    zd: $.getdata("zd_shareCode1") || "olmijoxgmjutzpsfsutvshsemopgexcusbjak2a  ",
+    nc: $.getdata("nc_shareCode1") || "1e7f1af959c34e2eb1e5fd7f6c432455 ",
+    mc: $.getdata("mc_shareCode1") || "MTAxODc2NTEzMDAwMDAwMDAyNzUzNzI2Mw==  ",
+    ddgc: $.getdata("dd_shareCode1") || "P04z54XCjVWnYaS5m9cZ2at2n8bkdpUSWFLGCI ",
+    jxgc: $.getdata("jx_shareCode1") || "21kTw42DfG_jKmT8ofSlJw==",
   },
   {
     zd: $.getdata("zd_shareCode2") || "",
