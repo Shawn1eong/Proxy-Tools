@@ -9,9 +9,9 @@ const shareCodes = [
     jxgc: $.getdata("jx_shareCode1") || "21kTw42DfG_jKmT8ofSlJw==",
   },
   {
-    zd: $.getdata("zd_shareCode2") || "",
-    nc: $.getdata("nc_shareCode2") || "",
-    mc: $.getdata("mc_shareCode2") || "",
+    zd: $.getdata("zd_shareCode2") || "olmijoxgmjutzpcz3cvfn7m3nk5izx25jmsr62q",
+    nc: $.getdata("nc_shareCode2") || "2b30d55798e6440cbfceb5e92ed22c34",
+    mc: $.getdata("mc_shareCode2") || "MTAxODc2NTEzMDAwMDAwMDAyODg3OTY4Nw==",
     ddgc: $.getdata("dd_shareCode2") || "",
     jxgc: $.getdata("jx_shareCode2") || "",
   },
