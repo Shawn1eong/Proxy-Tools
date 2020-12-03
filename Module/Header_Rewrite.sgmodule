@@ -3,33 +3,18 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% links.jianshu.com, *.baidu.com, weixin110.qq.com, www.zhihu.com, link.zhihu.com, www.google.com, www.google.*, www.jianshu.com, encrypted.google.*, *.csdn.net
+hostname = %APPEND% links.jianshu.com, weixin110.qq.com, www.jianshu.com, *.csdn.net,v2ex.com
+
 
 [Header Rewrite]
 
-# Update time: 2020.11.21
+# Update time: 2020.12.3
 
 # > 简书注入桌面
 ^https:\/\/www\.jianshu\.com\/p header-replace User-Agent “Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36”
 
-# > 知乎网页显示优化
-^https:\/\/www\.zhihu\.com\/ header-replace User-Agent "Mozilla/5.0 (Windows Phone 10)"
-
-# > 百度网盘网页优化
-^https:\/\/pan\.baidu\.com header-replace User-Agent "Mozilla/5.0 (Windows Phone 10)"
-
 # > 小小影视vip (By Eric)
 https:\/\/.*.xiaoxiao(img|apps|appxs).com header-replace Cookie xxx_api_auth=6131333537653261363463323331666265663763396239663835636662373930
-
-# > 百度贴吧
-^https?+:\/\/(?:c\.)?+tieba\.baidu\.com\/(?:f|p) header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
-^https?+:\/\/jump2\.bdimg\.com\/(?:f|p) header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
-
-# > 百度
-^https?:\/\/www\.zhihu\.com header-replace User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)
-
-# > 知乎
-^https?+:\/\/www\.zhihu\.com\/question header-replace User-Agent ”Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.4 Safari/605.1.15"
 
 # > 赚客
 ^https?://www.zuanke8.com header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Safari/605.1.15"
@@ -63,20 +48,13 @@ https:\/\/.*.xiaoxiao(img|apps|appxs).com header-replace Cookie xxx_api_auth=613
 ^https?://www.biquge.com.tw header-del Cookie
 
 [Script]
-BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/BaiduChangeUA.js
-
-Google = type=http-request,pattern=^https:\/\/www\.google\.com\/(m|search).+(q=[^&]+)&.+,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/google/simplifyurl.js
-
-EndlessGoogle = type=http-response,requires-body=1,pattern=^https?:\/\/www\.google\..*\/search,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/endlessgoogle.js
 
 CSDN = type=http-response,pattern=https:\/\/.*\.csdn\.net\/.*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Conf/Tools/csdn.js
+
+v2ex = type=http-response,pattern=^https:\/\/v2ex\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/v2ex.js
 
 Jianshu = type=http-request,pattern=^https?:\/\/links\.jianshu\.com\/go\?to=(.+)$,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Adblock/Jianshu.js
 
 Jianshux = type=http-response,pattern=^https:\/\/www\.jianshu\.com\/p,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/jianshu.js
-
-baiduPan = type=http-response,pattern=^https:\/\/pan\.baidu\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/baiduPan.js
-
-zhihux = type=http-response,pattern=^https:\/\/www\.zhihu\.com\/question,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/zhihux.user.js
 
 tbopener.js = type=http-response,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/HotKids/Rules/master/Script/weixin110.js
