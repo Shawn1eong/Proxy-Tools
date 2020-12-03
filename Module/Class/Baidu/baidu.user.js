@@ -5,16 +5,12 @@
  * 制作：elecV2(自用测试)
  *
  ******** 以下为 tamperJS 自动生成的 rewrite 相关信息，可能需要根据情况适当调整 ********
-
 [rewrite]
-^https?:\/\/.*\.baidu\.com url script-response-body https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/baidu.user.js
-
+^https?:\/\/.*\.baidu\.com url script-response-body https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/baidu.user.js
 // 可选
 ^https?:\/\/.*\.baidu\.com url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)$2
-
 [mitm]
 *.baidu.com
-
  ********
  * 工具: tamperJS BY @elecV2
  * 频道: https://t.me/elecV2
@@ -25,7 +21,6 @@ let body = $response.body
 
 if (/<\/html>|<\/body>/.test(body)) {
   body = body.replace('</body>', `
-
 <script>const elecJSPack = function(elecV2){
 /****** tamperJS 日志输出 ******/
 document.body.insertAdjacentHTML("beforeend",\`<ul id='tamperJSLog' style='background: #000000a8;color: #eee;position: fixed;bottom: 1em;top: initial;right: 0;left: 0;width: 95%;margin: 0 2%;border-radius: 8px;font-size: 16px;line-height: 1.6em;list-style: none;padding: 8px 12px;max-height: 100%;overflow: auto;white-space: pre-wrap;word-break: break-all;z-index: 9999 ;box-sizing: border-box' ondblclick="this.style.height === '2em'?Object.assign(this.style, { top: '1em', height: 'initial' }):Object.assign(this.style, { top: 'initial', height: '2em' })"><span style="position: sticky;top: 61.8%;font-size: 8px;opacity: 0.5;line-height: 1em;float: right;margin-right: 1em;">tamperJS by @elecV2</span></ul>\`);const tamperJSLog=document.querySelector("#tamperJSLog"),console={...elecV2,log:(...e)=>{e=e.map(e=>"string"!=typeof e?JSON.stringify(e):e).join(" "),tamperJSLog.insertAdjacentHTML("afterbegin","<li>"+e+"</li>"),elecV2.log(e)},error:(...e)=>{e=e.map(e=>"string"!=typeof e?JSON.stringify(e):e).join(" "),tamperJSLog.insertAdjacentHTML("afterbegin",'<li style="background: #ff0000a8; border-radius: 8px;">error: '+e+"</li>"),elecV2.error(e)}}; console.log("成功添加 tamperJS baidu.user.js");
@@ -1039,7 +1034,6 @@ if (typeof GM_addStyle != "undefined") {
 	}
 }
 })();
-
 }(console)</script></body>`)
 
   console.log('添加 tamperJS：baidu.user.js')

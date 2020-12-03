@@ -19,4 +19,4 @@ https?://link.zhihu.com/\?target=(https?)%3A//(.*) $1://$2 307
 zhihux = type=http-response,pattern=^https:\/\/www\.zhihu\.com\/question,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihux.user.js
 
 [MITM]
-hostname = %APPEND% www.zhihu.com,link.zhihu.com,oia.zhihu.com
+hostname = %APPEND% www.zhihu.com,link.zhihu.com,oia.zhihu.com 

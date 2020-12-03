@@ -4,7 +4,7 @@
 
 
 [URL Rewrite]
-# Update time: 2020.11.11
+# Update time: 2020.12.3
 
 #网易云
 ^https?://198.18.1.49 https://interface3.music.163.com header
@@ -21,9 +21,6 @@
 # > Jianshu 
 ^https:\/\/links\.jianshu\.com\/go\?to=(.+)$ $1 302
 
-# > baidu
-^https?:\/\/pan\.baidu\.com\/s\/(.+) https://pan.baiduwp.com/s/$1 302
-
 # > Coderx
 ;^https?:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/commit\/(.*)$ grape://commit?id=$2&reponame=$1 307
 ;^https?:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/pull\/(\d+)$ grape://pr?number=$2&reponame=$1 307
@@ -36,12 +33,6 @@
 # > GitHub master branch
 ^https://github.com/(Dreamacro|yichengchen|lhie1|DivineEngine|SukkaW)/(clash|clashX|Rules|Profiles|Koolshare-Clash)$ https://github.com/$1/$2/tree/master 302
 ^(http|https):\/\/raw\.githubusercontent\.com\/(DivineEngine|lhie1)\/(.+?)\/(master|main)\/(.+) https://cdn.jsdelivr.net/gh/$2/$3/$5 302
-
-# Redirect Google Search Service
-^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
-
-# Redirect Google Maps Service
-^(http|https):\/\/(ditu|maps).google\.cn https://maps.google.com 302
 
 # Wiki
 ^https://zh.(m.)?wikipedia.org/zh(-\w*)?(?=/) http://www.wikiwand.com/zh$2 302
@@ -123,4 +114,4 @@
 # CUSTOM URL
 
 [MITM]
-hostname = %APPEND% github.com,www.google.com,api.abema.io, GitHub.com,www.google.cn,*.wikipedia.org, *.wikiwand.com, raw.githubusercontent.com, apimboom2.globaldelight.net
+hostname = %APPEND% github.com,api.abema.io, GitHub.com,*.wikipedia.org, *.wikiwand.com, raw.githubusercontent.com, apimboom2.globaldelight.net
