@@ -2,10 +2,10 @@
 const $ = new Env("互助码");
 const shareCodes = [
   {
-    zd: $.getdata("zd_shareCode1") || "olmijoxgmjutzpsfsutvshsemopgexcusbjak2a  ",
-    nc: $.getdata("nc_shareCode1") || "1e7f1af959c34e2eb1e5fd7f6c432455 ",
-    mc: $.getdata("mc_shareCode1") || "MTAxODc2NTEzMDAwMDAwMDAyNzUzNzI2Mw==  ",
-    ddgc: $.getdata("dd_shareCode1") || "P04z54XCjVWnYaS5m9cZ2at2n8bkdpUSWFLGCI ",
+    zd: $.getdata("zd_shareCode1") || "olmijoxgmjutzpsfsutvshsemopgexcusbjak2a",
+    nc: $.getdata("nc_shareCode1") || "1e7f1af959c34e2eb1e5fd7f6c432455",
+    mc: $.getdata("mc_shareCode1") || "MTAxODc2NTEzMDAwMDAwMDAyNzUzNzI2Mw==",
+    ddgc: $.getdata("dd_shareCode1") || "P04z54XCjVWnYaS5m9cZ2at2n8bkdpUSWFLGCI",
     jxgc: $.getdata("jx_shareCode1") || "21kTw42DfG_jKmT8ofSlJw==",
   },
   {
