@@ -35,6 +35,7 @@ Epic周免= type=cron,cronexp=0 9 ? * MON,script-path=https://raw.githubusercont
 # > PSN会免(By Peng-YM)
 PSN会免= type=cron,cronexp=0 9 1 * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/psn.js,script-update-interval=0
 
+# > 支付宝捐步数
 捐步数 = type=cron,cronexp=0 18 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/donate-step.js,
 
 # By chavyleung      GitHub：https://github.com/chavyleung/scripts
