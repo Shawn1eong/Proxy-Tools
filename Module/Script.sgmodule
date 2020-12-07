@@ -78,6 +78,10 @@ Lightroom.js = requires-body=1,max-size=0,script-path=https://raw.githubusercont
 # > Mimo Pro （api.getmimo.com）
 Mimo Pro = type=http-response,pattern=^https:\/\/api\.getmimo\.com\/v1\/subscriptions$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/mimo.vip.js,script-update-interval=0
 
+# > working copy
+
+Workingcopy = type=http-response,pattern=^https:\/\/education\.github\.com\/api\/user$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/workingcopy.js,script-update-interval=0
+
 # > altstore （www.patreon.com,cdn.altstore.io）
 # altstore.js = requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/joyoner/rule/master/JS/altstore.js,script-update-interval=0,type=http-response,pattern=^https://cdn.altstore.io/file/altstore/apps.json
 

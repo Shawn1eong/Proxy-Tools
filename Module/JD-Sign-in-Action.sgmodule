@@ -5,20 +5,48 @@
 
 [Script]
 # 签到脚本
-十元街 = type=cron,cronexp=10 7 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_syj.js
 
 京东到家 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js,script-update-interval=0
 
-# By lxk0301   GitHub：https://github.com/lxk0301/scripts
-东东工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdfactory.js
+# 京东排行榜 = type=cron,cronexp=11 9 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js
+
+# 京喜财富岛 = type=cron,cronexp=30 23 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/MoPoQAQ/Script/main/Me/jx_cfd.js
 
 东东工厂 = type=cron,cronexp=0 * * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/dd_factory.js
 
 京东赚赚 = type=cron,cronexp=0 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.js
 
-东东农场 = type=cron,cronexp=5 6-18/6 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js,timeout=530,wake-system=1,script-update-interval=0
+京喜工厂plus = type=cron,cronexp=“0 */4 * * *”,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_factory_component.js
 
-东东萌宠 = type=cron,cronexp="15 6-18/6 * * *",wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js
+京喜工厂助力 = type=cron,cronexp=0 */1 * * *,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_factory.js,wake-system=1,timeout=20,script-update-interval=0
+
+京喜工厂商品列表详情 = type=cron,cronexp="10 10 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_products_detail.js
+
+京喜金牌厂长 = type=cron,cronexp=“10 * * * *”,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_story.js
+
+京东小窝 = type=cron,cronexp=0 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/ddxw.js
+
+# By lxk0301   GitHub：https://github.com/lxk0301/scripts
+
+京东快递签到 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_kd.js
+
+健康抽奖机 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_health.js
+
+京东汽车 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_car.js
+
+领京豆额外奖励 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_home.js
+
+#东东工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdfactory.js
+
+# 金榜年终奖 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_split.js
+
+# 秒杀红包雨 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_ms_redrain.js
+
+#十元街 = type=cron,cronexp=10 7 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_syj.js
+
+# 东东农场 = type=cron,cronexp=5 6-18/6 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js,timeout=530,wake-system=1,script-update-interval=0
+
+# 东东萌宠 = type=cron,cronexp="15 6-18/6 * * *",wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js
 
 # >>> 种豆得豆系列
 # >>>>> 凌晨时段可以领取一瓶营养液 {00:08}
@@ -27,7 +55,7 @@
 种豆得豆——整点时段 = type=cron, cronexp="0 0 22,7-21/2 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js
 
 # >>> 宠汪汪系列
-宠汪汪= type=cron,cronexp=15 */2 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js,timeout=330,wake-system=1,script-update-interval=0
+#宠汪汪= type=cron,cronexp=15 */2 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js,timeout=330,wake-system=1,script-update-interval=0
 
 # >>>>> 偷粮 {00:04 06:04}
 宠汪汪——偷粮 = type=cron,cronexp="30 4 0,6 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_steal.js
@@ -50,52 +78,34 @@
 东东超市——第二次兑换京豆 = type=cron, cronexp=“0 4 0 * * *”, wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js
 
 # >>> 抽奖机 {00:11}
-京东抽奖机 = type=cron,cronexp=11 1 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_lotteryMachine.js
+# 京东抽奖机 = type=cron,cronexp=11 1 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_lotteryMachine.js
 
-京东天天加速= type=cron,cronexp=8 */3 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_speed.js,timeout=130,wake-system=1,script-update-interval=0
+# 京东天天加速= type=cron,cronexp=8 */3 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_speed.js,timeout=130,wake-system=1,script-update-interval=0
 
-京东摇钱树 = type=cron,cronexp="3 */2 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js
+# 京东摇钱树 = type=cron,cronexp="3 */2 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js
 
-摇京豆= type=cron,cronexp=5 0 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_club_lottery.js,timeout=50,wake-system=1,script-update-interval=0
+# 摇京豆= type=cron,cronexp=5 0 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_club_lottery.js,timeout=50,wake-system=1,script-update-interval=0
 
-东东超市 = type=cron,cronexp="11 1-23/5 * * *",wake-system=1,timeout=320,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js
+# 东东超市 = type=cron,cronexp="11 1-23/5 * * *",wake-system=1,timeout=320,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js
 
 京小超领蓝币(兑换京豆)= type=cron,cronexp=0 0 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js,timeout=30,wake-system=1,script-update-interval=0
 
-取关京东店铺商品= type=cron,cronexp=55 23 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js,timeout=250,wake-system=1,script-update-interval=0
+# 取关京东店铺商品= type=cron,cronexp=55 23 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js,timeout=250,wake-system=1,script-update-interval=0
 
-进店领豆 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_shop.js
+# 进店领豆 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_shop.js
 
-天天提鹅= type=cron,cronexp=15 14 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_daily_egg.js,wake-system=1,script-update-interval=0
+# 天天提鹅= type=cron,cronexp=15 14 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/c.js,wake-system=1,script-update-interval=0
 
-金融养猪= type=cron,cronexp=12 13 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pigPet.js,wake-system=1,script-update-interval=0
+# 金融养猪= type=cron,cronexp=12 13 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pigPet.js,wake-system=1,script-update-interval=0
 
-京东全民开红包 = type=cron,cronexp=1 1 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_redPacket.js
+# 京东全民开红包 = type=cron,cronexp=1 1 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_redPacket.js
 
-京东白条= type=cron,cronexp=0 19 * * *,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_baiTiao.js,wake-system=1,script-update-interval=0
+# 京豆变动通知= type=cron,cronexp=2 9 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js,timeout=650,wake-system=1,script-update-interval=0
 
-京豆变动通知= type=cron,cronexp=2 9 * * *,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js,timeout=650,wake-system=1,script-update-interval=0
+# 点点券 = type=cron,cronexp="10 0,20 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_necklace.js
 
-点点券 = type=cron,cronexp="10 0,20 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_necklace.js
+# 京喜工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_dreamFactory.js
 
-泡泡大作战 = type=cron,cronexp=4 0 * * *,script-path=https://raw.githubusercontent.com/799953468/Quantumult-X/master/Scripts/JD/jd_paopao.js,wake-system=1,script-update-interval=0
+# 京喜故事 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jxstory.js
 
-京喜工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_dreamFactory.js
-
-京喜工厂plus = type=cron,cronexp=“0 */4 * * *”,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_factory_component.js
-
-京喜工厂助力 = type=cron,cronexp=0 */1 * * *,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_factory.js,wake-system=1,timeout=20,script-update-interval=0
-
-京喜工厂商品列表详情 = type=cron,cronexp="10 10 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_products_detail.js
-
-京喜金牌厂长 = type=cron,cronexp=“10 * * * *”,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_story.js
-
-京喜财富岛 = type=cron,cronexp=30 23 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/MoPoQAQ/Script/main/Me/jx_cfd.js
-
-京喜故事 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jxstory.js
-
-东东小窝 = type=cron,cronexp="16 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_small_home.js
-
-京东小窝 = type=cron,cronexp=0 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/ddxw.js
-
-京东排行榜 = type=cron,cronexp=11 9 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js
+#东东小窝 = type=cron,cronexp="16 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_small_home.js
