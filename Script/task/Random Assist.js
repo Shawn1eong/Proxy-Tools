@@ -55,9 +55,9 @@ $.random = Math.floor(Math.random() * 60);
         `http://api.turinglabs.net/api/v1/jd/jxfactory/create/${jxgc}/`,
         "京喜工厂"
     await $.wait($.random);
-    jxcs &&
+    jxcf &&
       (await create(
-        `https://api.ninesix.cc/api/jx-cfd/count/${jxgc}/`,
+        `https://api.ninesix.cc/api/jx-cfd/count/${jxcf}/`,
         "京喜财富"    
       ));
   }
