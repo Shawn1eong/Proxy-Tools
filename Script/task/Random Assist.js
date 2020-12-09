@@ -7,6 +7,7 @@ const shareCodes = [
     mc: $.getdata("mc_shareCode1") || "MTAxODc2NTEzMDAwMDAwMDAyNzUzNzI2Mw==",
     ddgc: $.getdata("dd_shareCode1") || "P04z54XCjVWnYaS5m9cZ2at2n8bkdpUSWFLGCI",
     jxgc: $.getdata("jx_shareCode1") || "21kTw42DfG_jKmT8ofSlJw==",
+    jxcf: $.getdata("cf_shareCode1") || "243FF1C9A804FCD7522158E2360F371CB6702C44CC1B0F9F0DE7D5B7B42F1A26",
   },
   {
     zd: $.getdata("zd_shareCode2") || "olmijoxgmjutzpcz3cvfn7m3nk5izx25jmsr62q",
@@ -14,6 +15,7 @@ const shareCodes = [
     mc: $.getdata("mc_shareCode2") || "MTAxODc2NTEzMDAwMDAwMDAyODg3OTY4Nw==",
     ddgc: $.getdata("dd_shareCode2") || "P04z54XCjVWnYaS5m9cZ2b43ChDxz45ikiSXTA",
     jxgc: $.getdata("jx_shareCode2") || "xuPVc2AP62TPiyGHt4hmig==",
+    jxcf: $.getdata("cf_shareCode2") || "D619CC03BABD585281ECA09C9B841E12E8E60DC325EB1DCC0AD7683DD3188275",
   },
 ];
 $.result = [];
@@ -52,6 +54,11 @@ $.random = Math.floor(Math.random() * 60);
       (await create(
         `http://api.turinglabs.net/api/v1/jd/jxfactory/create/${jxgc}/`,
         "京喜工厂"
+    await $.wait($.random);
+    jxcs &&
+      (await create(
+        `https://api.ninesix.cc/api/jx-cfd/count/${jxgc}/`,
+        "京喜财富"    
       ));
   }
   await showMsg();
