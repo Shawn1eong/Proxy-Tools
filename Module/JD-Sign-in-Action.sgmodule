@@ -28,6 +28,8 @@
 
 # By lxk0301   GitHub：https://github.com/lxk0301/scripts
 
+PUBG = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=600,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pubg.js
+
 # 苹果抽奖机 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_apple_live.js
 
 # 健康抽奖机 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_health.js
