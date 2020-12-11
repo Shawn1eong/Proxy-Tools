@@ -1,0 +1,9 @@
+#!name=Huke_checkin Cron Scripts
+#!desc=虎课网APP：这是一个学习做图做视频的，主要签到获取积分换会员学习
+
+[Script]
+虎课网 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/58xinian/Surge/master/Script/huke.js
+虎课网cookie = type=http-request,pattern=^https:\/\/api\.huke88\.com\/v5\/activity\/sign,script-path=https://raw.githubusercontent.com/58xinian/Surge/master/Script/huke.js
+
+[MITM] 
+hostname = %APPEND% api.huke88.com
