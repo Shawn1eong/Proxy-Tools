@@ -12,7 +12,7 @@ meweather.js = script-path=https://raw.githubusercontent.com/MeetaGit/MeetaRules
 世界时间 = script-path=https://github.com/congcong0806/surge-list/raw/master/Script/time.js,script-update-interval=0,type=cron,cronexp=”0 0 10,14,18 * * ?“
 
 # > 倒数日
-倒数日 = type=cron,cronexp=0 8 * * *,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/task/daysmatter.js,script-update-interval=0
+倒数日 = type=cron,cronexp=0 8 * * *,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/task/daysmatter.js,script-update-interval=0
 
 # > 每日蚂蚁收能量提醒（corn ”11 7 * * *“ 每天7:11）+ 每日壹句（有道词典）+ 跳转支付宝蚂蚁森林页面
 一言 = script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/yichahucha/cron_daily.js,type=cron,cronexp=11 7 * * *
@@ -21,7 +21,7 @@ meweather.js = script-path=https://raw.githubusercontent.com/MeetaGit/MeetaRules
 每日打开提醒 = script-path=https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js,type=cron,cronexp=”0 9,18 * * 1-5“
 
 # > GitHub监控(By Peng-YM)
-GitHub监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/task/github.js,script-update-interval=0
+GitHub监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/task/github.js,script-update-interval=0
 
 # > 实时货币换算
 实时汇率 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/exchangeRate.js,script-update-interval=0

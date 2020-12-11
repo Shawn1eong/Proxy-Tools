@@ -1,6 +1,6 @@
 /*
 # Gear Unlock Pro （by LTribe）
-Geist.js = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Unlock/Geist.js,script-update-interval=0
+Geist.js = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Unlock/Geist.js,script-update-interval=0
 [mitm]
 hostname = buy.itunes.apple.com,
 */

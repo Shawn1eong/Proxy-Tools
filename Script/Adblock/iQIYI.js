@@ -1,6 +1,6 @@
 /*
 [Script]
-http-response ^https?://cards\.iqiyi\.com/views_home/\d.0/qy_home requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/JS/Unlock/iQIYI.js
+http-response ^https?://cards\.iqiyi\.com/views_home/\d.0/qy_home requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/JS/Unlock/iQIYI.js
  [MITM]
 hostname = cards.iqiyi.com
 */

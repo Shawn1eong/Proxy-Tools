@@ -3,7 +3,7 @@
  * hostname = biz.caiyunapp.com
  * 
  * [Script]
- * 彩云天气_SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/Script/Crack/caiyun_svip.js
+ * 彩云天气_SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/caiyun_svip.js
  * 
  */
 

@@ -1,5 +1,5 @@
 /* Suege
-http-response ^https:\/\/api\.interpreter\.caiyunai\.com\/v1\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/JS/Unlock/cyxy.js,script-update-interval=0
+http-response ^https:\/\/api\.interpreter\.caiyunai\.com\/v1\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/JS/Unlock/cyxy.js,script-update-interval=0
 
 mitm:api.interpreter.caiyunai.com
 */

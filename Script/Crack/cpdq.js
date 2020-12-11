@@ -5,7 +5,7 @@
 https?:\/\/api\.jiaonizuocai\.com url script-response-body https://raw.githubusercontent.com/photonmang/quantumultX/master/cpdq.js
 
 #Surge4.0
-^https?:\/\/api\.jiaonizuocai\.com requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Ru1e/master/JS/Unlock/cpdq.js
+^https?:\/\/api\.jiaonizuocai\.com requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/JS/Unlock/cpdq.js
 
 
 MITM = api.jiaonizuocai.com
