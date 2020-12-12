@@ -3,12 +3,12 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% *.ddly666.top, hkj178.com, a.jxjt888.top, lysl2020.com, www.i3zh.com,d.syshhc.top
+hostname = %APPEND% d.smkj33.top, *.ddly666.top, hkj178.com, a.jxjt888.top, lysl2020.com, www.i3zh.com,
 
 [Script]
-老胡工具箱 = type=http-response,pattern=https://d.syshhc.top/wp-json/wp/v2/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
+森茂雅苑 = type=http-response,pattern=https://d.smkj33.top/wp-json/wp/v2/posts/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
 
-酸鸡汤 = type=http-response,pattern=https://bbb.ddly666.top/wp-json/wp/v2/posts/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
+酸鸡汤 = type=http-response,pattern=https://[a-z]+.ddly666.top/wp-json/wp/v2/posts/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
 
 黑科技软件 = type=http-response,pattern=^https:\/\/hkj178.com/wp-json/mp/v2/posts/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
 
