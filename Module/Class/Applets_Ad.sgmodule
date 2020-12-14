@@ -3,9 +3,14 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% d.smkj33.top, *.ddly666.top, hkj178.com, a.jxjt888.top, lysl2020.com, www.i3zh.com,iosoi.cn
+hostname = %APPEND% d.smkj33.top, *.ddly666.top, hkj178.com, a.jxjt888.top, lysl2020.com, www.i3zh.com, iosoi.cn, jabi.coding.net,
+
+[Rule]
+URL-REGEX,^https:\/\/hkj178\.com\wp-json/mp/v2/advert/wechat,REJECT-TINYGIF
 
 [Script]
+扎比科技资源箱 = type=http-response,pattern=https://jabi.coding.net/p/xcx/d/xcx/git/raw/master/jabikj.json,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/jabi.js,script-update-interval=0
+
 AppleAndroid = type=http-response,pattern=https://iosoi.cn/wp-json/wp/v2/posts/\d+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/aa.js,script-update-interval=0
 
 森茂雅苑 = type=http-response,pattern=https://d.smkj33.top/wp-json/wp/v2/posts/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
@@ -16,6 +21,7 @@ AppleAndroid = type=http-response,pattern=https://iosoi.cn/wp-json/wp/v2/posts/\
 
 天泽后花园 = type=http-response,pattern=^https:\/\/a.jxjt888.top/wp-json/wp/v2/posts/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
 
-小野分享 = type=http-response,pattern=^https:\/\/lysl2020.com/wp-json/wp/v2/posts/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
+小野分享 = type=http-response,pattern=^https:\/\/www.i3zh.com/wp-json/wp/v2/posts/\d+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
+小野分享卡片广告 = type=http-response,pattern=https://lysl2020.com/wp-json/wp/v2/posts\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xyfx.js,script-update-interval=0
 
-搜罗好货 = type=http-response,pattern=^https:\/\/www.i3zh.com/wp-json/wp/v2/posts/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
+搜罗好货 = type=http-response,pattern=^https:\/\/www.i3zh.com/wp-json/wp/v2/posts/\d+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
