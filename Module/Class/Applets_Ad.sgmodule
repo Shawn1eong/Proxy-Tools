@@ -13,6 +13,8 @@ URL-REGEX,^https:\/\/hkj178\.com\wp-json/mp/v2/advert/wechat,REJECT-TINYGIF
 
 AppleAndroid = type=http-response,pattern=https://iosoi.cn/wp-json/wp/v2/posts/\d+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/aa.js,script-update-interval=0
 
+Apple卡片广告 = type=http-response,pattern=https://iosoi.cn/wp-content/plugins/xingshu.php,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/kpgg.js,script-update-interval=0
+
 森茂雅苑 = type=http-response,pattern=https://d.smkj33.top/wp-json/wp/v2/posts/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
 
 酸鸡汤 = type=http-response,pattern=https://[a-z]+.ddly666.top/wp-json/wp/v2/posts/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
@@ -22,6 +24,7 @@ AppleAndroid = type=http-response,pattern=https://iosoi.cn/wp-json/wp/v2/posts/\
 天泽后花园 = type=http-response,pattern=^https:\/\/a.jxjt888.top/wp-json/wp/v2/posts/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
 
 小野分享 = type=http-response,pattern=^https:\/\/www.i3zh.com/wp-json/wp/v2/posts/\d+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
-小野分享卡片广告 = type=http-response,pattern=https://lysl2020.com/wp-json/wp/v2/posts\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xyfx.js,script-update-interval=0
+小野分享卡片广告 = type=http-response,pattern=https://lysl2020.com/wp-json/wp/v2/posts\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/kpgg.js,script-update-interval=0
 
 搜罗好货 = type=http-response,pattern=^https:\/\/www.i3zh.com/wp-json/wp/v2/posts/\d+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xcx.js,script-update-interval=0
+好货卡片广告 = type=http-response,pattern=https://www.i3zh.com/wp-json/wp/v2/posts\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/kpgg.js,script-update-interval=0
