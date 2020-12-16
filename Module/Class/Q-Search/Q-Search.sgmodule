@@ -55,10 +55,8 @@
 
 [URL Rewrite]
 
-#gm   (Google图片)
+# gm   (Google图片)
 ^https:\/\/duckduckgo.com\/\?q=gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
-# gh   (GitHub)
-^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
 
 # sof  (Stack Overflow)
 ^https:\/\/duckduckgo.com\/\?q=sof\+([^&]+).+ https://stackoverflow.com/search?q=$1 302
@@ -81,7 +79,18 @@
 # tf  (Google 搜索 TestFlight)
 ^https:\/\/duckduckgo.com\/\?q=tf(\+|%20)([^&]+).+ https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com 302
 
+
 # > 翻译
+
+# dlc xxx (DeepL 译至中)
+^https:\/\/duckduckgo.com\/\?q=dlc(\+|%20)([^&]+).+ https://www.deepl.com/translator#auto/zh/$2 302
+
+# dle xxx (DeepL 译至英)
+^https:\/\/duckduckgo.com\/\?q=dle(\+|%20)([^&]+).+ https://www.deepl.com/translator#auto/en/$2 302
+
+# dlj xxx (DeepL 译至日)
+^https:\/\/duckduckgo.com\/\?q=dlj(\+|%20)([^&]+).+ https://www.deepl.com/translator#auto/ja/$2 302
+
 # yd   (有道)
 ^https:\/\/duckduckgo.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
 
@@ -96,6 +105,9 @@
 
 
 # 社区
+
+# gh   (GitHub)
+^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
 
 # db：豆瓣
 ^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
@@ -117,6 +129,9 @@
 
 # ssp: 少数派
 ^https:\/\/duckduckgo.com\/\?q=ssp\+([^&]+).+ https://sspai.com/search/post/$1 302
+
+# ssp xxx (Google 搜索少数派)
+^https:\/\/duckduckgo.com\/\?q=ssp(\+|%20)([^&]+).+ https://www.google.com/search?as_q=$2&as_sitesearch=sspai.com 302
 
 # csdn: CSDN
 ^https:\/\/duckduckgo.com\/\?q=csdn\+([^&]+).+ https://so.csdn.net/so/search/s.do?q=$1&t=&u= 302
