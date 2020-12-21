@@ -7,6 +7,7 @@ const shareCodes = [
     mc: $.getdata("mc_shareCode1") || "MTAxODc2NTEzMDAwMDAwMDAyNzUzNzI2Mw==",
     ddgc: $.getdata("dd_shareCode1") || "P04z54XCjVWnYaS5m9cZ2at2n8bkdpUSWFLGCI",
     jxgc: $.getdata("jx_shareCode1") || "21kTw42DfG_jKmT8ofSlJw==",
+    jdzz: $.getdata("zz_shareCode1") || "AUWE5mfiXzmQMWmTx3ipMlA",
   },
   {
     zd: $.getdata("zd_shareCode2") || "olmijoxgmjutzpcz3cvfn7m3nk5izx25jmsr62q",
@@ -14,6 +15,7 @@ const shareCodes = [
     mc: $.getdata("mc_shareCode2") || "MTAxODc2NTEzMDAwMDAwMDAyODg3OTY4Nw==",
     ddgc: $.getdata("dd_shareCode2") || "P04z54XCjVWnYaS5m9cZ2b43ChDxz45ikiSXTA",
     jxgc: $.getdata("jx_shareCode2") || "xuPVc2AP62TPiyGHt4hmig==",
+    jdzz: $.getdata("zz_shareCode2") || "AUWE5ma2RmTxaCGn8iX0fxA",
   },
   {
     zd: $.getdata("zd_shareCode3") || "u5lnx42k5ifiunfvo3i2ptusxwne4buyblkruci",
@@ -21,6 +23,7 @@ const shareCodes = [
     mc: $.getdata("mc_shareCode3") || "MTE1NDUyMjEwMDAwMDAwMzYwODMzNzM=",
     ddgc: $.getdata("dd_shareCode3") || "P04z54XCjVWnYaS5m9cZwSHtxgf4oaK3ORX4g",
     jxgc: $.getdata("jx_shareCode3") || "bIrzqjIMsQBao28mVKd6xA==",
+    jdzz: $.getdata("zz_shareCode3") || "AUWE5-9L6qWB_cwGMmC0c",
   },
 ];
 $.result = [];
@@ -29,7 +32,7 @@ $.random = Math.floor(Math.random() * 60);
 !(async () => {
   console.log(`\n此脚本延迟${$.random}秒执行\n`);
   for (let i = 0; i < shareCodes.length; i++) {
-    const { zd, nc, mc, ddgc, jxgc } = shareCodes[i];
+    const { zd, nc, mc, ddgc, jxgc, jdzz } = shareCodes[i];
     await $.wait($.random);
     zd &&
       (await create(
@@ -59,6 +62,11 @@ $.random = Math.floor(Math.random() * 60);
       (await create(
         `http://api.turinglabs.net/api/v1/jd/jxfactory/create/${jxgc}/`,
         "京喜工厂"
+      )); 
+      jdzz &&
+      (await create(
+        `https://code.chiang.fun/api/v1/jd/jdzz/create/${jdzz}/`,
+        "京东赚赚"
       ));
   }
   await showMsg();
