@@ -13,6 +13,7 @@ meweather.js = script-path=https://raw.githubusercontent.com/MeetaGit/MeetaRules
 
 # > 倒数日
 倒数日 = type=cron,cronexp=0 8 * * *,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/task/daysmatter.js,script-update-interval=0
+倒数日 = type=cron,cronexp=0 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/daymatter.js,
 
 # > 每日打卡提醒（corn ”0 9,18 * * 1-5“ 周一到周五，早九晚六）+ 每日壹句（有道词典）+ 跳转钉钉打卡页面
 每日打开提醒 = script-path=https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js,type=cron,cronexp=”0 9,18 * * 1-5“
