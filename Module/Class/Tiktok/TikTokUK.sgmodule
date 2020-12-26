@@ -1,16 +1,13 @@
 #!name=Unlock TikTok UK
-#!desc=Make Your Day - By wzw1997007 & Choler
+#!desc=TikTok Unlock
 #!system=ios
 
-[General]
-force-http-engine-hosts = %APPEND% api-h2.tiktokv.com:443,api.tiktokv.com:443
-
 [URL Rewrite]
-^https://api[\w-]*?.tiktokv.com/aweme/v\d/policy/notice/? - reject
-
+#tiktok解锁直播区域限制
 (?<=_region=)CN(?=&) UK 307
-(?<=&app_version=)1[6-9]..(?=.?.?&) 100. 307
-(?<=\?version_code=)1[6-9]..(?=.?.?&) 100. 307
+(?<=&mcc_mnc=)4 2 307
+^(https?:\/\/dm[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
+(^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
 
 [MITM]
-hostname = %INSERT% *.tiktokv.com, *.byteoversea.com, *.musical.ly, *.snssdk.com
+hostname = %APPEND% *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
