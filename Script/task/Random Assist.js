@@ -25,6 +25,7 @@ const shareCodes = [
     jxgc: $.getdata("jx_shareCode3") || "bIrzqjIMsQBao28mVKd6xA==",
     jdzz: $.getdata("zz_shareCode3") || "AUWE5-9L6qWB_cwGMmC0c",
   },
+  {
     zd: $.getdata("zd_shareCode4") || "66nvo67oyxpyccoglzgwl5usjmtbpvmo7uno5ya",
     nc: $.getdata("nc_shareCode4") || "8e20ae3c7a1c4b2a9b4368607914b8b9",
     mc: $.getdata("mc_shareCode4") || "MTE1NDQ5OTUwMDAwMDAwNDI3NzQ0NDM=",
@@ -32,7 +33,6 @@ const shareCodes = [
     jxgc: $.getdata("jx_shareCode4") || "jNZkHBEDJTnBCbEoGYdsyw==",
     jdzz: $.getdata("zz_shareCode4") || "S5KkcN3l7oSauQFq-9J52",
   },
-];
 ];
 $.result = [];
 $.random = Math.floor(Math.random() * 60);
