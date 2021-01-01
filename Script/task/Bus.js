@@ -52,7 +52,7 @@ $.result = []
     mc && await createMc(`http://api.turinglabs.net/api/v1/jd/pet/create/${mc}/`)
     dd && await createDd(`http://api.turinglabs.net/api/v1/jd/ddfactory/create/${dd}/`)
     jx && await createJx(`http://api.turinglabs.net/api/v1/jd/jxfactory/create/${jx}/`)
-    zz &await createZz(`https://code.chiang.fun/api/v1/jd/jdzz/create/${zz}/`)
+    zz && await createZz(`https://code.chiang.fun/api/v1/jd/jdzz/create/${zz}/`)
   }
   await showMsg()
 })()
