@@ -5,9 +5,9 @@ const shareCodes = [
     zd: $.getdata("zd_shareCode1") || "olmijoxgmjutzpsfsutvshsemopgexcusbjak2a",
     nc: $.getdata("nc_shareCode1") || "1e7f1af959c34e2eb1e5fd7f6c432455",
     mc: $.getdata("mc_shareCode1") || "MTAxODc2NTEzMDAwMDAwMDAyNzUzNzI2Mw==",
-    ddgc: $.getdata("dd_shareCode1") || "P04z54XCjVWnYaS5m9cZ2at2n8bkdpUSWFLGCI",
+    ddgc: $.getdata("dd_shareCode1") || "T0225KkcRkse9gXTch79l6EMdQCjVWnYaS5kRrbA",
     jxgc: $.getdata("jx_shareCode1") || "21kTw42DfG_jKmT8ofSlJw==",
-    jdzz: $.getdata("zz_shareCode1") || "AUWE5mfiXzmQMWmTx3ipMlA",
+    jdzz: $.getdata("zz_shareCode1") || "S5KkcRkse9gXTch79l6EMdQ",
   },
   {
     zd: $.getdata("zd_shareCode2") || "olmijoxgmjutzpcz3cvfn7m3nk5izx25jmsr62q",
@@ -15,16 +15,24 @@ const shareCodes = [
     mc: $.getdata("mc_shareCode2") || "MTAxODc2NTEzMDAwMDAwMDAyODg3OTY4Nw==",
     ddgc: $.getdata("dd_shareCode2") || "P04z54XCjVWnYaS5m9cZ2b43ChDxz45ikiSXTA",
     jxgc: $.getdata("jx_shareCode2") || "xuPVc2AP62TPiyGHt4hmig==",
-    jdzz: $.getdata("zz_shareCode2") || "AUWE5ma2RmTxaCGn8iX0fxA",
+    jdzz: $.getdata("zz_shareCode2") || "S5KkcRh4YoV2FIBPwwPZfJQ",
   },
   {
     zd: $.getdata("zd_shareCode3") || "u5lnx42k5ifiunfvo3i2ptusxwne4buyblkruci",
     nc: $.getdata("nc_shareCode3") || "d37401264ed1404e8ef9f211e8bb618f",
     mc: $.getdata("mc_shareCode3") || "MTE1NDUyMjEwMDAwMDAwMzYwODMzNzM=",
-    ddgc: $.getdata("dd_shareCode3") || "P04z54XCjVWnYaS5m9cZwSHtxgf4oaK3ORX4g",
+    ddgc: $.getdata("dd_shareCode3") || "T0205KkcJGFzkQGgW3uA0aZcCjVWnYaS5kRrbA",
     jxgc: $.getdata("jx_shareCode3") || "bIrzqjIMsQBao28mVKd6xA==",
     jdzz: $.getdata("zz_shareCode3") || "AUWE5-9L6qWB_cwGMmC0c",
   },
+    zd: $.getdata("zd_shareCode4") || "66nvo67oyxpyccoglzgwl5usjmtbpvmo7uno5ya",
+    nc: $.getdata("nc_shareCode4") || "8e20ae3c7a1c4b2a9b4368607914b8b9",
+    mc: $.getdata("mc_shareCode4") || "MTE1NDQ5OTUwMDAwMDAwNDI3NzQ0NDM=",
+    ddgc: $.getdata("dd_shareCode4") || "T0205KkcN3l7oSauQFq-9J52CjVWnYaS5kRrbA",
+    jxgc: $.getdata("jx_shareCode4") || "jNZkHBEDJTnBCbEoGYdsyw==",
+    jdzz: $.getdata("zz_shareCode4") || "S5KkcN3l7oSauQFq-9J52",
+  },
+];
 ];
 $.result = [];
 $.random = Math.floor(Math.random() * 60);
