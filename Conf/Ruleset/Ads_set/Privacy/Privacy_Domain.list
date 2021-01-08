@@ -1,11 +1,11 @@
 # NAME: Privacy
 # AUTHOR: blackmatrix7
 # GITHUB: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2020-12-31 03:52:16
-# DOMAIN: 17
-# DOMAIN-SUFFIX: 2789
+# UPDATED: 2021-01-08 02:59:06
+# DOMAIN: 16
+# DOMAIN-SUFFIX: 2796
 # DOMAIN-KEYWORD: 3
-# TOTAL: 2809
+# TOTAL: 2815
 data.mistat.xiaomi.com
 hm.baidu.com
 hmma.baidu.com
@@ -14,7 +14,6 @@ log-hl-ipv6.snssdk.com
 log-lq.snssdk.com
 log-va.tiktokv.com
 log.byteoversea.com
-log.tiktokv.com
 mc.51.la
 safebrowsing.googleapis.com
 safebrowsing.urlsec.qq.com
@@ -35,6 +34,7 @@ zgsdk.zhugeio.com
 .6pal.consobaby.com
 .7lbd4.armandthiery.fr
 .7mx.eider.com
+.7q1z79gxsi.global.ssl.fastly.net
 .913nd.dieti-natura.es
 .a.20minutes.fr
 .a.mobify.com
@@ -288,7 +288,6 @@ zgsdk.zhugeio.com
 .anti-bot.baidu.com
 .ape-tagit.timeinc.net
 .apester.com/event
-.api-location-prd.pelcro.com
 .api.nobeta.com.br
 .api.wipmania.com
 .apple.www.letv.com
@@ -300,7 +299,6 @@ zgsdk.zhugeio.com
 .as.mytoys.de
 .as.payback.it
 .as.yomonda.de
-.as01.overbuff.com
 .aserve.directorym.com
 .asianimage-gb.asianimage.co.uk
 .astat.nikkei.com
@@ -736,6 +734,7 @@ zgsdk.zhugeio.com
 .dc.banggood.com
 .dc.letv.com
 .dccss.banggood.com
+.dcf.espn.com
 .dd.nytimes.com
 .de-mi-nis-ner.info
 .de-mi-nis-ner2.info
@@ -882,6 +881,11 @@ zgsdk.zhugeio.com
 .etacontent.com
 .etui.fs.ml.com
 .eu.groupondata.com
+.eu1l.dotabuff.com
+.eu1l.overbuff.com
+.eu1l.speedrun.com
+.eu1l.trackdota.com
+.eu1l.valorbuff.com
 .eulerian.belambra.be
 .eulerian.belambra.fr
 .eulerian.brandalley.fr
@@ -906,6 +910,7 @@ zgsdk.zhugeio.com
 .event.dkb.de
 .event.getblue.io
 .event.syndigo.cloud
+.event.webcollage.net
 .eventapi.libring.com
 .eventgateway.soundcloud.com
 .eventlog.inspsearchapi.com
@@ -1071,7 +1076,6 @@ zgsdk.zhugeio.com
 .gets.faz.net
 .gj.mmstat.com
 .gjr5.yoigo.com
-.gk3o.trackdota.com
 .glasgowtimes-gb.glasgowtimes.co.uk
 .glassmoni.researchgate.net
 .glbdns.microsoft.com
@@ -1163,6 +1167,7 @@ zgsdk.zhugeio.com
 .ingest.sentry.io
 .inquiries.redhat.com
 .insight.fonecta.fi
+.insights.algolia.io
 .insights.cdt.ch
 .insights.sitesearch360.com
 .insitez.blob.core.windows.net
@@ -1181,16 +1186,18 @@ zgsdk.zhugeio.com
 .irqs.ioam.de
 .is.base.de
 .itracking.fccinteractive.com
+.jac.yahoosandbox.com
 .javascriptcounter.appspot.com
 .jelly.mdhv.io
 .jppolid-track.trackprod.integration.jppol.dk
+.k.kolplay.com
 .k.rueducommerce.fr
 .k.streamrail.com
-.k9v7.dotabuff.com
 .kalstats.kaltura.com
 .kbn.korben.info
 .keighleynews-gb.keighleynews.co.uk
 .keyword.daumdn.com
+.keywords.complex.com
 .kidderminstershuttle-gb.kidderminstershuttle.co.uk
 .kiks.auto.ru
 .kinesisproxy.hearstlabs.com
@@ -1265,6 +1272,7 @@ zgsdk.zhugeio.com
 .log.outbrain.com
 .log.outbrainimg.com
 .log.pinterest.com
+.log.plinga.de
 .log.popin.cc
 .log.prezi.com
 .log.ren.tv
@@ -1422,7 +1430,6 @@ zgsdk.zhugeio.com
 .morozhko.club
 .mors22.com
 .mqs.ioam.de
-.mqzy.dotabuff.com
 .ms-apps.haaretz.com
 .ms.computerbild.de
 .msg.71.am
@@ -1449,8 +1456,6 @@ zgsdk.zhugeio.com
 .nexttime.ovh
 .nil.naver.com
 .ninja.akamaized.net
-.nj1r.valorbuff.com
-.nkeq.speedrun.com
 .nm.newegg.com
 .nmtracking.netflix.com
 .noa0.compteczam.fr
@@ -1460,7 +1465,6 @@ zgsdk.zhugeio.com
 .nova.dice.net
 .nrg.red-by-sfr.fr
 .ns.rvmkitt.com
-.nvea.valorbuff.com
 .nws.naltis.com
 .nxakpj4ac8gkd53.info
 .o.addthis.com
@@ -1617,7 +1621,6 @@ zgsdk.zhugeio.com
 .postpixel.vindicosuite.com
 .powercount.jswelt.de
 .powersearch.us.com
-.pqoz.trackdota.com
 .pr.blogflux.com
 .prd-collector-anon.ex.co
 .prd-collector-anon.playbuzz.com
@@ -2283,6 +2286,8 @@ zgsdk.zhugeio.com
 .te.mytoys.de
 .te.supportfreecontent.com
 .ted.metro.co.uk
+.telemetrics.klaviyo.com
+.telemetry.api.wmcdp.io
 .telemetry.art19.com
 .telemetry.jivosite.com
 .telemetry.reembed.com
@@ -2511,6 +2516,7 @@ zgsdk.zhugeio.com
 .tracking.g2crowd.com
 .tracking.gameforge.de
 .tracking.godatafeed.com
+.tracking.gpm-rtv.ru
 .tracking.gruppo.mps.it
 .tracking.ha.rueducommerce.fr
 .tracking.hannoversche.de
@@ -2674,7 +2680,6 @@ zgsdk.zhugeio.com
 .utrack.hexun.com
 .uts.auction.co.kr
 .uue2.destinia.ir
-.uuqz.overbuff.com
 .v.emedia.cn
 .v.oui.sncf
 .v.shopify.com
@@ -2723,6 +2728,7 @@ zgsdk.zhugeio.com
 .vtf2f.banque-casino.fr
 .vtrtl.de
 .vv.ricardo.ch
+.w88.espn.com
 .wa.gmx.fr
 .wa.metro.co.uk
 .wa.ui-portal.de

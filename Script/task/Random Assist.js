@@ -8,6 +8,7 @@ const shareCodes = [
     ddgc: $.getdata("dd_shareCode1") || "T0225KkcRkse9gXTch79l6EMdQCjVWnYaS5kRrbA",
     jxgc: $.getdata("jx_shareCode1") || "21kTw42DfG_jKmT8ofSlJw==",
     jdzz: $.getdata("zz_shareCode1") || "S5KkcRkse9gXTch79l6EMdQ",
+    joy: $.getdata("joy_shareCode1") || "zVvcQ6OpX_3Qs4r4xY1H9at9zd5YaBeE",
   },
   {
     zd: $.getdata("zd_shareCode2") || "olmijoxgmjutzpcz3cvfn7m3nk5izx25jmsr62q",
@@ -16,6 +17,7 @@ const shareCodes = [
     ddgc: $.getdata("dd_shareCode2") || "P04z54XCjVWnYaS5m9cZ2b43ChDxz45ikiSXTA",
     jxgc: $.getdata("jx_shareCode2") || "xuPVc2AP62TPiyGHt4hmig==",
     jdzz: $.getdata("zz_shareCode2") || "S5KkcRh4YoV2FIBPwwPZfJQ",
+    joy: $.getdata("joy_shareCode2") || "ovHvzoiSX4iewYX_IpAcR6t9zd5YaBeE",
   },
   {
     zd: $.getdata("zd_shareCode3") || "u5lnx42k5ifiunfvo3i2ptusxwne4buyblkruci",
@@ -24,6 +26,7 @@ const shareCodes = [
     ddgc: $.getdata("dd_shareCode3") || "T0205KkcJGFzkQGgW3uA0aZcCjVWnYaS5kRrbA",
     jxgc: $.getdata("jx_shareCode3") || "bIrzqjIMsQBao28mVKd6xA==",
     jdzz: $.getdata("zz_shareCode3") || "AUWE5-9L6qWB_cwGMmC0c",
+    joy: $.getdata("joy_shareCode3") || "oPg5oqcy4bnyZaXMOD3Emg==",
   },
   {
     zd: $.getdata("zd_shareCode4") || "66nvo67oyxpyccoglzgwl5usjmtbpvmo7uno5ya",
@@ -32,6 +35,7 @@ const shareCodes = [
     ddgc: $.getdata("dd_shareCode4") || "T0205KkcN3l7oSauQFq-9J52CjVWnYaS5kRrbA",
     jxgc: $.getdata("jx_shareCode4") || "jNZkHBEDJTnBCbEoGYdsyw==",
     jdzz: $.getdata("zz_shareCode4") || "S5KkcN3l7oSauQFq-9J52",
+    joy: $.getdata("joy_shareCode4") || "oBwaINm1V_JfsxS21Vw3Cw==",
   },
 ];
 $.result = [];
@@ -40,7 +44,7 @@ $.random = Math.floor(Math.random() * 60);
 !(async () => {
   console.log(`\n此脚本延迟${$.random}秒执行\n`);
   for (let i = 0; i < shareCodes.length; i++) {
-    const { zd, nc, mc, ddgc, jxgc, jdzz } = shareCodes[i];
+    const { zd, nc, mc, ddgc, jxgc, jdzz, joy } = shareCodes[i];
     await $.wait($.random);
     zd &&
       (await create(
@@ -75,6 +79,11 @@ $.random = Math.floor(Math.random() * 60);
       (await create(
         `https://code.chiang.fun/api/v1/jd/jdzz/create/${jdzz}/`,
         "京东赚赚"
+      ));
+      joy &&
+      (await create(
+        `https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/${joy}/`,
+        "疯狂JOY"
       ));
   }
   await showMsg();
