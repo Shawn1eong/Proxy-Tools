@@ -30,8 +30,6 @@
 ;^https?:\/\/github\.com\/(?!.*users)(?!.*trending)([\u4E00-\u9FA5A-Za-z0-9_-]+)\/(?!.*blob)([\u4E00-\u9FA5A-Za-z0-9_-]+)(?!.*md)(?!.*png|jpg)$ grape://repo?reponame=$1/$2 307
 ;^https?:\/\/github\.com\/(?!.*users)(?!.*trending)([\u4E00-\u9FA5A-Za-z0-9_-]+)$ grape://user?login=$1 307
 
-# > GitHub Accelerate
-^(https?:\/\/(?:raw|gist)\.githubusercontent\.com\/.+)$ https://github.pengym.workers.dev/$1 302
 # > GitHub master branch
 ^https://github.com/(Dreamacro|yichengchen|lhie1|DivineEngine|SukkaW)/(clash|clashX|Rules|Profiles|Koolshare-Clash)$ https://github.com/$1/$2/tree/master 302
 ^(http|https):\/\/raw\.githubusercontent\.com\/(DivineEngine|lhie1)\/(.+?)\/(master|main)\/(.+) https://cdn.jsdelivr.net/gh/$2/$3/$5 302
