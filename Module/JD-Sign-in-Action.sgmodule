@@ -44,12 +44,12 @@
 宠汪汪——晚餐 = type=cron, cronexp="0 4 18 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy.js
 宠汪汪——第七次 = type=cron, cronexp="0 7 21 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_feedPets.js
 
-宠汪汪积分兑换奖品= type=cron,cronexp=0,59 0,59 0,8,12,16,23 * * *,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_reward.js,timeout=30,wake-system=1,script-update-interval=0
+宠汪汪积分兑换奖品= type=cron,cronexp=1 0,8,12,16 * * *,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_reward.js,timeout=30,wake-system=1,script-update-interval=0
 
-宠汪汪——兑换京豆 = type=cron, cronexp=“0 0-16/8 * * *”, wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_reward.js
+宠汪汪——兑换京豆 = type=cron, cronexp=1 0,8,12,16 * * *, wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_reward.js
 
 # >>>>> 第一次执行,大概率失败 {23：59}
-东东超市——第一次兑换京豆 = type=cron, cronexp=“59 59 23 * * *”, wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_blueCoin.js
+东东超市——第一次兑换京豆 = type=cron, cronexp=59 59 23 * * *, wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_blueCoin.js
 # >>>>> 第二次执行,可以执行完毕 {00:04}
 东东超市——第二次兑换京豆 = type=cron, cronexp=“0 4 0 * * *”, wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_blueCoin.js
 
