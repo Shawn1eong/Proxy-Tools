@@ -33,17 +33,6 @@
 # >>>>> 其余时段 {22,7-21/2:00}
 种豆得豆——整点时段 = type=cron, cronexp="0 0 22,7-21/2 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_plantBean.js
 
-# >>>>> 偷粮 {00:04 06:04}
-宠汪汪——偷粮 = type=cron,cronexp="30 4 0,6 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_steal.js
-# >>>>> 喂食 (不追求每日"8"次全部成功,单独分"7"次执行,以确保成功喂食，从早上开始每次喂食间隔 183 分钟)
-宠汪汪——首次 = type=cron, cronexp="0 30 0 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_feedPets.js
-宠汪汪——第二次 = type=cron, cronexp="0 51 5 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_feedPets.js
-宠汪汪——早餐 = type=cron, cronexp="0 54 8 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy.js
-宠汪汪——午餐 = type=cron, cronexp="0 57 11 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy.js
-宠汪汪——第五次 = type=cron, cronexp="0 1 15 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_feedPets.js
-宠汪汪——晚餐 = type=cron, cronexp="0 4 18 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy.js
-宠汪汪——第七次 = type=cron, cronexp="0 7 21 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_feedPets.js
-
 宠汪汪积分兑换奖品= type=cron,cronexp=1 0,8,12,16 * * *,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_reward.js,timeout=30,wake-system=1,script-update-interval=0
 
 宠汪汪——兑换京豆 = type=cron, cronexp=1 0,8,12,16 * * *, wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_reward.js
