@@ -5,6 +5,8 @@
 [Script]
 # 签到脚本
 
+# by whyour and Woo
+
 京东到家 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js,script-update-interval=0
 
 京喜财富岛 = type=cron,cronexp=30 23 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/moposmall/Script/main/Me/jx_cfd.js
@@ -22,6 +24,12 @@
 京喜工厂商品列表详情 = type=cron,cronexp="10 10 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_products_detail.js
 
 京东小窝 = type=cron,cronexp=0 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/ddxw.js
+
+# by shylocks 
+
+京东粉丝专享 = type=cron,cronexp="1 7 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_wechat_sign.js
+
+宝洁美发屋 = type=cron,cronexp="1 8,9 14-31/1 1 *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_bj.js
 
 # By lxk0301   GitHub：https://github.com/lxk0301/scripts
 
