@@ -26,6 +26,7 @@
 京东小窝 = type=cron,cronexp="0 9 * * *",timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/ddxw.js
 
 # by shylocks 
+京东炸年兽🧨 = type=cron,cronexp=“20 * * * *”,wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nianCollect.js
 
 京东粉丝专享 = type=cron,cronexp="1 7 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_wechat_sign.js
 
