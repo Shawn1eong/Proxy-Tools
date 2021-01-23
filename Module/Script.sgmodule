@@ -4,7 +4,7 @@
 
 
 [MITM]
-hostname = %APPEND%  lanfanapp.com, education.github.com, api.getmimo.com,api.xiuxiu.meitu.com,api.meiyan.com, biz.caiyunapp.com, *.xxjjappss.com,*.*.mob.com, *.bybutter.com,prod.api.shapr3d.com,cdn.altstore.io,www.patreon.com,bea.sportq.com, buy.itunes.apple.com, api.revenuecat.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com,api.lennou.com,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com,*.xiaoxiao*.com,vsco.co,u.kanghuayun.com,www.3ivf.com,pay.guoing.com,api.gotokeep.com,59.110.149.231,129.211.156.213,api.vuevideo.net,api.gamer.com.tw,*.xiangxiangapps.com,avatar-nct.nixcdn.com,oa.zalo.me,api.meiease.c*, viva-asia1.vvbrd.com,purchases.ws.pho.to,photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io,  api.polaxiong.com, api.polarr.co
+hostname = %APPEND%  *.jxedt.com, lanfanapp.com, education.github.com, api.getmimo.com,api.xiuxiu.meitu.com,api.meiyan.com, biz.caiyunapp.com, *.xxjjappss.com,*.*.mob.com, *.bybutter.com,prod.api.shapr3d.com,cdn.altstore.io,www.patreon.com,bea.sportq.com, buy.itunes.apple.com, api.revenuecat.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com,api.lennou.com,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com,*.xiaoxiao*.com,vsco.co,u.kanghuayun.com,www.3ivf.com,pay.guoing.com,api.gotokeep.com,59.110.149.231,129.211.156.213,api.vuevideo.net,api.gamer.com.tw,*.xiangxiangapps.com,avatar-nct.nixcdn.com,oa.zalo.me,api.meiease.c*, viva-asia1.vvbrd.com,purchases.ws.pho.to,photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io,  api.polaxiong.com, api.polarr.co
 
 [Script]
 # Update time: 2020.11.25
@@ -48,7 +48,10 @@ VUE PRO = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/S
 Hyxj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/HYXJ.js,type=http-response,pattern=^https?:\/\/.*\.bybutter\.com\/(v4\/shop\/|v4\/users\/me|v4\/shop\/shelves|v4\/editor\/template\/recommended|v4\/search\/products|v4\/template-square\/)
 
 # > 菜谱大全 (api.jiaonizuocai.com)
-cpdq.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/cpdq.js,type=http-response,pattern=^https?:\/\/api\.jiaonizuocai\.com
+菜谱大全 = type=http-response,pattern=^https?:\/\/api\.jiaonizuocai\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/cpdq.js,script-update-interval=0
+
+# > 驾校一点通 (api.polaxiong.com, api.polarr.co)
+驾校一点通 = type=http-response,pattern=^https://vipapi.jxedt.com/vip/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/jxydt.js,script-update-interval=0
 
 # > 泼辣修图 (api.polaxiong.com, api.polarr.co)
 泼辣修图 = type=http-response,pattern=^https?:\/\/api\.(polaxiong\.com|polarr\.co)\/v\d\/payments\/appleiap\/receipts\/confirmation$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/LTribeSkyx/Script/master/polaris.js,script-update-interval=0
