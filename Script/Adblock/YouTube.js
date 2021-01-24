@@ -1,15 +1,16 @@
 /*
 [Script]
-http-request ^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) script-path=https://Choler.github.io/Surge/Script/YouTube.js
+Youtube_ads = type=http-response,pattern=^https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Adblock/YouTube.js,script-update-interval=0
 
 [MITM]
-hostname = *.googlevideo.com
+hostname = *.googlevideo.com,youtubei.googleapis.com,www.youtube.com,www.googleapis.com,youtubei.googleapis.com,s.youtube.com,play.googleapis.com,
 */
 
-var data = {
-  body: "{}",
-  headers: {
-    "Content-Type": "multipart/byteranges"
-  }
-};
-$done({response: data});
+if ($request.url.indexOf("&oad") != -1) {
+  $done({ response: {body: ""} });
+} else if ($request.url.indexOf("&ctier") != -1) {
+  let url = $request.url.replace(/ctier=[A-Z]/, "ctier=A");
+  $done({ response: { status: 302, headers: { Location: url } } });
+} else {
+  $done({})
+}
