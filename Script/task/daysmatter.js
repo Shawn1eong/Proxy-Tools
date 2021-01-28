@@ -112,7 +112,7 @@ if (isSurge) {
 
 
 /*
-倒数日
+纪念日
 
 使用:
 #每天 8点通知, 也可以自定义其他时间, 详情:https://community.nssurge.com/d/33-scripting
@@ -147,7 +147,7 @@ Date.prototype.format = function(fmt) {
     return fmt;
 };
 
-//倒数日计算
+//纪念日计算
 function dateDiff(startDate, endDate) {
     //2002-12-18格式  
     var sdate, edate, days
@@ -179,7 +179,7 @@ function day() {
         content += dayarr[i][0] + "," + u + "\n"
     }
     console.log(content);
-    $notification.post('倒数日', "", content)
+    $notification.post('纪念日', "", content)
     $done()
 }
 
