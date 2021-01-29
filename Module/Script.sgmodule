@@ -14,9 +14,6 @@ hostname = %APPEND%  *.jxedt.com, lanfanapp.com, education.github.com, api.getmi
 # > 小小影视 Unlock vip （*.xxjjappss.com,*.*.mob.com,）
 小小影视 = type=http-response,pattern=https:\/\/.*\..*\.com\/(vod\/reqplay\/|ucp/index|getGlobalData),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/xxys.js,script-update-interval=0
 
-# > lanfan pro (lanfanapp.com)
-懒饭Pro = type=http-response,pattern=^https:\/\/lanfanapp.com\/api\/v1\/user\/(prime.json|page_detail.json),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/lanfanapp.js,script-update-interval=0
-
 # > VSCO unlock vip (vsco.co)
 vsco.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js,type=http-response,pattern=^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/
 
