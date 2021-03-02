@@ -6,9 +6,9 @@
 ^https:\/\/pan\.baidu\.com header-replace User-Agent “Mozilla/5.0 (Windows Phone 10)”
 
 [Script]
-baiduPan = type=http-response,pattern=^https:\/\/pan\.baidu\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/baiduPan.js
+baiduPan = type=http-response,pattern=^https:\/\/pan\.baidu\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/baiduPan.js
 
-BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/BaiduChangeUA.js
+BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/BaiduChangeUA.js
 
 
 [MITM]

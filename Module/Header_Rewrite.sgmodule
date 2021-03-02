@@ -3,15 +3,11 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% links.jianshu.com, weixin110.qq.com, www.jianshu.com, *.csdn.net,v2ex.com
+hostname = %APPEND%  weixin110.qq.com, *.csdn.net,v2ex.com
 
 
 [Header Rewrite]
-
-# Update time: 2020.12.3
-
-# > 简书注入桌面
-^https:\/\/www\.jianshu\.com\/p header-replace User-Agent “Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36”
+# Update time: 2021.3.2
 
 # > 小小影视vip (By Eric)
 https:\/\/.*.xiaoxiao(img|apps|appxs).com header-replace Cookie xxx_api_auth=6131333537653261363463323331666265663763396239663835636662373930
@@ -52,9 +48,5 @@ https:\/\/.*.xiaoxiao(img|apps|appxs).com header-replace Cookie xxx_api_auth=613
 CSDN = type=http-response,pattern=https:\/\/.*\.csdn\.net\/.*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Conf/Tools/csdn.js
 
 v2ex = type=http-response,pattern=^https:\/\/v2ex\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/v2ex.js
-
-Jianshu = type=http-request,pattern=^https?:\/\/links\.jianshu\.com\/go\?to=(.+)$,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Adblock/Jianshu.js
-
-Jianshux = type=http-response,pattern=^https:\/\/www\.jianshu\.com\/p,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/jianshu.js
 
 tbopener.js = type=http-response,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/HotKids/Rules/master/Script/weixin110.js
