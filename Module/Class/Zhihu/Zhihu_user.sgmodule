@@ -3,7 +3,7 @@
 #!system=ios
 
 [Header Rewrite]
-^https:\/\/www\.zhihu\.com\/ header-replace User-Agent "Mozilla/5.0 (Windows Phone 10)"
+^https:\/\/www\.zhihu\.com\/(question|topic) header-replace User-Agent "Mozilla/5.0 (Windows Phone 10)"
 
 [URL Rewrite]
 // 去掉知乎的中间跳转。

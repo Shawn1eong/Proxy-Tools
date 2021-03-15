@@ -35,9 +35,6 @@ VUE PRO = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/S
 # > Bear熊掌记 (buy.itunes.apple.com)
 // Bear熊掌记 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/bear.js,type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
 
-# > RCam /Geist /Gear /Picsew (buy.itunes.apple.com)
-内购 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/receipt.js,script-update-interval=0,type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
-
 # > 企信通小程序 unlock (miniapp.elecredit.com)
 企信通小程序 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/Alex/qxt.js,script-update-interval=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/
 
