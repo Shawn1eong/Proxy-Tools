@@ -1,0 +1,30 @@
+
+name: 中国电信签到
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "0 */8 * * *"
+#电信经常签到不成功所以让他每八小时执行一下,一天三次
+    watch:
+        types: [started]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        if: github.event.repository.owner.id == github.event.sender.id
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js 10.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 10.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: "运行【中国电信签到】"
+              run: |
+                  node Script/task/10000.js
+              env:
+                  TELECOM_MOBILE: ${{ secrets.TELECOM_MOBILE }}
+                  SEND_KEY: ${{ secrets.SEND_KEY }}
