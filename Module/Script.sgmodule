@@ -4,7 +4,7 @@
 
 
 [MITM]
-hostname = %APPEND%  *.jxedt.com, lanfanapp.com, education.github.com, api.getmimo.com,api.xiuxiu.meitu.com,api.meiyan.com, biz.caiyunapp.com, *.xxjjappss.com,*.huaerdadi.com,*.xiaoxiaoapps.com,*.xiaoxiaoimg.com, *.bybutter.com,prod.api.shapr3d.com,cdn.altstore.io,www.patreon.com,bea.sportq.com, buy.itunes.apple.com, api.revenuecat.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com,api.lennou.com,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com,*.xiaoxiao*.com,vsco.co,u.kanghuayun.com,www.3ivf.com,pay.guoing.com,api.gotokeep.com,59.110.149.231,129.211.156.213,api.vuevideo.net,api.gamer.com.tw,*.xiangxiangapps.com,avatar-nct.nixcdn.com,oa.zalo.me,api.meiease.c*, viva-asia1.vvbrd.com,purchases.ws.pho.to,photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io,  api.polaxiong.com, api.polarr.co
+hostname = %APPEND%  *.jxedt.com, lanfanapp.com, education.github.com, api.getmimo.com,api.xiuxiu.meitu.com,api.meiyan.com, biz.caiyunapp.com, *.xxjjappss.com, pay.wecut.com,*.huaerdadi.com,*.xiaoxiaoapps.com,*.xiaoxiaoimg.com, *.bybutter.com,prod.api.shapr3d.com,cdn.altstore.io,www.patreon.com,bea.sportq.com, buy.itunes.apple.com, api.revenuecat.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com,api.lennou.com,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com,*.xiaoxiao*.com,vsco.co,u.kanghuayun.com,www.3ivf.com,pay.guoing.com,api.gotokeep.com,59.110.149.231,129.211.156.213,api.vuevideo.net,api.gamer.com.tw,*.xiangxiangapps.com,avatar-nct.nixcdn.com,oa.zalo.me,api.meiease.c*, viva-asia1.vvbrd.com,purchases.ws.pho.to,photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io,  api.polaxiong.com, api.polarr.co
 
 [Script]
 # Update time: 2021.2.27
@@ -59,6 +59,9 @@ paper笔记 = requires-body=1,max-size=0,script-path=https://raw.githubuserconte
 # > syzzzf （commerce-.*api.faceu.mobi, commerce-api.faceu.mobi）
 # 轻颜相机 & ulike & 蒸汽波相机(vaporcam)三合一 解锁VIP(By @s y & Alex0510)
 qyxj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/qyxj.js,type=http-response,pattern=^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info
+
+# MolyCam.js
+MolyCam.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/MolyCam.js,type=http-response,pattern=^https:\/\/pay\.wecut\.com\/apple\/iosVerifyReceipt\.php$
 
 # > Peak （billing.peakcloud.org）
 peak游戏 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/peak.js,type=http-response,pattern=^https:\/\/billing\.peakcloud\.org\/billing\/2\/user\/me?
