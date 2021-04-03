@@ -3,12 +3,15 @@
 #!system=ios
 
 [MITM]
-hostname = %APPEND% *.tslt.xyz, g.syshhc.top, c.jxjt888.top, www.laoguikeji.cn, qj.bpojie.com, b.tslt.xyz, m.xgjyouhui.com, www.freeheikeji.cn, xcx.xianbaow.com, *.smkj33.top, *.ddly666.top, hkj178.com, a.jxjt888.top, lysl2020.com, www.i3zh.com, iosoi.cn, jabi.coding.net, jt.jxjt888.top, gjsx.vip, d.syshhc.top, gz.gongzijx.com, tvapp.guilaile.cn, www.benbenfx.xyz
+hostname = %APPEND% *.tslt.xyz, g.syshhc.top, c.jxjt888.top, www.laoguikeji.cn,*.bspapp.com, qj.bpojie.com, b.tslt.xyz, m.xgjyouhui.com, www.freeheikeji.cn, xcx.xianbaow.com, *.smkj33.top, *.ddly666.top, hkj178.com, a.jxjt888.top, lysl2020.com, www.i3zh.com, iosoi.cn, jabi.coding.net, jt.jxjt888.top, gjsx.vip, d.syshhc.top, gz.gongzijx.com, tvapp.guilaile.cn, www.benbenfx.xyz
 
 [Rule]
 URL-REGEX,^https:\/\/hkj178\.com\wp-json/mp/v2/advert/wechat,REJECT-TINYGIF
 
 [Script]
+# > 027 予图阁 微信小程序 弹窗给出原图及1080图的URL（20210119）
+予图阁= type=http-response,pattern=https://3dd0be8a-54fe-43ff-a0e7-f670c4f20432.bspapp.com/.*get_wallpaper_detail, requires-body=1,max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/ytg.js,script-update-interval=0
+
 # > 026 科技窝（20201228）
 科技窝= type=http-response,pattern=https://www.benbenfx.xyz/wp-json/wp/v2/posts, requires-body=1,max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/apt.js,script-update-interval=0
 
