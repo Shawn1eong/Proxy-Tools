@@ -1,17 +1,17 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
-# GITHUB: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2021-03-02 12:07:09.915706
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2021-04-10 02:15:40
 # DESCRIPTION: 分流规则中含有URL-REGEX类型，请搭配MITM使用
-# DOMAIN-SUFFIX: 28204
+# DOMAIN: 43
+# DOMAIN-SUFFIX: 29319
 # USER-AGENT: 49
-# DOMAIN: 35
 # DOMAIN-KEYWORD: 42
-# IP-CIDR: 127
+# IP-CIDR: 128
 # IP-CIDR6: 3
 # PROCESS-NAME: 1
 # URL-REGEX: 1
-# TOTAL: 28462
+# TOTAL: 29586
 DOMAIN-KEYWORD,-spotify-com
 DOMAIN-KEYWORD,-tiktokcdn-com
 DOMAIN-KEYWORD,.blogspot.
@@ -181,6 +181,7 @@ IP-CIDR,74.86.0.0/16,no-resolve
 IP-CIDR,75.126.0.0/16,no-resolve
 IP-CIDR,91.108.0.0/16,no-resolve
 IP-CIDR,91.198.174.0/24,no-resolve
+IP-CIDR,95.161.64.0/20,no-resolve
 IP-CIDR6,2001:67c:4e8::/48,no-resolve
 IP-CIDR6,2001:b28:f23d::/48,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,no-resolve
