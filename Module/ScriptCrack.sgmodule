@@ -102,3 +102,5 @@ Workingcopy = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/e
 
 Altstore = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/www\.patreon\.com\/api\/oauth2\/v2\/identity?,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/altstore.js,script-update-interval=-1
 
+# > 031 Textnow （api.textnow.me）
+Textnow = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.textnow\.me\/api2.0\/users\/.+,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/textnow.js,script-update-interval=-1
