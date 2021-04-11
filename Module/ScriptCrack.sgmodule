@@ -89,15 +89,16 @@ Adguard Premium = type=http-response,requires-body=1,max-size=0,pattern=^https:\
 Darkroom.js = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/(receipts|subscribers*),script-path=https://raw.githubusercontent.com/LTribeSkyx/Script/master/Darkroom.js,script-update-interval=0
 
 # > 027 Lightroom （photos.adobe.io）
-Lightroom.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Lightroom.js,script-update-interval=0
+Lightroom.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/Lightroom.js,script-update-interval=0
 
 # > 028 Mimo Pro （api.getmimo.com）
-Mimo Pro = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.getmimo\.com\/v1\/subscriptions$,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/mimo.vip.js,script-update-interval=0
+Mimo Pro = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.getmimo\.com\/v1\/subscriptions$,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/mimo.vip.js,script-update-interval=0
 
 # > 029 Workingcopy （api.getmimo.com）
-Workingcopy = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/education\.github\.com\/api\/user$,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/workingcopy.js,script-update-interval=0
+Workingcopy = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/education\.github\.com\/api\/user$,script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Script/Crack/workingcopy.js,script-update-interval=0
 
 # > 030 altstore （www.patreon.com,cdn.altstore.io）
 # altstore.js = type=http-response,requires-body=1,max-size=0,debug=1,pattern=^https://cdn.altstore.io/file/altstore/apps.json,script-path=https://raw.githubusercontent.com/joyoner/rule/master/JS/altstore.js,script-update-interval=0
 
-Altstore beta  = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/www\.patreon\.com\/api\/oauth2\/v2\/identity?,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/altstore.js,script-update-interval=0
+Altstore = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/www\.patreon\.com\/api\/oauth2\/v2\/identity?,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/altstore.js,script-update-interval=-1
+

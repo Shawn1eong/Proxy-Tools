@@ -1,5 +1,15 @@
-#!name=生成NextDNS模块
-#!desc=https://next.dns
+#!name=NextDNS-Utra-Low
+#!desc=DNS Over HTTPS
+
+[General]
+dns-server = 45.90.28.72, 45.90.30.72
+doh-server = https://dns.nextdns.io/d49521/administrator%E2%80%98iphone
+doh-follow-outbound-mode = true
+doh-format = wireformat
+always-real-ip = link-ip.nextdns.io
+
+[Rule]
+DOMAIN-KEYWORD,nextdns,Proxy
 
 [Script]
 # > Netdns

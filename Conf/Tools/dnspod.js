@@ -1,5 +1,5 @@
 /*
-Dnspod = type=dns,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Surge/dnspod.js,script-update-interval=0
+Dnspod = type=dns,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/Surge/dnspod.js,script-update-interval=0
 */
 
 const url = 'http://119.29.29.29/d?dn=' + $domain;

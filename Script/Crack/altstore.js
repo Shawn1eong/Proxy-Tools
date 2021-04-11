@@ -1,6 +1,6 @@
 /*
 [Script]
-Altstore beta = type=http-response,pattern=https:\/\/www\.patreon\.com\/api\/oauth2\/v2\/identity?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/altstore.js,script-update-interval=0
+Altstore beta = type=http-response,pattern=https:\/\/www\.patreon\.com\/api\/oauth2\/v2\/identity?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/altstore.js,script-update-interval=0
 [MITM]
 hostname = www.patreon.com
 */
