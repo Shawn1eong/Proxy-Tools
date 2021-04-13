@@ -1,5 +1,5 @@
 /*
- unlock vip会员缓存下载 2021.3.24网络搜集，红鲤鱼与绿鲤鱼与驴 公众号iosrule
+ unlock vip会员缓存下载 2021.3.24网络搜集
 
 https:\/\/app\.bilibili\.com\/(x\/vip\/web\/user\/combine|vip\/home|x\/v2\/account\/mine|x\/v2\/account\/myinfo) url script-response-body Bibilivip.js
 
@@ -20,7 +20,7 @@ const vip2 = 'vip/home';
 const vip3 = 'x/v2/account/mine';
 const vip4 = 'x/v2/account/myinfo';
 if (url.indexOf(vip1) != -1) {
-obj.data.account.name="公众号iosrule";
+obj.data.account.name="Shawneleong";
 obj.data.account.rank=88888;
 
 obj.data.vip.type=1;
@@ -49,7 +49,7 @@ body = JSON.stringify(obj);
 
 
 if (url.indexOf(vip3) != -1||url.indexOf(vip4) != -1) {
-obj.data.name="公众号iosrule";
+obj.data.name="Shawnleong";
 obj.data.coins=9999999;
 obj.data.rank=88888;
 obj.data.bcoin=88888;
