@@ -9,7 +9,7 @@ hostname = %APPEND%  *.jxedt.com, education.github.com,mall.zuoyebang.com,apivip
 [Script]
 # Update time: 2021.4.10
 # > 01 彩云天气_SVIP
-彩云天气_SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/caiyun_svip.js,script-update-interval=0
+彩云天气_SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Module/Class/Crack/Scripts/caiyun_svip.js,script-update-interval=0
 
 # > 02 小小影视 Unlock vip （*.xxjjappss.com,*.huaerdadi.com,*.xiaoxiaoapps.com,*.xiaoxiaoimg.com,）
 小小影视 = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/.*\.(xiaoxiaoapps|xiaoxiaoimg)\.com\/(ssp-svr\/ssp\/list3|ucp/index|getGlobalData),script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/xxys.js,script-update-interval=0
@@ -18,13 +18,13 @@ hostname = %APPEND%  *.jxedt.com, education.github.com,mall.zuoyebang.com,apivip
 vsco.js = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js,script-update-interval=0
 
 # > 04 Keep app unlock private lessons and action libraries. (api.gotokeep.com,59.110.149.231,129.211.156.213)
-Keep PRO = type=http-response,requires-body=1,pattern=https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days),script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/keepgoto.js,script-update-interval=0
+Keep PRO = type=http-response,requires-body=1,pattern=https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days),script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Module/Class/Crack/Scripts/keepgoto.js,script-update-interval=0
 
 # > 05 美颜相机 v9.6.20版本 (api.meiyan.com)
-Meiyanxiangji.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.meiyan\.com\/vip\/user_info,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/Meiyanxiangji.js,script-update-interval=0
+Meiyanxiangji.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.meiyan\.com\/vip\/user_info,script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Module/Class/Crack/Scripts/Meiyanxiangji.js,script-update-interval=0
 
 # > 06 美图秀秀 v9.0.51版本 (api.xiuxiu.meitu.com)
-Meiyanxiangji.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.xiuxiu\.meitu\.com\/v1\/user\/show\.json,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/mtxx.js,script-update-interval=0
+Meiyanxiangji.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.xiuxiu\.meitu\.com\/v1\/user\/show\.json,script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Module/Class/Crack/Scripts/mtxx.js,script-update-interval=0
 
 # > 07 VUE pro (api.vuevideo.net)
 VUE PRO = type=http-response,requires-body=1,pattern=^https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/VUE.js,script-update-interval=0
@@ -34,7 +34,7 @@ VUE PRO = type=http-response,requires-body=1,pattern=^https:\/\/api\.vuevideo\.n
 // Bear熊掌记 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/bear.js,script-update-interval=0
 
 # > 09 企信通小程序 unlock (miniapp.elecredit.com)
-企信通小程序 = requires-body=1,max-size=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/Alex/qxt.js,script-update-interval=0
+企信通小程序 = requires-body=1,max-size=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/,script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Module/Class/Crack/Scripts/Alex/qxt.js,script-update-interval=0
 
 # > 010 Quicut 体验大片视频编辑的感觉 (20201112)
 Quicut = type=http-response,requires-body=1,max-size=0,pattern=http://outcut.szsszykj.com/api/OverseasPay/GetVip,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/qc.js,script-update-interval=0
@@ -65,16 +65,16 @@ Fitplan = type=http-response,requires-body=1,max-size=0,pattern=https://api2.fit
 作业帮 = type=http-response,requires-body=1,max-size=0,pattern=https://apivip.zybang.com/vipols/vip/viphomev1?.+,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/zyb.js,script-update-interval=0
 
 # > 019 驾校一点通 (api.polaxiong.com, api.polarr.co)
-驾校一点通 = type=http-response,requires-body=1,max-size=0,pattern=^https://vipapi.jxedt.com/vip/,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/jxydt.js,script-update-interval=0
+驾校一点通 = type=http-response,requires-body=1,max-size=0,pattern=^https://vipapi.jxedt.com/vip/,script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Module/Class/Crack/Scripts/jxydt.js,script-update-interval=0
 
 # > 020 泼辣修图 (api.polaxiong.com, api.polarr.co)
 泼辣修图 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.(polaxiong\.com|polarr\.co)\/v\d\/payments\/appleiap\/receipts\/confirmation$,script-path=https://raw.githubusercontent.com/LTribeSkyx/Script/master/polaris.js,script-update-interval=0
 
 # > 021 paper （api.revenuecat.com）
-paper笔记 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.revenuecat\.com\/.*\/subscribers\/[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}$,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/paper.js,script-update-interval=0
+paper笔记 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.revenuecat\.com\/.*\/subscribers\/[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}$,script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Module/Class/Crack/Scripts/paper.js,script-update-interval=0
 
 # > 022 彩云小译 （api.interpreter.caiyunai.com）
-彩云小译 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.interpreter\.caiyunai\.com\/v1\/user,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Crack/cyxy.js,script-update-interval=0
+彩云小译 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.interpreter\.caiyunai\.com\/v1\/user,script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Module/Class/Crack/Scripts/cyxy.js,script-update-interval=0
 
 # > 023  MolyCam and VaporCam 拍出你的美解锁VIP（20210402）
 MolyCam and VaporCam = type=http-response,requires-body=1,max-size=0,type=http-response,pattern=https:\/\/pay\.wecut\.com\/apple\/(iosVerifyReceipt|iosAppVerifyReceipt)\.php,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/mv.js,script-update-interval=0
@@ -95,7 +95,7 @@ Lightroom.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/
 Mimo Pro = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.getmimo\.com\/v1\/subscriptions$,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/mimo.js,script-update-interval=0
 
 # > 029 Workingcopy （api.getmimo.com）
-Workingcopy = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/education\.github\.com\/api\/user$,script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Script/Crack/workingcopy.js,script-update-interval=0
+Workingcopy = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/education\.github\.com\/api\/user$,script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Module/Class/Crack/Scripts/workingcopy.js,script-update-interval=0
 
 # > 030 altstore （www.patreon.com,cdn.altstore.io）
 # altstore.js = type=http-response,requires-body=1,max-size=0,debug=1,pattern=^https://cdn.altstore.io/file/altstore/apps.json,script-path=https://raw.githubusercontent.com/joyoner/rule/master/JS/altstore.js,script-update-interval=0

@@ -1,9 +1,16 @@
+/*
+[Script]
+Altstore beta = type=http-response,pattern=https:\/\/www\.patreon\.com\/api\/oauth2\/v2\/identity?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/altstore.js,script-update-interval=0
+[MITM]
+hostname = www.patreon.com
+*/
+
 let obj = JSON.parse($response.body);
 obj ={
         "data": {
             "attributes": {
-                "first_name": "Lang",
-                "full_name": "Lang Khach"
+                "first_name": "Shawn",
+                "full_name": "Shawn Leong"
             },
             "id": "30618536",
             "relationships": {
