@@ -37,7 +37,7 @@ VUE PRO = type=http-response,requires-body=1,pattern=^https:\/\/api\.vuevideo\.n
 // Bear熊掌记 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/bear.js,script-update-interval=0
 
 # > 09 企信通小程序 unlock (miniapp.elecredit.com)
-企信通小程序 = requires-body=1,max-size=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/,script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Module/Class/Crack/Scripts/Alex/qxt.js,script-update-interval=0
+企信通小程序 = requires-body=1,max-size=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/,script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Module/Class/Crack/Scripts/qxt.js,script-update-interval=0
 
 # > 010 Quicut 体验大片视频编辑的感觉 (20201112)
 Quicut = type=http-response,requires-body=1,max-size=0,pattern=http://outcut.szsszykj.com/api/OverseasPay/GetVip,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/qc.js,script-update-interval=0
