@@ -11,22 +11,22 @@ let bodyList = {
   }
 }
 let ids = {
-  '8': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD,
-  '9': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD,
-  '10': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD,
-  '11': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD,
-  '12': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD,
-  '13': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD,
-  '14': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD,
-  '15': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD,
-  '16': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD,
-  '17': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD,
-  '18': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD,
-  '19': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD,
-  '20': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD,
-  '21': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD,
-  '22': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD,
-  '23': 'RRA4Kr8hch51J49qasBvEv8Agf8chAD
+  '8': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC,
+  '9': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC,
+  '10': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC,
+  '11': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC,
+  '12': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC,
+  '13': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC,
+  '14': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC,
+  '15': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC,
+  '16': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC,
+  '17': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC,
+  '18': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC,
+  '19': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC,
+  '20': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC,
+  '21': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC,
+  '22': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC,
+  '23': 'RRAKoqJYHaBPhFyuYdunFqtjeVBLDC
 }
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
