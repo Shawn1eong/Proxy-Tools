@@ -23,7 +23,7 @@ jobs:
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/shaGuar-svg/Proxy-Tools.git"
+          source_repo: "https://github.com/Shawn1eong/Proxy-Tools.git"
           source_branch: "master"
           destination_branch: "main"
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}

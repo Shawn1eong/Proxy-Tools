@@ -5,7 +5,7 @@
 [task_local]
 
 # 限免APP
-1 8-22 * * * https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Conf/Tools/free_app_detect.js, tag=限免APP, enabled=true
+1 8-22 * * * https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Conf/Tools/free_app_detect.js, tag=限免APP, enabled=true
  */
 const $ = Env("限免APP")
 $.date = $.time('yyyyMMdd')

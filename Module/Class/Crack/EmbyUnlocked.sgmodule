@@ -4,11 +4,11 @@
 
 [Script]
 #EmbyPremiere
-emby-adr-vD.js = type=http-response,requires-body=1,max-size=0,pattern=^https://mb3admin.com/admin/service/registration/validateDevice,script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Module/Class/Emby/emby-adr-vD.js
+emby-adr-vD.js = type=http-response,requires-body=1,max-size=0,pattern=^https://mb3admin.com/admin/service/registration/validateDevice,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Emby/emby-adr-vD.js
 
-emby-adr-v.js = type=http-response,requires-body=1,max-size=0,pattern=^https://mb3admin.com/admin/service/registration/validate,script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Module/Class/Emby/emby-adr-v.js
+emby-adr-v.js = type=http-response,requires-body=1,max-size=0,pattern=^https://mb3admin.com/admin/service/registration/validate,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Emby/emby-adr-v.js
 
-emby-adr-gS.js = type=http-response,requires-body=1,max-size=0,pattern=^https://mb3admin.com/admin/service/registration/getStatus,script-path=https://raw.githubusercontent.com/ShaGuar-svg/Proxy-Tools/master/Module/Class/Emby/emby-adr-gS.js
+emby-adr-gS.js = type=http-response,requires-body=1,max-size=0,pattern=^https://mb3admin.com/admin/service/registration/getStatus,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Emby/emby-adr-gS.js
 
 [MITM]
 hostname = %APPEND% mb3admin.com

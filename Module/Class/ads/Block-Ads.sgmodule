@@ -79,8 +79,8 @@ rrsp_banner = type=http-response,requires-body=true,pattern=^https?:\/\/api\.rr\
 RRtv_channel.js = type=http-response,requires-body=true,pattern=^https?:\/\/api\.rr\.tv\/v\dplus\/index\/channel$,script-path=https://raw.githubusercontent.com/scomper/Surge/master/Scripts/rrsp.js
 
 # > IT之家 去新闻列表广告
-ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Adblock/ITHome.js,type=http-response,pattern=^https?:\/\/api\.ithome\.com\/json\/slide\/index
-ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/shaGuar-svg/Proxy-Tools/master/Script/Adblock/ITHome.js,type=http-response,pattern=^https?:\/\/api\.ithome\.com\/json\/(newslist|listpage)\/news
+ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Script/Adblock/ITHome.js,type=http-response,pattern=^https?:\/\/api\.ithome\.com\/json\/slide\/index
+ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Script/Adblock/ITHome.js,type=http-response,pattern=^https?:\/\/api\.ithome\.com\/json\/(newslist|listpage)\/news
 
 [MITM]
 hostname = %APPEND% render.alipay.com, gw.alicdn.com, *acs.m.taobao.com,*.dxy.cn, m.weibo.cn, api.live.bilibili.com, pic*.zhimg.com,vv.video.qq.com, *.amemv.com, rtbapi.douyucdn.cn, ap*.bilibili.com, api.ithome.com, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
