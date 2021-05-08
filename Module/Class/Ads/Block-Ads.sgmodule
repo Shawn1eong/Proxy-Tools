@@ -66,6 +66,8 @@ app_name=news_article&([\S]*)aid=\d+ app_name=news_article_social&$1aid=19 heade
 https://vv\.video\.qq\.com/checktime - REJECT
 
 [Script]
+# > Remove WeChat‘s Ad
+WeChat.js = type=http-request,pattern=^https://mp\.weixin\.qq\.com/mp/getappmsgad,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Script/Adblock/WeChat.js,script-update-interval=0
 
 # > Remove douyu‘s Ad
 douyu.js = type=http-response,pattern=^https?:\/\/rtbapi\.douyucdn\.cn,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/douyu.js,script-update-interval=0
@@ -83,4 +85,4 @@ ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent
 ITHome.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Script/Adblock/ITHome.js,type=http-response,pattern=^https?:\/\/api\.ithome\.com\/json\/(newslist|listpage)\/news
 
 [MITM]
-hostname = %APPEND% render.alipay.com, gw.alicdn.com, *acs.m.taobao.com,*.dxy.cn, m.weibo.cn, api.live.bilibili.com, pic*.zhimg.com,vv.video.qq.com, *.amemv.com, rtbapi.douyucdn.cn, ap*.bilibili.com, api.ithome.com, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
+hostname = %APPEND% render.alipay.com, gw.alicdn.com, *acs.m.taobao.com,*.dxy.cn, m.weibo.cn, api.live.bilibili.com, pic*.zhimg.com,vv.video.qq.com, mp.weixin.qq.com, *.amemv.com, rtbapi.douyucdn.cn, ap*.bilibili.com, api.ithome.com, *.qidian.com, api.m.jd.com, api.rr.tv, sf-integral-sign-in.weixinjia.net, *.amemv.com, *.musical.ly
