@@ -67,7 +67,7 @@ https://vv\.video\.qq\.com/checktime - REJECT
 
 [Script]
 
-# # Remove douyu‘s Ad
+# > Remove douyu‘s Ad
 douyu.js = type=http-response,pattern=^https?:\/\/rtbapi\.douyucdn\.cn,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/douyu.js,script-update-interval=0
 
 # > Super removes ads hostname:*.snssdk.com
