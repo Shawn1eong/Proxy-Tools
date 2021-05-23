@@ -15,7 +15,7 @@ hostname = %APPEND%  *.jxedt.com, education.github.com,mall.zuoyebang.com,apivip
 小小影视 = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/.*\.(xiaoxiaoapps|xiaoxiaoimg)\.com\/(ssp-svr\/ssp\/list3|ucp/index|getGlobalData),script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/xxys.js,script-update-interval=0
 
 # > 03 VSCO unlock vip (vsco.co)
-vsco.js = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js,script-update-interval=0
+vsco.js = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Module/Class/Crack/Scripts/vsco.js,script-update-interval=0
 
 # > 04 Keep app unlock private lessons and action libraries. (api.gotokeep.com,59.110.149.231,129.211.156.213)
 #Keep PRO = type=http-response,requires-body=1,pattern=https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days),script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/keepgoto.js,script-update-interval=0
