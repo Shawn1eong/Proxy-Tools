@@ -1,6 +1,4 @@
-/* Keep 解锁私人课程,动作库,解锁运动课程页面会员精讲，解锁会员专属页面会员课程，解锁智能训练(胸背部无跑步无器材84天锻炼) for V6.24~V6.27 （20210418）
-https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days) url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/keep_new.js
-
+/*
 作者：photonmang
 脚本更新：
 2021/4/18 修复因Keep课程调整导致的一直加载问题
@@ -20,8 +18,8 @@ let url = $request.url;
 let body = $response.body;
 let obj = JSON.parse(body);
 
-const startDate="20210420"; // 训练开始时间
-const endDate="20210609"  //训练结束时间
+const startDate="20210607"; // 训练开始时间
+const endDate="20211001"  //训练结束时间
 
 const path1 = 'dynamic';
 const path2 = 'subject';
@@ -5646,4 +5644,3 @@ obj = {
 }
 body = JSON.stringify(obj);
 $done({body});
-
