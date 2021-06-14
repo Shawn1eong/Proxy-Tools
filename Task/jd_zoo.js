@@ -841,7 +841,7 @@ async function getPostRequest(type, body) {
     'Content-Type': `application/x-www-form-urlencoded`,
     'Host': `api.m.jd.com`,
     'Connection': `keep-alive`,
-       'User-Agent': "",
+       'User-Agent': "jdapp;iPhone;10.0.2;13.2;1b1a1809fa9e106d9b5ef4524b613415d41d8cd9;network/wifi;ADID/04511257-BC65-0EBA-20AA-F795DDCF68D9;model/iPhone9,2;addressid/2380459069;appBuild/167694;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
      'Accept-Language': `zh-cn`
   };
   return {url: url, method: method, headers: headers, body: body};
