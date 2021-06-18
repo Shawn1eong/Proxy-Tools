@@ -14,7 +14,7 @@ let url = $request.url;
 let body = $response.body;
 let obj = JSON.parse(body);
 
-const startDate="20210607"; // 训练开始时间
+const startDate="20210618"; // 训练开始时间
 const endDate="20211001"  //训练结束时间
 
 const path1 = 'dynamic';
