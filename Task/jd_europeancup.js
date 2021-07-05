@@ -31,7 +31,7 @@ if ($.isNode()) {
 const JD_API_HOST = `https://api.m.jd.com/client.action`;
 message = ""
 $.actid = "901100032442101"
-$.shareuuid = "26136166a0714f5193f4298370b9abe9" //俺的助力码 
+$.shareuuid = "8f530edbcc004b60adcbd598e2f6d8dd" //俺的助力码 
     !(async () => {
         if (!cookiesArr[0]) {
             $.msg($.name, '【提示】请先获取cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/', {
@@ -117,7 +117,49 @@ $.shareuuid = "26136166a0714f5193f4298370b9abe9" //俺的助力码
     .finally(() => $.done())
 //获取活动信息
 
+// 更新cookie 
 
+function updateCookie (resp) {
+    if (!resp.headers['set-cookie']){
+        return
+    }
+    let obj = {}
+    let cookieobj = {}
+    let cookietemp = cookie.split(';')
+    for (let v of cookietemp) {
+        const tt2 = v.split('=')
+        obj[tt2[0]] = v.replace(tt2[0] + '=', '')
+    }
+    for (let ck of resp['headers']['set-cookie']) {
+        const tt = ck.split(";")[0]
+        const tt2 = tt.split('=')
+        obj[tt2[0]] = tt.replace(tt2[0] + '=', '')
+    }
+    const newObj = {
+        ...cookieobj,
+        ...obj,
+    }
+    cookie = ''
+    for (let key in newObj) {
+        key && (cookie = cookie + `${key}=${newObj[key]};`)
+    }
+    // console.log(cookie, 'jdCookie')
+}
+
+function jdUrl(functionId, body) {
+  return {
+    url: `https://api.m.jd.com/client.action?functionId=${functionId}`,
+    body: body,
+    headers: {
+      'Host': 'api.m.jd.com',
+      'accept': '*/*',
+      'user-agent': 'JD4iPhone/167490 (iPhone; iOS 14.2; Scale/3.00)',
+      'accept-language': 'zh-Hans-JP;q=1, en-JP;q=0.9, zh-Hant-TW;q=0.8, ja-JP;q=0.7, en-US;q=0.6',
+      'content-type': 'application/x-www-form-urlencoded',
+      'Cookie': cookie
+    }
+  }
+}
 
 //genToken
 function genToken() {
@@ -315,6 +357,7 @@ function getUserInfo() {
     })
 }
 
+
 function getUid() {
     return new Promise(resolve => {
         let body = `activityId=${$.actid}&pin=${encodeURIComponent($.pin)}&pinImg=${$.pinImg }&nick=${encodeURIComponent($.nick)}&cjyxPin=&cjhyPin=&shareUuid=${$.myid ? $.myid : $.shareuuid}`
@@ -326,8 +369,8 @@ function getUid() {
                     data = JSON.parse(data);
                     if (data.data) {
                         if ($.index == 1) {
-                            $.myid = data.data.uid
-                            console.log(`账号1欧洲杯助力码为 ${$.myid}`)
+                            // $.myid = data.data.uid
+                            console.log(`账号1欧洲杯助力码为 ${$.shareuuid}`)
                         }
                         $.actid = data.data.activityId
                         /*      $.pinImg = data.data.yunMidImageUrl
