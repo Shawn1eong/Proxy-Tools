@@ -2,6 +2,9 @@
 #!desc=百度优化
 #!system=ios
 
+[Rule]
+DOMAIN,mbdp02.bdstatic.com,REJECT
+
 [Header Rewrite]
 ^https:\/\/pan\.baidu\.com header-replace User-Agent “Mozilla/5.0 (Windows Phone 10)”
 
