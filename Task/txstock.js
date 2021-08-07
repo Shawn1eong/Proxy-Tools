@@ -1,5 +1,6 @@
 const jsname = '📈腾讯自选股'
 const $ = Env(jsname)
+const runTestTask = true; //测试任务开关
 const logs = 0; //0为关闭日志，1为开启,默认为0
 const notifyInterval = 1; //0为关闭通知，1为所有通知,默认为0
 const taskIDList = new Array();
@@ -141,10 +142,14 @@ if ($.isNode()) {
     await newtxstock();
     console.log(`\n🏠 执行【自动提现】任务\n`)
     await cashorder(cash, money);
-    console.log(`\n🏠 逢9必发活动任务执行开始...\n`)
-    await ninethlottoTask();
   } else {
     $.log(`时间未到,请将CRON设置到"PM3:15"之后`);
+    if (runTestTask) {
+      console.log(`\n🏠 逢9必发活动任务执行开始...\n`)
+      await ninethlottoTask();
+    } else {
+      console.log(`\n🏠 目前设置不参加测试活动任务🙅‍♂️\n`)
+    }
   }
   await showmsg();
 
@@ -192,7 +197,7 @@ async function ninethIDCheck() {
                 const taskstatusSum = arrSum(taskSetStatusList)
                 if (taskstatusSum == 4 && lottostate == 0) {
                   console.log(`点9就发活动任务已完成 🎉 ,明天再来\n`)
-                  $.reject("🈲 点9就发活动任务已完成,停止循环")
+                  $.done()
                 } else if (lottostate == 1) {
                   console.log(`🈶 抽奖机会,开始请求执行抽奖任务`)
                   //计时9秒抽奖
@@ -287,6 +292,7 @@ async function nineTask(id, tid, ticket) {
             switch (code) {
               case "0":
                 $.log(`🌟 获得${data.reward_desc},执行任务...GoodLucky！\n`);
+                $.wait(5000)
                 break;
               default:
                 $.log(`\n‼️${resp.statusCode}[调试log]:${resp.body}`);
@@ -461,14 +467,13 @@ async function endninethlottoTask(ticket) {
           if (safeGet(data)) {
             // $.log(data)
             data = JSON.parse(data);
-            const endtime = data.lotto_reward.reward_time
             const lottoreward = data.lotto_reward.reward_desc
             $.log(`🌟 逢9必发活动:获得 ${lottoreward}\n`);
             tz += `【逢9必发】:${lottoreward}\n`
             console.log(`⏳ 结束时间:`+time(endtime));
-            const nowms = endtime - begintime
-            const bias = 9000 - nowms
-            console.log(`→本次毫秒数(${nowms}ms),9秒偏差值(${bias}ms)`);
+            // const nowms = endtime - begintime
+            // const bias = 9000 - nowms
+            // console.log(`→本次毫秒数(${nowms}ms),9秒偏差值(${bias}ms)`);
           }
         }
       } catch (e) {
