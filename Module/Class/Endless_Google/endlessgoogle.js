@@ -1,24 +1,17 @@
-/**
- * 名称：Endless_Google.user.js
- * 地址：https://openuserjs.org/install/tumpio/Endless_Google.user.js
- * 
- * 制作：elecV2
- *
- ******** (已调整)以下为 tamperJS 自动生成的 rewrite 相关信息，可能需要根据情况适当调整 ********
+/*
 [rewrite]
-https:\/\/www\.google\.com\/(m|search) url script-response-body https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/google/Endless_Google.user.js
+https:\/\/www\.google\.com\/(m|search) url script-response-body Endless_Google.user.js
+
 [mitm]
-hostname = www.google.com
- ********
- * 工具: tamperJS BY @elecV2
- * 频道: https://t.me/elecV2
- *
-**/
+www.google.*
+ 
+*/
 
 let body = $response.body
 
 if (/<\/html>|<\/body>/.test(body)) {
   body = body.replace('</body>', `
+
 <script>
 const elecJSPack = function(){// ==UserScript==
 // @name            Endless Google
@@ -36,15 +29,18 @@ const elecJSPack = function(){// ==UserScript==
 // @license         MIT
 // @noframes
 // ==/UserScript==
+
 if (location.href.indexOf("tbm=isch") !== -1) // NOTE: Don't run on image search
     return;
 if (window.top !== window.self) // NOTE: Do not run on iframes
     return;
+
 const centerElement = "#center_col";
 const loadWindowSize = 1.6;
 const filtersAll = ["#foot", "#bottomads"];
 const filtersCol = filtersAll.concat(["#extrares", "#imagebox_bigimages"]);
 let   msg = "";
+
 const css = \`
 .page-number {
   position: relative;
@@ -75,13 +71,16 @@ const css = \`
   display:block;
 }
 \`;
+
 let pageNumber = 1;
 let prevScrollY = 0;
 let nextPageLoading = false;
+
 function requestNextPage() {
     nextPageLoading = true;
     let nextPage = new URL(location.href);
     if (!nextPage.searchParams.has("q")) return;
+
     nextPage.searchParams.set("start", String(pageNumber * 10));
     !msg.classList.contains("shown") && msg.classList.add("shown");
     fetch(nextPage.href)
@@ -90,16 +89,20 @@ function requestNextPage() {
             let parser = new DOMParser();
             let htmlDocument = parser.parseFromString(text, "text/html");
             let content = htmlDocument.documentElement.querySelector(centerElement);
+
             content.id = "col_" + pageNumber;
             filter(content, filtersCol);
+
             let pageMarker = document.createElement("div");
             pageMarker.textContent = String(pageNumber + 1);
             pageMarker.className = "page-number";
+
             let col = document.createElement("div");
             col.className = "next-col";
             col.appendChild(pageMarker);
             col.appendChild(content);
             document.querySelector(centerElement).appendChild(col);
+
             if (!content.querySelector("#rso")) {
                 // end of results
                 window.removeEventListener("scroll", onScrollDocumentEnd);
@@ -107,11 +110,13 @@ function requestNextPage() {
                 msg.classList.contains("shown") && msg.classList.remove("shown");
                 return;
             }
+
             pageNumber++;
             nextPageLoading = false;
             msg.classList.contains("shown") && msg.classList.remove("shown");
         });
 }
+
 function onScrollDocumentEnd() {
     let y = window.scrollY;
     let delta = y - prevScrollY;
@@ -120,9 +125,11 @@ function onScrollDocumentEnd() {
     }
     prevScrollY = y;
 }
+
 function isDocumentEnd(y) {
     return y + window.innerHeight * loadWindowSize >= document.body.clientHeight;
 }
+
 function filter(node, filters) {
     for (let filter of filters) {
         let child = node.querySelector(filter);
@@ -131,6 +138,7 @@ function filter(node, filters) {
         }
     }
 }
+
 function init() {
     prevScrollY = window.scrollY;
     window.addEventListener("scroll", onScrollDocumentEnd);
@@ -141,12 +149,12 @@ function init() {
     document.head.appendChild(style);
     msg = document.createElement("div");
     msg.setAttribute("class", "endless-msg");
-    msg.innerText = "Loading next page...";
+    msg.innerText = "       Loading next page...";
     document.body.appendChild(msg);
 }
+
 document.addEventListener("DOMContentLoaded", init);
 }()</script></body>`)
 
 }
-
 $done({ body })
