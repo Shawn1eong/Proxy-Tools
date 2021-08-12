@@ -124,11 +124,12 @@ if ($.isNode()) {
   taskkeyVal = taskkeyArr[0];
   wxtaskkeyVal = wxtaskkeyArr[0];
   ////////////// 测试区///////////////
-  //////////// 测试区///////////////
-  await getWXShareCode1();
-  await getWXShareCode2();
-  console.log(`\n🔺验证码群内提交:复制以下代码到群里贴上\n\n${tgmarkcode}${tasksharecode1}&${tasksharecode2}`);
-  console.log(`\n🔺验证码机器人提交:sb键盘提交助力码,复制以下代码回应提交\n\n${tasksharecode1}&${tasksharecode2}`);
+  wzqqlskey = wxtaskkeyVal.split("wzq_qlskey=")[1].split(";")[0]
+  wzqqluin = wxtaskkeyVal.split("wzq_qluin=")[1].split(";")[0]
+  // await getWXShareCode1();
+  // await getWXShareCode2();
+  console.log(`\n🔺验证码群内提交:复制以下代码到群里贴上\n\n${tgmarkcode}${wzqqlskey}&${wzqqluin}`);
+  console.log(`\n🔺验证码机器人提交:sb键盘提交助力码,复制以下代码回应提交\n\n${wzqqlskey}&${wzqqluin}`);
   if ((hour == 15 && minute >= 15) || (hour == 16) || (hour == 17) || (hour == 18) || (hour == 19) || (hour == 20) || (hour == 21) || (hour == 22) || (hour == 23)) {
     console.log(`\n🏠 查询目前账户金币\n`)
     await userhome(); //金币查询
@@ -145,6 +146,8 @@ if ($.isNode()) {
   } else {
     $.log(`时间未到,请将CRON设置到"PM3:15"之后`);
     if (runTestTask) {
+      console.log(`\n🏠 分享助力开始`)
+      await runShareTask();
       console.log(`\n🏠 逢9必发活动任务执行开始...\n`)
       await ninethlottoTask();
     } else {
@@ -221,11 +224,12 @@ async function ninethIDCheck() {
                       await ninethticket();
                       await $.wait(3000);
                       await nineTask(id, tid, ticket)
+                      await $.wait(9000)
                       //计时9秒抽奖
                       await ninethlottoticket();
                       await $.wait(3000);
                       await runninethlottoTask(lottoticket);
-                      await $.wait(9000)
+                      await $.wait(3000);
                       await endninethlottoTask(lottoticket);
                       console.log(`⏳ 等待10sec...做下一个活动任务\n`);
                       await $.wait(10000); //等待10秒
@@ -292,7 +296,6 @@ async function nineTask(id, tid, ticket) {
             switch (code) {
               case "0":
                 $.log(`🌟 获得${data.reward_desc},执行任务...GoodLucky！\n`);
-                $.wait(5000)
                 break;
               default:
                 $.log(`\n‼️${resp.statusCode}[调试log]:${resp.body}`);
@@ -356,79 +359,6 @@ async function ninethlottokey1() {
     });
   });
 }
-async function ninethlottokey2() {
-  return new Promise((resolve) => {
-    const options = {
-      url: `https://wzq.tenpay.com/cgi-bin/wxapi_sign.fcgi?action=2`,
-      headers: {
-        'Accept': `application/json, text/plain, */*`,
-        'Origin': `https://wzq.tenpay.com`,
-        'Accept-Encoding': `gzip, deflate, br`,
-        'Cookie': `pgv_pvid=5868655024; ts_refer=zqact.tenpay.com/activity/page/activityForward/; ts_uid=91002010; qlappid=wx9cf8c670ebd68ce4; qlskey=v0aaf63c22260f6c5c57a43be10c0ddf; qluin=085e9858eb9a917a0284af898@wx.tenpay.com; qq_logtype=16; wx_session_time=1626785221000; wzq_qlappid=wx9cf8c670ebd68ce4; wzq_qlskey=v0aaf63c22260f6c5c57a43be10c0ddf; wzq_qluin=os-ppuAxF5wczm82tjx_8ztelmd4; zxg_openid=oA0GbjkyYDAZfHok5p9Pv4Pcyuzo`,
-        'Content-Type': `application/x-www-form-urlencoded`,
-        'Host': `wzq.tenpay.com`,
-        'Connection': `keep-alive`,
-        'User-Agent': `Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.7(0x18000733) NetType/4G Language/zh_CN`,
-        'Referer': `https://wzq.tenpay.com/mp/v2/index.html?stat_data=4003000011`,
-        'Accept-Language': `zh-cn`
-      },
-      body: `url=https%3A%2F%2Fwzq.tenpay.com%2Fmp%2Fv2%2Findex.html%3Fstat_data%3D4003000011`
-    };
-    $.post(options, async (err, resp, data) => {
-      try {
-        if (err) {
-          console.log("⛔️API查询请求失败，请检查自身设备网络情况");
-          console.log(JSON.stringify(err));
-          $.logErr(err);
-        } else {
-          if (safeGet(data)) {
-            $.log(data)
-          }
-        }
-      } catch (e) {
-        $.logErr(e, resp);
-      } finally {
-        resolve();
-      }
-    });
-  });
-}
-async function ninethlottokey3() {
-  return new Promise((resolve) => {
-    const options = {
-      url: `https://wzq.tenpay.com/cgi-bin/userinfo.fcgi?t=${rndtime}`,
-      headers: {
-        'Accept': `application/json, text/plain, */*`,
-        'Origin': `https://wzq.tenpay.com`,
-        'Accept-Encoding': `gzip, deflate, br`,
-        'Cookie': `wzq_channel=4003000011..; pgv_pvid=5868655024; ts_refer=zqact.tenpay.com/activity/page/activityForward/; ts_uid=91002010; qlappid=wx9cf8c670ebd68ce4; qlskey=v0aaf63c22260f6c5c57a43be10c0ddf; qluin=085e9858eb9a917a0284af898@wx.tenpay.com; qq_logtype=16; wx_session_time=1626785221000; wzq_qlappid=wx9cf8c670ebd68ce4; wzq_qlskey=v0aaf63c22260f6c5c57a43be10c0ddf; wzq_qluin=os-ppuAxF5wczm82tjx_8ztelmd4; zxg_openid=oA0GbjkyYDAZfHok5p9Pv4Pcyuzo`,
-        'Content-Type': `application/x-www-form-urlencoded`,
-        'Host': `wzq.tenpay.com`,
-        'Connection': `keep-alive`,
-        'User-Agent': `Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.7(0x18000733) NetType/4G Language/zh_CN`,
-        'Referer': `https://wzq.tenpay.com/mp/v2/index.html?stat_data=4003000011`,
-        'Accept-Language': `zh-cn`
-      },
-      body: `_h5ver=2.0.1&dealer=1&detail=1`
-    };
-    $.post(options, async (err, resp, data) => {
-      try {
-        if (err) {
-          console.log("⛔️API查询请求失败，请检查自身设备网络情况");
-          console.log(JSON.stringify(err));
-          $.logErr(err);
-        } else {
-          // data = JSON.stringify(data);
-          // $.log(data)
-        }
-      } catch (e) {
-        $.logErr(e, resp);
-      } finally {
-        resolve();
-      }
-    });
-  });
-}
 async function runninethlottoTask(ticket) {
   return new Promise((resolve) => {
     const options = wxTaskOptions(`https://wzq.tenpay.com/cgi-bin/activity_timer_lotto.fcgi?actid=1108&type=9th&action=begin&ticket=${ticket}&_=${rndtime}`);
@@ -470,7 +400,7 @@ async function endninethlottoTask(ticket) {
             const lottoreward = data.lotto_reward.reward_desc
             $.log(`🌟 逢9必发活动:获得 ${lottoreward}\n`);
             tz += `【逢9必发】:${lottoreward}\n`
-            console.log(`⏳ 结束时间:`+time(endtime));
+            // console.log(`⏳ 结束时间:`+time(endtime));
             // const nowms = endtime - begintime
             // const bias = 9000 - nowms
             // console.log(`→本次毫秒数(${nowms}ms),9秒偏差值(${bias}ms)`);
@@ -573,15 +503,15 @@ function wxTaskOptions(url, body) {
   };
 }
 
-function wxTaskOptions2(url, body) {
+function wxTaskOptions2(url, body, wzqqlskey, wzqqluin) {
+  const sharecookie = `wzq_qlskey=${wzqqlskey}; wzq_qluin=${wzqqluin};`
   return {
     url: `${url}`,
     headers: {
       'Accept': `application/json, text/plain, */*`,
       'Origin': `https://wzq.tenpay.com`,
       'Accept-Encoding': `gzip, deflate, br`,
-      'Cookie': `pgv_pvid=5868655024; ts_refer=zqact.tenpay.com/activity/page/activityForward/; ts_uid=91002010; qlappid=wx9cf8c670ebd68ce4; qlskey=v0aaf63c22260f6c5c57a43be10c0ddf; qluin=085e9858eb9a917a0284af898@wx.tenpay.com; qq_logtype=16; wx_session_time=1626785221000; wzq_qlappid=wx9cf8c670ebd68ce4; wzq_qlskey=v0aaf63c22260f6c5c57a43be10c0ddf; wzq_qluin=os-ppuAxF5wczm82tjx_8ztelmd4; zxg_openid=oA0GbjkyYDAZfHok5p9Pv4Pcyuzo`,
-      'Content-Type': `application/x-www-form-urlencoded`,
+      'Cookie': sharecookie,
       'Host': `wzq.tenpay.com`,
       'Connection': `keep-alive`,
       'User-Agent': `Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.7(0x18000733) NetType/4G Language/zh_CN`,
@@ -827,8 +757,8 @@ async function runAppTask(id, tid, ticket) {
               default:
                 // $.log(data.retmsg);
                 console.log("🚌 本任务需要邀请助力,请复制你的邀请码提交上车");
-                await getWXShareCode1();
-                await getWXShareCode2();
+                // await getWXShareCode1();
+                // await getWXShareCode2();
             }
           }
         }
@@ -897,8 +827,8 @@ async function runWXTask(id, tid, ticket) {
               default:
                 // $.log(`\n‼️${resp.statusCode}[调试log]:${resp.body}`);
                 console.log("🚌 本任务需要邀请助力,请复制你的邀请码提交上车");
-                await getWXShareCode1();
-                await getWXShareCode2();
+                // await getWXShareCode1();
+                // await getWXShareCode2();
             }
           }
         }
@@ -1117,9 +1047,9 @@ async function getShareCode2() {
   });
 }
 // WX分享code获取
-async function getWXShareCode1() {
+async function getWXShareCode1(wzqqlskey, wzqqluin) {
   return new Promise((resolve) => {
-    const options = wxTaskOptions(`https://wzq.tenpay.com/cgi-bin/activity/activity_share.fcgi?`, `_h5ver=2.0.1&action=query_share_code&share_type=task_51_1110`);
+    const options = wxTaskOptions2(`https://wzq.tenpay.com/cgi-bin/activity/activity_share.fcgi?`, `_h5ver=2.0.1&action=query_share_code&share_type=task_51_1110`, wzqqlskey, wzqqluin);
     $.post(options, async (err, resp, data) => {
       try {
         if (err) {
@@ -1134,7 +1064,7 @@ async function getWXShareCode1() {
             switch (code) {
               case "0":
                 tasksharecode1 = data.share_code
-                console.log(`🌀分享个股sharecode:${tasksharecode1}`);
+                console.log(`🌀获取助力分享个股sharecode:${tasksharecode1}`);
                 break;
               default:
                 $.log(`\n‼️${resp.statusCode}[调试log]:${resp.body}`);
@@ -1149,9 +1079,9 @@ async function getWXShareCode1() {
     });
   });
 }
-async function getWXShareCode2() {
+async function getWXShareCode2(wzqqlskey, wzqqluin) {
   return new Promise((resolve) => {
-    const options = wxTaskOptions(`https://wzq.tenpay.com/cgi-bin/activity/activity_share.fcgi?`, `_h5ver=2.0.1&action=query_share_code&share_type=news_share`);
+    const options = wxTaskOptions2(`https://wzq.tenpay.com/cgi-bin/activity/activity_share.fcgi?`, `_h5ver=2.0.1&action=query_share_code&share_type=news_share`, wzqqlskey, wzqqluin);
     $.post(options, async (err, resp, data) => {
       try {
         if (err) {
@@ -1166,7 +1096,7 @@ async function getWXShareCode2() {
             switch (code) {
               case "0":
                 tasksharecode2 = data.share_code
-                console.log(`🌀分享资讯sharecode:${tasksharecode2}`);
+                console.log(`🌀获取助力分享资讯sharecode:${tasksharecode2}`);
                 break;
               default:
                 $.log(`\n‼️${resp.statusCode}[调试log]:${resp.body}`);
@@ -1296,18 +1226,20 @@ async function runShareTask() {
             }
           }
 
-          const findMyCode = sharecodeArr.findIndex(i => i.indexOf(tasksharecode1) > -1)
-          shareCodeSum = sharecodeArr.length
+          const findMyCode = sharecodeArr.findIndex(i => i.indexOf(wzqqlskey) > -1)
           if (findMyCode == -1) {
             console.log(`→Oh抱歉,你没有在参与助力的车队里`);
-          } else if (findMyCode == 0) {
+          } else if (findMyCode == 1) {
             console.log(`→Hey!恭喜,你在参与助力的车队里`);
             console.log(`\n🙋 你是头码,将助力最后一位,开始助力任务`);
-            let runsharecode = sharecodeArr[shareCodeSum]
+            shareCodeSum = sharecodeArr.length-1
+            runsharecode = sharecodeArr[shareCodeSum]
             const runsharetaskcode1 = runsharecode.split("&")[0]
             const runsharetaskcode2 = runsharecode.split("&")[1]
-            await runShareTask1(runsharetaskcode1);
-            await runShareTask2(runsharetaskcode2);
+            await getWXShareCode1(runsharetaskcode1,runsharetaskcode2);
+            await getWXShareCode2(runsharetaskcode1,runsharetaskcode2);
+            await runShareTask1(tasksharecode1);
+            await runShareTask2(tasksharecode2);
 
           } else {
             console.log(`→Hey!恭喜,你在参与助力的车队里`);
@@ -1316,8 +1248,10 @@ async function runShareTask() {
             let runsharecode = sharecodeArr[sharecodeindex]
             const runsharetaskcode1 = runsharecode.split("&")[0]
             const runsharetaskcode2 = runsharecode.split("&")[1]
-            await runShareTask1(runsharetaskcode1);
-            await runShareTask2(runsharetaskcode2);
+            await getWXShareCode1(runsharetaskcode1,runsharetaskcode2);
+            await getWXShareCode2(runsharetaskcode1,runsharetaskcode2);
+            await runShareTask1(tasksharecode1);
+            await runShareTask2(tasksharecode2);
 
           }
         }
