@@ -1,6 +1,6 @@
 /*
 [rewrite]
-https:\/\/www\.google\.com\/(m|search) url script-response-body Endless_Google.user.js
+^https?:\/\/www\.google\..*\/search url script-response-body Endless_Google.user.js
 
 [mitm]
 www.google.*
