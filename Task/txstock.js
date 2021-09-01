@@ -126,11 +126,10 @@ if ($.isNode()) {
   ////////////// 测试区///////////////
   wzqqlskey = wxtaskkeyVal.split("wzq_qlskey=")[1].split(";")[0]
   wzqqluin = wxtaskkeyVal.split("wzq_qluin=")[1].split(";")[0]
-  // await getWXShareCode1();
-  // await getWXShareCode2();
   console.log(`\n🔺验证码群内提交:复制以下代码到群里贴上\n\n${tgmarkcode}${wzqqlskey}&${wzqqluin}`);
   console.log(`\n🔺验证码机器人提交:sb键盘提交助力码,复制以下代码回应提交\n\n${wzqqlskey}&${wzqqluin}`);
-  if ((hour == 15 && minute >= 15) || (hour == 16) || (hour == 17) || (hour == 18) || (hour == 19) || (hour == 20) || (hour == 21) || (hour == 22) || (hour == 23)) {
+  console.log(`\n🏠 开始分享助力任务,检查助力资格`)
+  await runShareTask();
     console.log(`\n🏠 查询目前账户金币\n`)
     await userhome(); //金币查询
     console.log(`\n🏠 执行【签到】任务\n`)
@@ -143,18 +142,9 @@ if ($.isNode()) {
     await newtxstock();
     console.log(`\n🏠 执行【自动提现】任务\n`)
     await cashorder(cash, money);
-  } else {
-    $.log(`时间未到,请将CRON设置到"PM3:15"之后`);
-    if (runTestTask) {
-      console.log(`\n🏠 分享助力开始`)
-      await runShareTask();
-      console.log(`\n🏠 逢9必发活动任务执行开始...\n`)
-      await ninethlottoTask();
-    } else {
-      console.log(`\n🏠 目前设置不参加测试活动任务🙅‍♂️\n`)
-    }
-  }
-  await showmsg();
+    // console.log(`\n🏠 逢9必发活动任务执行开始...\n`)
+    // await ninethlottoTask();
+    await showmsg();
 
 })()
 .catch((e) => $.logErr(e))
@@ -656,15 +646,19 @@ async function wxtaskOldIDCheck() {
                   let status = taskSetStatusList[j]
 
                   console.log(`检查-WX老任务id${id}状态`)
-                  if (status == "0") {
-                    console.log(`→去做WX老任务id${id}:${desc}`)
-                    await WXoldtaskticket();
-                    await $.wait(2000);
-                    await runWXOldTask(id, tid, ticket)
-                    console.log(`⏳ 等待10sec...\n`);
-                    await $.wait(10000); //等待10秒
+                  if (id == 19 || id == 13) {
+                    console.log(`WX老任务id${id}需要邀请新用户🐥\n`);
                   } else {
-                    console.log(`WX老任务id${id}已完成 🎉\n`)
+                    if (status == "0") {
+                      console.log(`→去做WX老任务id${id}:${desc}`)
+                      await WXoldtaskticket();
+                      await $.wait(2000);
+                      await runWXOldTask(id, tid, ticket)
+                      console.log(`⏳ 等待10sec...\n`);
+                      await $.wait(10000); //等待10秒
+                    }else {
+                      console.log(`WX老任务id${id}已完成 🎉\n`)
+                    }
                   }
                 }
                 break;
@@ -756,9 +750,9 @@ async function runAppTask(id, tid, ticket) {
                 break;
               default:
                 // $.log(data.retmsg);
-                console.log("🚌 本任务需要邀请助力,请复制你的邀请码提交上车");
-                // await getWXShareCode1();
-                // await getWXShareCode2();
+                // console.log("🚌 本任务需要邀请助力,请复制你的邀请码提交上车");
+                console.log(`\n🏠 开始分享助力任务,检查助力资格`)
+                await runShareTask();
             }
           }
         }
@@ -791,9 +785,6 @@ async function runAppOldTask(id, tid, ticket) {
                 break;
               default:
                 $.log(`\n‼️${resp.statusCode}[调试log]:${resp.body}`);
-                // console.log("🚌 本任务需要邀请助力,请复制你的邀请码提交上车");
-                // await getWXShareCode1();
-                // await getWXShareCode2();
             }
           }
         }
@@ -823,12 +814,11 @@ async function runWXTask(id, tid, ticket) {
               case "0":
                 $.log(`🆕 WX任务ID${id}:获得${data.reward_desc}\n`);
                 tz += `【WX新任务ID${id}】:${data.reward_desc}\n`
-                break;
+                break;k
               default:
-                // $.log(`\n‼️${resp.statusCode}[调试log]:${resp.body}`);
-                console.log("🚌 本任务需要邀请助力,请复制你的邀请码提交上车");
-                // await getWXShareCode1();
-                // await getWXShareCode2();
+                // console.log("🚌 本任务需要邀请助力,请复制你的邀请码提交上车");
+                console.log(`\n🏠 开始分享助力任务,检查助力资格`)
+                await runShareTask();
             }
           }
         }
@@ -998,7 +988,7 @@ async function getShareCode1() {
             const code = data.retcode
             switch (code) {
               case "0":
-                tasksharecode = data.share_code
+                tasksharecode1 = data.share_code
                 console.log(`🌀APP分享个股sharecode:${tasksharecode}`);
                 break;
               default:
@@ -1030,7 +1020,7 @@ async function getShareCode2() {
             const code = data.retcode
             switch (code) {
               case "0":
-                tasksharecode = data.share_code
+                tasksharecode2 = data.share_code
                 console.log(`🌀APP分享资讯sharecode:${tasksharecode}`);
                 break;
               default:
@@ -1047,9 +1037,9 @@ async function getShareCode2() {
   });
 }
 // WX分享code获取
-async function getWXShareCode1(wzqqlskey, wzqqluin) {
+async function getWXShareCode1() {
   return new Promise((resolve) => {
-    const options = wxTaskOptions2(`https://wzq.tenpay.com/cgi-bin/activity/activity_share.fcgi?`, `_h5ver=2.0.1&action=query_share_code&share_type=task_51_1110`, wzqqlskey, wzqqluin);
+    const options = wxTaskOptions(`https://wzq.tenpay.com/cgi-bin/activity/activity_share.fcgi?`, `_h5ver=2.0.1&action=query_share_code&share_type=task_51_1110`);
     $.post(options, async (err, resp, data) => {
       try {
         if (err) {
@@ -1064,7 +1054,7 @@ async function getWXShareCode1(wzqqlskey, wzqqluin) {
             switch (code) {
               case "0":
                 tasksharecode1 = data.share_code
-                console.log(`🌀获取助力分享个股sharecode:${tasksharecode1}`);
+                console.log(`🌀我的助力分享个股sharecode:${tasksharecode1}`);
                 break;
               default:
                 $.log(`\n‼️${resp.statusCode}[调试log]:${resp.body}`);
@@ -1079,9 +1069,9 @@ async function getWXShareCode1(wzqqlskey, wzqqluin) {
     });
   });
 }
-async function getWXShareCode2(wzqqlskey, wzqqluin) {
+async function getWXShareCode2() {
   return new Promise((resolve) => {
-    const options = wxTaskOptions2(`https://wzq.tenpay.com/cgi-bin/activity/activity_share.fcgi?`, `_h5ver=2.0.1&action=query_share_code&share_type=news_share`, wzqqlskey, wzqqluin);
+    const options = wxTaskOptions(`https://wzq.tenpay.com/cgi-bin/activity/activity_share.fcgi?`, `_h5ver=2.0.1&action=query_share_code&share_type=news_share`);
     $.post(options, async (err, resp, data) => {
       try {
         if (err) {
@@ -1096,7 +1086,7 @@ async function getWXShareCode2(wzqqlskey, wzqqluin) {
             switch (code) {
               case "0":
                 tasksharecode2 = data.share_code
-                console.log(`🌀获取助力分享资讯sharecode:${tasksharecode2}`);
+                console.log(`🌀我的助力分享资讯sharecode:${tasksharecode2}`);
                 break;
               default:
                 $.log(`\n‼️${resp.statusCode}[调试log]:${resp.body}`);
@@ -1112,9 +1102,9 @@ async function getWXShareCode2(wzqqlskey, wzqqluin) {
   });
 }
 //分享助力
-async function runShareTask1(tasksharecode) {
+async function runShareTask1(tasksharecode,wzqqlskey, wzqqluin) {
   return new Promise((resolve) => {
-    const options = wxTaskOptions(`https://wzq.tenpay.com/cgi-bin/activity/activity_share.fcgi?`, `_h5ver=2.0.1&action=share_code_info&share_type=task_51_1111&share_code=${tasksharecode}`);
+    const options = wxTaskOptions2(`https://wzq.tenpay.com/cgi-bin/activity/activity_share.fcgi?`, `_h5ver=2.0.1&action=share_code_info&share_type=task_51_1111&share_code=${tasksharecode}`,wzqqlskey, wzqqluin);
     $.post(options, async (err, resp, data) => {
       try {
         if (err) {
@@ -1129,21 +1119,7 @@ async function runShareTask1(tasksharecode) {
             const status = data.share_code_info.status
             switch (code) {
               case "0":
-                shareman = data.share_code_info.nickname
-                if (status) {
-                  console.log(`→${shareman}:谢谢你的分享个股助力！🎉`);
-                } else {
-                  console.log(`→分享个股助力他人失败！❌`);
-                  let randomNum = Random(0, shareCodeSum)
-                  let runsharecode = sharecodeArr[randomNum]
-                  console.log(`\n🎲 随机挑选一个码助力:\n${runsharecode}`);
-                  await $.wait(3000)
-                  let runsharetaskcode1 = runsharecode.split("&")[0]
-                  // let runsharetaskcode2 = runsharecode.split("&")[1]
-                  await runShareTask1(runsharetaskcode1);
-                  // await runShareTask2(runsharetaskcode2);
-
-                }
+              console.log("→执行分享个股任务成功！");
                 break;
               default:
                 $.log(`\n‼️${resp.statusCode}[调试log]:${resp.body}`);
@@ -1158,9 +1134,9 @@ async function runShareTask1(tasksharecode) {
     });
   });
 }
-async function runShareTask2(tasksharecode) {
+async function runShareTask2(tasksharecode,wzqqlskey, wzqqluin) {
   return new Promise((resolve) => {
-    const options = wxTaskOptions(`https://wzq.tenpay.com/cgi-bin/activity/activity_share.fcgi?`, `_h5ver=2.0.1&action=share_code_info&share_type=task_50_1111&share_code=${tasksharecode}`);
+    const options = wxTaskOptions2(`https://wzq.tenpay.com/cgi-bin/activity/activity_share.fcgi?`, `_h5ver=2.0.1&action=share_code_info&share_type=task_50_1111&share_code=${tasksharecode}`,wzqqlskey, wzqqluin);
     $.post(options, async (err, resp, data) => {
       try {
         if (err) {
@@ -1175,20 +1151,71 @@ async function runShareTask2(tasksharecode) {
             const status = data.share_code_info.status
             switch (code) {
               case "0":
-                shareman = data.share_code_info.nickname
-                if (status) {
-                  console.log(`→${shareman}:谢谢你的分享资讯助力！🎉`);
-                } else {
-                  console.log(`→分享资讯助力他人失败！❌`);
-                  let randomNum = Random(0, shareCodeSum)
-                  let runsharecode = sharecodeArr[randomNum]
-                  console.log(`\n🎲 随机挑选一个码助力:\n${runsharecode}`);
-                  await $.wait(3000)
-                  // let runsharetaskcode1 = runsharecode.split("&")[0]
-                  let runsharetaskcode2 = runsharecode.split("&")[1]
-                  // await runShareTask1(runsharetaskcode1);
-                  await runShareTask2(runsharetaskcode2);
-                }
+                console.log("→执行分享资讯任务成功");
+                break;
+              default:
+                $.log(`\n‼️${resp.statusCode}[调试log]:${resp.body}`);
+            }
+          }
+        }
+      } catch (e) {
+        $.logErr(e, resp);
+      } finally {
+        resolve();
+      }
+    });
+  });
+}
+async function runShareTask3(tasksharecode,wzqqlskey, wzqqluin) {
+  return new Promise((resolve) => {
+    const options = wxTaskOptions2(`https://wzq.tenpay.com/cgi-bin/activity/activity_share.fcgi?`, `_h5ver=2.0.1&action=share_code_info&share_type=task_51_1110&share_code=${tasksharecode}`,wzqqlskey, wzqqluin);
+    $.post(options, async (err, resp, data) => {
+      try {
+        if (err) {
+          console.log("⛔️API查询请求失败，请检查自身设备网络情况");
+          console.log(JSON.stringify(err));
+          $.logErr(err);
+        } else {
+          if (safeGet(data)) {
+            // $.log(data)
+            data = JSON.parse(data);
+            const code = data.retcode
+            const status = data.share_code_info.status
+            switch (code) {
+              case "0":
+              console.log("→执行分享个股任务成功！");
+                break;
+              default:
+                $.log(`\n‼️${resp.statusCode}[调试log]:${resp.body}`);
+            }
+          }
+        }
+      } catch (e) {
+        $.logErr(e, resp);
+      } finally {
+        resolve();
+      }
+    });
+  });
+}
+async function runShareTask4(tasksharecode,wzqqlskey, wzqqluin) {
+  return new Promise((resolve) => {
+    const options = wxTaskOptions2(`https://wzq.tenpay.com/cgi-bin/activity/activity_share.fcgi?`, `_h5ver=2.0.1&action=share_code_info&share_type=task_50_1110&share_code=${tasksharecode}`,wzqqlskey, wzqqluin);
+    $.post(options, async (err, resp, data) => {
+      try {
+        if (err) {
+          console.log("⛔️API查询请求失败，请检查自身设备网络情况");
+          console.log(JSON.stringify(err));
+          $.logErr(err);
+        } else {
+          if (safeGet(data)) {
+            // $.log(data)
+            data = JSON.parse(data);
+            const code = data.retcode
+            const status = data.share_code_info.status
+            switch (code) {
+              case "0":
+                console.log("→执行分享资讯任务成功");
                 break;
               default:
                 $.log(`\n‼️${resp.statusCode}[调试log]:${resp.body}`);
@@ -1216,7 +1243,7 @@ async function runShareTask() {
           $.logErr(err);
         } else {
           const shareGroupCodeData = JSON.parse(data)
-          console.log(`\n🚌 参与任务助力码共有${shareGroupCodeData.length}人,你上车了吗？`);
+          // console.log(`🚌 参与任务助力码共有${shareGroupCodeData.length}人,你上车了吗？`);
           const sharecodeList = shareGroupCodeData.map(i => i.code)
           //转换成一个码的数组
           sharecodeArr = new Array()
@@ -1225,34 +1252,22 @@ async function runShareTask() {
               sharecodeArr.push(sharecodeList[i][k])
             }
           }
-
           const findMyCode = sharecodeArr.findIndex(i => i.indexOf(wzqqlskey) > -1)
           if (findMyCode == -1) {
             console.log(`→Oh抱歉,你没有在参与助力的车队里`);
-          } else if (findMyCode == 1) {
-            console.log(`→Hey!恭喜,你在参与助力的车队里`);
-            console.log(`\n🙋 你是头码,将助力最后一位,开始助力任务`);
-            shareCodeSum = sharecodeArr.length-1
-            runsharecode = sharecodeArr[shareCodeSum]
-            const runsharetaskcode1 = runsharecode.split("&")[0]
-            const runsharetaskcode2 = runsharecode.split("&")[1]
-            await getWXShareCode1(runsharetaskcode1,runsharetaskcode2);
-            await getWXShareCode2(runsharetaskcode1,runsharetaskcode2);
-            await runShareTask1(tasksharecode1);
-            await runShareTask2(tasksharecode2);
-
           } else {
-            console.log(`→Hey!恭喜,你在参与助力的车队里`);
-            console.log(`\n🙋 你的车码:LSBx${findMyCode},开始助力任务`);
-            let sharecodeindex = findMyCode - 1
-            let runsharecode = sharecodeArr[sharecodeindex]
+            console.log(`→Hey!恭喜,你在参与助力的车队里...开始助力任务`);
+            let shareCodeSum = sharecodeArr.length
+            let randomNum = Random(0, shareCodeSum)
+            let runsharecode = sharecodeArr[randomNum]
             const runsharetaskcode1 = runsharecode.split("&")[0]
             const runsharetaskcode2 = runsharecode.split("&")[1]
-            await getWXShareCode1(runsharetaskcode1,runsharetaskcode2);
-            await getWXShareCode2(runsharetaskcode1,runsharetaskcode2);
-            await runShareTask1(tasksharecode1);
-            await runShareTask2(tasksharecode2);
-
+            await getWXShareCode1();
+            await getWXShareCode2();
+            await runShareTask1(tasksharecode1,runsharetaskcode1,runsharetaskcode2);
+            await runShareTask2(tasksharecode2,runsharetaskcode1,runsharetaskcode2);
+            await runShareTask3(tasksharecode1,runsharetaskcode1,runsharetaskcode2);
+            await runShareTask4(tasksharecode2,runsharetaskcode1,runsharetaskcode2);
           }
         }
       } catch (e) {
@@ -1263,6 +1278,7 @@ async function runShareTask() {
     });
   });
 }
+
 async function sample() {
   return new Promise((resolve) => {
     const options = TaskOptions(`https://wzq.tenpay.com/cgi-bin/activity_task_daily.fcgi?action=home&type=routine&actid=1111&_=${rndtime}&openid=${signheaderVal}`);
