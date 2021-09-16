@@ -39,9 +39,4 @@ qs.google.forEach(sp=>{
   if(qs) qkey.push(qs)
 })
 
-let path = '/m?' + qkey.join('&')
-// path = '/m?q=elecV2'    // 验证脚本是否生效
-
-if(log) console.log('simply url path to ' + path)
-
 $done({ path })
