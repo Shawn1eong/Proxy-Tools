@@ -1,12 +1,14 @@
 /*
 
-
 【QX】
 ^https?://.+?/user/myInfo url script-request-header jysz.js
+^https?://.+?/task/fetchTask\?taskType= url script-response-body jysz.js
+^https?://.+/jysz/read url script-analyze-echo-response jysz.js
 
 【Surge】
 金银手指阅读 = type=http-request,pattern=^https?://.+?/user/myInfo,requires-body=0,max-size=0,script-path=jysz.js
-
+金银手指mock = type=http-response,pattern=^https?://.+?/task/fetchTask\?taskType=,requires-body=1,max-size=0,script-path=jysz.js
+mock_page = type=http-request,pattern=^https?://.+/jysz/read,requires-body=1,max-size=0,timeout=10,script-path=jysz.js
 
 */
 
@@ -19,8 +21,14 @@ concurrency = concurrency < 1 ? 1 : concurrency
 const execNo = [] // 允许执行的账号，为空时不限制，指定时，按照指定的来判断处理，例如：[1,3]
 const excludeNo = [] // 根据账号序号直接过滤账号ck数据
 const limitCount = 70
+// 每日检测篇数，用于自动中断检测文章
+const stopNos = $.getjson('jyszStopNos', {})
+$.stKey = $.time('yyyyMMdd')
 
 const bizCodeMsg = {
+  '-66':'跳过阅读',
+  '-55':'跳过阅读，上次偶遇检测文章',
+  '-44':'跳过阅读，本阶段达到上限',
   '20':'暂无任务',
   '10':'下批文章将在60分钟后到达',
   '11':'当天达到上限',
@@ -33,14 +41,16 @@ function execTask(ac, i) {
       await $.wait(i * 50)
       let obj = await getApi(ac.url.replace('user/myInfo', 'sign/todayAwardInfo'), ac)
       if ((execNo.length == 0 || execNo.includes(ac.no)) && obj.data && obj.data.completeTodayReadCount > 0 && obj.data.completeTodayReadCount < limitCount) {
-        obj = await getApi(ac.url.replace('user/myInfo', 'task/fetchTask?taskType=1'), ac)
-      } else {
-        obj = {
-          message: '跳过阅读',
-          data: obj.data
+        if (ac.stopRead.includes(obj.data.completeTodayReadCount + '')) {
+          obj = {data: {bizCode: -55, completeTodayReadCount: obj.data.completeTodayReadCount}}
+          ac.extMsg.push(`上次偶遇检测文章，请先通过检测并增加今日文章阅读数后可执行脚本`)
+        } else {
+          obj = await getApi(ac.url.replace('user/myInfo', 'task/fetchTask?taskType=1'), ac)
         }
+      } else {
+        obj = {data: {...obj.data, bizCode: -66}}
         if (obj.data.completeTodayReadCount >= limitCount) {
-          obj.message = `当天已读文章${obj.data.completeTodayReadCount}篇`
+          obj.data.bizCode = -44
         }
       }
       if (obj.data && obj.data.taskUrl && !obj.data.testLink && !obj.data.bizCode) {
@@ -49,34 +59,53 @@ function execTask(ac, i) {
         do {
           let count = obj.data.completeTodayCount + 1
           let time = parseInt(Math.random() * (11 - 9 + 1) + 9, 10)
-          $.log(`🌝账号${ac.no}等待${time}秒后提交阅读任务: ${obj.data.taskId}`)
+          let taskId = obj.data.taskId
+          $.log(`⌛️账号${ac.no}等待${time}秒后提交阅读任务: ${taskId}`)
           await $.wait(time * 1000)
-          obj = await postApi(ac.url.replace('user/myInfo', 'task/completeTask'), ac, getSign(JSON.stringify({taskId: obj.data.taskId})))
+          obj = await postApi(ac.url.replace('user/myInfo', 'task/completeTask'), ac, getSign(JSON.stringify({taskId})))
           if (obj.code == '0' && obj.data) {
-            $.log(`账号${ac.no} 今日第${count}次阅读获得奖励：${obj.data.goldAward}`)
+            if (obj.data.goldAward) {
+              $.log(`账号${ac.no} 今日第${count}次阅读获得奖励：${obj.data.goldAward}`)
+            } else {
+              $.logErr(`账号${ac.no} 今日第${count}次阅读奖励信息异常：\n${$.toStr(obj)}`)
+            }
           } else {
-            $.log(`账号${ac.no} 今日第${count}次阅读执行异常：${$.toStr(obj)}`)
+            if (obj.msg == '资源获取过于频繁') {
+              obj = await postApi(ac.url.replace('user/myInfo', 'task/completeTask'), ac, getSign(JSON.stringify({taskId})))
+              if (obj.code == '0' && obj.data) {
+                if (obj.data.goldAward) {
+                  $.log(`账号${ac.no} 今日第${count}次阅读获得奖励：${obj.data.goldAward}`)
+                } else {
+                  $.logErr(`账号${ac.no} 今日第${count}次阅读奖励信息异常：\n${$.toStr(obj)}`)
+                }
+              } else {
+                $.logErr(`账号${ac.no} 今日第${count}次阅读两次执行异常：\n${$.toStr(obj)}`)
+              }
+            }
             errorCount++
           }
           if (errorCount <= 3) {
             obj = await getApi(ac.url.replace('user/myInfo', 'task/fetchTask?taskType=1'), ac)
           }
-        } while (obj.data && obj.data.taskUrl && !obj.data.bizCode)
-      } else if (obj.data && obj.data.testLink) {
-        $.msg($.name, `账号${ac.no}:检测文章`, obj.data.taskUrl)
+        } while (obj.data && obj.data.taskUrl && !obj.data.testLink && !obj.data.bizCode)
+        $.log(`♨️账号${ac.no} 无阅读任务：${bizCodeMsg[(obj.data && obj.data.bizCode)||''] || '本阶段达到上限'}`)
+      }
+      if (obj.data && obj.data.testLink) {
+        stopNos[ac.unionId][$.stKey] = [(obj.data.completeTodayCount || obj.data.completeTodayReadCount) + '']
+        $.msg($.name, `⚠️账号${ac.no}:今天还没检测过？速速检测去`, obj.data.taskUrl)
       } else {
-        $.log(`账号${ac.no} 无阅读任务：${obj.message || bizCodeMsg[(obj.data && obj.data.bizCode)||''] || '本阶段达到上限'}`)
+        $.log(`⚠️账号${ac.no} 无阅读任务：${bizCodeMsg[(obj.data && obj.data.bizCode)||''] || '本阶段达到上限'}`)
       }
       ac.extMsg.push(`今日已读：${obj.data && (obj.data.completeTodayCount || obj.data.completeTodayReadCount)}次`)
       // 获取签到信息
       obj = await getApi(ac.url.replace('user/myInfo', 'sign/todayAwardInfo'), ac)
       if (obj = obj.data) {
         if (obj.completeTodayReadCount >= 25 && obj.task1State != 1) {
-          $.log(`账号${ac.no} 领取阅读25篇奖励`)
+          $.log(`🎉账号${ac.no} 领取阅读25篇奖励`)
           await postApi(ac.url.replace('user/myInfo', 'sign/todayAwardGain?taskSeq=1'), ac)
         }
         if (obj.completeTodayReadCount >= 50 && obj.task2State != 1) {
-          $.log(`账号${ac.no} 领取阅读50篇奖励`)
+          $.log(`🎉账号${ac.no} 领取阅读50篇奖励`)
           await postApi(ac.url.replace('user/myInfo', 'sign/todayAwardGain?taskSeq=2'), ac)
         }
       }
@@ -112,6 +141,15 @@ function getExecAcList() {
     if (i % slot == 0) {
       idx++
     }
+    // 设置需要手动阅读的文章序号
+    o.stopRead = []
+    // 设置今天检测到的鉴权文章序号
+    let sns = stopNos[o.unionId] && stopNos[o.unionId][$.stKey]
+    if (sns) {
+      sns.forEach(rno => o.stopRead.push(rno))
+    } else {
+      stopNos[o.unionId] = {}
+    }
     if (execAcList[idx]) {
       execAcList[idx].push(o)
     } else {
@@ -124,20 +162,24 @@ function getExecAcList() {
 
 // 数据获取
 async function getck() {
-  
+  if ($request.headers && $request.headers['Connection-Type']) {
+    if ($request.headers) {
+      delete $request.headers['Connection-Type']
+      $.done({headers: $request.headers})
+    }
+    return
+  }
   const url = $request.url
-  const hd = $request.headers
-  let curCk = ''
-  if (url.indexOf("user/myInfo") > -1 && (curCk = hd['token'] || '')) {
+  let token = ''
+  if (url.indexOf("user/myInfo") > -1 && (token = $request.headers['token'] || '')) {
     let no = jysz.length
-    let acInfo = await getApi(url, {no, hd})
+    let acInfo = await getApi(url, {no, hd:$request.headers})
     if (acInfo = acInfo.data) {
-      let newAc = {unionId: acInfo.unionId, url, hd}
       let status = 1
       for (let i = 0, len = no; i < len; i++) {
         let ac = jysz[i] || {}
         if (ac.unionId) {
-          if (ac.unionId == newAc.unionId) {
+          if (ac.unionId == acInfo.unionId) {
             no = i
             status = 0
             break
@@ -146,10 +188,20 @@ async function getck() {
           no = i
         }
       }
-      if (!status && jysz[no] && curCk == jysz[no]['hd']['token']) {
+      if (!status && jysz[no] && token == jysz[no]['hd']['token']) {
         return
       }
-      jysz[no] = newAc
+      const hd = {}
+      for (let hdName in $request.headers) {
+        if (['Accept', 'Cookie', 'cookie', 'User-Agent', 'user-agent', 'X-Requested-With', 'Referer', 'token'].includes(hdName)) {
+          let hdValue = $request.headers[hdName]
+          if (hdName == 'user-agent') {
+            hdName = 'User-Agent'
+          }
+          hd[hdName] = hdValue
+        }
+      }
+      jysz[no] = {unionId: acInfo.unionId, url, hd}
       $.setdata(JSON.stringify(jysz, null, 2), 'jysz')
       $.msg($.name, "", `[账号${no+1}] ${status?'新增':'更新'}数据成功！`)
     }
@@ -164,7 +216,17 @@ function getApi(url, ac) {
       url,
       headers: ac.hd
     }
-    
+    if ($.isSurge()) {
+      if (opts.headers) {
+        opts.headers['Connection-Type'] = 'm'
+      } else {
+        opts = {
+          'Connection-Type': 'm'
+        }
+      }
+    } else if (!$.isSurge() && opts.headers) {
+      delete opts.headers['Connection-Type']
+    }
     $.get(opts, async (err, resp, data) => {
       let obj = {}
       try {
@@ -185,7 +247,17 @@ function getApi(url, ac) {
 function postApi(url, ac, body = '') {
   return new Promise((resolve) => {
     let opts = {url, headers: {...ac.hd, 'Content-Type': 'application/json;charset=UTF-8'}, body}
-    
+    if ($.isSurge()) {
+      if (opts.headers) {
+        opts.headers['Connection-Type'] = 'm'
+      } else {
+        opts = {
+          'Connection-Type': 'm'
+        }
+      }
+    } else if (!$.isSurge() && opts.headers) {
+      delete opts.headers['Connection-Type']
+    }
     $.post(opts, async (err, resp, data) => {
       let obj = {}
       try {
@@ -223,9 +295,76 @@ function getSign(t) {
 
 !(async () => {
   if (typeof $request !== "undefined" && $request.url != 'http://www.apple.com/') {
-    
+    let url = $request.url
+    if ($request.headers && $request.headers['Connection-Type']) {
+      delete $request.headers['Connection-Type']
+      $.done({headers: $request.headers})
+    } else if (typeof $response !== "undefined") {
+      if (url.indexOf('task/fetchTask?') > 0) {
+        let body = $response.body
+        // 非检测文章倒计时
+        let obj = $.toObj(body, {})
+        if (obj.data && !obj.data.testLink && obj.data.taskUrl) {
+          if (obj.data.testLink) {
+            $.msg($.name, '', '需滑动页面避免受限')
+          } else {
+            obj.data.taskUrl = `http://www.local-mock.com/jysz/read`
+            $.done({
+              body: $.toStr(obj)
+            })
+          }
+        }
+      }
+    } else if (url.indexOf('/jysz/read') > 0) {
+      let delay = parseInt(Math.random() * (11 - 10 + 1) + 10, 10)
+      let body = `
+      <html>
+      <head>
+          <meta charset="UTF-8">
+      </head>
+      <style>
+          div {position:relative; top:46%; left:28%; border:0px solid #008800; font-size: 7vw}
+      </style>
+      <body><div id="timer" onclick="javascript:clickTime()"></div></body>
+      <script>
+        var oBox= document.getElementById('timer');
+        var go = -1
+        var maxtime = ${delay};
+        // setTimeout(() => window.history.go(go), maxtime * 1000 + 500);
+        function CountDown() {
+          if (maxtime >= 0) {
+            oBox.innerHTML = '返回倒计时' + maxtime + '秒(' + go + ')';
+            --maxtime;
+          } else {
+            clearInterval(timer);
+            window.history.go(go);
+          }
+        }
+        timer = setInterval("CountDown()", 1050);
+        function clickTime() {
+          if (timer) {
+            clearInterval(timer)
+            timer = null
+          } else {
+            timer = setInterval("CountDown()", 1050);
+          }
+        }
+      </script>
+      </html>
+      `
+      const headers = {
+        "Connection": "Close",
+        'Content-Type': 'text/html; charset=utf-8'
+      };
+      if ($.isSurge() || $.isLoon()) {
+        $.done({response: {status: 200, headers, body}})
+      } else if ($.isQuanX()) {
+        $.done({status: 'HTTP/1.1 200 OK', headers, body})
+      }
+    } else {
+      // 获取ck
       await getck()
-    
+    }
   } else {
     let execAcList = getExecAcList()
     let msgInfo = []
@@ -244,6 +383,7 @@ function getSign(t) {
     } else {
       $.log('\n======== [脚本运行完毕,打印日志结果] ========\n' + msgInfo.join('\n\n'))
     }
+    $.setdata($.toStr(stopNos), 'jyszStopNos')
   }
 })()
 .catch((e) => $.logErr(e))
