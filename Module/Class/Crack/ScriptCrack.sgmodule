@@ -4,7 +4,7 @@
 
 
 [MITM]
-hostname = %APPEND% mall.zuoyebang.com,apivip.zybang.com, ipadcms.caixin.com,outcut.szsszykj.com,zebra.maka.im,license.pdfexpert.com,api2.fitplanapp.com,api.dushu.io, api.getmimo.com,api.xiuxiu.meitu.com,api.meiyan.com, biz.caiyunapp.com, *.xxjjappss.com, pay.wecut.com,*.huaerdadi.com,*.xiaoxiaoapps.com,*.xiaoxiaoimg.com,prod.api.shapr3d.com,cdn.altstore.io,www.patreon.com,bea.sportq.com, api.revenuecat.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com,api.lennou.com,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com,*.xiaoxiao*.com,api.revenuecat.com,u.kanghuayun.com,www.3ivf.com,pay.guoing.com,api.gotokeep.com,59.110.149.231,129.211.156.213,api.vuevideo.net,api.gamer.com.tw,*.xiangxiangapps.com,avatar-nct.nixcdn.com,oa.zalo.me,api.meiease.c*, viva-asia1.vvbrd.com,purchases.ws.pho.to,photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io,  api.polaxiong.com, api.polarr.co
+hostname = %APPEND% mall.zuoyebang.com,apivip.zybang.com,vip1.kuwo.cn, ipadcms.caixin.com,outcut.szsszykj.com,zebra.maka.im,license.pdfexpert.com,api2.fitplanapp.com,api.dushu.io, api.getmimo.com,api.xiuxiu.meitu.com,api.meiyan.com, biz.caiyunapp.com, *.xxjjappss.com, pay.wecut.com,*.huaerdadi.com,*.xiaoxiaoapps.com,*.xiaoxiaoimg.com,prod.api.shapr3d.com,cdn.altstore.io,www.patreon.com,bea.sportq.com, api.revenuecat.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com,api.lennou.com,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,api.jiaonizuocai.com,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com,*.xiaoxiao*.com,api.revenuecat.com,u.kanghuayun.com,www.3ivf.com,pay.guoing.com,api.gotokeep.com,59.110.149.231,129.211.156.213,api.vuevideo.net,api.gamer.com.tw,*.xiangxiangapps.com,avatar-nct.nixcdn.com,oa.zalo.me,api.meiease.c*, viva-asia1.vvbrd.com,purchases.ws.pho.to,photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io,  api.polaxiong.com, api.polarr.co
 
 [Script]
 # Update time: 2021.5.23
@@ -42,14 +42,14 @@ VUE PRO = type=http-response,requires-body=1,pattern=^https:\/\/api\.vuevideo\.n
 # > 010 Quicut 体验大片视频编辑的感觉 (20201112)
 Quicut = type=http-response,requires-body=1,max-size=0,pattern=http://outcut.szsszykj.com/api/OverseasPay/GetVip,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/qc.js,script-update-interval=0
 
-# > 011 财新周刊 解锁会员文章（20210320）
-财新周刊 = type=http-response,requires-body=1,max-size=0,pattern=http://ipadcms.caixin.com/tmp/articles/*,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/cxzk.js,script-update-interval=0
+# > 011 酷我音乐
+酷我音乐 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js,script-update-interval=0
 
-# > 012 Myscript Nebo APP UNBLOCK（20210321）
+# > 012 酷我音乐下载
+酷我音乐下载 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/musicpay\.kuwo.cn\/music\.pay\?uid=\d+,script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/User/KuWoMusicDownload.js,script-update-interval=0
+
+# > 013 Myscript Nebo APP UNBLOCK（20210321）
 Myscript Nebo = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/.*\.nebo\.app\/api\/.*\/inapppurchase\/apple\/receipt,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/nebo.js,script-update-interval=0
-
-# > 013 斑马海报 解锁会员权限（20210130）
-斑马海报 = type=http-response,requires-body=1,max-size=0,pattern=https://zebra.maka.im/api/user/info,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/bmhb.js,script-update-interval=0
 
 # > 014 Document 解锁PDF会员编辑功能 一次性解锁（20201108）
 Document = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/license\.pdfexpert\.com\/api\/.+\/subscription\/(refresh$|check$),script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/documents.js,script-update-interval=0
@@ -66,9 +66,6 @@ Fitplan = type=http-response,requires-body=1,max-size=0,pattern=https://api2.fit
 # > 018 作业帮 解锁付费音频资源（20210407）by photonmang
 作业帮 = type=http-response,requires-body=1,max-size=0,pattern=https://mall.zuoyebang.com/mall/goods/audio/voice/list?audioId=\d+,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/zyb.js,script-update-interval=0
 作业帮 = type=http-response,requires-body=1,max-size=0,pattern=https://apivip.zybang.com/vipols/vip/viphomev1?.+,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/zyb.js,script-update-interval=0
-
-# > 019 驾校一点通 (api.polaxiong.com, api.polarr.co)
-驾校一点通 = type=http-response,requires-body=1,max-size=0,pattern=^https://vipapi.jxedt.com/vip/,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/jxydt.js,script-update-interval=0
 
 # > 020 泼辣修图 (api.polaxiong.com, api.polarr.co)
 泼辣修图 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.(polaxiong\.com|polarr\.co)\/v\d\/payments\/appleiap\/receipts\/confirmation$,script-path=https://raw.githubusercontent.com/LTribeSkyx/Script/master/polaris.js,script-update-interval=0
@@ -107,3 +104,4 @@ Altstore = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/www\.
 
 # > 031 Textnow （api.textnow.me）
 Textnow = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.textnow\.me\/api2.0\/users\/.+,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/textnow.js,script-update-interval=-1
+
