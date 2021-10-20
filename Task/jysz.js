@@ -96,7 +96,11 @@ function execTask(ac, i) {
       } else {
         $.log(`⚠️账号${ac.no} 无阅读任务：${bizCodeMsg[(obj.data && obj.data.bizCode)||''] || '本阶段达到上限'}`)
       }
-      ac.extMsg.push(`今日已读：${obj.data && (obj.data.completeTodayCount || obj.data.completeTodayReadCount)}次`)
+      let readCount = obj.data && (obj.data.completeTodayCount || obj.data.completeTodayReadCount)
+      if (readCount == undefined) {
+        $.logErr(`账号${ac.no} 今日已读信息获取失败：\n${obj.respData}`)
+      }
+      ac.extMsg.push(`今日已读：${readCount}次`)
       // 获取签到信息
       obj = await getApi(ac.url.replace('user/myInfo', 'sign/todayAwardInfo'), ac)
       if (obj = obj.data) {
@@ -110,7 +114,10 @@ function execTask(ac, i) {
         }
       }
       let acInfo = await getApi(ac.url, ac)
-      acInfo = (acInfo && acInfo.data) || {}
+      acInfo = acInfo.data || {respData: acInfo.respData}
+      if (acInfo.goldNow == undefined) {
+        $.logErr(`账号${ac.no} 当前金币获取失败：\n${acInfo.respData}`)
+      }
       ac.extMsg.push(`当前金币：${acInfo.goldNow}`)
       ac.nameNick = (acInfo.nameNick) || ''
       if (acInfo.goldNow && acInfo.goldNow >= 4000) {
@@ -234,6 +241,7 @@ function getApi(url, ac) {
           $.logErr(`❌ 账号${ac.no} API请求失败，请检查网络后重试\n url: ${opts.url} \n data: ${JSON.stringify(err, null, 2)}\n`)
         } else {
           obj = $.toObj(data, obj)
+          obj.respData = data
         }
       } catch (e) {
         $.logErr(`======== 账号 ${ac.no} ========\nurl: ${opts.url}\nerror:${e}\ndata: ${resp && resp.body}\n`)
