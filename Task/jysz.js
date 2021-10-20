@@ -24,6 +24,7 @@ const limitCount = 70
 // 每日检测篇数，用于自动中断检测文章
 const stopNos = $.getjson('jyszStopNos', {})
 $.stKey = $.time('yyyyMMdd')
+$.surgeTag = !($.getval('surgeTag') || 0)
 
 const bizCodeMsg = {
   '-66':'跳过阅读',
@@ -57,6 +58,22 @@ function execTask(ac, i) {
         // 获取到文章数据，准备执行阅读任务
         let errorCount = 0
         do {
+          if (obj.data.taskUrl.indexOf('redirect_uri=https%3A%2F%2Fwhchengyuan.net%2Fjup%2Ftask%2FtakeUrl%3Fsn%3D') > 0) {
+            let params = {}
+            obj.data.taskUrl.replace(/([^?&=]+)=([^?&=]*)/g, (rs, $1, $2) => {
+              params[decodeURIComponent($1)] = decodeURIComponent($2);
+              return rs;
+            })
+            if (params.redirect_uri) {
+              let taskUrl = `${params.redirect_uri}&state=${params.state}`
+              await getApi(taskUrl, {
+                no: ac.no,
+                hd: {
+                  'User-Agent': ac.hd['User-Agent']
+                }
+              })
+            }
+          }
           let count = obj.data.completeTodayCount + 1
           let time = parseInt(Math.random() * (11 - 9 + 1) + 9, 10)
           let taskId = obj.data.taskId
@@ -92,6 +109,7 @@ function execTask(ac, i) {
       }
       if (obj.data && obj.data.testLink) {
         stopNos[ac.unionId][$.stKey] = [(obj.data.completeTodayCount || obj.data.completeTodayReadCount) + '']
+        ac.extMsg.push(`偶遇检测文章，请先通过检测并增加今日文章阅读数后可执行脚本`)
         $.msg($.name, `⚠️账号${ac.no}:今天还没检测过？速速检测去`, obj.data.taskUrl)
       } else {
         $.log(`⚠️账号${ac.no} 无阅读任务：${bizCodeMsg[(obj.data && obj.data.bizCode)||''] || '本阶段达到上限'}`)
@@ -223,7 +241,7 @@ function getApi(url, ac) {
       url,
       headers: ac.hd
     }
-    if ($.isSurge()) {
+    if ($.isSurge() && $.surgeTag) {
       if (opts.headers) {
         opts.headers['Connection-Type'] = 'm'
       } else {
@@ -255,7 +273,7 @@ function getApi(url, ac) {
 function postApi(url, ac, body = '') {
   return new Promise((resolve) => {
     let opts = {url, headers: {...ac.hd, 'Content-Type': 'application/json;charset=UTF-8'}, body}
-    if ($.isSurge()) {
+    if ($.isSurge() && $.surgeTag) {
       if (opts.headers) {
         opts.headers['Connection-Type'] = 'm'
       } else {
