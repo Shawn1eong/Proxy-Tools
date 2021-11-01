@@ -1,25 +1,22 @@
 /*
-JD | TB Price comparison
-by Small
-date 2021-06-25
-Thanks @yichahucha
+jd tb 商品历史价格查询，比价
 
-QX:
-^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
+QuantumultX:
+^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) url script-response-body https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Module/Class/Historical%20price/Price.js
 
-^http://.+/amdc/mobileDispatch url script-request-body https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
-^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail url script-response-body https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
+^http://.+/amdc/mobileDispatch url script-request-body https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Module/Class/Historical%20price/Price.js
+^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail url script-response-body https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Module/Class/Historical%20price/Price.js
 
 Surge4:
-http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
+http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Module/Class/Historical%20price/Price.js
 
-http-request ^http://.+/amdc/mobileDispatch requires-body=1,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
-http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail requires-body=1,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
+http-request ^http://.+/amdc/mobileDispatch requires-body=1,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Module/Class/Historical%20price/Price.js
+http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail requires-body=1,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Module/Class/Historical%20price/Price.js
 
-Surge & QX MITM = api.m.jd.com, trade-acs.m.taobao.com
+MITM = api.m.jd.com, trade-acs.m.taobao.com
 */
 
-const ScriptName = "浜笢|娣樺疂 姣斾环";
+const ScriptName = "京东|淘宝 比价";
 const $ = new Env(ScriptName);
 
 const ScriptIdentifier = "jd_tb_price";
@@ -236,7 +233,7 @@ function handleGetdetail() {
             try {
                 let guaranteeBarVO = data.componentsVO.guaranteeBarVO;
                 let textList = guaranteeBarVO.guaranteeItems[0].textList;
-                textList.unshift("浠锋牸璇︽儏");
+                textList.unshift("价格详情");
             } catch (e) {
                 $.logErr(e, "handleGetdetail handle title error");
             }
@@ -249,16 +246,16 @@ function handleGetdetail() {
 
 
                 if (tradeConsumerProtection) {
-                    setTBItems(tradeConsumerProtection.tradeConsumerService.service.items, createTBItem("浠锋牸璇︽儏", text));
+                    setTBItems(tradeConsumerProtection.tradeConsumerService.service.items, createTBItem("价格详情", text));
                     for (let t of text.split("\n")) {
                         if (t === "") continue;
                         pushTBItems(tradeConsumerProtection.tradeConsumerService.nonService.items, createTBItem(t));
                     }
                 }
 
-                setTBItems(consumerProtection.items, createTBItem("浠锋牸璇︽儏", text));
+                setTBItems(consumerProtection.items, createTBItem("价格详情", text));
                 if (consumerProtection.serviceProtection)
-                    setTBItems(consumerProtection.serviceProtection.basicService.services, createTBItem("浠锋牸璇︽儏", [text]));
+                    setTBItems(consumerProtection.serviceProtection.basicService.services, createTBItem("价格详情", [text]));
 
             } catch (e) {
                 $.logErr(e, "handleGetdetail handle body error");
@@ -328,42 +325,42 @@ function handleBijiago(data) {
         },
         range: {
             "type": "text",
-            "title": "浠锋牸鍖洪棿",
+            "title": "价格区间",
             "text": store['price_range'],
         },
         now: {
             "type": "price",
-            "title": "褰撳墠浠�",
+            "title": "当前价",
             "price": Math.round(store['last_price'] / 100),
             "date": "-"
         },
         highest: {
             "type": "price",
-            "title": "鏈€楂樹环",
+            "title": "最高价",
             "price": Math.round(store['highest']),
             "date": time2str(store['max_stamp'] * 1000)
         },
         lowest: {
             "type": "price",
-            "title": "鏈€浣庝环",
+            "title": "最低价",
             "price": Math.round(store['lowest']),
             "date": time2str(parseInt(store['min_stamp']) * 1000)
         },
         day30: {
             "type": "price",
-            "title": "涓夊崄澶�",
+            "title": "三十天",
             "price": -1,
             "date": "-"
         },
         _618: {
             "type": "price",
-            "title": "鍏竴鍏�",
+            "title": "六一八",
             "price": -1,
             "date": "-"
         },
         _1111: {
             "type": "price",
-            "title": "鍙屽崄涓€",
+            "title": "双十一",
             "price": -1,
             "date": "-"
         }
@@ -389,10 +386,10 @@ function handleBijiago(data) {
         let show = promo_day['show'];
         let price = Math.round(promo_day['price']);
         let date = promo_day['date'];
-        if (promo_day['show'].indexOf("618浠锋牸") != -1) {
+        if (promo_day['show'].indexOf("618价格") != -1) {
             historyObj._618['price'] = price;
             historyObj._618['date'] = date;
-        } else if (promo_day['show'].indexOf("鍙�11浠锋牸") != -1) {
+        } else if (promo_day['show'].indexOf("双11价格") != -1) {
             historyObj._1111['price'] = price;
             historyObj._1111['date'] = date;
         } else
@@ -457,7 +454,7 @@ function request_history_price(id, type, callback) {
 
         if (err) {
             result.success = false;
-            result.msg = "鑾峰彇浠锋牸淇℃伅澶辫触";
+            result.msg = "获取价格信息失败";
             result.data = err;
         }
 
@@ -521,7 +518,7 @@ function priceDiff(now, old) {
     let diff = old - now;
     if (diff === 0)
         return '-'
-    return diff > 0 ? `鈫�${Math.round(diff)}` : `鈫�${Math.round(Math.abs(diff))}`;
+    return diff > 0 ? `↓${Math.round(diff)}` : `↑${Math.round(Math.abs(diff))}`;
 }
 
 function space(str, len) {
@@ -756,7 +753,7 @@ function checkVersion(callback = () => { }) {
             try {
                 let obj = JSON.parse(data);
                 if (ScriptVersion !== obj.version)
-                    $.msg(`鑴氭湰:${ScriptName} 鍙戠幇鏂扮増鏈琡, `鐗堟湰鍙凤細${obj.version}`, `鏇存柊鍐呭锛�${obj.msg}`);
+                    $.msg(`脚本:${ScriptName} 发现新版本`, `版本号：${obj.version}`, `更新内容：${obj.msg}`);
             } catch (e) {
                 $.logErr(e, resp);
             } finally {
