@@ -30,7 +30,6 @@ async function all() {
     
   console.log(`开始查询E卡库存`);
   await cEk()
-  await $.wait(3000)
   }
                      
 //版块
@@ -68,7 +67,10 @@ function cEk(timeout = 0) {
               if (qqfh.status == 0 ) {
                 if(qqfh.data.AQ03008 == true){
                   console.log(`【哇E卡有库存了，快去兑换！】`);
-                  tz += `【哇E卡有库存了，快去兑换‼️‼️‼️‼️】\n`
+                  tz += `【哇,骚年，E卡有库存了，快去兑换‼️‼️‼️‼️】\n`
+                  if ($.isNode()) {
+                    await notify.sendNotify(`${$.name}`, `${tz}`)
+                }
                 }else{
                   console.log(`【E卡还没补货，等下再查查看吧】`);
                   tz += `【骚年，E卡还没补货，再等等吧】\n`
