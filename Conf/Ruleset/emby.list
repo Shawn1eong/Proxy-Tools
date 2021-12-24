@@ -90,3 +90,8 @@ DOMAIN,pub3back.emby.wtf
 DOMAIN,pub1.emby.wtf
 DOMAIN,pub2.emby.wtf
 DOMAIN,pub3.emby.wtf
+
+# > 流媒体熊猫服务器
+DOMAIN,embyclub.com
+DOMAIN,az-hk.embyclub.com
+DOMAIN,azsgp.embyclub.com
