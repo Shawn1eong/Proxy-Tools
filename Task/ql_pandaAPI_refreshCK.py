@@ -15,7 +15,7 @@ username = ""
 password = ""
 
 # 自定义青龙端口：
-port = "8001"
+port = "111"
 
 if username == "" or password == "":
     f = open("/ql/config/auth.json")
