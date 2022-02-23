@@ -118,8 +118,3 @@ FIMO解锁全部胶卷 = type=http-response,requires-body=1,max-size=0,pattern=^
 
 # > 拦截100解锁永久超级会员
 拦截100解锁 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/Block100FVIPCrack.js,script-update-interval=-1
-
-# > flb
-flb = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/(\$RCAnonymousID\%)?(\w)+$,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Module/Class/Crack/Scripts/flb.js,script-update-interval=-1
-flb = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/receipts$,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Module/Class/Crack/Scripts/flb.js,script-update-interval=-1
-
