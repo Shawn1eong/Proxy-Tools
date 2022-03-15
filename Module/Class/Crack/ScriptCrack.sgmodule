@@ -18,7 +18,7 @@ hostname = %APPEND% mall.zuoyebang.com,apivip.zybang.com,vip1.kuwo.cn,server.yoy
 OCSV.js = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/api\.revenuecat\.com\/*,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Module/Class/Crack/Scripts/ocsv.js,script-update-interval=0
 
 # > Keep app unlock private lessons and action libraries. (*.gotokeep.com
-Keep PRO = type=http-response,requires-body=1,pattern=^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans),script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/keep,script-update-interval=0
+Keep Premium = type=http-response,requires-body=1,pattern=^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans),script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/Keep.js,script-update-interval=0
 
 # > Keep 解锁私人课程,动作库,解锁运动课程页面会员精讲，解锁会员专属页面会员课程，解锁智能训练(胸背部无跑步无器材84天锻炼) for V6.24~V6.27 （20210418）
 # keep_new = type=http-response,requires-body=1,pattern=https://api.gotokeep.com/(.+/subject|.+/dynamic|.+/coursePlus/.+|.+/status|.+/tab|.+/my|.+/start|.+/join|.+/complete|.+/detail/.+|.+/preview|.+/auth|.+/tab|.+/days),script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/KeepNew.js,script-update-interval=0
