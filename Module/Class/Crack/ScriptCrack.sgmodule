@@ -15,7 +15,7 @@ hostname = %APPEND% mall.zuoyebang.com,apivip.zybang.com,vip1.kuwo.cn,server.yoy
 小小影视 = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/.*\..*\..*\/(vod\/reqplay\/|ucp\/index|getGlobalData|init),script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xxys.js,script-update-interval=0
 
 # > OCSV unlock vip 
-OCSV.js = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/api\.revenuecat\.com\/*,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Module/Class/Crack/Scripts/ocsv.js,script-update-interval=0
+OCSV.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Module/Class/Crack/Scripts/ocsv.js,script-update-interval=0
 
 # > Keep app unlock private lessons and action libraries. (*.gotokeep.com
 Keep Premium = type=http-response,requires-body=1,pattern=^https://(.+).gotokeep.com(/athena/v5/people/my|/nuocha/plans),script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/Keep.js,script-update-interval=0
