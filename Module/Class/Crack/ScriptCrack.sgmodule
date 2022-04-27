@@ -107,9 +107,6 @@ Altstore = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/www\.
 # >  FIMO解锁全部胶卷 (server.yoyiapp.com)
 FIMO解锁全部胶卷 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/server\.yoyiapp\.com\/fimo-user\/apple\/certificate$,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/FiMoCameraProCrack.js,script-update-interval=-1
 
-# > 南方周末(2022.01.21)
-南方周末 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.infzm\.com\/mobile\/(user|contents\?|contents\/\d+\?|contents\/\d+\/isview\?|course_borrow|courses\/\d+\?|mall|course_items),script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/NanFangZhouMo.js,script-update-interval=-1
-
 # > 七猫小说(2022.01.18)
 七猫小说 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/(api-\w+|xiaoshuo)\.wtzw\.com\/api\/v\d\/,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/QiMaoXiaoShuo.js,script-update-interval=-1
 
