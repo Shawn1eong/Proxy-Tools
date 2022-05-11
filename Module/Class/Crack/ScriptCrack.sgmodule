@@ -4,7 +4,7 @@
 
 
 [MITM]
-hostname = %APPEND% mall.zuoyebang.com,apivip.zybang.com,vip1.kuwo.cn,server.yoyiapp.com, ipadcms.caixin.com,api.infzm.com,outcut.szsszykj.com,*.xxjjappss.com,*.daqindou.com,*.wangbiwu.com, *.myxxdq.com, 110.42.5.226,zebra.maka.im,license.pdfexpert.com,api2.fitplanapp.com,api.dushu.io,tagit.hyhuo.com, api.getmimo.com,api.xiuxiu.meitu.com,api.account.meitu.com,api.meiyan.com, biz.caiyunapp.com, pay.wecut.com,prod.api.shapr3d.com,cdn.altstore.io,www.patreon.com,bea.sportq.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com,api.lennou.com,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,39.97.157.167,apiios.xiangha.com,apiios_dq.xiangha.com, appweb_dq.xiangha.com, 101.200.225.157,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com,*.xiaoxiao*.com,api.revenuecat.com,u.kanghuayun.com,www.3ivf.com,pay.guoing.com,*.gotokeep.com,59.110.149.231,129.211.156.213,api.vuevideo.net,api.gamer.com.tw,*.xiangxiangapps.com,avatar-nct.nixcdn.com,oa.zalo.me,api.meiease.c*, viva-asia1.vvbrd.com,purchases.ws.pho.to,photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io,  api.polaxiong.com, api.polarr.co
+hostname = %APPEND% mall.zuoyebang.com,apivip.zybang.com,vip1.kuwo.cn,server.yoyiapp.com, ipadcms.caixin.com,api.infzm.com,outcut.szsszykj.com,commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi, pay.wecut.com,*.xxjjappss.com,*.daqindou.com,*.wangbiwu.com, *.myxxdq.com, 110.42.5.226,zebra.maka.im,license.pdfexpert.com,api2.fitplanapp.com,api.dushu.io,api.meiyan.com, biz.caiyunapp.com, pay.wecut.com,prod.api.shapr3d.com,cdn.altstore.io,www.patreon.com,bea.sportq.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com,api.lennou.com,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,39.97.157.167,apiios.xiangha.com,apiios_dq.xiangha.com, appweb_dq.xiangha.com, 101.200.225.157,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com,*.xiaoxiao*.com,api.revenuecat.com,u.kanghuayun.com,www.3ivf.com,pay.guoing.com,*.gotokeep.com,59.110.149.231,129.211.156.213,api.vuevideo.net,api.gamer.com.tw,*.xiangxiangapps.com,avatar-nct.nixcdn.com,oa.zalo.me,api.meiease.c*, viva-asia1.vvbrd.com,purchases.ws.pho.to,photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, 
 
 [Script]
 # Update time: 2022.2.14
@@ -27,8 +27,8 @@ Keep Premium = type=http-response,requires-body=1,pattern=^https://(.+).gotokeep
 Meiyanxiangji.js = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.account\.meitu\.com\/(common\/check_device_login_pwd|users\/show_current\.json),script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/Meiyanxiangji.js,script-update-interval=0
 Meiyanxiangji.js = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.meiyan\.com\/vip\/(user_center\.json|user_info\.json),script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/Meiyanxiangji.js,script-update-interval=0
 
-# > 美图秀秀 v9.0.51版本 (api.xiuxiu.meitu.com)
-Meiyanxiangji.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.xiuxiu\.meitu\.com\/v1\/user\/show\.json,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/mtxx.js,script-update-interval=0
+# > 醒图&Ulike&轻颜相机&vaporcam（四合一）解鎖會員權限（2022-05-09）
+QYXJ.js = type=http-response,requires-body=1,max-size=0,pattern=https://(commerce-.*api|pay).(faceu|wecut).(com|mobi)/(commerce|apple)/(iosAppVerifyReceipt.php|v1/subscription/user_info),script-path=https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/commerce.js,script-update-interval=0
 
 # > VUE pro (api.vuevideo.net)
 VUE PRO = type=http-response,requires-body=1,pattern=^https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/VUE.js,script-update-interval=0
@@ -69,9 +69,6 @@ Fitplan = type=http-response,requires-body=1,max-size=0,pattern=https://api2.fit
 作业帮 = type=http-response,requires-body=1,max-size=0,pattern=https://mall.zuoyebang.com/mall/goods/audio/voice/list?audioId=\d+,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/zyb.js,script-update-interval=0
 作业帮 = type=http-response,requires-body=1,max-size=0,pattern=https://apivip.zybang.com/vipols/vip/viphomev1?.+,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/zyb.js,script-update-interval=0
 
-# > 泼辣修图 (api.polaxiong.com, api.polarr.co)
-泼辣修图 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.(polaxiong\.com|polarr\.co)\/v\d\/payments\/appleiap\/receipts\/confirmation$,script-path=https://raw.githubusercontent.com/LTribeSkyx/Script/master/polaris.js,script-update-interval=0
-
 # > paper （api.revenuecat.com）
 paper笔记 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.revenuecat\.com\/.*\/subscribers\/[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}$,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/paper.js,script-update-interval=0
 
@@ -93,12 +90,6 @@ Darkroom.js = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/
 # > Lightroom （photos.adobe.io）
 Lightroom.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/lightroom.js,script-update-interval=0
 
-# > Mimo Pro （api.getmimo.com）
-Mimo Pro = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.getmimo\.com\/v1\/subscriptions$,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/mimo.js,script-update-interval=0
-
-# >  Workingcopy （api.getmimo.com）
-Workingcopy = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/education\.github\.com\/api\/user$,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/workingcopy.js,script-update-interval=0
-
 # >  altstore （www.patreon.com,cdn.altstore.io）
 # altstore.js = type=http-response,requires-body=1,max-size=0,debug=1,pattern=^https://cdn.altstore.io/file/altstore/apps.json,script-path=https://raw.githubusercontent.com/joyoner/rule/master/JS/altstore.js,script-update-interval=0
 
@@ -112,6 +103,3 @@ FIMO解锁全部胶卷 = type=http-response,requires-body=1,max-size=0,pattern=^
 
 # > 香哈菜谱(2022.01.19)
 香哈菜谱 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/apiios\.xiangha\.com\/main\d+\/,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/XiangHaCaiPu.js,script-update-interval=-1
-
-# > 拦截100解锁永久超级会员
-拦截100解锁 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/Block100FVIPCrack.js,script-update-interval=-1
