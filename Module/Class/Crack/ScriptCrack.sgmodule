@@ -4,10 +4,22 @@
 
 
 [MITM]
-hostname = %APPEND% mall.zuoyebang.com,apivip.zybang.com,vip1.kuwo.cn,server.yoyiapp.com, ipadcms.caixin.com,api.infzm.com,outcut.szsszykj.com,commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi, pay.wecut.com,*.daqindou.com,*.wangbiwu.com, *.myxxdq.com, 110.42.5.226,zebra.maka.im,api2.fitplanapp.com,api.meiyan.com, biz.caiyunapp.com, pay.wecut.com,prod.api.shapr3d.com,cdn.altstore.io,www.patreon.com,bea.sportq.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com,api.lennou.com,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,39.97.157.167,apiios.xiangha.com,apiios_dq.xiangha.com, appweb_dq.xiangha.com, 101.200.225.157,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com,*.xiaoxiao*.com,api.revenuecat.com,u.kanghuayun.com,www.3ivf.com,pay.guoing.com,*.gotokeep.com,59.110.149.231,129.211.156.213,api.vuevideo.net,api.gamer.com.tw,*.xiangxiangapps.com,avatar-nct.nixcdn.com,oa.zalo.me,api.meiease.c*, viva-asia1.vvbrd.com,purchases.ws.pho.to,photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, 
+hostname = %APPEND% api4.bybutter.com,app.bilibili.com,micro-tool-api.lyaway.com,appwk.baidu.com,mall.zuoyebang.com,apivip.zybang.com,vip1.kuwo.cn,server.yoyiapp.com, ipadcms.caixin.com,api.infzm.com,outcut.szsszykj.com,commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi, pay.wecut.com,*.daqindou.com,*.wangbiwu.com, *.myxxdq.com, 110.42.5.226,zebra.maka.im,api2.fitplanapp.com,api.meiyan.com, biz.caiyunapp.com, pay.wecut.com,prod.api.shapr3d.com,cdn.altstore.io,www.patreon.com,bea.sportq.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com,api.lennou.com,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,39.97.157.167,apiios.xiangha.com,apiios_dq.xiangha.com, appweb_dq.xiangha.com, 101.200.225.157,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com,*.xiaoxiao*.com,api.revenuecat.com,u.kanghuayun.com,www.3ivf.com,pay.guoing.com,*.gotokeep.com,59.110.149.231,129.211.156.213,api.vuevideo.net,api.gamer.com.tw,*.xiangxiangapps.com,avatar-nct.nixcdn.com,oa.zalo.me,api.meiease.c*, viva-asia1.vvbrd.com,purchases.ws.pho.to,photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, 
 
 [Script]
-# Update time: 2022.2.14
+# Update time: 2022.11.13
+# > 通话录音（2021-06-25）
+通话录音 = type=http-response,requires-body=1,max-size=0,pattern=http://micro-tool-api.lyaway.com/*,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/thly.js,script-update-interval=0
+
+# > BiliBili 解锁1080P高码率+4K畫質(番劇和影視除外)
+BiliBili = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/bilibili_json.js,script-update-interval=0
+
+# > 黄油相机解锁相片编辑权限
+黄油相机 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api4\.bybutter\.com\/v4\/(users\/me$|shop\/me\/privileges$),script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/bybutter.js,script-update-interval=0
+
+# > 百度文库
+百度文库 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/baidulibrary.js,script-update-interval=0
+
 # > 彩云天气_SVIP
 彩云天气_SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/caiyun_svip.js,script-update-interval=0
 
@@ -94,4 +106,3 @@ FIMO解锁全部胶卷 = type=http-response,requires-body=1,max-size=0,pattern=^
 
 # > 香哈菜谱(2022.01.19)
 香哈菜谱 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/apiios\.xiangha\.com\/main\d+\/,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/XiangHaCaiPu.js,script-update-interval=-1
-
