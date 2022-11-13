@@ -4,15 +4,12 @@
 
 
 [MITM]
-hostname = %APPEND% mall.zuoyebang.com,apivip.zybang.com,vip1.kuwo.cn,server.yoyiapp.com, ipadcms.caixin.com,api.infzm.com,outcut.szsszykj.com,commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi, pay.wecut.com,*.xxjjappss.com,*.daqindou.com,*.wangbiwu.com, *.myxxdq.com, 110.42.5.226,zebra.maka.im,license.pdfexpert.com,api2.fitplanapp.com,api.dushu.io,api.meiyan.com, biz.caiyunapp.com, pay.wecut.com,prod.api.shapr3d.com,cdn.altstore.io,www.patreon.com,bea.sportq.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com,api.lennou.com,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,39.97.157.167,apiios.xiangha.com,apiios_dq.xiangha.com, appweb_dq.xiangha.com, 101.200.225.157,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com,*.xiaoxiao*.com,api.revenuecat.com,u.kanghuayun.com,www.3ivf.com,pay.guoing.com,*.gotokeep.com,59.110.149.231,129.211.156.213,api.vuevideo.net,api.gamer.com.tw,*.xiangxiangapps.com,avatar-nct.nixcdn.com,oa.zalo.me,api.meiease.c*, viva-asia1.vvbrd.com,purchases.ws.pho.to,photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, 
+hostname = %APPEND% mall.zuoyebang.com,apivip.zybang.com,vip1.kuwo.cn,server.yoyiapp.com, ipadcms.caixin.com,api.infzm.com,outcut.szsszykj.com,commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi, pay.wecut.com,*.daqindou.com,*.wangbiwu.com, *.myxxdq.com, 110.42.5.226,zebra.maka.im,api2.fitplanapp.com,api.meiyan.com, biz.caiyunapp.com, pay.wecut.com,prod.api.shapr3d.com,cdn.altstore.io,www.patreon.com,bea.sportq.com, miniapp.elecredit.com,cm.szsszykj.com,mobile.conceptispuzzles.com,api.interpreter.caiyunai.com,usapi.tongbu.com,miaow.yiyongcad.com,api.lennou.com,commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.wakamoment.ga, *.bh3.com, *.bjxkhc.com,39.97.157.167,apiios.xiangha.com,apiios_dq.xiangha.com, appweb_dq.xiangha.com, 101.200.225.157,bookapi.ihuman.com, billing.peakcloud.org, pay.wecut.com, api.psy-1.com,*.xiaoxiao*.com,api.revenuecat.com,u.kanghuayun.com,www.3ivf.com,pay.guoing.com,*.gotokeep.com,59.110.149.231,129.211.156.213,api.vuevideo.net,api.gamer.com.tw,*.xiangxiangapps.com,avatar-nct.nixcdn.com,oa.zalo.me,api.meiease.c*, viva-asia1.vvbrd.com,purchases.ws.pho.to,photos.adobe.io, duolingo-leaderboards-prod.duolingo.com, mobile-api.adguard.com, api.blinkist.com, api.pushover.net, lcs-mobile-cops.adobe.io, 
 
 [Script]
 # Update time: 2022.2.14
 # > 彩云天气_SVIP
 彩云天气_SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/caiyun_svip.js,script-update-interval=0
-
-# > 小小影视 Unlock vip 
-小小影视 = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/.*\..*\..*\/(vod\/reqplay\/|ucp\/index|getGlobalData|init),script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/xxys.js,script-update-interval=0
 
 # > OCSV unlock vip 
 OCSV.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Module/Class/Crack/Scripts/ocsv.js,script-update-interval=0
@@ -28,7 +25,7 @@ Meiyanxiangji.js = type=http-response,requires-body=1,max-size=0,pattern=^https?
 Meiyanxiangji.js = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.meiyan\.com\/vip\/(user_center\.json|user_info\.json),script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/Meiyanxiangji.js,script-update-interval=0
 
 # > 醒图&Ulike&轻颜相机&vaporcam（四合一）解鎖會員權限（2022-05-09）
-QYXJ.js = type=http-response,requires-body=1,max-size=0,pattern=https://(commerce-.*api|pay).(faceu|wecut).(com|mobi)/(commerce|apple)/(iosAppVerifyReceipt.php|v1/subscription/user_info),script-path=https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/commerce.js,script-update-interval=0
+QYXJ.js = type=http-response,requires-body=1,max-size=0,pattern=https://(commerce-.*api|pay).(faceu|wecut).(com|mobi)/(commerce|apple)/(iosAppVerifyReceipt.php|v1/subscription/user_info),script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/commerce.js,script-update-interval=0
 
 # > VUE pro (api.vuevideo.net)
 VUE PRO = type=http-response,requires-body=1,pattern=^https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/VUE.js,script-update-interval=0
@@ -41,7 +38,7 @@ VUE PRO = type=http-response,requires-body=1,pattern=^https:\/\/api\.vuevideo\.n
 企信通小程序 = requires-body=1,max-size=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/qxt.js,script-update-interval=0
 
 # > Quicut 体验大片视频编辑的感觉 (20201112)
-Quicut = type=http-response,requires-body=1,max-size=0,pattern=http://outcut.szsszykj.com/api/OverseasPay/GetVip,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/qc.js,script-update-interval=0
+Quicut = type=http-response,requires-body=1,max-size=0,pattern=http://outcut.szsszykj.com/api/OverseasPay/GetVip,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/qc.js,script-update-interval=0
 
 # >  酷我音乐
 酷我音乐 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js,script-update-interval=0
@@ -50,24 +47,18 @@ Quicut = type=http-response,requires-body=1,max-size=0,pattern=http://outcut.szs
 酷我音乐下载 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/musicpay\.kuwo.cn\/music\.pay\?uid=\d+,script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/User/KuWoMusicDownload.js,script-update-interval=0
 
 # > Myscript Nebo APP UNBLOCK（20210321）
-Myscript Nebo = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/.*\.nebo\.app\/api\/.*\/inapppurchase\/apple\/receipt,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/nebo.js,script-update-interval=0
-
-# > Document 解锁PDF会员编辑功能 一次性解锁（20201108）
-Document = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/license\.pdfexpert\.com\/api\/.+\/subscription\/(refresh$|check$),script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/documents.js,script-update-interval=0
+Myscript Nebo = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/.*\.nebo\.app\/api\/.*\/inapppurchase\/apple\/receipt,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/nebo.js,script-update-interval=0
 
 # > 菜谱大全 解锁VIP功能（20200906）
 菜谱大全 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/apiios_dq\.xiangha\.com\/v\d\/,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/CaiPuDaQuan.js,script-update-interval=0
 菜谱大全 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/appweb_dq\.xiangha\.com\/center\/pay\/home,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/CaiPuDaQuan.js,script-update-interval=0
 
 # > Fitplan 要不要做做Vip专属有氧运动 登录使用（20201107）
-Fitplan = type=http-response,requires-body=1,max-size=0,pattern=https://api2.fitplanapp.com/fitplan-server/v2/user/profile,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/fitplan.js,script-update-interval=0
-
-# > 樊登读书 解锁会员的课程音频 畅游知识的海洋（20201026）
-樊登读书 = type=http-response,requires-body=1,max-size=0,pattern=https://api.dushu.io/Album/Info,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/fdds.js,script-update-interval=0
+Fitplan = type=http-response,requires-body=1,max-size=0,pattern=https://api2.fitplanapp.com/fitplan-server/v2/user/profile,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/fitplan.js,script-update-interval=0
 
 # > 作业帮 解锁付费音频资源（20210407）by photonmang
-作业帮 = type=http-response,requires-body=1,max-size=0,pattern=https://mall.zuoyebang.com/mall/goods/audio/voice/list?audioId=\d+,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/zyb.js,script-update-interval=0
-作业帮 = type=http-response,requires-body=1,max-size=0,pattern=https://apivip.zybang.com/vipols/vip/viphomev1?.+,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/zyb.js,script-update-interval=0
+作业帮 = type=http-response,requires-body=1,max-size=0,pattern=https://mall.zuoyebang.com/mall/goods/audio/voice/list?audioId=\d+,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/zyb.js,script-update-interval=0
+作业帮 = type=http-response,requires-body=1,max-size=0,pattern=https://apivip.zybang.com/vipols/vip/viphomev1?.+,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/zyb.js,script-update-interval=0
 
 # > paper （api.revenuecat.com）
 paper笔记 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.revenuecat\.com\/.*\/subscribers\/[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}$,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/paper.js,script-update-interval=0
@@ -76,7 +67,7 @@ paper笔记 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/a
 彩云小译 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.interpreter\.caiyunai\.com\/v1\/user,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/cyxy.js,script-update-interval=0
 
 # > MolyCam and VaporCam 拍出你的美解锁VIP（20210402）
-MolyCam and VaporCam = type=http-response,requires-body=1,max-size=0,type=http-response,pattern=https:\/\/pay\.wecut\.com\/apple\/(iosVerifyReceipt|iosAppVerifyReceipt)\.php,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/mv.js,script-update-interval=0
+MolyCam and VaporCam = type=http-response,requires-body=1,max-size=0,type=http-response,pattern=https:\/\/pay\.wecut\.com\/apple\/(iosVerifyReceipt|iosAppVerifyReceipt)\.php,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/mv.js,script-update-interval=0
 
 # > Peak （billing.peakcloud.org）
 peak游戏 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/billing\.peakcloud\.org\/billing\/2\/user\/me?,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Module/Class/Crack/Scripts/peak.js,script-update-interval=0
@@ -103,3 +94,4 @@ FIMO解锁全部胶卷 = type=http-response,requires-body=1,max-size=0,pattern=^
 
 # > 香哈菜谱(2022.01.19)
 香哈菜谱 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/apiios\.xiangha\.com\/main\d+\/,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/XiangHaCaiPu.js,script-update-interval=-1
+
