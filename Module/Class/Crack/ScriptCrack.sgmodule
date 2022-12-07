@@ -9,16 +9,17 @@ hostname = %APPEND% api4.bybutter.com,app.bilibili.com,micro-tool-api.lyaway.com
 [Script]
 # Update time: 2022.11.13
 # > 通话录音（2021-06-25）
-通话录音 = type=http-response,requires-body=1,max-size=0,pattern=http://micro-tool-api.lyaway.com/*,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/thly.js,script-update-interval=0
+通话录音 = type=http-response,requires-body=1,max-size=0,pattern=http://micro-tool-api.lyaway.com/*,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Conf/Cuttlefish/Script/thly.js,script-update-interval=0
+
 
 # > BiliBili 解锁1080P高码率+4K畫質(番劇和影視除外)
-BiliBili = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/bilibili_json.js,script-update-interval=0
+BiliBili = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Conf/Cuttlefish/Script/bilibili_json.js,script-update-interval=0
 
 # > 黄油相机解锁相片编辑权限
-黄油相机 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api4\.bybutter\.com\/v4\/(users\/me$|shop\/me\/privileges$),script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/bybutter.js,script-update-interval=0
+黄油相机 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api4\.bybutter\.com\/v4\/(users\/me$|shop\/me\/privileges$),script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Conf/Cuttlefish/Script/bybutter.js,script-update-interval=0
 
 # > 百度文库
-百度文库 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/baidulibrary.js,script-update-interval=0
+百度文库 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Conf/Cuttlefish/Script/baidulibrary.js,script-update-interval=0
 
 # > 彩云天气_SVIP
 彩云天气_SVIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/caiyun_svip.js,script-update-interval=0
@@ -37,7 +38,7 @@ Meiyanxiangji.js = type=http-response,requires-body=1,max-size=0,pattern=^https?
 Meiyanxiangji.js = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.meiyan\.com\/vip\/(user_center\.json|user_info\.json),script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/Meiyanxiangji.js,script-update-interval=0
 
 # > 醒图&Ulike&轻颜相机&vaporcam（四合一）解鎖會員權限（2022-05-09）
-QYXJ.js = type=http-response,requires-body=1,max-size=0,pattern=https://(commerce-.*api|pay).(faceu|wecut).(com|mobi)/(commerce|apple)/(iosAppVerifyReceipt.php|v1/subscription/user_info),script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/commerce.js,script-update-interval=0
+QYXJ.js = type=http-response,requires-body=1,max-size=0,pattern=https://(commerce-.*api|pay).(faceu|wecut).(com|mobi)/(commerce|apple)/(iosAppVerifyReceipt.php|v1/subscription/user_info),script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Conf/Cuttlefish/Script/commerce.js,script-update-interval=0
 
 # > VUE pro (api.vuevideo.net)
 VUE PRO = type=http-response,requires-body=1,pattern=^https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/VUE.js,script-update-interval=0
@@ -50,7 +51,7 @@ VUE PRO = type=http-response,requires-body=1,pattern=^https:\/\/api\.vuevideo\.n
 企信通小程序 = requires-body=1,max-size=0,type=http-response,pattern=https:\/\/miniapp\.elecredit\.com/ucenter_info/,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/qxt.js,script-update-interval=0
 
 # > Quicut 体验大片视频编辑的感觉 (20201112)
-Quicut = type=http-response,requires-body=1,max-size=0,pattern=http://outcut.szsszykj.com/api/OverseasPay/GetVip,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/qc.js,script-update-interval=0
+Quicut = type=http-response,requires-body=1,max-size=0,pattern=http://outcut.szsszykj.com/api/OverseasPay/GetVip,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Conf/Cuttlefish/Script/qc.js,script-update-interval=0
 
 # >  酷我音乐
 酷我音乐 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js,script-update-interval=0
@@ -59,18 +60,18 @@ Quicut = type=http-response,requires-body=1,max-size=0,pattern=http://outcut.szs
 酷我音乐下载 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/musicpay\.kuwo.cn\/music\.pay\?uid=\d+,script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/User/KuWoMusicDownload.js,script-update-interval=0
 
 # > Myscript Nebo APP UNBLOCK（20210321）
-Myscript Nebo = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/.*\.nebo\.app\/api\/.*\/inapppurchase\/apple\/receipt,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/nebo.js,script-update-interval=0
+Myscript Nebo = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/.*\.nebo\.app\/api\/.*\/inapppurchase\/apple\/receipt,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Conf/Cuttlefish/Script/nebo.js,script-update-interval=0
 
 # > 菜谱大全 解锁VIP功能（20200906）
 菜谱大全 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/apiios_dq\.xiangha\.com\/v\d\/,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/CaiPuDaQuan.js,script-update-interval=0
 菜谱大全 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/appweb_dq\.xiangha\.com\/center\/pay\/home,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/CaiPuDaQuan.js,script-update-interval=0
 
 # > Fitplan 要不要做做Vip专属有氧运动 登录使用（20201107）
-Fitplan = type=http-response,requires-body=1,max-size=0,pattern=https://api2.fitplanapp.com/fitplan-server/v2/user/profile,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/fitplan.js,script-update-interval=0
+Fitplan = type=http-response,requires-body=1,max-size=0,pattern=https://api2.fitplanapp.com/fitplan-server/v2/user/profile,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Conf/Cuttlefish/Script/fitplan.js,script-update-interval=0
 
 # > 作业帮 解锁付费音频资源（20210407）by photonmang
-作业帮 = type=http-response,requires-body=1,max-size=0,pattern=https://mall.zuoyebang.com/mall/goods/audio/voice/list?audioId=\d+,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/zyb.js,script-update-interval=0
-作业帮 = type=http-response,requires-body=1,max-size=0,pattern=https://apivip.zybang.com/vipols/vip/viphomev1?.+,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/zyb.js,script-update-interval=0
+作业帮 = type=http-response,requires-body=1,max-size=0,pattern=https://mall.zuoyebang.com/mall/goods/audio/voice/list?audioId=\d+,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Conf/Cuttlefish/Script/zyb.js,script-update-interval=0
+作业帮 = type=http-response,requires-body=1,max-size=0,pattern=https://apivip.zybang.com/vipols/vip/viphomev1?.+,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Conf/Cuttlefish/Script/zyb.js,script-update-interval=0
 
 # > paper （api.revenuecat.com）
 paper笔记 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.revenuecat\.com\/.*\/subscribers\/[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}$,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/paper.js,script-update-interval=0
@@ -79,7 +80,7 @@ paper笔记 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/a
 彩云小译 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.interpreter\.caiyunai\.com\/v1\/user,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Module/Class/Crack/Scripts/cyxy.js,script-update-interval=0
 
 # > MolyCam and VaporCam 拍出你的美解锁VIP（20210402）
-MolyCam and VaporCam = type=http-response,requires-body=1,max-size=0,type=http-response,pattern=https:\/\/pay\.wecut\.com\/apple\/(iosVerifyReceipt|iosAppVerifyReceipt)\.php,script-path=https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/mv.js,script-update-interval=0
+MolyCam and VaporCam = type=http-response,requires-body=1,max-size=0,type=http-response,pattern=https:\/\/pay\.wecut\.com\/apple\/(iosVerifyReceipt|iosAppVerifyReceipt)\.php,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Conf/Cuttlefish/Script/mv.js,script-update-interval=0
 
 # > Peak （billing.peakcloud.org）
 peak游戏 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/billing\.peakcloud\.org\/billing\/2\/user\/me?,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/main/Module/Class/Crack/Scripts/peak.js,script-update-interval=0
