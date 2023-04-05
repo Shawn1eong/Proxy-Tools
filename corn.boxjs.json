@@ -1,0 +1,56 @@
+{
+  "id": "jtc.app.sub",
+  "name": "cron应用订阅",
+  "author": "@FoKit",
+  "icon": "https://avatars.githubusercontent.com/u/44187836",
+  "repo": "https://github.com/FoKit",
+  "apps": [
+    {
+      "id": "jparking",
+      "name": "捷停车",
+      "author": "@FoKit",
+      "descs_html": [
+        "捷停车签到"
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/FoKit/Scripts/main/images/jparking.png",
+        "https://raw.githubusercontent.com/FoKit/Scripts/main/images/jparking.png"
+      ],
+      "scripts": [
+        {
+          "name": "捷停车签到",
+          "script": "https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js"
+        }
+      ],
+      "keys": [
+        "jtc_userId1",
+        "jtc_taskNo1"
+        "jtc_userId2",
+        "jtc_taskNo2"
+	      "jtc_userId3",
+        "jtc_taskNo3"
+
+      ],
+      "settings": [
+        {
+          "id": "jtc_userId",
+          "name": "用户ID",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 1,
+          "placeholder": "userId1@userId2",
+          "desc": "多个ID@隔开"
+        },
+        {
+          "id": "jtc_taskNo",
+          "name": "任务ID",
+          "val": "T71811221608",
+          "type": "text",
+          "placeholder": "T71811221608",
+          "desc": "默认 T71811221608 可留空"
+        }
+      ]
+    }
+
+
