@@ -6,190 +6,6 @@
   "repo": "https://github.com/FoKit",
   "apps": [
     {
-      "id": "ql",
-      "name": "数据同步",
-      "author": "@FoKit",
-      "descs_html": [
-        "用于JD1/JD2和BoxJS之间的数据同步"
-      ],
-      "icons": [
-        "https://raw.githubusercontent.com/FoKit/Scripts/main/images/sync.png",
-        "https://raw.githubusercontent.com/FoKit/Scripts/main/images/sync.png"
-      ],
-      "scripts": [
-        {
-          "name": "JD1同步到BoxJS",
-          "script": "https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jd1_sync_box.js"
-        },
-        {
-          "name": "JD2同步到BoxJS",
-          "script": "https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jd2_sync_box.js"
-        }
-      ],
-      "keys": [
-        "@ql.ip_jd1",
-        "@ql.client_id_jd1",
-        "@ql.client_secret_jd1",
-        "@ql.username_jd1",
-        "@ql.password_jd1",
-        "@ql.env_jd1",
-        "@ql.mute_jd1",
-        "@ql.is_pwd_jd1",
-        "@ql.ip_jd2",
-        "@ql.client_id_jd2",
-        "@ql.client_secret_jd2",
-        "@ql.username_jd2",
-        "@ql.password_jd2",
-        "@ql.env_jd2",
-        "@ql.mute_jd2",
-        "@ql.is_pwd_jd2"
-      ],
-      "settings": [
-        {
-          "id": "@ql.mute_jd1",
-          "name": "静默同步（JD1 > BoxJs）",
-          "val": false,
-          "type": "boolean",
-          "desc": "同步时不会显示通知"
-        },
-        {
-          "id": "@ql.is_pwd_jd1",
-          "name": "使用密码登陆JD1容器",
-          "val": false,
-          "type": "boolean",
-          "desc": "优先使用密码登陆"
-        },
-        {
-          "id": "@ql.ip_jd1",
-          "name": "JD1 Domains",
-          "val": "",
-          "type": "text",
-          "placeholder": "ip:port"
-        },
-        {
-          "id": "@ql.username_jd1",
-          "name": "JD1 UserName",
-          "val": "",
-          "type": "text"
-        },
-        {
-          "id": "@ql.password_jd1",
-          "name": "JD1 PassWord",
-          "val": "",
-          "type": "text"
-        },
-        {
-          "id": "@ql.client_id_jd1",
-          "name": "JD1 Client ID",
-          "val": "",
-          "type": "text"
-        },
-        {
-          "id": "@ql.client_secret_jd1",
-          "name": "JD1 Client Secret",
-          "val": "",
-          "type": "text"
-        },
-        {
-          "id": "@ql.mute_jd2",
-          "name": "静默同步（JD2 > BoxJs）",
-          "val": false,
-          "type": "boolean",
-          "desc": "同步时不会显示通知"
-        },
-        {
-          "id": "@ql.is_pwd_jd2",
-          "name": "使用密码登陆",
-          "val": true,
-          "type": "boolean",
-          "desc": "优先使用密码登陆"
-        },
-        {
-          "id": "@ql.ip_jd2",
-          "name": "JD2 Domains",
-          "val": "",
-          "type": "text",
-          "placeholder": "ip:port"
-        },
-        {
-          "id": "@ql.username_jd2",
-          "name": "JD2 UserName",
-          "val": "",
-          "type": "text"
-        },
-        {
-          "id": "@ql.password_jd2",
-          "name": "JD2 PassWord",
-          "val": "",
-          "type": "text"
-        },
-        {
-          "id": "@ql.client_id_jd2",
-          "name": "JD2 Client ID",
-          "val": "",
-          "type": "text"
-        },
-        {
-          "id": "@ql.client_secret_jd2",
-          "name": "JD2 Client Secret",
-          "val": "",
-          "type": "text"
-        }
-      ]
-    },
-    {
-      "id": "tools",
-      "name": "Tools",
-      "author": "@FoKit",
-      "descs_html": [
-        "自用工具"
-      ],
-      "icons": [
-        "https://raw.githubusercontent.com/FoKit/Scripts/main/images/debug.png",
-        "https://raw.githubusercontent.com/FoKit/Scripts/main/images/debug.png"
-      ],
-      "keys": [
-        "is_debug",
-        "buy_helper_LR",
-        "hb_sessionId"
-      ],
-      "settings": [
-        {
-          "id": "is_debug",
-          "name": "Debug",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "buy_helper_LR",
-          "name": "购物助手",
-          "val": "left",
-          "type": "radios",
-          "desc": "展示位置",
-          "items": [
-            {
-              "key": "left",
-              "label": "左边"
-            },
-            {
-              "key": "right",
-              "label": "右边"
-            }
-          ]
-        },
-        {
-          "id": "hb_sessionId",
-          "name": "hb_sessionId",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 1,
-          "desc": ""
-        }
-      ]
-    },
-    {
       "id": "jparking",
       "name": "捷停车",
       "author": "@FoKit",
@@ -207,12 +23,16 @@
         }
       ],
       "keys": [
-        "jtc_userId",
-        "jtc_taskNo"
+        "jtc_userId1",
+        "jtc_taskNo1"
+        "jtc_userId2",
+        "jtc_taskNo2"
+        "jtc_userId3",
+        "jtc_taskNo3"
       ],
       "settings": [
         {
-          "id": "jtc_userId",
+          "id": "jtc_userId1",
           "name": "用户ID",
           "val": "",
           "type": "textarea",
@@ -222,13 +42,49 @@
           "desc": "多个ID@隔开"
         },
         {
-          "id": "jtc_taskNo",
+          "id": "jtc_taskNo1",
           "name": "任务ID",
           "val": "T71811221608",
           "type": "text",
           "placeholder": "T71811221608",
           "desc": "默认 T71811221608 可留空"
-        }
+        },
+        {
+          "id": "jtc_userId2",
+          "name": "用户ID",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 1,
+          "placeholder": "userId1@userId2",
+          "desc": "多个ID@隔开"
+        },
+        {
+          "id": "jtc_taskNo2",
+          "name": "任务ID",
+          "val": "T71811221608",
+          "type": "text",
+          "placeholder": "T71811221608",
+          "desc": "默认 T71811221608 可留空"
+        },
+        {
+          "id": "jtc_userId3",
+          "name": "用户ID",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 1,
+          "placeholder": "userId1@userId2",
+          "desc": "多个ID@隔开"
+        },
+        {
+          "id": "jtc_taskNo3",
+          "name": "任务ID",
+          "val": "T71811221608",
+          "type": "text",
+          "placeholder": "T71811221608",
+          "desc": "默认 T71811221608 可留空"
+        },
       ]
     },
     {
