@@ -2,13 +2,31 @@
 #!desc=签到类脚本，可以指定时间执行。
 
 [Script]
-# > 历史上的哪一天
+# 历史上的哪一天
 历史事件 = type=cron,cronexp=0 0 10,15,20 * * ? script-path=https://raw.githubusercontent.com/MeetaGit/MeetaRules/m%CE%B1ster/Surge/Scripting/Calendar.js,script-update-interval=0
 
-# > 倒数日
+# 倒数日
 纪念日 = type=cron,cronexp=0 8 * * *,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Script/task/daysmatter.js,script-update-interval=0
 倒数日 = type=cron,cronexp=0 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/daymatter.js,
 
-# > 每日打卡提醒（corn ”0 9,18 * * 1-5“ 周一到周五，早九晚六）+ 每日壹句（有道词典）+ 跳转钉钉打卡页面
-每日打开提醒 = script-path=https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js,type=cron,cronexp=”0 9,18 * * 1-5“
+# 每日打卡提醒（corn ”0 9,18 * * 1-5“ 周一到周五，早九晚六）+ 每日壹句（有道词典）+ 跳转钉钉打卡页面
+每日打开提醒 = type=cron,cronexp=0 9,18 * * 1-5,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js,
+
+# 途虎
+途虎 = type=cron,cronexp=0 12 * * *,timeout=60,script-path=https://raw.githubusercontent.com/xl2101200/-/main/thyc.js,
+
+# 阿里云盘
+阿里云盘 = type=cron,cronexp=0 10 0 * * ?,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,
+
+# 捷停车签到
+捷停车签到 = type=cron,cronexp=15 9 * * *,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js,
+
+# 买菜币
+MT买菜币 = type=cron,cronexp=0 6,8 * * *,script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.mallcoin.task.js,
+
+# 签到领红包
+MT签到领红包 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js,
+
+# 喜马拉雅签到
+喜马拉雅签到 = type=cron,cronexp=35 8 * * *,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js
 
