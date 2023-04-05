@@ -1,3 +1,17 @@
+/*
+
+Quantumult X 脚本:
+Darkroom Unlock annual subscriptions （by LTribe）
+
+[rewrite_local]
+# Darkroom Unlock annual subscriptions （by LTribe）
+^https?:\/\/api\.revenuecat\.com\/v\d\/(receipts|subscribers*) url script-response-body Darkroom.js
+
+[mitm]
+hostname = api.revenuecat.com,
+
+*/
+
 let obj = JSON.parse($response.body);
 
 obj = {
