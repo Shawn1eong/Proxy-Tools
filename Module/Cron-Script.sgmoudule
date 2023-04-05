@@ -2,14 +2,8 @@
 #!desc=签到类脚本，可以指定时间执行。
 
 [Script]
-# > 天气（MEETAGIT）
-meweather.js = type=cron,cronexp=0 0 8,14,18 * * ? script-path=https://raw.githubusercontent.com/MeetaGit/MeetaRules/master/Surge/Scripting/meweather.js,script-update-interval=0
-
 # > 历史上的哪一天
 历史事件 = type=cron,cronexp=0 0 10,15,20 * * ? script-path=https://raw.githubusercontent.com/MeetaGit/MeetaRules/m%CE%B1ster/Surge/Scripting/Calendar.js,script-update-interval=0
-
-# > 世界时间通知
-世界时间 = type=cron,cronexp=0 0 10,14,18 * * ? script-path=https://github.com/congcong0806/surge-list/raw/master/Script/time.js,script-update-interval=0,
 
 # > 倒数日
 纪念日 = type=cron,cronexp=0 8 * * *,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Script/task/daysmatter.js,script-update-interval=0
@@ -17,35 +11,4 @@ meweather.js = type=cron,cronexp=0 0 8,14,18 * * ? script-path=https://raw.githu
 
 # > 每日打卡提醒（corn ”0 9,18 * * 1-5“ 周一到周五，早九晚六）+ 每日壹句（有道词典）+ 跳转钉钉打卡页面
 每日打开提醒 = script-path=https://raw.githubusercontent.com/yichahucha/surge/master/clock_in.js,type=cron,cronexp=”0 9,18 * * 1-5“
-
-# > IOS&MAC限免APP
-IOS&MAC限免APP= type=cron,cronexp=1 8-22 * * *,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Conf/Tools/free_app_detect.js,script-update-interval=0
-
-# > GitHub监控(By Peng-YM)
-GitHub监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/master/Script/task/github.js,script-update-interval=0
-
-# > 实时货币换算
-实时汇率 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/exchangeRate.js,script-update-interval=0
-
-# > 汇率监控(By Peng-YM)
-汇率监控= type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/exchange.js,script-update-interval=0
-
-# > Epic周免(By Peng-YM)
-Epic周免= type=cron,cronexp=0 9 ? * MON,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/epic.js,script-update-interval=0
-
-# > PSN会免(By Peng-YM)
-PSN会免= type=cron,cronexp=0 9 1 * *,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/psn.js,script-update-interval=0
-
-# > 支付宝捐步数
-捐步数 = type=cron,cronexp=0 18 * * *,timeout=60,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/donate-step.js,
-
-# By chavyleung      GitHub：https://github.com/chavyleung/scripts
-
-喜马拉雅 = type=cron,cronexp=40 3 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.js,wake-system=1,timeout=20,script-update-interval=0
-
-虎课网 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/58xinian/Surge/master/Script/huke.js
-
-伊利乳品 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js,wake-system=true
-
-Geekhub = type=cron,cronexp=1 0 * * *,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/geekhub.js,wake-system=true
 
