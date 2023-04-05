@@ -27,9 +27,8 @@
         "jtc_taskNo1"
         "jtc_userId2",
         "jtc_taskNo2"
-	      "jtc_userId3",
+	"jtc_userId3",
         "jtc_taskNo3"
-
       ],
       "settings": [
         {
@@ -52,5 +51,5 @@
         }
       ]
     }
-
-
+  ]
+}
