@@ -207,16 +207,12 @@
         }
       ],
       "keys": [
-        "jtc_userId1",
-        "jtc_taskNo1"
-        "jtc_userId2",
-        "jtc_taskNo2"
-	"jtc_userId3",
-        "jtc_taskNo3"
+        "jtc_userId",
+        "jtc_taskNo"
       ],
       "settings": [
         {
-          "id": "jtc_userId1",
+          "id": "jtc_userId",
           "name": "用户ID",
           "val": "",
           "type": "textarea",
@@ -226,43 +222,7 @@
           "desc": "多个ID@隔开"
         },
         {
-          "id": "jtc_taskNo1",
-          "name": "任务ID",
-          "val": "T71811221608",
-          "type": "text",
-          "placeholder": "T71811221608",
-          "desc": "默认 T71811221608 可留空"
-        }
-	 {
-          "id": "jtc_userId2",
-          "name": "用户ID",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 1,
-          "placeholder": "userId1@userId2",
-          "desc": "多个ID@隔开"
-        },
-        {
-          "id": "jtc_taskNo2",
-          "name": "任务ID",
-          "val": "T71811221608",
-          "type": "text",
-          "placeholder": "T71811221608",
-          "desc": "默认 T71811221608 可留空"
-        }
-	 {
-          "id": "jtc_userId3",
-          "name": "用户ID",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 1,
-          "placeholder": "userId1@userId2",
-          "desc": "多个ID@隔开"
-        },
-        {
-          "id": "jtc_taskNo3",
+          "id": "jtc_taskNo",
           "name": "任务ID",
           "val": "T71811221608",
           "type": "text",
