@@ -1,5 +1,5 @@
-#!name=哔哩哔哩优化
-#!desc=干掉哔哩哔哩垃圾CDN
+#!name=BiliBili CDN
+#!desc=CDN
 [General]
 force-http-engine-hosts =  %APPEND% cn*.bilivideo.com
 
