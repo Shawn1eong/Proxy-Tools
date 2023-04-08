@@ -38,5 +38,8 @@ Lightroom.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/
 # Google 搜索并发
 Google CAPTCHA = type=http-response,pattern=^https:\/\/www\.google\.com(\.[a-z]+|)\/search\?q=,requires-body=1,debug=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Google_CAPTCHA.js,max-size=0,timeout=10,ability=http-client-policy,argument=^(🇸🇬|🇭🇰)\s.*\d+$
 
+# 百度搜索防跳转 
+百度搜索防跳转 = type=http-response,pattern=^https?\:\/\/boxer\.baidu\.com\/scheme,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/baidu-no-redirect.js
+
 [MITM]
-hostname = %APPEND% api.revenuecat.com, biz.caiyunapp.com, api.vuevideo.net, miniapp.elecredit.com, api.revenuecat.com, billing.peakcloud.org, photos.adobe.io, guide-acs.m.taobao.com, testflight.apple.com, www.google.com*
+hostname = %APPEND% api.revenuecat.com, biz.caiyunapp.com, api.vuevideo.net, miniapp.elecredit.com, api.revenuecat.com, billing.peakcloud.org, photos.adobe.io, guide-acs.m.taobao.com, testflight.apple.com, www.google.com*，boxer.baidu.com
