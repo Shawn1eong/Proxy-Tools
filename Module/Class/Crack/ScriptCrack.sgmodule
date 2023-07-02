@@ -32,6 +32,9 @@ Darkroom.js = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/
 # Lightroom （photos.adobe.io）
 Lightroom.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/lightroom.js,script-update-interval=0
 
+# 剪映解锁会员 （api3-lq.faceu.mobi, commerce-api-lq.faceu.mobi, lv-api-lq.ulikecam.com）
+剪映解锁会员 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/commerce-api-lq\.faceu\.mobi\/commerce\/v1\/(subscription\/user_info|purchase\/draft_unlock|effect\/check_effects),script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/VideoFusionVipCrack.js,script-update-interval=0
+
 # Peng-YM的淘票票豆瓣评分
 淘票票豆瓣评分 = type=http-response, requires-body=1, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopshowapi\.getextendshowbyid, script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/TaoPiaoPiao/taopiaopiao.js
 
@@ -42,4 +45,4 @@ Google CAPTCHA = type=http-response,pattern=^https:\/\/www\.google\.com(\.[a-z]+
 百度搜索防跳转 = type=http-response,pattern=^https?\:\/\/boxer\.baidu\.com\/scheme,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/baidu-no-redirect.js
 
 [MITM]
-hostname = %APPEND% api.revenuecat.com, biz.caiyunapp.com, api.vuevideo.net, miniapp.elecredit.com, api.revenuecat.com, billing.peakcloud.org, photos.adobe.io, guide-acs.m.taobao.com, testflight.apple.com, www.google.com*，boxer.baidu.com
+hostname = %APPEND% api.revenuecat.com, biz.caiyunapp.com, api.vuevideo.net, miniapp.elecredit.com, api.revenuecat.com, billing.peakcloud.org, photos.adobe.io, guide-acs.m.taobao.com, testflight.apple.com, www.google.com*，boxer.baidu.com,api3-lq.faceu.mobi, commerce-api-lq.faceu.mobi, lv-api-lq.ulikecam.com
