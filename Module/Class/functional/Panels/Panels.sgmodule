@@ -7,9 +7,6 @@ NetSpeed = script-name=NetSpeed
 # ip isp city
 NetISP = script-name=NetISP,update-interval=-1
 
-# ping
-NetPing = script-name=NetPing,update-interval=-1
-
 #ChatGPT Panel
 CFGPT = script-name=CFGPT,update-interval=-1
 
@@ -28,9 +25,6 @@ stream-all = script-name=stream-all, title="流媒体解锁检测", content="请
 [Script]
 # netspeed
 NetSpeed = type=generic,script-path=https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/modules/Panel/Net_Speed/Net_Speed.js,argument=title=NetSpeed&iconfast=bolt&iconmid=hare&iconslow=tortoise&colorlow=#06D6A0&colormid=#FFD166&colorhigh=#EF476F
-
-# NetPing
-NetPing = type=generic,timeout=2,script-path=https://raw.githubusercontent.com/Keywos/rule/key/JS/NetPing.js
 
 # NetISP
 NetISP = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/Keywos/rule/key/JS/NetISP.js
