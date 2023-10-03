@@ -1,12 +1,6 @@
 #!name=Panels
 #!desc=信息面板模块
 [Panel]
-# netspeed
-NetSpeed = script-name=NetSpeed
-
-# ip isp city
-NetISP = script-name=NetISP,update-interval=-1
-
 #ChatGPT Panel
 CFGPT = script-name=CFGPT,update-interval=-1
 
@@ -23,12 +17,6 @@ NetInfoPanel=title="",content="",style=info,script-name=net-info-panel.js,update
 stream-all = script-name=stream-all, title="流媒体解锁检测", content="请刷新面板", update-interval=-1
 
 [Script]
-# netspeed
-NetSpeed = type=generic,script-path=https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/modules/Panel/Net_Speed/Net_Speed.js,argument=title=NetSpeed&iconfast=bolt&iconmid=hare&iconslow=tortoise&colorlow=#06D6A0&colormid=#FFD166&colorhigh=#EF476F
-
-# NetISP
-NetISP = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/Keywos/rule/key/JS/NetISP.js
-
 # Chatgpt可用区域检测随可用性更换ICON
 CFGPT = type=generic,timeout=6,script-path=https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/modules/Panel/CFGPT/CFGPT_2.js,argument=icon=lasso.and.sparkles&iconerr=xmark.seal.fill&icon-color=#336FA9&iconerr-color=#D65C51
 
