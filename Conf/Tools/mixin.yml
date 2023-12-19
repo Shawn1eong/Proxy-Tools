@@ -1,8 +1,5 @@
 mixin: # object
   enable: true
-  default-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
   nameserver:
     - https://doh.apad.pro/dns-query
     - https://doh.pub/dns-query
