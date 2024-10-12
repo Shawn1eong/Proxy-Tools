@@ -30,7 +30,7 @@ peak游戏 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/bi
 Darkroom.js = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/(receipts|subscribers*),script-path=https://raw.githubusercontent.com/LTribeSkyx/Script/master/Darkroom.js,script-update-interval=0
 
 # Lightroom （photos.adobe.io）
-Lightroom.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/lightroom.js,script-update-interval=0
+Lightroom.js = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts,script-path=https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/refs/heads/main/Module/Class/Crack/Scripts/lightroom.js,script-update-interval=0
 
 # 剪映解锁会员 （api3-lq.faceu.mobi, commerce-api-lq.faceu.mobi, lv-api-lq.ulikecam.com）
 剪映解锁会员 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/commerce-api-lq\.faceu\.mobi\/commerce\/v1\/(subscription\/user_info|purchase\/draft_unlock|effect\/check_effects),script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/VideoFusionVipCrack.js,script-update-interval=0
