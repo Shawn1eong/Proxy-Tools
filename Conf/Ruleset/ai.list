@@ -47,14 +47,22 @@ DOMAIN, www.bing.com
 DOMAIN-SUFFIX,copilot.cloud.microsoft
 
 # Gemini
-DOMAIN, bard.google.com
-DOMAIN, gemini.google.com
+DOMAIN,ai.google.dev
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,makersuite.google.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,apis.google.com
+DOMAIN-KEYWORD,colab
+DOMAIN-KEYWORD,developerprofiles
+DOMAIN-KEYWORD,generativelanguage
 DOMAIN, generativelanguage.googleapis.com
-DOMAIN, ai.google.dev
 DOMAIN, aida.googleapis.com
 DOMAIN, aistudio.google.com
-DOMAIN, alkalimakersuite-pa.clients6.google.com
-DOMAIN, makersuite.google.com
 
 # Claude
 DOMAIN,cdn.usefathom.com
