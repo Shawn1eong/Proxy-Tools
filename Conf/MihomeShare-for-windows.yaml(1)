@@ -1,0 +1,135 @@
+#Telegram @an_sion MihomeShare
+Subscribe: &Subscribe {type: http, interval: 28800, health-check: {enable: true, url: "https://www.gstatic.com/generate_204", interval: 86400, timeout: 3000}, override: { udp: true, ip-version: ipv4-prefer, skip-cert-verify: true}, exclude-filter: "(?i)Expire|Traffic|流量|到期|重置|频道|订阅|官网|禁止"}
+#
+proxy-providers:
+  Airport-1: { <<: *Subscribe, proxy: DIRECT, override: { additional-prefix: "[FC]"}, url: "订阅链接1", path: "./providers/air1.yaml" }
+  Airport-2: { <<: *Subscribe, proxy: DIRECT, override: { additional-prefix: "[WD]"}, url: "订阅链接2", path: "./providers/air2.yaml" }
+  Airport-3: { <<: *Subscribe, proxy: 手动选择, override: { additional-prefix: "[LY]"},  url: "订阅链接3", path: ./providers/air3.yaml }
+#
+ipv6: true
+allow-lan: true
+bind-address: "*"
+mixed-port: 7890
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: strict
+global-client-fingerprint: chrome
+profile: {store-selected: true, store-fake-ip: true}
+#
+external-controller: "0.0.0.0:9090"
+external-controller-cors: {allow-origins: ["https://metacubexd.pages.dev", "https://d.metacubex.one", "https://board.zash.run.place"], allow-private-network: true}
+secret: "Ansion168"
+external-ui: ui
+external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+#
+geodata-mode: true
+geodata-loader: memconservative
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
+  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+  asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+#
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: false
+  override-destination: false
+  sniff:
+    HTTP: {ports: [80, 8080-8880], override-destination: true}
+    TLS: {ports: [443, 8443]}
+    QUIC: {ports: [443, 8443]}
+  skip-domain: ["+.lan", "+.local", "+.localdomain", "+.home.arpa", "+.localhost", "localhost.ptlogin2.qq.com", "+.miwifi.com", "+.ifaner.dd94wan.com", "Mijia Cloud", "+.push.apple.com", "+.icloud.com", "+.icloud-content.com", "+.itunes.apple.com", "+.mzstatic.com"]
+#
+dns:
+  enable: true
+  listen: 0.0.0.0:7874
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  use-hosts: true
+  use-system-hosts: true
+  cache-algorithm: arc
+  prefer-h3: true
+  respect-rules: false
+  default-nameserver: ["223.5.5.5", "223.6.6.6", "182.254.116.116", "180.76.76.76", "119.29.29.29"]
+  nameserver: ["https://dns.alidns.com/dns-query#h3=true", "quic://dns.alidns.com:853", "https://dns.alidns.com/dns-query", "tls://223.5.5.5:853", "https://doh.pub/dns-query"]
+  fake-ip-filter: ["+.push.apple.com", "+.icloud.com", "+.icloud-content.com", "+.mzstatic.com", "+.itunes.apple.com",
+    "time.apple.com", "captive.apple.com", "Mijia Cloud", "+.miwifi.com", "+.ifaner.dd94wan.com", "+.lan", "+.local", "+.localdomain", "+.localhost",
+    "localhost.ptlogin2.qq.com", "router.asus.com", "www.asusrouter.com", "tplogin.cn", "tendawifi.com", "melogin.cn", "phicomm.me",
+    "my.router", "mi.router", "mywifi.net", "routerlogin.net", "p.to", "connectivitycheck.platform.hicloud.com", "connectivitycheck.gstatic.com", "detectportal.firefox.com", "ntp.org", "pool.ntp.org", "time.*.com", "time.*.gov", "time.*.edu.cn","ip6-localhost", "ip6-loopback", "ip6-localnet", "ip6-mcastprefix", "ip6-allnodes", "ip6-allrouters"]
+#
+tun:
+  enable: true
+  stack: mixed
+  mtu: 1400
+  auto-route: true
+  auto-detect-interface: true
+  auto-redirect: false
+  strict-route: false
+  endpoint-independent-nat: true
+  bypass-lan: true
+  udp-timeout: 600
+  dns-hijack: [tcp://any:53,udp://any:53]
+#
+proxies:
+  - {name: 直连, type: direct}
+  - {name: 拒绝, type: reject}
+#
+Urltest: &Urltest {type: url-test, include-all: true, tolerance: 60, interval: 900, max-failed-times: 1, hidden: true}
+proxy-groups:
+  # 策略分流分组
+  - {name: 手动选择, type: select, proxies: [香港自动, 台湾自动, 美国自动, 狮城自动, 日本自动, 韩国自动], include-all: true}
+  - {name: Telegram, type: select, proxies: [手动选择, 美国自动, 狮城自动, 日本自动]}
+  - {name: Spotify, type: select, proxies: [直连, 手动选择, 美国自动, 狮城自动, 日本自动]}
+  - {name: AI, type: select, proxies: [直连, 手动选择, 美国自动, 狮城自动, 日本自动]}
+  - {name: 海外媒体, type: select, proxies: [手动选择, 香港自动, 台湾自动, 美国自动, 狮城自动, 日本自动, 韩国自动]}
+  - {name: 兜底规则, type: select, proxies: [直连, 手动选择]}
+  # 地区分组筛选
+  - {name: 香港自动, <<: *Urltest, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
+  - {name: 台湾自动, <<: *Urltest, filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$" }
+  - {name: 美国自动, <<: *Urltest, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
+  - {name: 狮城自动, <<: *Urltest, filter: "(?=.*(新|狮|獅|SG|(?i)Singapore))^((?!(港|台|日|韩|美|西)).)*$"}
+  - {name: 日本自动, <<: *Urltest, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
+  - {name: 韩国自动, <<: *Urltest, filter: "(?=.*(韩|KR|(?i)Korea))^((?!(台|日|港|新|美)).)*$"}
+#
+rules:
+  - RULE-SET,Adrules,REJECT
+  - RULE-SET,Spotify,Spotify
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,AI,AI
+  - RULE-SET,GlobalMedia,手动选择
+  - RULE-SET,GlobalGFW,手动选择
+  - RULE-SET,ChinaMedia,直连
+  - RULE-SET,China,直连
+  - RULE-SET,Lan,直连
+  - GEOIP,CN,直连
+  - MATCH,兜底规则
+#
+rule-anchor:
+  classical: &classical {type: http, interval: 86400, behavior: classical, format: text}
+# 规则集
+rule-providers:
+  # 广告拦截
+  Adrules: {<<: *classical, url: "https://adrules.top/adrules.list"}
+  # Spotify音乐
+  Spotify: {<<: *classical, url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/Spotify.list"}
+  # 电报服务
+  Telegram: {<<: *classical, url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Other/Telegram.list"}
+  # ChatGPT
+  AI: {<<: *classical, url: "https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/refs/heads/main/Conf/Ruleset/ai.list"}
+  # 海外媒体
+  GlobalMedia: {<<: *classical, url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/GlobalMedia.list"}
+  # 海外服务
+  GlobalGFW: {<<: *classical, url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/GlobalGFW.list"}
+  # 国内服务
+  ChinaMedia: {<<: *classical, url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/ChinaMedia.list"}
+  China: {<<: *classical, url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Direct.list"}
+  # 局域网
+  Lan: {<<: *classical, url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Local.list"}
+
+
+
