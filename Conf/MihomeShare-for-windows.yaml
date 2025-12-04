@@ -83,6 +83,8 @@ Urltest: &Urltest {type: url-test, include-all: true, tolerance: 60, interval: 9
 proxy-groups:
   # 策略分流分组
   - {name: 手动选择, type: select, proxies: [香港自动, 台湾自动, 美国自动, 狮城自动, 日本自动, 韩国自动], include-all: true}
+  - {name: Google, type: select, proxies: [美国自动, 狮城自动, 日本自动]}
+  - {name: Microsoft, type: select, proxies: [直连, 手动选择, 美国自动, 狮城自动, 日本自动]}
   - {name: Telegram, type: select, proxies: [手动选择, 美国自动, 狮城自动, 日本自动]}
   - {name: Spotify, type: select, proxies: [直连, 手动选择, 美国自动, 狮城自动, 日本自动]}
   - {name: AI, type: select, proxies: [直连, 手动选择, 美国自动, 狮城自动, 日本自动]}
@@ -98,9 +100,9 @@ proxy-groups:
 #
 rules:
   - RULE-SET,Adrules,REJECT
-  - RULE-SET,Google,AI
-  - RULE-SET,Copilot,AI
-  - RULE-SET,Microsoft,手动选择
+  - RULE-SET,Google,Google
+  - RULE-SET,Copilot,Microsoft
+  - RULE-SET,Microsoft,Microsoft
   - RULE-SET,Spotify,Spotify
   - RULE-SET,Telegram,Telegram
   - RULE-SET,AI,AI
