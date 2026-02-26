@@ -78,6 +78,7 @@ tun:
 proxies:
   - {name: 直连, type: direct}
   - {name: 拒绝, type: reject}
+  
 #
 Urltest: &Urltest {type: url-test, include-all: true, tolerance: 60, interval: 900, max-failed-times: 1, hidden: true}
 select: &select {type: select, include-all: true, tolerance: 60, interval: 900, max-failed-times: 1, hidden: false}
@@ -88,7 +89,7 @@ proxy-groups:
   - {name: Microsoft, type: select, proxies: [直连, 手动选择, 美国地区, 狮城自动, 日本自动]}
   - {name: Telegram, type: select, proxies: [手动选择, 美国地区, 狮城自动, 日本自动]}
   - {name: Spotify, type: select, proxies: [直连, 手动选择, 美国地区, 狮城自动, 日本自动]}
-  - {name: ChatAI, type: select, proxies: [直连, 手动选择, 美国地区, 狮城自动, 日本自动]}
+  - {name: OPENAI, type: select, proxies: [直连, 手动选择, 美国地区, 狮城自动, 日本自动]}
   - {name: 海外媒体, type: select, proxies: [手动选择, 香港自动, 台湾自动, 美国地区, 狮城自动, 日本自动, 韩国自动]}
   - {name: 兜底规则, type: select, proxies: [直连, 手动选择]}
   # 地区分组筛选
@@ -121,8 +122,8 @@ rule-anchor:
 rule-providers:
   # 广告拦截
   Adrules: {<<: *classical, url: "https://adrules.top/adrules.list"}
-  # ChatAI
-  ChatAI: {<<: *classical, url: "https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/refs/heads/main/Conf/Ruleset/ai.list"}
+  # ChatGPT
+  OPENAI: {<<: *classical, url: "https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/refs/heads/main/Conf/Ruleset/ai.list"}
   # Spotify音乐
   Spotify: {<<: *classical, url: "https://cdn.jsdelivr.net/gh/axcsz/Collect@master/Ruleset/Media/Spotify.list"}
   # 谷歌服务
